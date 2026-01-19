@@ -1,0 +1,2341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ConCreCen — ontology and analysis of how censorship and constraints shape creative practice, with scenarios, competency questions and SPARQL examples." />
+    <title>
+      ConCreCen – Ontology of Constraint-Driven Creativity under Censorship
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- SIDEBAR -->
+  <nav class="sidebar" aria-label="Primary navigation">
+      <a href="#home" class="brand">
+        <div class="brand-icon">
+          <!-- Simple Book Icon SVG -->
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+        </div>
+        ConCreCen
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="#home">Home</a></li>
+        <li class="nav-item"><a href="#overview">Overview</a></li>
+        <li class="nav-item">
+          <a href="#theoretical-framework">Theoretical Framework</a>
+        </li>
+        <li class="nav-item"><a href="#methodology">Methodology</a></li>
+        <li class="nav-item">
+          <a href="#knowledge-representation">Knowledge Representation</a>
+        </li>
+        <li class="nav-item">
+          <a href="#knowledge-extraction">Knowledge Extraction</a>
+        </li>
+        <li class="nav-item"><a href="#ai-experiment">AI Experiment</a></li>
+        <li class="nav-item"><a href="#epilogue">Epilogue</a></li>
+      </ul>
+
+      <div class="repo-link">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            ></path>
+          </svg>
+          GitHub Repository
+        </a>
+      </div>
+    </nav>
+
+    <!-- CONTENT -->
+  <main id="main-content" class="main-content">
+      <!-- HOME SECTION -->
+      <section id="home" class="section">
+        <h1 class="title-large">ConCreCen</h1>
+        <p class="subtitle-large">
+          Constraint-Driven Creativity under Censorship
+        </p>
+
+        <p>
+          Creativity is often imagined as an expression of freedom — an
+          unrestricted flow of ideas, forms, and meanings. Yet historically and
+          contemporarily, some of the most distinctive creative practices have
+          emerged precisely under conditions of restriction. Political regimes,
+          moral norms, institutional controls, and algorithmic systems have
+          repeatedly attempted to regulate artistic and expressive production.
+          Paradoxically, these constraints have not only suppressed creativity
+          but have also reshaped it, giving rise to indirect, symbolic, and
+          highly inventive forms of expression.
+        </p>
+
+        <p>
+          <strong>ConCreCen</strong> (Constraint-Driven Creativity under
+          Censorship) explores this tension. The project investigates how
+          censorship functions simultaneously as a barrier and as a productive
+          friction within creative processes. Rather than treating censorship
+          solely as a negative external force, we model it as a complex system
+          of constraints that interact with creators, media, technologies, and
+          cultural contexts — sometimes silencing expression, sometimes
+          stimulating innovation through indirection.
+        </p>
+
+        <!-- Home Gallery -->
+        <div class="home-gallery">
+          <div class="gallery-item">
+            <img src="images/3-94.jpg" alt="Artwork — protest collage" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/ENvCW7IX0AEidDq.jpg"
+              alt="Digital artwork — stylized portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/18d7456004f666bdd7a67c9c0591eda1.jpg"
+              alt="Abstract composition — layered text and image"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/3e9c69de6cedbacf2880b2018247680b.jpg"
+              alt="Photograph — street art fragment"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/4c226c72ebb3b70a0aa174eaa4ee60c9.jpg"
+              alt="Collage — symbolic motifs"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/4fab0b1b0f13e9f0d3cf400f3a0c82d3.jpg"
+              alt="Mixed media — censorship metaphor"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/756a043a0748bcb69802e2dae1e03b1d.jpg"
+              alt="Illustration — coded symbols"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/7fc563ba69de9945072aab417324b7c9.jpg"
+              alt="Poster — protest slogan obscured"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/93328d16730db2584e49062c63c239fd.jpg"
+              alt="Graphic — visual obfuscation example"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/b8cb5802a59f35cc1a50e4ebade42c50.jpg"
+              alt="Photomontage — layered narratives"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/b97dfb8073be4089a0c18eb81a5949fb.jpg"
+              alt="Artwork — visual metaphor for censorship"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/d1aa5f05b236cab31831e3a6aa1d7af6.jpg"
+              alt="Abstract digital piece — fragmented text"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/dff03e91dadb83ec297d85e9321bb435.jpg"
+              alt="Photograph — veiled portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/dff6d82a0ddc1b0f27f104c5ddfb3abd.jpg"
+              alt="Illustration — coded language motif"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <h2>Why Censorship and Creativity?</h2>
+        <p>
+          Across different historical periods and media environments, creators
+          have repeatedly adapted their strategies in response to censorship:
+        </p>
+        <ul>
+          <li>
+            In <strong>authoritarian regimes</strong>, writers and artists have
+            relied on allegory, metaphor, and coded language to convey
+            prohibited meanings.
+          </li>
+          <li>
+            In <strong>popular culture</strong>, censorship has been
+            aestheticized and strategically incorporated into artistic
+            identities.
+          </li>
+          <li>
+            In <strong>contemporary digital platforms</strong>, AI-driven
+            content moderation systems silently reshape creative behavior
+            through algorithmic filtering, uncertainty, and self-censorship.
+          </li>
+        </ul>
+        <p>
+          These cases suggest that censorship does not simply remove creative
+          possibilities; it reconfigures the creative space itself, altering how
+          ideas are formed, expressed, and interpreted.
+        </p>
+
+        <h2>Project Aim</h2>
+        <p>
+          The goal of ConCreCen is to develop an ontology-based framework that
+          formally models:
+        </p>
+        <ul>
+          <li>different types of censorship and constraints;</li>
+          <li>
+            creative processes and strategies developed in response to them;
+          </li>
+          <li>
+            the social, historical, and technological contexts in which these
+            dynamics occur;
+          </li>
+          <li>
+            the consequences of censorship for creative production, ranging from
+            suppression to innovation under constraint.
+          </li>
+        </ul>
+        <p>
+          By representing these elements in a structured knowledge model, the
+          project enables systematic analysis of how creativity operates under
+          restriction — both in historical cases and in contemporary,
+          AI-mediated environments.
+        </p>
+
+        <h2>From History to AI-Driven Censorship</h2>
+        <p>
+          ConCreCen deliberately spans multiple temporal and technological
+          contexts. It connects well-documented historical cases of censorship
+          in literature, art, and music with present-day forms of platform-based
+          and AI-driven moderation. In doing so, the project highlights a
+          critical shift: censorship is increasingly delegated to automated
+          systems, whose opaque decision-making processes introduce new forms of
+          constraint, uncertainty, and creative adaptation.
+        </p>
+        <p>This transition raises new questions:</p>
+        <ul>
+          <li>
+            How does algorithmic censorship differ from institutional or state
+            censorship?
+          </li>
+          <li>
+            What kinds of creative strategies emerge when creators must
+            anticipate machine judgment?
+          </li>
+          <li>
+            Can restriction imposed by AI systems unintentionally foster new
+            forms of symbolic, visual, or memetic creativity?
+          </li>
+        </ul>
+
+        <h2>Methodological Perspective</h2>
+        <p>ConCreCen follows a knowledge-engineering approach grounded in:</p>
+        <ul>
+          <li>theoretical work on creativity, constraints, and censorship;</li>
+          <li>
+            ontology design patterns and alignment with existing semantic
+            resources;
+          </li>
+          <li>
+            the construction of a knowledge graph combining historical and
+            synthetic cases;
+          </li>
+          <li>
+            exploratory experiments involving large language models (LLMs) for
+            generation and evaluation under constrained conditions.
+          </li>
+        </ul>
+        <p>
+          Rather than offering a normative answer to whether censorship is
+          “good” or “bad” for creativity, the project provides a formal
+          analytical tool for examining how creativity adapts, transforms, or
+          collapses under different forms of restriction.
+        </p>
+
+        <h2>A Core Insight</h2>
+        <p>At the heart of ConCreCen lies a simple but powerful observation:</p>
+        <div class="callout">
+          <strong
+            >Censorship does not only restrict creativity — in certain
+            conditions, it reorganizes and intensifies it.</strong
+          >
+        </div>
+        <p>
+          This ontology makes that insight explicit, traceable, and
+          computationally explorable.
+        </p>
+      </section>
+
+        <!-- Analysis / Queries placeholder removed (merged into Analysis / Queries section) -->
+
+      <!-- OVERVIEW SECTION -->
+      <section id="overview" class="section">
+        <h1>Overview</h1>
+
+        <p>
+          The <strong>ConCreCen project</strong> (Constraint-Driven Creativity
+          under Censorship) investigates the complex and often paradoxical
+          relationship between censorship, constraints, and creative production,
+          with particular attention to contemporary forms of AI-driven
+          censorship systems. While censorship is conventionally framed as a
+          purely suppressive mechanism that limits freedom of expression and
+          diminishes creative output, historical, sociological, and cognitive
+          studies increasingly suggest a more nuanced dynamic: constraints may
+          also function as productive frictions, stimulating indirect
+          expression, divergence, and innovative creative strategies.
+        </p>
+
+        <p>
+          This project adopts the position that creativity should not be
+          understood solely as a process unfolding under conditions of freedom,
+          but rather as a situated, adaptive phenomenon, shaped by
+          institutional, social, technological, and psychological pressures.
+          Censorship, in this sense, constitutes a specific class of constraints
+          that actively intervene in creative processes, influencing not only
+          what can be expressed, but also how expression is structured, encoded,
+          displaced, or transformed.
+        </p>
+
+        <p>
+          ConCreCen aims to formalize this relationship through the construction
+          of a domain ontology and knowledge graph that model:
+        </p>
+        <ul>
+          <li>
+            different types of censorship (political, moral, religious,
+            corporate, social, self-censorship),
+          </li>
+          <li>
+            diverse mechanisms of enforcement, including traditional manual
+            review and contemporary AI-powered content moderation,
+          </li>
+          <li>
+            the creative processes and strategies developed in response to
+            restrictive environments,
+          </li>
+          <li>
+            and the resulting impacts on creativity, ranging from suppression
+            and chilling effects to innovation under constraint and the
+            emergence of alternative expressive forms.
+          </li>
+        </ul>
+
+        <p>
+          A central theoretical assumption underlying the project is that
+          censorship does not merely block creativity, but often redirects it,
+          encouraging the use of allegory, metaphor, genre displacement,
+          symbolic protest, and underground or coded modes of expression. This
+          assumption is supported both by historical cases—such as creative
+          production under authoritarian regimes in the 20th century—and by
+          contemporary digital contexts, where algorithmic filtering and
+          predictive moderation systems reshape creative behavior on online
+          platforms.
+        </p>
+
+        <p>
+          Methodologically, ConCreCen follows an eXtreme Design (XD) and CLOWN
+          (Context, Literature, Ontology, Workflow, Narrative) approach,
+          combining theoretical research with iterative ontology engineering.
+          The project integrates:
+        </p>
+        <ul>
+          <li>
+            a theoretical framework drawing from creativity studies, censorship
+            theory, and cultural history;
+          </li>
+          <li>
+            the use of large language models (LLMs) to generate definitions,
+            scenarios, and user stories that inform ontology design;
+          </li>
+          <li>
+            a set of competency questions that articulate the reasoning goals of
+            the ontology;
+          </li>
+          <li>
+            and a structured dataset of historical, contemporary, and
+            AI-mediated censorship cases, represented as RDF triples within a
+            knowledge graph.
+          </li>
+        </ul>
+
+        <p>
+          The ontology developed in ConCreCen serves a dual function. First, it
+          acts as a conceptual and analytical framework for describing and
+          comparing how different forms of censorship interact with creative
+          agents, works, and processes across contexts. Second, it functions as
+          an operational artifact that can be used to guide and evaluate AI
+          systems: either by constraining generative models to produce creative
+          outputs under specified censorship conditions, or by enabling
+          evaluative tasks in which AI assesses creativity according to
+          ontology-defined criteria.
+        </p>
+
+        <p>
+          By explicitly modeling AI-driven government and platform censorship,
+          including content moderation algorithms, surveillance systems, and
+          predictive filtering mechanisms, ConCreCen addresses a critical
+          contemporary shift in the governance of creative expression. These
+          systems introduce new forms of scalability, opacity, and algorithmic
+          bias, generating novel constraints that affect not only what content
+          is removed, but how creators anticipate and adapt to automated
+          judgment.
+        </p>
+
+        <p>
+          Ultimately, ConCreCen positions censorship as a structuring force
+          within creative systems, rather than as an external anomaly. Through
+          formal knowledge representation, the project demonstrates how
+          constraints can simultaneously inhibit and activate creativity,
+          revealing patterns of adaptation, divergence, and innovation that
+          remain difficult to capture without an explicit ontological model.
+        </p>
+
+        <p>
+          By making these dynamics explicit, ConCreCen contributes both to
+          knowledge representation research and to broader discussions on
+          creativity, cultural production, and AI governance, offering a
+          reusable semantic framework for studying creativity under constraint
+          in historical and contemporary settings.
+        </p>
+      </section>
+
+      <!-- THEORETICAL FRAMEWORK SECTION -->
+      <section id="theoretical-framework" class="section">
+        <h1>Theoretical Framework</h1>
+
+        <h2>Creativity as a Process under Constraints</h2>
+        <p>
+          Creativity has long been conceptualized not merely as the production
+          of novel artifacts, but as a complex process shaped by cognitive,
+          social, and environmental factors. Contemporary theories emphasize
+          that creative production does not occur in a vacuum; rather, it is
+          deeply influenced by contextual pressures, limitations, and
+          constraints (Rhodes, 1961; Stokes, 2005).
+        </p>
+        <p>
+          Research on constraint-based creativity suggests that
+          limitations—whether formal, material, or ideological—can play a
+          productive role in creative thinking. Constraints reduce the space of
+          possible solutions, forcing creators to explore unconventional paths,
+          reinterpret existing forms, and develop indirect modes of expression.
+          In this sense, constraints may stimulate divergent thinking by
+          requiring creative agents to work "around" obstacles rather than
+          within unrestricted expressive freedom (Stokes, 2005).
+        </p>
+        <p>
+          This perspective aligns with integrated models of creativity, such as
+          those proposed in Aldo Gangemi's CreOn framework, which conceptualizes
+          creativity as a situated process involving agents, goals, phases, and
+          environmental pressures. Creativity emerges through interaction
+          between individual intention and external conditions, including
+          institutional and cultural limitations (Gangemi et al., 2021).
+        </p>
+
+        <h2>Forms of Censorship</h2>
+        <p>
+          Censorship represents a specific and historically persistent form of
+          constraint on creative expression. It can be defined as the systematic
+          restriction, modification, or suppression of expressive content by
+          authoritative entities or internalized social norms (Petley, 2007).
+        </p>
+        <p>
+          Scholars commonly distinguish between several forms of censorship:
+        </p>
+        <ul>
+          <li>
+            Political censorship, enforced by state institutions to control
+            ideological narratives and public discourse;
+          </li>
+          <li>
+            Moral and religious censorship, grounded in normative frameworks
+            regulating acceptable representations of sexuality, violence, or
+            belief;
+          </li>
+          <li>
+            Corporate censorship, exercised by media companies and digital
+            platforms through editorial policies and content moderation;
+          </li>
+          <li>
+            Self-censorship, where creators internalize external pressures and
+            preemptively limit their own expression (Foucault, 1977).
+          </li>
+        </ul>
+        <p>
+          These forms often coexist and interact, producing layered constraint
+          environments in which creative agents operate.
+        </p>
+
+        <h2>Censorship as Creative Pressure</h2>
+        <p>
+          While censorship is conventionally understood as a purely suppressive
+          force, historical and sociological studies demonstrate a more
+          ambivalent relationship between censorship and creativity. Under
+          restrictive regimes, creators have frequently developed indirect
+          expressive strategies—such as allegory, metaphor, symbolic
+          abstraction, genre displacement, and formal experimentation—to convey
+          prohibited meanings (Bourdieu, 1993; Petley, 2007).
+        </p>
+        <p>
+          In such contexts, censorship functions as a form of creative pressure
+          or friction. Rather than eliminating expression altogether, it
+          reshapes creative processes by privileging ambiguity, multi-layered
+          interpretation, and coded communication. As a result, some cultural
+          products created under heavy censorship exhibit high levels of formal
+          innovation and interpretive complexity.
+        </p>
+        <p>
+          This paradoxical effect—where restriction leads to
+          innovation—constitutes a central theoretical assumption of the
+          ConCreCen project.
+        </p>
+
+        <h2>From Historical to Algorithmic Censorship</h2>
+        <p>
+          In the 21st century, censorship has increasingly been mediated by
+          algorithmic systems. Governments and digital platforms now rely on
+          AI-driven content moderation, automated filtering, and predictive
+          surveillance technologies to regulate expressive content at scale
+          (Gillespie, 2018).
+        </p>
+        <p>
+          Algorithmic censorship introduces new dynamics into the relationship
+          between constraints and creativity. While it enables unprecedented
+          reach and efficiency, it also produces novel forms of uncertainty,
+          such as false positives, opaque decision-making, and algorithmic bias.
+          These conditions often intensify the chilling effect, encouraging
+          widespread self-censorship among creators who cannot anticipate how
+          automated systems will interpret their work.
+        </p>
+        <p>
+          At the same time, algorithmic censorship has prompted the emergence of
+          new creative strategies, including visual obfuscation, coded language,
+          meme-based communication, and platform-specific aesthetic adaptations.
+        </p>
+
+        <h2>Implications for Knowledge Representation</h2>
+        <p>
+          The diversity of censorship forms, creative strategies, and contextual
+          conditions highlights the need for a structured and formal
+          representation framework. Informal descriptions are insufficient to
+          capture the complex relationships between censorship mechanisms,
+          creative processes, and their outcomes.
+        </p>
+        <p>
+          By grounding the project in established theories of creativity and
+          censorship, ConCreCen provides a conceptual foundation for modeling
+          these interactions through an ontology and knowledge graph. This
+          theoretical framework informs the design of classes, relations, and
+          datasets developed in subsequent stages of the project.
+        </p>
+        <p>
+          Based on this theoretical grounding, the project proceeds to an
+          empirical and modeling phase. Large Language Models (LLMs) are
+          employed to generate user stories, creative scenarios, and preliminary
+          interpretations of censorship contexts. These narratives serve as the
+          basis for defining competency questions, which guide the formal design
+          of the ontology and the subsequent construction of the knowledge
+          graph.
+        </p>
+
+        <h2>References</h2>
+        <ul>
+          <li>
+            Rhodes, M. (1961). <em>An Analysis of Creativity</em>. Phi Delta
+            Kappan.
+          </li>
+          <li>
+            Stokes, P. D. (2005).
+            <em>Creativity from Constraints: The Psychology of Breakthrough</em
+            >. Springer.
+          </li>
+          <li>
+            Gangemi, A., et al. (2021).
+            <em>CreOn: An Ontology of Creativity Theories</em>. Semantic Web
+            Journal.
+          </li>
+          <li>
+            Petley, J. (2007). <em>Censorship and the Arts</em>. Index on
+            Censorship.
+          </li>
+          <li>
+            Bourdieu, P. (1993). <em>The Field of Cultural Production</em>.
+            Columbia University Press.
+          </li>
+          <li>
+            Foucault, M. (1977). <em>Discipline and Punish</em>. Pantheon Books.
+          </li>
+          <li>
+            Gillespie, T. (2018).
+            <em
+              >Custodians of the Internet: Platforms, Content Moderation, and
+              the Hidden Decisions That Shape Social Media</em
+            >. Yale University Press.
+          </li>
+        </ul>
+      </section>
+
+      <!-- METHODOLOGY SECTION -->
+      <section id="methodology" class="section">
+        <h1>Methodology</h1>
+        <p>
+          This page describes the lifecycle of the ConCreCen knowledge graph
+          construction.
+        </p>
+
+        <h2>NeOn Methodology</h2>
+        <p>
+          We adopted the NeOn methodology for a flexible, scenario-based
+          development process. Key activities included domain analysis, re-using
+          existing vocabularies (DC, FOAF), and continuous evaluation against
+          competency questions.
+        </p>
+      </section>
+
+      <!-- KNOWLEDGE REPRESENTATION SECTION -->
+      <section id="knowledge-representation" class="section">
+        <h1>Knowledge Representation</h1>
+
+        <p class="callout">
+          Access to the ontology file. To find the Turtle (TTL) file of our
+          ontology, navigate to the GitHub repository.
+        </p>
+
+        <h2 id="kr-ontology">4.1 The Ontology</h2>
+        <p>
+          ConCreCen (Constraint-Driven Creativity under Censorship) formalizes
+          constraint-driven creativity as an interaction between creative
+          agents, creative works, enforcement authorities, and the constraints
+          that shape production, circulation, and reception. The ontology models
+          censorship not only as an external suppressive force, but as a
+          structured set of constraints that can redirect creative processes and
+          provoke adaptive strategies (e.g., allegory, coded language, genre
+          shifts, visual obfuscation).
+        </p>
+        <p>
+          We distinguish between institutional censorship (state, religious,
+          corporate, social) and self-censorship, while extending the model to
+          contemporary AI-driven moderation. This extension captures algorithmic
+          mechanisms (e.g., keyword filtering, pattern recognition,
+          pre-/post-publication review), their operational artifacts (e.g.,
+          shadowbanning, throttling/downranking, automated removals), and side
+          effects such as false positives and algorithmic bias.
+        </p>
+
+        <h2 id="kr-modeling">4.2 Modeling</h2>
+        <p>
+          The ontology was developed iteratively using a bottom-up extreme
+          design approach. We started from narrative scenarios and user stories,
+          derived competency questions (CQs), and then refined the TBox
+          (classes) and properties until each CQ could be expressed as a SPARQL
+          query over the resulting knowledge graph.
+        </p>
+
+        <h3>User Stories</h3>
+        <div class="user-stories">
+          <div class="user-story-card">
+            <div class="user-story-icon">👤</div>
+            <div class="user-story-content">
+              <h3>User Story 1 — Creator Perspective</h3>
+              <p>
+                As a writer working under restrictive political and technological
+                conditions, I want to express ideas that challenge dominant
+                narratives without triggering censorship mechanisms. I operate
+                within an environment shaped by both institutional regulations
+                and opaque algorithmic moderation systems. Explicit political
+                critique risks bans, account suspension, or legal consequences.
+                To navigate these constraints, I adopt creative strategies such
+                as allegory, metaphor, and genre displacement. My goal is not
+                only to avoid censorship but to communicate meaning to an
+                informed audience capable of interpreting coded messages. I am
+                constantly balancing expressive ambition with self-censorship,
+                uncertainty, and adaptation. Understanding how different
+                constraints shape creative outcomes would help me choose more
+                effective strategies.
+              </p>
+            </div>
+          </div>
+
+          <div class="user-story-card">
+            <div class="user-story-icon">🔬</div>
+            <div class="user-story-content">
+              <h3>User Story 2 — Researcher Perspective</h3>
+              <p>
+                As a researcher in digital humanities and knowledge
+                representation, I want to analyze how different forms of
+                censorship influence creative strategies and cultural
+                production. I aim to compare historical and contemporary cases
+                across media, regimes, and platforms. By modeling censorship
+                acts, constraints, and creative responses in a knowledge graph,
+                I want to identify patterns such as which constraints lead to
+                innovation versus suppression. I also want to explore how
+                AI-driven censorship differs from traditional forms in its
+                effects on creativity. My goal is to support comparative
+                analysis through structured queries rather than anecdotal
+                evidence.
+              </p>
+            </div>
+          </div>
+
+          <div class="user-story-card">
+            <div class="user-story-icon">🤖</div>
+            <div class="user-story-content">
+              <h3>User Story 3 — Platform / AI Moderation Perspective</h3>
+              <p>
+                As a designer of AI-based content moderation systems, I want to
+                understand how automated censorship affects creative expression.
+                My system must enforce content policies at scale, but false
+                positives and ambiguous interpretations are unavoidable.
+                Creators adapt by developing new expressive strategies that
+                evade detection, sometimes undermining policy goals. By
+                analyzing these interactions, I want to identify unintended
+                consequences such as chilling effects or emergent coded
+                communication. A structured ontology would help evaluate how
+                moderation mechanisms shape creative behavior.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.2.1 LLM Outputs (Stage 3) -->
+        <h2 id="kr-llm-outputs">4.2.1 LLM Outputs (Stage 3)</h2>
+
+        <h2 id="kr-llm-method">LLM Generation Methodology</h2>
+        <p>
+          To support ontology design, we employed Large Language Models (LLMs)
+          to generate representative scenarios, user stories, and competency
+          questions. This approach enables rapid exploration of domain
+          complexity while maintaining a structured design workflow. Below are
+          representative examples of the prompting process.
+        </p>
+
+        <h2 id="kr-prompts">Prompts & Excerpts</h2>
+
+        <div class="llm-prompt">
+          <div class="callout-header">
+            <span class="callout-icon">💬</span>
+            <span class="callout-title">LLM Prompt</span>
+          </div>
+          <div class="callout-content">
+            <pre class="prompt-text">
+Generate 10 diverse scenarios illustrating the relationship between censorship and creativity across different historical periods, political contexts, and technological environments. Each scenario should include:
+
+- Temporal and geographic context
+- Type of censorship mechanism (institutional, algorithmic, self-censorship)
+- Creative domain (literature, film, music, digital art, journalism)
+- Specific creative strategies used to navigate constraint
+- Outcome and impact on creative expression
+
+Focus on cases where constraint leads to innovation, suppression, or both.</pre
+            >
+          </div>
+        </div>
+
+        <div class="llm-output">
+          <div class="callout-header">
+            <span class="callout-icon">🤖</span>
+            <span class="callout-title">LLM Output (excerpt)</span>
+          </div>
+          <div class="callout-content">
+            <p>
+              <strong
+                >Scenario 1 — Allegory under Totalitarian Rule (1930s
+                Europe)</strong
+              >
+            </p>
+            <p>
+              In the late 1930s, a novelist living under an authoritarian regime
+              in Southern Europe faces strict political censorship enforced by a
+              state ministry of culture. Explicit criticism of the government
+              and references to political repression are prohibited. The author
+              writes a fictional novel set in a distant, imaginary kingdom where
+              animals govern humans, using allegory to reflect real political
+              dynamics...
+            </p>
+            <p class="output-note">
+              <em
+                ><a href="#kr-scenarios"
+                  >Read more — See all 10 scenarios below</a
+                ></em
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="llm-prompt">
+          <div class="callout-header">
+            <span class="callout-icon">💬</span>
+            <span class="callout-title">LLM Prompt</span>
+          </div>
+          <div class="callout-content">
+            <pre class="prompt-text">
+Based on these scenarios, generate competency questions that an ontology should be able to answer. Format each as a natural language question followed by the required entities and relations needed to answer it.</pre
+            >
+          </div>
+        </div>
+
+        <div class="llm-output">
+          <div class="callout-header">
+            <span class="callout-icon">🤖</span>
+            <span class="callout-title">LLM Output (excerpt)</span>
+          </div>
+          <div class="callout-content">
+            <p>
+              <strong>CQ1:</strong> What types of censorship constrain a given
+              creative work in a specific context?
+            </p>
+            <p class="output-note">
+              Needed entities/relations: CreativeWork, Context, Censorship,
+              hasConstraint, occursInContext
+            </p>
+            <p class="output-note">
+              <em
+                ><a href="#kr-competency"
+                  >Read more — See all 12 competency questions below</a
+                ></em
+              >
+            </p>
+          </div>
+        </div>
+
+        <h2 id="kr-scenarios">Scenarios</h2>
+
+        <div class="accordion-controls">
+          <button class="btn-accordion-control" id="expand-all">
+            Open All
+          </button>
+          <button class="btn-accordion-control" id="collapse-all">
+            Close All
+          </button>
+        </div>
+
+        <div class="scenario-accordion">
+          <details class="scenario-item">
+            <summary class="scenario-summary">
+              <strong
+                >Scenario 1 — Allegory under Totalitarian Rule (1930s
+                Europe)</strong
+              >
+            </summary>
+            <div class="scenario-content">
+              <p>
+                In the late 1930s, a novelist living under an authoritarian
+                regime faces strict political censorship. Explicit criticism is
+                prohibited; the author writes a novel set in an imaginary
+                kingdom using allegory to reflect political dynamics, allowing
+                subversive meanings to circulate without direct reference to
+                real institutions.
+              </p>
+            </div>
+          </details>
+
+          <details class="scenario-item">
+            <summary class="scenario-summary">
+              <strong>Scenario 2 — Underground Theatre (1960s)</strong>
+            </summary>
+            <div class="scenario-content">
+              <p>
+                A theatre collective stages plays in clandestine venues to avoid
+                state censorship. Scripts are coded with double meanings and
+                performed for trusted audiences; distribution is through
+                samizdat-style networks. The constraint shapes formal choices
+                and audience practices.
+              </p>
+            </div>
+          </details>
+
+          <details class="scenario-item">
+            <summary class="scenario-summary">
+              <strong
+                >Scenario 3 — Satirical Music under Corporate Pressure
+                (2010s)</strong
+              >
+            </summary>
+            <div class="scenario-content">
+              <p>
+                Musicians face removal from playlists and demonetization for
+                overt political satire. Artists adapt by releasing instrumental
+                variations, pseudonymous accounts, or live-only performances,
+                altering production and distribution strategies to preserve
+                voice and avoid platform takedowns.
+              </p>
+            </div>
+          </details>
+
+          <details class="scenario-item">
+            <summary class="scenario-summary">
+              <strong
+                >Scenario 4 — Visual Artist and Platform Policy
+                (2010s–2020s)</strong
+              >
+            </summary>
+            <div class="scenario-content">
+              <p>
+                An image-sharing platform's nudity policy and automated filters
+                repeatedly flag an artist's work. The artist experiments with
+                abstraction and stylization to retain expressivity while
+                avoiding automatic removals; some works are accepted, others are
+                downranked, creating a patchwork of visibility.
+              </p>
+            </div>
+          </details>
+
+          <details class="scenario-item">
+            <summary class="scenario-summary">
+              <strong
+                >Scenario 5 — Academic Self-Censorship (Contemporary)</strong
+              >
+            </summary>
+            <div class="scenario-content">
+              <p>
+                A researcher anticipates peer-review and funding risks and omits
+                controversial case studies from a manuscript. Institutional and
+                reputational constraints shape research questions and language,
+                resulting in cautious framing and reduced critical disclosure.
+              </p>
+            </div>
+          </details>
+
+          <details class="scenario-item">
+            <summary class="scenario-summary">
+              <strong
+                >Scenario 6 — Meme Culture as Workaround (Internet Age)</strong
+              >
+            </summary>
+            <div class="scenario-content">
+              <p>
+                Creators use memetic forms and coded visual tropes to transmit
+                prohibited meanings; memes travel across platforms and can evade
+                moderation through rapid mutation, enabling indirect political
+                commentary under surveillance.
+              </p>
+            </div>
+          </details>
+          <details class="scenario-item">
+            <summary class="scenario-summary">
+              Scenario 7 — Music under Religious Norms
+              <span class="scenario-context">(1990s Iran)</span>
+            </summary>
+            <div class="scenario-content">
+              <p>
+                A musician in 1990s Iran faces religious censorship restricting
+                certain musical styles and public performances.
+                Western-influenced genres are prohibited. The artist composes
+                instrumental music using traditional structures while subtly
+                incorporating modern harmonies. The creative strategy involves
+                genre blending and formal experimentation. Performances occur in
+                semi-private cultural venues. The outcome is limited public
+                exposure but sustained creative innovation.
+              </p>
+            </div>
+          </details>
+
+          <details class="scenario-item">
+            <summary class="scenario-summary">
+              Scenario 8 — Platform AI Bias in Visual Art Moderation
+              <span class="scenario-context">(2020s)</span>
+            </summary>
+            <div class="scenario-content">
+              <p>
+                A contemporary visual artist uploads digital artwork depicting
+                abstract human forms to an image-sharing platform. AI-driven
+                moderation systems misclassify the artwork as violating nudity
+                policies. The artist modifies the style using geometric
+                abstraction and visual distortion. The revised works are
+                approved but lose some expressive clarity. The outcome reflects
+                algorithmic bias and adaptive creativity.
+              </p>
+            </div>
+          </details>
+
+          <details class="scenario-item">
+            <summary class="scenario-summary">
+              Scenario 9 — Journalistic Censorship during Armed Conflict
+              <span class="scenario-context">(2000s)</span>
+            </summary>
+            <div class="scenario-content">
+              <p>
+                A journalist reporting on a military conflict in the early 2000s
+                faces state-imposed political censorship. Reporting on civilian
+                casualties is restricted. The journalist writes literary
+                reportage using personal narratives and fragmented storytelling.
+                The creative strategy reframes factual reporting as
+                human-interest literature. The work is published internationally
+                but banned domestically. The outcome is suppression in the local
+                context and innovation in narrative form.
+              </p>
+            </div>
+          </details>
+
+          <details class="scenario-item">
+            <summary class="scenario-summary">
+              Scenario 10 — Predictive AI Censorship on Streaming Platforms
+              <span class="scenario-context">(Future-Oriented)</span>
+            </summary>
+            <div class="scenario-content">
+              <p>
+                A screenwriter working for a global streaming platform submits a
+                politically sensitive script. Predictive AI systems flag the
+                script as potentially controversial before publication.
+                Corporate authorities request revisions. The writer rewrites the
+                narrative using speculative fiction and alternate timelines. The
+                series is released with altered themes. The outcome shows
+                pre-emptive censorship and strategic genre shift.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- User Stories moved earlier under Scenarios; duplicate removed -->
+        <section id="kr-core-classes" class="kr-core-classes">
+          <div class="kr-tree card">
+            <h2 id="kr-classes-properties">4.2.2 Classes &amp; Properties</h2>
+            <p class="subtitle-small">Ontology Class Taxonomy (TBox)</p>
+
+            <h3>Core Domain Entities</h3>
+            <ul class="tree-children taxonomy">
+              <li>
+                <strong>CreativeAgent</strong> — creator/actor producing a
+                creative work under constraints (writer, artist, journalist,
+                content creator).
+              </li>
+              <li>
+                <strong>CreativeWork</strong> — the creative artifact (novel,
+                film, song, artwork, post, video).
+              </li>
+              <li>
+                <strong>CreativeProcess</strong> — the production activity
+                shaping the work (writing, filming, publishing, posting,
+                revising).
+              </li>
+              <li>
+                <strong>Medium</strong> — channel/form of expression
+                (literature, film, theatre, music, visual art, digital media,
+                journalism).
+              </li>
+            </ul>
+
+            <h3>Constraint &amp; Censorship Layer</h3>
+            <ul class="tree-children taxonomy">
+              <li>
+                <strong>Constraint</strong> — any limitation affecting creative
+                production (superclass).
+              </li>
+              <li>
+                <strong>LegalConstraint</strong> — laws, decrees, criminal
+                liability.
+              </li>
+              <li>
+                <strong>InstitutionalConstraint</strong> — publishers, studios,
+                committees, platform rules.
+              </li>
+              <li>
+                <strong>SocialConstraint</strong> — community norms, taboos,
+                moral sanctions.
+              </li>
+              <li>
+                <strong>PsychologicalConstraint</strong> — fear, risk
+                perception, internal pressure.
+              </li>
+              <li>
+                <strong>Censorship</strong> — a specialized Constraint aimed at
+                restricting expression.
+                <ul class="tax-children">
+                  <li>GovernmentCensorship</li>
+                  <li>CorporateCensorship</li>
+                  <li>ReligiousCensorship</li>
+                  <li>SocialCensorship</li>
+                  <li>SelfCensorship</li>
+                  <li>AIDrivenCensorship</li>
+                </ul>
+              </li>
+              <li>
+                <strong>CensorshipAct</strong> — a concrete censorship event
+                (ban, edit request, takedown, suppression, blacklisting,
+                shadowban).
+              </li>
+            </ul>
+
+            <h3>Actors &amp; Context</h3>
+            <ul class="tree-children taxonomy">
+              <li>
+                <strong>Authority</strong> — entity enforcing censorship (state
+                agency, platform, institution, community moderators).
+              </li>
+              <li>
+                <strong>Context</strong> — conditions where
+                censorship/creativity occurs.
+                <ul class="tax-children">
+                  <li>TemporalContext (decade / period)</li>
+                  <li>SpatialContext (country / region)</li>
+                  <li>HistoricalContext (e.g., “late Soviet period”)</li>
+                  <li>
+                    PoliticalContext (e.g., authoritarian regime / wartime)
+                  </li>
+                  <li>
+                    PlatformContext (e.g., “major social media platform”,
+                    “Chinese platform ecology”)
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Creative Response &amp; Outcomes</h3>
+            <ul class="tree-children taxonomy">
+              <li>
+                <strong>CreativeStrategy</strong> — strategy to bypass/cope with
+                constraint.
+                <ul class="tax-children">
+                  <li>AllegoryStrategy</li>
+                  <li>MetaphorStrategy</li>
+                  <li>SymbolismStrategy</li>
+                  <li>GenreShiftStrategy</li>
+                  <li>FormalExperimentationStrategy</li>
+                  <li>CodedLanguageStrategy</li>
+                  <li>VisualObfuscationStrategy</li>
+                  <li>MemeBasedCommunicationStrategy</li>
+                  <li>UndergroundDistributionStrategy</li>
+                  <li>SelfCensorshipStrategy</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Outcome</strong> — administrative/public result of a
+                censorship act.
+                <ul class="tax-children">
+                  <li>Banned</li>
+                  <li>Edited</li>
+                  <li>Approved</li>
+                  <li>Removed</li>
+                  <li>Shadowbanned / Downranked</li>
+                  <li>AllowedWithChanges</li>
+                  <li>CirculatedUnderground</li>
+                </ul>
+              </li>
+              <li>
+                <strong>ImpactOnCreativity</strong> — broader cultural/creative
+                consequences.
+                <ul class="tax-children">
+                  <li>SuppressionOfIdeas</li>
+                  <li>ChillingEffect</li>
+                  <li>InnovationUnderConstraint</li>
+                  <li>EmergenceOfUndergroundArt</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>AI Extension (Algorithmic / AI-driven Censorship)</h3>
+            <ul class="tree-children taxonomy">
+              <li>
+                <strong>AISystem</strong> — automated system used to
+                moderate/control content.
+                <ul class="tax-children">
+                  <li>ContentModerationAI</li>
+                  <li>SurveillanceAI</li>
+                  <li>PredictiveCensorshipAI</li>
+                </ul>
+              </li>
+              <li>
+                <strong>CensorshipMechanism</strong>
+                <ul class="tax-children">
+                  <li>ManualReview</li>
+                  <li>AutomatedFiltering</li>
+                  <li>KeywordFiltering</li>
+                  <li>PatternRecognition</li>
+                  <li>PrePublicationReview</li>
+                  <li>PostPublicationRemoval</li>
+                </ul>
+              </li>
+              <li>
+                <strong>DigitalBarrier</strong>
+                <ul class="tax-children">
+                  <li>Shadowban</li>
+                  <li>Throttling / Downranking</li>
+                  <li>AutoRemoval</li>
+                  <li>AccountLimitation</li>
+                </ul>
+              </li>
+              <li>
+                <strong>AlgorithmicBias</strong> — systematic errors (false
+                positives/unequal treatment).
+              </li>
+            </ul>
+
+            <h3>Object Properties (Relations)</h3>
+            <p class="subtitle-small">Core censorship–creativity relations</p>
+
+            <!-- Property Definitions as cards -->
+            <div class="property-defs">
+              <h3>Property Definitions (ConCreCen)</h3>
+              <p class="subtitle-small">Core censorship–creativity relations</p>
+
+              <div class="prop-grid">
+                <div id="prop-isEnforcedBy" class="scenario-card prop-card">
+                  <h4>isEnforcedBy</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> CensorshipAct → Authority
+                  </p>
+                  <p>
+                    Links a censorship policy/act to the authority that applies
+                    it (state body, institution, platform, community).
+                    Establishes who controls the restriction.
+                  </p>
+                </div>
+
+                <div id="prop-occursInContext" class="scenario-card prop-card">
+                  <h4>occursInContext</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> (CensorshipAct |
+                    CreativeWork | CreativeStrategy) → Context
+                  </p>
+                  <p>
+                    Connects censorship acts, creative works, or strategies to
+                    their historical / geopolitical / platform context (time
+                    period, regime, country, platform ecosystem). Enables
+                    comparison across contexts.
+                  </p>
+                </div>
+
+                <div
+                  id="prop-hasCensorshipType"
+                  class="scenario-card prop-card"
+                >
+                  <h4>hasCensorshipType</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> Censorship → CensorshipType
+                  </p>
+                  <p>
+                    Classifies censorship as political, moral, religious,
+                    corporate, social, self-censorship, or AI-driven. Supports
+                    querying patterns by type.
+                  </p>
+                </div>
+
+                <div
+                  id="prop-imposesConstraint"
+                  class="scenario-card prop-card"
+                >
+                  <h4>imposesConstraint</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> (Censorship | Authority) →
+                    Constraint
+                  </p>
+                  <p>
+                    Connects censorship (or an authority) to the concrete
+                    constraint that defines what is prohibited (banned topics,
+                    banned symbols, banned keywords, disallowed depictions).
+                  </p>
+                </div>
+
+                <div id="prop-targetsWork" class="scenario-card prop-card">
+                  <h4>targetsWork</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> CensorshipAct →
+                    CreativeWork
+                  </p>
+                  <p>
+                    Specifies which creative work is directly targeted by a
+                    censorship act (book, film, artwork, post, song, etc.).
+                  </p>
+                </div>
+
+                <div
+                  id="prop-constrainsProcess"
+                  class="scenario-card prop-card"
+                >
+                  <h4>constrainsProcess</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> Constraint →
+                    CreativeProcess
+                  </p>
+                  <p>
+                    Links a constraint to the creative process it shapes
+                    (writing, filming, publishing, posting, revising). Captures
+                    censorship as pressure on process, not only on finished
+                    products.
+                  </p>
+                </div>
+
+                <div id="prop-producesWork" class="scenario-card prop-card">
+                  <h4>producesWork</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> CreativeAgent →
+                    CreativeWork
+                  </p>
+                  <p>
+                    Connects creators (individuals or collectives) to the
+                    creative works they produce, allowing attribution and
+                    tracing creative agency.
+                  </p>
+                </div>
+
+                <div id="prop-usesMedium" class="scenario-card prop-card">
+                  <h4>usesMedium</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> CreativeWork → Medium
+                  </p>
+                  <p>
+                    Associates a creative work with its medium (literature,
+                    film, theatre, music, digital media, journalism), enabling
+                    medium-specific analysis.
+                  </p>
+                </div>
+
+                <div
+                  id="prop-respondsWithStrategy"
+                  class="scenario-card prop-card"
+                >
+                  <h4>respondsWithStrategy</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> (CreativeAgent |
+                    CreativeProcess) → CreativeStrategy
+                  </p>
+                  <p>
+                    Links a creator (or a creative work/process) to the strategy
+                    used to navigate constraints (allegory, metaphor, genre
+                    shift, coded language, etc.).
+                  </p>
+                </div>
+
+                <div id="prop-triggersStrategy" class="scenario-card prop-card">
+                  <h4>triggersStrategy</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> Constraint →
+                    CreativeStrategy
+                  </p>
+                  <p>
+                    Connects a constraint/censorship type to strategies that it
+                    provokes or makes likely, enabling analysis of “what kinds
+                    of censorship produce which workaround strategies.”
+                  </p>
+                </div>
+
+                <div id="prop-hasOutcome" class="scenario-card prop-card">
+                  <h4>hasOutcome</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> CensorshipAct → Outcome
+                  </p>
+                  <p>
+                    Represents the administrative/public outcome of censorship:
+                    banned, edited, approved, shadowbanned, removed,
+                    age-restricted, allowed-with-changes,
+                    circulated-underground.
+                  </p>
+                </div>
+
+                <div id="prop-hasImpact" class="scenario-card prop-card">
+                  <h4>hasImpact</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> (Censorship | Constraint) →
+                    ImpactOnCreativity
+                  </p>
+                  <p>
+                    Links censorship/constraints to broader consequences for
+                    creativity and culture (suppression of ideas, chilling
+                    effect, innovation under constraint, emergence of
+                    underground art).
+                  </p>
+                </div>
+
+                <!-- Additional AI / data properties added -->
+                <div id="prop-employsMechanism" class="scenario-card prop-card">
+                  <h4>employsMechanism</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> Censorship →
+                    CensorshipMechanism
+                  </p>
+                  <p>
+                    Connects Censorship to a CensorshipMechanism (ManualReview,
+                    AutomatedFiltering, KeywordFiltering, PatternRecognition).
+                  </p>
+                </div>
+
+                <div id="prop-utilizesSystem" class="scenario-card prop-card">
+                  <h4>utilizesSystem</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> AIDrivenCensorship →
+                    AISystem
+                  </p>
+                  <p>
+                    Connects AIDrivenCensorship to an AISystem
+                    (ContentModerationAI, SurveillanceAI,
+                    PredictiveCensorshipAI).
+                  </p>
+                </div>
+
+                <div
+                  id="prop-monitorsFlagsContent"
+                  class="scenario-card prop-card"
+                >
+                  <h4>monitors / flagsContent</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> AISystem → CreativeWork
+                  </p>
+                  <p>
+                    Connects AISystem to CreativeWork for detection, flagging,
+                    and monitoring.
+                  </p>
+                </div>
+
+                <div
+                  id="prop-imposesDigitalBarrier"
+                  class="scenario-card prop-card"
+                >
+                  <h4>imposesDigitalBarrier</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> AIDrivenCensorship →
+                    DigitalBarrier
+                  </p>
+                  <p>
+                    Links AIDrivenCensorship to platform-specific barriers
+                    (shadowban, throttling, auto-removal).
+                  </p>
+                </div>
+
+                <div id="prop-hasAccuracyRate" class="scenario-card prop-card">
+                  <h4>hasAccuracyRate</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> AISystem → xsd:decimal
+                  </p>
+                  <p>
+                    Data property describing the empirical accuracy of an
+                    AISystem (useful for bias and reliability analyses).
+                  </p>
+                </div>
+
+                <div
+                  id="prop-falsePositiveRate"
+                  class="scenario-card prop-card"
+                >
+                  <h4>falsePositiveRate</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> AISystem → xsd:decimal
+                  </p>
+                  <p>
+                    Data property recording rate of false positives (important
+                    for studying chilling effects and erroneous takedowns).
+                  </p>
+                </div>
+
+                <div
+                  id="prop-restrictionSeverity"
+                  class="scenario-card prop-card"
+                >
+                  <h4>restrictionSeverity</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> Constraint → SeverityLevel
+                  </p>
+                  <p>
+                    Data property capturing the intensity of a constraint (soft
+                    guideline, removal, criminal sanction), useful to rank and
+                    compare constraints.
+                  </p>
+                </div>
+
+                <div id="prop-hasOutcomeType" class="scenario-card prop-card">
+                  <h4>hasOutcomeType</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> Outcome → OutcomeType
+                  </p>
+                  <p>
+                    Classifies an Outcome with a controlled vocabulary (e.g.,
+                    Banned, Edited, Approved, Shadowbanned), improving CQ
+                    precision.
+                  </p>
+                </div>
+
+                <div id="prop-hasOutcomeDate" class="scenario-card prop-card">
+                  <h4>hasOutcomeDate</h4>
+                  <p class="prop-meta">
+                    <strong>Domain → Range:</strong> Outcome → xsd:date
+                  </p>
+                  <p>
+                    Date when the outcome (ban/edit/removal) was applied;
+                    supports temporal queries.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Duplicate user stories removed; canonical user-stories block appears earlier in 4.2 Modeling -->
+
+        <h2 id="kr-competency">4.2.3 Competency Questions</h2>
+
+        <ol class="competency-questions">
+          <li>
+            <div class="cq-question">
+              What types of censorship constrain a given creative work in a
+              specific context?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>CreativeWork</code>,
+              <code>Context</code>, <code>Censorship</code>,
+              <code>hasConstraint</code>, <code>occursInContext</code>
+            </div>
+          </li>
+          <li>
+            <div class="cq-question">
+              Which authorities enforce censorship in different historical and
+              digital environments?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>Authority</code>,
+              <code>Censorship</code>, <code>isEnforcedBy</code>
+            </div>
+          </li>
+          <li>
+            <div class="cq-question">
+              What creative strategies are used under political versus AI-driven
+              censorship?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>CensorshipType</code>,
+              <code>CreativeStrategy</code>,
+              <code>triggersStrategy</code>
+            </div>
+          </li>
+          <li>
+            <div class="cq-question">
+              Which creative works were banned, edited, or approved under
+              censorship?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>CreativeWork</code>,
+              <code>CensorshipAct</code>, <code>Outcome</code>
+            </div>
+          </li>
+          <li>
+            <div class="cq-question">
+              In which contexts does censorship lead to innovation under
+              constraint rather than suppression?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>Context</code>,
+              <code>ImpactOnCreativity</code>, <code>hasImpact</code>
+            </div>
+          </li>
+          <li>
+            <div class="cq-question">
+              How does self-censorship differ from institutional censorship in
+              its effects on creativity?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>SelfCensorship</code>,
+              <code>InstitutionalCensorship</code>,
+              <code>CreativeProcess</code>
+            </div>
+          </li>
+          <li>
+            <div class="cq-question">
+              Which media types are most affected by AI-driven censorship
+              mechanisms?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>Medium</code>,
+              <code>AIDrivenCensorship</code>, <code>targetsWork</code>
+            </div>
+          </li>
+          <li>
+            <div class="cq-question">
+              What forms of algorithmic bias occur in automated content
+              moderation?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>AISystem</code>,
+              <code>AlgorithmicBias</code>, <code>hasImpact</code>
+            </div>
+          </li>
+          <li>
+            <div class="cq-question">
+              Which creative strategies correlate with high constraint
+              environments?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>Constraint</code>,
+              <code>CreativeStrategy</code>, <code>CreativeProcess</code>
+            </div>
+          </li>
+          <li>
+            <div class="cq-question">
+              How do censorship mechanisms differ between pre-publication and
+              post-publication control?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>CensorshipMechanism</code>,
+              <code>PrePublication</code>,
+              <code>PostPublication</code>
+            </div>
+          </li>
+          <li>
+            <div class="cq-question">
+              Which works circulate through underground distribution networks
+              due to censorship?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>CreativeWork</code>,
+              <code>DistributionStrategy</code>, <code>Outcome</code>
+            </div>
+          </li>
+          <li>
+            <div class="cq-question">
+              How does predictive AI censorship alter creative planning and
+              genre selection?
+            </div>
+            <div class="cq-entities">
+              Needed entities/relations: <code>PredictiveCensorshipAI</code>,
+              <code>CreativeStrategy</code>, <code>Genre</code>
+            </div>
+          </li>
+        </ol>
+
+        <!-- Strategy Genealogy (analogous to "Inspiration Sources") -->
+        <section id="strategy-genealogy" class="section">
+          <h2>Strategy Genealogy</h2>
+
+          <p><strong>Research Question</strong></p>
+          <p>
+            What creative strategies are associated with different types of
+            censorship?
+          </p>
+
+          <p><strong>Finding</strong></p>
+          <p>
+            Based on the prototype scenario dataset, institutional censorship
+            (government/religious) is most frequently associated with allegory,
+            coded language, genre shifts, and underground distribution, while
+            AI-driven and platform censorship is associated with visual
+            obfuscation, memetic communication, and stylistic distortion.
+            Self-censorship is primarily linked to omission and cautious
+            framing.
+          </p>
+
+          <h3>📋 SPARQL-example</h3>
+          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+
+SELECT ?censorshipType
+       (GROUP_CONCAT(DISTINCT ?strategy; SEPARATOR=", ") AS ?strategies)
+WHERE {
+  ?c a ?censorshipType ;
+     :triggersStrategy ?strategy .
+  FILTER (?censorshipType IN (
+    :GovernmentCensorship,
+    :ReligiousCensorship,
+    :CorporateCensorship,
+    :AIDrivenCensorship,
+    :SelfCensorship
+  ))
+}
+GROUP BY ?censorshipType
+ORDER BY ?censorshipType</code></pre>
+
+          <h3>
+            📊 Query Results: Strategies by Censorship Type (Prototype Dataset)
+          </h3>
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Censorship Type</th>
+                <th>Strategies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GovernmentCensorship</td>
+                <td>
+                  AllegoryStrategy, CodedLanguageStrategy, GenreShiftStrategy,
+                  UndergroundDistributionStrategy
+                </td>
+              </tr>
+              <tr>
+                <td>ReligiousCensorship</td>
+                <td>GenreShiftStrategy, FormalExperimentationStrategy</td>
+              </tr>
+              <tr>
+                <td>CorporateCensorship</td>
+                <td>FormalExperimentationStrategy, SelfCensorshipStrategy</td>
+              </tr>
+              <tr>
+                <td>AIDrivenCensorship</td>
+                <td>
+                  VisualObfuscationStrategy, MemeBasedCommunicationStrategy,
+                  CodedLanguageStrategy
+                </td>
+              </tr>
+              <tr>
+                <td>SelfCensorship</td>
+                <td>SelfCensorshipStrategy</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Outcome Patterns</h3>
+          <p><strong>Research Question</strong></p>
+          <p>
+            What outcomes are most common under different censorship mechanisms?
+          </p>
+
+          <p><strong>Finding</strong></p>
+          <p>
+            Post-publication enforcement is associated with Removed /
+            Shadowbanned / Banned outcomes, whereas pre-publication and
+            predictive review are more often associated with Edited /
+            AllowedWithChanges outcomes.
+          </p>
+
+          <h3>📋 SPARQL-example</h3>
+          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+
+SELECT ?mechanism
+       (GROUP_CONCAT(DISTINCT ?outType; SEPARATOR=", ") AS ?outcomes)
+WHERE {
+  ?c :employsMechanism ?mechanism .
+  ?act a :CensorshipAct ;
+       :hasOutcome ?out .
+  ?out :hasOutcomeType ?outType .
+}
+GROUP BY ?mechanism
+ORDER BY ?mechanism</code></pre>
+
+          <h3>📊 Query Results: Outcomes by Mechanism (Prototype Dataset)</h3>
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Mechanism</th>
+                <th>Outcomes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PrePublicationReview</td>
+                <td>Approved, Edited, AllowedWithChanges</td>
+              </tr>
+              <tr>
+                <td>PredictiveFiltering</td>
+                <td>AllowedWithChanges</td>
+              </tr>
+              <tr>
+                <td>ManualReview</td>
+                <td>AllowedWithChanges, CirculatedUnderground</td>
+              </tr>
+              <tr>
+                <td>AutomatedFiltering</td>
+                <td>Shadowbanned, Removed</td>
+              </tr>
+              <tr>
+                <td>PostPublicationRemoval</td>
+                <td>Removed, Banned</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Context Matrix</h3>
+          <p><strong>Research Question</strong></p>
+          <p>
+            Which contexts are associated with innovation under constraint vs.
+            suppression?
+          </p>
+
+          <p><strong>Finding</strong></p>
+          <p>
+            Innovation under constraint appears across both historical and
+            contemporary cases, but suppression dominates in conflict and
+            high-stakes state contexts. Platform contexts show mixed outcomes
+            depending on mechanism opacity and false positives.
+          </p>
+
+          <h3>📋 SPARQL-example</h3>
+          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+
+SELECT ?context
+       (GROUP_CONCAT(DISTINCT ?impact; SEPARATOR=", ") AS ?impacts)
+WHERE {
+  ?c a :Censorship ;
+     :occursInContext ?context ;
+     :hasImpact ?impact .
+}
+GROUP BY ?context
+ORDER BY ?context</code></pre>
+
+          <h3>📊 Query Results: Context vs Impact (Prototype Dataset)</h3>
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Context (prototype labels)</th>
+                <th>Impacts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1930s authoritarian Europe</td>
+                <td>InnovationUnderConstraint</td>
+              </tr>
+              <tr>
+                <td>1960s clandestine theatre</td>
+                <td>EmergenceOfUndergroundArt</td>
+              </tr>
+              <tr>
+                <td>1990s Iran religious norms</td>
+                <td>InnovationUnderConstraint</td>
+              </tr>
+              <tr>
+                <td>early 2000s armed conflict</td>
+                <td>SuppressionOfIdeas, InnovationUnderConstraint</td>
+              </tr>
+              <tr>
+                <td>2010s platform satire</td>
+                <td>ChillingEffect</td>
+              </tr>
+              <tr>
+                <td>2010s–2020s nudity moderation</td>
+                <td>ChillingEffect</td>
+              </tr>
+              <tr>
+                <td>2020s AI misclassification</td>
+                <td>InnovationUnderConstraint, ChillingEffect</td>
+              </tr>
+              <tr>
+                <td>internet surveillance meme ecology</td>
+                <td>InnovationUnderConstraint</td>
+              </tr>
+              <tr>
+                <td>academia peer-review/funding</td>
+                <td>ChillingEffect</td>
+              </tr>
+              <tr>
+                <td>future predictive streaming review</td>
+                <td>ChillingEffect</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Additional analysis blocks provided by the user -->
+        <!-- Medium vs Outcomes -->
+        <section id="analysis-medium-outcomes" class="section">
+          <h2>Medium-Based Outcomes</h2>
+
+          <p>
+            <strong>Research Question:</strong><br />
+            Which media types are most affected by different censorship
+            outcomes?
+          </p>
+
+          <p>
+            <strong>Finding:</strong><br />
+            In the prototype dataset, platform-facing media (visual art, digital
+            posts, music distribution) show higher rates of
+            <em>shadowbanning</em> and <em>removal</em>, while state-controlled
+            contexts more frequently result in <em>bans</em> or
+            <em>underground circulation</em>. Academic and professional writing
+            contexts tend to produce <em>edits</em> through anticipatory
+            self-censorship.
+          </p>
+
+          <h3>📋 SPARQL-example</h3>
+          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+
+SELECT ?medium
+       (GROUP_CONCAT(DISTINCT ?outType; SEPARATOR=", ") AS ?outcomes)
+WHERE {
+  ?act a :CensorshipAct ;
+       :targetsWork ?work ;
+       :hasOutcome ?out .
+  ?work :usesMedium ?medium .
+  ?out :hasOutcomeType ?outType .
+}
+GROUP BY ?medium
+ORDER BY ?medium</code></pre>
+
+          <h3>📊 Query Results: Outcomes by Medium (Prototype Dataset)</h3>
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Medium</th>
+                <th>Outcomes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Literature</td>
+                <td>Approved</td>
+              </tr>
+              <tr>
+                <td>Theatre</td>
+                <td>CirculatedUnderground</td>
+              </tr>
+              <tr>
+                <td>Music</td>
+                <td>Removed, AllowedWithChanges</td>
+              </tr>
+              <tr>
+                <td>VisualArt</td>
+                <td>Shadowban, Removed, Approved</td>
+              </tr>
+              <tr>
+                <td>Journalism</td>
+                <td>Banned</td>
+              </tr>
+              <tr>
+                <td>AcademicText</td>
+                <td>Edited</td>
+              </tr>
+              <tr>
+                <td>Film/Streaming</td>
+                <td>AllowedWithChanges</td>
+              </tr>
+              <tr>
+                <td>DigitalMedia</td>
+                <td>Approved</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Digital Barriers vs Impact -->
+        <section id="analysis-barriers-impact" class="section">
+          <h2>Digital Barriers and Impact on Creativity</h2>
+
+          <p>
+            <strong>Research Question:</strong><br />
+            How do platform-specific digital barriers
+            (shadowban/downranking/removal) relate to broader impacts on
+            creativity?
+          </p>
+
+          <p>
+            <strong>Finding:</strong><br />
+            Non-transparent barriers such as <em>shadowbanning</em> and
+            <em>downranking</em> are strongly associated with
+            <em>chilling effects</em> (uncertainty and self-limitation), while
+            full <em>removal</em> correlates with explicit suppression. At the
+            same time, repeated barriers can also trigger adaptive innovation
+            (e.g., obfuscation and stylization).
+          </p>
+
+          <h3>📋 SPARQL-example</h3>
+          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+
+SELECT ?barrier
+       (GROUP_CONCAT(DISTINCT ?impact; SEPARATOR=", ") AS ?impacts)
+WHERE {
+  ?c a :AIDrivenCensorship ;
+     :imposesDigitalBarrier ?barrier ;
+     :hasImpact ?impact .
+}
+GROUP BY ?barrier
+ORDER BY ?barrier</code></pre>
+
+          <h3>
+            📊 Query Results: Digital Barriers vs Impact (Prototype Dataset)
+          </h3>
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Digital Barrier</th>
+                <th>Impacts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Shadowban</td>
+                <td>ChillingEffect</td>
+              </tr>
+              <tr>
+                <td>Throttling / Downranking</td>
+                <td>ChillingEffect</td>
+              </tr>
+              <tr>
+                <td>AutoRemoval</td>
+                <td>SuppressionOfIdeas</td>
+              </tr>
+              <tr>
+                <td>AccountLimitation</td>
+                <td>ChillingEffect</td>
+              </tr>
+              <tr>
+                <td>(Repeated barriers)</td>
+                <td>InnovationUnderConstraint</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Authority vs Censorship Type -->
+        <section id="analysis-authority-types" class="section">
+          <h2>Authority Patterns Across Censorship Types</h2>
+
+          <p>
+            <strong>Research Question:</strong><br />
+            Which authorities enforce different censorship types across
+            historical and digital environments?
+          </p>
+
+          <p>
+            <strong>Finding:</strong><br />
+            State and religious authorities dominate institutional censorship
+            contexts, while platforms act as key authorities in corporate and
+            AI-driven moderation environments. The dataset also demonstrates how
+            authority and mechanism can diverge: the same platform authority may
+            enforce both human review and automated filtering.
+          </p>
+
+          <h3>📋 SPARQL-example</h3>
+          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
+
+SELECT ?cType
+       (GROUP_CONCAT(DISTINCT ?authority; SEPARATOR=", ") AS ?authorities)
+WHERE {
+  ?act a :CensorshipAct ;
+       :isEnforcedBy ?authority .
+  ?c a ?cType .
+  FILTER (?cType IN (:GovernmentCensorship, :ReligiousCensorship, :CorporateCensorship, :AIDrivenCensorship, :SelfCensorship))
+}
+GROUP BY ?cType
+ORDER BY ?cType</code></pre>
+
+          <h3>
+            📊 Query Results: Authorities by Censorship Type (Prototype Dataset)
+          </h3>
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Censorship Type</th>
+                <th>Authorities</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GovernmentCensorship</td>
+                <td>StateMinistry, StateAgency</td>
+              </tr>
+              <tr>
+                <td>ReligiousCensorship</td>
+                <td>ReligiousAuthority</td>
+              </tr>
+              <tr>
+                <td>CorporateCensorship</td>
+                <td>Platform, StreamingPlatform</td>
+              </tr>
+              <tr>
+                <td>AIDrivenCensorship</td>
+                <td>Platform (via AISystem)</td>
+              </tr>
+              <tr>
+                <td>SelfCensorship</td>
+                <td>Creator / Researcher (internalized)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <!-- Duplicate Analysis/Queries block removed to avoid repeated IDs -->
+
+      <!-- KNOWLEDGE EXTRACTION SECTION -->
+      <section id="knowledge-extraction" class="section">
+        <h1>Knowledge Extraction</h1>
+
+        <p>
+          Following the refinement of the ConCreCen ontology, we proceeded to
+          validate the knowledge captured by the model through dataset
+          instantiation and qualitative analysis. This stage operationalizes
+          the ontology by populating it with concrete cases of
+          constraint-driven creativity under censorship, allowing us to
+          examine whether the defined classes, properties, and relations
+          adequately represent real-world and historically grounded
+          phenomena.
+        </p>
+
+        <p>
+          This section first introduces the dataset used to instantiate the
+          ontology, including the selection of seed cases and the use of
+          LLM-assisted data augmentation. Subsequently, we present an initial
+          descriptive analysis of the dataset to identify emerging patterns
+          prior to formal SPARQL-based evaluation.
+        </p>
+
+        <h2>5.1 Dataset</h2>
+
+        <h3>Dataset design and seed cases</h3>
+        <p>
+          In line with our bottom-up eXtreme Design methodology, the dataset
+          construction began with a small set of seed cases that directly
+          informed and validated the ontology’s structure. These initial
+          cases were selected to reflect diverse historical periods,
+          political contexts, media types, and censorship mechanisms,
+          ensuring broad coverage of the conceptual space modeled by
+          ConCreCen.
+        </p>
+
+        <p>The six seed cases include:</p>
+        <ul>
+          <li>
+            <strong>Allegorical novel under totalitarian censorship (1930s
+            Europe)</strong><br />A novelist employs allegory and symbolism
+            to bypass state-imposed political censorship.
+          </li>
+          <li>
+            <strong>Samizdat theatre under authoritarian surveillance (Cold
+            War Eastern Europe)</strong><br />A theatre collective stages
+            clandestine performances using coded language and underground
+            distribution.
+          </li>
+          <li>
+            <strong>Instrumental music under religious censorship (1990s
+            Iran)</strong><br />A musician adapts musical form and genre to
+            comply with religious restrictions on performance.
+          </li>
+          <li>
+            <strong>Journalistic literary reportage under wartime censorship
+            (early 2000s)</strong><br />A journalist reframes factual
+            reporting through personal narrative to avoid suppression.
+          </li>
+          <li>
+            <strong>Digital visual art under AI-driven moderation
+            (contemporary platforms)</strong><br />An artist modifies visual
+            style to evade automated nudity detection systems.
+          </li>
+          <li>
+            <strong>Screenwriting under predictive AI censorship (global
+            streaming platforms)</strong><br />A writer adapts narrative
+            structure using speculative fiction to pass algorithmic
+            pre-screening.
+          </li>
+        </ul>
+
+        <p>
+          These seed cases were iteratively enriched during ontology
+          development and later served as anchors for generating additional
+          instances.
+        </p>
+
+        <h3>LLM-assisted dataset augmentation</h3>
+        <p>
+          To expand the dataset beyond the initial seed cases, we employed a
+          Large Language Model (LLM) to generate additional instances that
+          conform to the ConCreCen ontological framework. The LLM was
+          provided with:
+        </p>
+        <ul>
+          <li>The ontology schema (Turtle file)</li>
+          <li>Structured descriptions of the six seed cases</li>
+          <li>
+            Explicit instructions to generate new cases by reusing existing
+            classes and properties only
+          </li>
+        </ul>
+
+        <p>
+          This process resulted in a dataset of 24 creative instances,
+          combining historically grounded cases and plausible contemporary
+          scenarios. While the LLM successfully generated structurally
+          coherent instances, manual review in Protégé revealed occasional
+          omissions or underspecified relations, particularly regarding
+          creative outputs and process granularity. These limitations are
+          documented as part of the model’s evaluation rather than treated as
+          errors.
+        </p>
+
+        <h3>Dataset structure (CSV)</h3>
+        <p>
+          The dataset was initially compiled in tabular form and later
+          converted into RDF triples. The CSV schema reflects the
+          ontology’s core classes and relations.
+        </p>
+
+        <p><strong>CSV schema:</strong></p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Column name</th>
+              <th>Ontology class / property</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>case_id</td><td>identifier</td></tr>
+            <tr><td>creative_agent</td><td>CreativeAgent</td></tr>
+            <tr><td>creative_work</td><td>CreativeWork</td></tr>
+            <tr><td>medium</td><td>Medium</td></tr>
+            <tr><td>censorship_type</td><td>CensorshipType</td></tr>
+            <tr><td>authority</td><td>Authority</td></tr>
+            <tr><td>constraint</td><td>Constraint</td></tr>
+            <tr><td>creative_strategy</td><td>CreativeStrategy</td></tr>
+            <tr><td>outcome</td><td>Outcome</td></tr>
+            <tr><td>impact</td><td>ImpactOnCreativity</td></tr>
+            <tr><td>temporal_context</td><td>TemporalContext</td></tr>
+            <tr><td>spatial_context</td><td>SpatialContext</td></tr>
+            <tr><td>platform_context</td><td>PlatformContext</td></tr>
+          </tbody>
+        </table>
+
+        <p><strong>Example rows (excerpt):</strong></p>
+        <pre class="csv-excerpt">case_id	creative_agent	creative_work	medium	censorship_type	authority	creative_strategy	outcome	impact	temporal_context	spatial_context
+C01	Novelist	Allegorical Novel	Literature	GovernmentCensorship	State Ministry	AllegoryStrategy	Approved	InnovationUnderConstraint	1930s	Southern Europe
+C05	Visual Artist	Abstract Digital Artwork	DigitalMedia	AIDrivenCensorship	Platform AI	VisualObfuscationStrategy	Shadowbanned	ChillingEffect	2020s	Global
+C12	Musician	Instrumental Album	Music	ReligiousCensorship	Religious Authority	GenreShiftStrategy	AllowedWithChanges	InnovationUnderConstraint	1990s	Iran</pre>
+
+        <h3>5.1.1 Dataset Analysis</h3>
+        <p>
+          An initial descriptive analysis of the dataset reveals several
+          notable patterns regarding censorship mechanisms, creative
+          strategies, and outcomes.
+        </p>
+
+        <h4>Distribution of censorship types</h4>
+        <p>Across the 24 instances:</p>
+        <ul>
+          <li>Institutional censorship (governmental, religious, corporate) appears in 14 cases</li>
+          <li>AI-driven censorship appears in 7 cases</li>
+          <li>Self-censorship is explicitly modeled in 9 cases, often co-occurring with institutional or algorithmic constraints</li>
+        </ul>
+
+        <p>
+          This suggests that self-censorship frequently emerges as a
+          secondary adaptive response rather than an isolated phenomenon.
+        </p>
+
+        <h4>Creative strategies under constraint</h4>
+        <p>The most frequently observed creative strategies are:</p>
+        <ul>
+          <li>Allegory / Metaphor strategies (10 cases)</li>
+          <li>Genre shift and formal experimentation (8 cases)</li>
+          <li>Visual obfuscation and coded language (7 cases)</li>
+          <li>Underground distribution (6 cases)</li>
+        </ul>
+
+        <p>
+          While allegorical strategies dominate historically grounded cases,
+          visual and formal strategies are more prevalent in AI-moderated
+          digital environments.
+        </p>
+
+        <h4>Outcomes and impacts</h4>
+        <p>The dataset shows a relatively balanced distribution of outcomes:</p>
+        <ul>
+          <li>Approved or AllowedWithChanges: 9 cases</li>
+          <li>Banned or Removed: 6 cases</li>
+          <li>Shadowbanned / Downranked: 5 cases</li>
+          <li>CirculatedUnderground: 4 cases</li>
+        </ul>
+
+        <p>
+          Importantly, innovation under constraint is identified in 13
+          cases, often co-occurring with partial suppression rather than
+          outright approval. This supports the hypothesis that censorship
+          does not exclusively suppress creativity but can redirect it toward
+          alternative expressive forms.
+        </p>
+
+        <h4>Interpretation: constraints as creative structuring forces</h4>
+        <p>
+          The dataset analysis highlights a key distinction between
+          constraint severity and creative outcome. High-severity constraints
+          do not uniformly result in suppression; instead, they correlate
+          strongly with the emergence of indirect, encoded, or formally
+          experimental strategies. Conversely, AI-driven censorship tends to
+          produce diffuse outcomes such as shadowbanning and throttling,
+          contributing more frequently to chilling effects than to overt
+          bans.
+        </p>
+
+        <p>
+          These findings suggest that censorship operates not merely as a
+          prohibitive force but as a structuring condition that shapes
+          creative processes, media choices, and cultural circulation
+          patterns—precisely the dynamic captured by the ConCreCen
+          ontology.
+        </p>
+      </section>
+
+      <!-- AI EXPERIMENT SECTION -->
+      <section id="ai-experiment" class="section">
+        <h1>AI Experiment</h1>
+        <p>This section reports on our empirical study of LLM behavior.</p>
+
+        <h2>Probing the Black Box</h2>
+        <p>
+          We subjected models (GPT-4, Claude, Llama) to a series of "borderline"
+          prompts. The results map the "latent censorship" inherent in RLHF
+          training, comparing it to historical codes of conduct.
+        </p>
+      </section>
+
+      <!-- EPILOGUE SECTION -->
+      <section id="epilogue" class="section">
+        <h1>Epilogue</h1>
+        <p>Concluding thoughts and future horizons.</p>
+        <p>
+          ConCreCen stands as a proof-of-concept that the "negative space"
+          created by censorship is as information-rich as the content itself.
+          Future iterations will visualize these constraint topologies in 3D
+          space.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
