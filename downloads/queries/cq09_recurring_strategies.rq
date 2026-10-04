@@ -1,0 +1,15 @@
+# CQ9. Which creative strategies recur across different media or censorship mechanisms?
+PREFIX cc:   <http://example.org/censorcreate#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?strategy (COUNT(DISTINCT ?medium) AS ?media) (COUNT(DISTINCT ?mech) AS ?mechanisms) WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:usesMechanism ?mech ;
+         cc:hasResponse ?response .
+  ?response cc:usesStrategy ?strategy .
+  ?work a ?medium .
+  ?medium rdfs:subClassOf cc:CreativeWork .
+  FILTER(?medium != cc:CensoredWork && ?medium != cc:WorkVersion)
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+GROUP BY ?strategy
+ORDER BY DESC(?media) DESC(?mechanisms)

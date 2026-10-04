@@ -1,0 +1,12 @@
+# CQ8. What was the outcome: adaptation, modification, suppression, abandonment, etc.?
+PREFIX cc:   <http://example.org/censorcreate#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?title ?response ?outcome WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:hasResponse ?response .
+  ?response cc:hasOutcome ?o .
+  ?o rdfs:label ?outcome . FILTER(lang(?outcome) = "en")
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+ORDER BY ?outcome

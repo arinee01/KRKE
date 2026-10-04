@@ -1,0 +1,457 @@
+@prefix cc: <http://example.org/censorcreate#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cc:CL_HKR_Distribution a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_HKR_DistributionStop ;
+    cc:claimText "Distribution was stopped on 10 September 1985 (agent not named in the source); Höpcke was 'called on the carpet and given a formal censure'. No documented creative response to this second event." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Darnton1991,
+        cc:SRC_Lance_Metailie .
+
+cc:CL_HKR_Irony a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_HKR_PrintApproval ;
+    cc:aboutCreativeResponse cc:RE_HKR_IronicNarration ;
+    cc:claimText "The preface to the French edition argues that Braun uses the ruse and irony of Enlightenment writers (Diderot's Jacques le fataliste) to pass subversive ideas; the narrator explicitly thematises why so much 'cannot be said directly'. This is an interpretation by the preface author, and the novel was written (1981) before the formal review began." ;
+    cc:confidenceLevel "medium" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Darnton1991,
+        cc:SRC_Lance_Metailie .
+
+cc:CL_HKR_Lesehilfe a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_HKR_PrintApproval ;
+    cc:aboutCreativeResponse cc:RE_HKR_Lesehilfe ;
+    cc:claimText "The 1985 GDR edition appeared with Schlenstedt's text, intended 'd'une part à amadouer la censure, d'autre part à guider le lecteur'; the Suhrkamp edition in the West was published without it." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_GuibertYeche,
+        cc:SRC_Hoepcke1985,
+        cc:SRC_Lance_Metailie,
+        cc:SRC_bpb_Selbstzensur .
+
+cc:CL_Notorious_Character a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_Notorious_PCAReview ;
+    cc:claimText "The PCA found Alicia's characterisation unacceptable and listed 17 changes (25 July 1945). How each change was implemented is not yet documented here — to be checked in Billheimer, ch. 14." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Billheimer2019 .
+
+cc:CL_Notorious_Kiss a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_Notorious_PCAReview ;
+    cc:aboutCreativeResponse cc:RE_Notorious_FragmentedKiss ;
+    cc:claimText "Hitchcock 'concocted' the kiss scene specifically to get around the supposed three-second rule; Bergman recalled that the censors 'couldn't and didn't cut the scene because we never at any one point kissed for more than three seconds'." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Billheimer2019,
+        cc:SRC_HitchZone_PCA .
+
+cc:CL_Shost_Fifth a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_Pravda1936 ;
+    cc:aboutCreativeResponse cc:RE_Shost_FifthSymphony ;
+    cc:claimText "The Fifth Symphony is documented as Shostakovich's response to the 1936 criticism ('a Soviet artist's creative reply to just criticism') and led to his rehabilitation; whether the finale is sincere or ironic remains debated, so the Ambiguity strategy is an interpretation." ;
+    cc:confidenceLevel "medium" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Robinson_BSO,
+        cc:SRC_Wiki_Muddle .
+
+cc:CL_Sym4_Withdrawal a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_Sym4_Cancellation ;
+    cc:aboutCreativeResponse cc:RE_Sym4_Withdrawal ;
+    cc:claimText "The Fourth Symphony was withdrawn from rehearsal in 1936 and not performed until 1961; sources disagree on whether the withdrawal was voluntary or imposed, hence both SelfCensorship and Ban are recorded." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Wiki_Sym4 .
+
+<http://example.org/censorcreate/cases> a owl:Ontology ;
+    rdfs:label "ConCreCen — documented case studies (knowledge graph)"@en ;
+    owl:imports <http://example.org/censorcreate> .
+
+cc:CON_HKR_Distribution a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Circulation of the already published novel halted." ;
+    cc:hasConstraintType cc:ContentRestriction .
+
+cc:CON_Notorious_Character a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:constrainsElement cc:EL_Notorious_AliciaCharacter ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Alicia must not appear as a 'grossly immoral woman'; any suggestion of sexual promiscuity to be avoided; the word 'tramp' to be removed." ;
+    cc:hasConstraintType cc:SubjectRestriction .
+
+cc:DieterSchlenstedt a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Dieter Schlenstedt"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:EL_HKR_PartyPrivilegeSatire a cc:Theme,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Ironic portrayal of a Party functionary (Kunze) and his chauffeur (Hinze); apparatchik privilege at the heart of the plot." .
+
+cc:EL_Notorious_AliciaCharacter a cc:Theme,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Characterisation of Alicia Huberman's sexual morality." .
+
+cc:EL_Notorious_KissScene a cc:Scene,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Love scene between Devlin (Cary Grant) and Alicia (Ingrid Bergman) in her Rio apartment." .
+
+cc:EL_Shost_ModernistIdiom a cc:AudioElement,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Dissonant, modernist musical idiom of Lady Macbeth (and of the Fourth Symphony in progress)." .
+
+cc:EV_HKR_DistributionStop a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "After publication and hostile reviews (Neues Deutschland; critic Anneliese Löffler), distribution of the novel in the GDR was stopped on 10 September 1985; Höpcke received a formal Party censure. A new GDR edition appeared only in 1988." ;
+    cc:documentedBy cc:SRC_Darnton1991,
+        cc:SRC_Lance_Metailie ;
+    cc:eventDate 1985 ;
+    cc:imposesConstraint cc:CON_HKR_Distribution ;
+    cc:targetsWork cc:HinzeKunzeRoman ;
+    cc:usesMechanism cc:DistributionRestriction .
+
+cc:EV_Pravda1936 a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Unsigned Pravda editorial 'Muddle Instead of Music' (28 January 1936), two days after Stalin attended the opera; further Pravda attacks followed; the opera disappeared from the repertoire (last performance 11 March 1936)." ;
+    cc:documentedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Robinson_BSO,
+        cc:SRC_Wiki_Muddle ;
+    cc:eventDate 1936 ;
+    cc:hasResponse cc:RE_Shost_FifthSymphony ;
+    cc:imposedBy cc:Pravda ;
+    cc:imposesConstraint cc:CON_Shost_Formalism ;
+    cc:targetsWork cc:LadyMacbethMtsensk ;
+    cc:usesMechanism cc:Ban,
+        cc:Removal .
+
+cc:EV_Sym4_Cancellation a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Premiere planned for 11 December 1936 (Leningrad Philharmonic, Stiedry) cancelled after rehearsals; officially presented as the composer's withdrawal, while other accounts (Glikman) report pressure from Party and Composers' Union officials." ;
+    cc:documentedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Wiki_Sym4 ;
+    cc:eventDate 1936 ;
+    cc:hasResponse cc:RE_Sym4_Withdrawal ;
+    cc:imposedBy cc:SovietComposersUnion ;
+    cc:imposesConstraint cc:CON_Shost_Formalism ;
+    cc:targetsWork cc:ShostakovichSymphony4 ;
+    cc:usesMechanism cc:Ban,
+        cc:SelfCensorship .
+
+cc:HKR_GDR_1985 a cc:WorkVersion,
+        owl:NamedIndividual ;
+    rdfs:label "Hinze-Kunze-Roman, Mitteldeutscher Verlag (Halle) 1985 edition with Schlenstedt's afterword; the simultaneous Suhrkamp edition appeared without it"@en ;
+    cc:createdBy cc:VolkerBraun ;
+    cc:creationYear 1985 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Hinze-Kunze-Roman, Mitteldeutscher Verlag (Halle) 1985 edition with Schlenstedt's afterword; the simultaneous Suhrkamp edition appeared without it" ;
+    cc:versionOf cc:HinzeKunzeRoman .
+
+cc:HV_Verlage_Buchhandel a cc:CensoringAgent,
+        cc:CensoringAuthority,
+        owl:NamedIndividual ;
+    rdfs:label "Hauptverwaltung Verlage und Buchhandel (GDR Ministry of Culture)"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:LadyMacbethMtsensk a cc:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Lady Macbeth of the Mtsensk District"@en ;
+    cc:createdBy cc:DmitriShostakovich ;
+    cc:creationYear 1932 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Lady Macbeth of the Mtsensk District" .
+
+cc:Notorious1946 a cc:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Notorious"@en ;
+    cc:createdBy cc:AlfredHitchcock ;
+    cc:creationYear 1946 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Notorious" .
+
+cc:PCA a cc:CensoringAgent,
+        cc:CensoringAuthority,
+        owl:NamedIndividual ;
+    rdfs:label "Production Code Administration (headed by Joseph Breen)"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:Pravda a cc:CensoringAgent,
+        owl:NamedIndividual ;
+    rdfs:label "Pravda (Communist Party newspaper; editorial expressing the official Party line)"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:ShostakovichSymphony4 a cc:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Symphony No. 4 in C minor, Op. 43"@en ;
+    cc:createdBy cc:DmitriShostakovich ;
+    cc:creationYear 1936 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Symphony No. 4 in C minor, Op. 43" .
+
+cc:ShostakovichSymphony5 a cc:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Symphony No. 5 in D minor, Op. 47"@en ;
+    cc:createdBy cc:DmitriShostakovich ;
+    cc:creationYear 1937 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Symphony No. 5 in D minor, Op. 47" .
+
+cc:SovietComposersUnion a cc:CensoringAgent,
+        owl:NamedIndividual ;
+    rdfs:label "Union of Soviet Composers and Party officials"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:AlfredHitchcock a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Alfred Hitchcock"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:CON_Notorious_Kissing a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:constrainsElement cc:EL_Notorious_KissScene ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Production Code: 'Excessive and lustful kissing ... are not to be shown'; enforced through an unofficial rule of thumb that a screen kiss should not exceed about three seconds." ;
+    cc:hasConstraintType cc:ContentRestriction,
+        cc:DirectRepresentationRestriction .
+
+cc:EV_HKR_PrintApproval a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Four-year GDR print-approval process: manuscript submitted to Mitteldeutscher Verlag end 1981, passed to the Hauptverwaltung end 1983; negative expert report by Werner Neubert (July 1984); Höpcke changed 'refusal' to 'needs further work'; renewed unsuccessful attempts to obtain changes; approval early 1985." ;
+    cc:documentedBy cc:SRC_Darnton1991,
+        cc:SRC_GuibertYeche,
+        cc:SRC_Hoepcke1985,
+        cc:SRC_Lance_Metailie,
+        cc:SRC_bpb_Selbstzensur ;
+    cc:eventDate 1985 ;
+    cc:hasResponse cc:RE_HKR_IronicNarration,
+        cc:RE_HKR_Lesehilfe ;
+    cc:imposedBy cc:HV_Verlage_Buchhandel ;
+    cc:imposesConstraint cc:CON_HKR_Ideology ;
+    cc:targetsWork cc:HinzeKunzeRoman ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:PriorApproval .
+
+cc:EV_Notorious_PCAReview a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Production Code Administration review of the script: Joseph Breen called it 'definitely unacceptable' (25 May 1945); a further review (25 July 1945) listed 17 required changes, incl. removing five uses of 'tramp' for Alicia." ;
+    cc:documentedBy cc:SRC_Billheimer2019,
+        cc:SRC_HitchZone_PCA ;
+    cc:eventDate 1945 ;
+    cc:hasResponse cc:RE_Notorious_FragmentedKiss ;
+    cc:imposedBy cc:PCA ;
+    cc:imposesConstraint cc:CON_Notorious_Character,
+        cc:CON_Notorious_Kissing ;
+    cc:targetsWork cc:Notorious1946 ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:PriorApproval .
+
+cc:RE_HKR_IronicNarration a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Braun frames the critique in an ironic, Diderot-like master-servant narrative with an intrusive narrator who comments on what 'cannot be said directly'." ;
+    cc:documentedBy cc:SRC_Darnton1991,
+        cc:SRC_Lance_Metailie ;
+    cc:eventDate 1981 ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:VolkerBraun ;
+    cc:respondsTo cc:CON_HKR_Ideology ;
+    cc:usesStrategy cc:Allegory,
+        cc:Irony .
+
+cc:RE_HKR_Lesehilfe a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Dieter Schlenstedt, one of the manuscript's first reviewers, writes an appended 'schöngeistige Lesehilfe': five fictional letters that ironise the review process and guide readers; the text was meant both to placate the censors and to guide reading." ;
+    cc:documentedBy cc:SRC_GuibertYeche,
+        cc:SRC_Hoepcke1985,
+        cc:SRC_Lance_Metailie,
+        cc:SRC_bpb_Selbstzensur ;
+    cc:eventDate 1985 ;
+    cc:hasOutcome cc:AlternativeVersionProduced ;
+    cc:performedBy cc:DieterSchlenstedt ;
+    cc:producesVersion cc:HKR_GDR_1985 ;
+    cc:respondsTo cc:CON_HKR_Ideology ;
+    cc:usesStrategy cc:Irony,
+        cc:ParatextualFraming .
+
+cc:RE_Notorious_FragmentedKiss a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Hitchcock stages a scene of about two and a half to three minutes as a chain of short kisses (none longer than ~3 seconds), interrupted by talk and a telephone call, so the scene stays within the rule but reads as one continuous embrace." ;
+    cc:documentedBy cc:SRC_Billheimer2019,
+        cc:SRC_HitchZone_PCA ;
+    cc:eventDate 1946 ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:AlfredHitchcock ;
+    cc:respondsTo cc:CON_Notorious_Kissing ;
+    cc:usesStrategy cc:Fragmentation,
+        cc:IndirectRepresentation .
+
+cc:RE_Shost_FifthSymphony a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Fifth Symphony (composed 18 April–20 July 1937; premiered 21 November 1937, Leningrad Philharmonic, Mravinsky): a turn 'towards greater accessibility, towards greater simplicity', classical form and tonal harmony, with a finale whose triumph has been heard as sincere or ironic." ;
+    cc:documentedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Robinson_BSO,
+        cc:SRC_Wiki_Muddle ;
+    cc:eventDate 1937 ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:DmitriShostakovich ;
+    cc:respondsTo cc:CON_Shost_Formalism ;
+    cc:resultsInWork cc:ShostakovichSymphony5 ;
+    cc:usesStrategy cc:Ambiguity .
+
+cc:RE_Sym4_Withdrawal a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Shostakovich withdraws the Fourth Symphony; it remains unperformed until 1961." ;
+    cc:documentedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Wiki_Sym4 ;
+    cc:eventDate 1936 ;
+    cc:hasOutcome cc:UnpublishedWork ;
+    cc:performedBy cc:DmitriShostakovich ;
+    cc:respondsTo cc:CON_Shost_Formalism .
+
+cc:CON_HKR_Ideology a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:constrainsElement cc:EL_HKR_PartyPrivilegeSatire ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Objections that the irony targets socialism, distorts the concept of freedom and represents the Liebknecht-Luxemburg commemoration unworthily (Neubert report, July 1984)." ;
+    cc:hasConstraintType cc:SubjectRestriction .
+
+cc:HinzeKunzeRoman a cc:LiteraryWork,
+        owl:NamedIndividual ;
+    rdfs:label "Hinze-Kunze-Roman"@en ;
+    cc:createdBy cc:VolkerBraun ;
+    cc:creationYear 1981 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Hinze-Kunze-Roman" .
+
+cc:SRC_GuibertYeche a cc:BookChapter,
+        owl:NamedIndividual ;
+    rdfs:label "Censure et autocensure en RDA : la littérature socialiste des années quatre-vingt face au pouvoir"@en ;
+    cc:bibliographicCitation "Guibert-Yeche, H. Censure et autocensure en RDA. ENS Éditions (OpenEdition Books), pp. 127–144." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Censure et autocensure en RDA : la littérature socialiste des années quatre-vingt face au pouvoir" ;
+    cc:sourceURL "https://books.openedition.org/enseditions/19283"^^xsd:anyURI .
+
+cc:SRC_HitchZone_PCA a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "Production Code Administration"@en ;
+    cc:bibliographicCitation "Production Code Administration. The Alfred Hitchcock Wiki (quotes the Production Code and Bergman's recollection)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Production Code Administration" ;
+    cc:sourceURL "https://the.hitchcock.zone/wiki/Production_Code_Administration"^^xsd:anyURI .
+
+cc:SRC_Hoepcke1985 a cc:PeriodicalArticle,
+        owl:NamedIndividual ;
+    rdfs:label "Über Volker Brauns HINZE-KUNZE-ROMAN"@en ;
+    cc:bibliographicCitation "Höpcke, K. (1985). Über Volker Brauns Hinze-Kunze-Roman. Die Weltbühne 33–34/1985; reprinted in Das Blättchen, April 2025." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 1985 ;
+    cc:sourceTitle "Über Volker Brauns HINZE-KUNZE-ROMAN" ;
+    cc:sourceURL "https://das-blaettchen.de/2025/04/ueber-volker-brauns-hinze-kunze-roman-71622.html"^^xsd:anyURI .
+
+cc:SRC_Robinson_BSO a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "Symphony No. 5 (programme note)"@en ;
+    cc:bibliographicCitation "Robinson, H. Symphony No. 5 (Shostakovich). Boston Symphony Orchestra programme note." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Symphony No. 5 (programme note)" ;
+    cc:sourceURL "https://www.bso.org/works/symphony-no-5-shostakovich"^^xsd:anyURI .
+
+cc:SRC_Wiki_Muddle a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "Muddle Instead of Music"@en ;
+    cc:bibliographicCitation "Muddle Instead of Music. Wikipedia (tertiary source, used for orientation only)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Muddle Instead of Music" ;
+    cc:sourceURL "https://en.wikipedia.org/wiki/Muddle_Instead_of_Music"^^xsd:anyURI .
+
+cc:SRC_Wiki_Sym4 a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "Symphony No. 4 (Shostakovich)"@en ;
+    cc:bibliographicCitation "Symphony No. 4 (Shostakovich). Wikipedia (tertiary source, used for orientation only)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Symphony No. 4 (Shostakovich)" ;
+    cc:sourceURL "https://en.wikipedia.org/wiki/Symphony_No._4_(Shostakovich)"^^xsd:anyURI .
+
+cc:SRC_bpb_Selbstzensur a cc:PeriodicalArticle,
+        owl:NamedIndividual ;
+    rdfs:label "Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR"@en ;
+    cc:bibliographicCitation "Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR. Aus Politik und Zeitgeschichte, Bundeszentrale für politische Bildung." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR" ;
+    cc:sourceURL "https://www.bpb.de/shop/zeitschriften/apuz/archiv/535791/das-wechselspiel-von-selbstzensur-und-literaturlenkung-in-der-ddr/"^^xsd:anyURI .
+
+cc:VolkerBraun a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Volker Braun"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:CON_Shost_Formalism a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:constrainsElement cc:EL_Shost_ModernistIdiom ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Condemnation of 'formalism': dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works." ;
+    cc:hasConstraintType cc:StylisticRestriction .
+
+cc:SRC_Billheimer2019 a cc:Book,
+        owl:NamedIndividual ;
+    rdfs:label "Hitchcock and the Censors (ch. 14 'Notorious (1946)')"@en ;
+    cc:bibliographicCitation "Billheimer, J. (2019). Hitchcock and the Censors. University Press of Kentucky, pp. 118–128. DOI 10.5810/kentucky/9780813177427.003.0015" ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2019 ;
+    cc:sourceTitle "Hitchcock and the Censors (ch. 14 'Notorious (1946)')" ;
+    cc:sourceURL "https://academic.oup.com/kentucky-scholarship-online/book/34148/chapter/289477434"^^xsd:anyURI .
+
+cc:DmitriShostakovich a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Dmitri Shostakovich"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:SRC_Darnton1991 a cc:PeriodicalArticle,
+        owl:NamedIndividual ;
+    rdfs:label "The Good Old Days"@en ;
+    cc:bibliographicCitation "Darnton, R. (1991). The Good Old Days. The New York Review of Books, 16 May 1991." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 1991 ;
+    cc:sourceTitle "The Good Old Days" ;
+    cc:sourceURL "https://www.nybooks.com/articles/1991/05/16/the-good-old-days/"^^xsd:anyURI .
+
+cc:SRC_FrolovaWalker2023 a cc:Book,
+        owl:NamedIndividual ;
+    rdfs:label "Shostakovich's Symphony No. 5 (ch. 1 'From the Fourth to the Fifth')"@en ;
+    cc:bibliographicCitation "Frolova-Walker, M. & Walker, J. (2023). Shostakovich's Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001" ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2023 ;
+    cc:sourceTitle "Shostakovich's Symphony No. 5 (ch. 1 'From the Fourth to the Fifth')" ;
+    cc:sourceURL "https://academic.oup.com/book/55321/chapter/428777077"^^xsd:anyURI .
+
+cc:SRC_Lance_Metailie a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "Le Roman de Hinze et Kunze (preface, publisher page)"@en ;
+    cc:bibliographicCitation "Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Le Roman de Hinze et Kunze (preface, publisher page)" ;
+    cc:sourceURL "https://editions-metailie.com/livre/le-roman-de-hinze-et-kunze/"^^xsd:anyURI .
+

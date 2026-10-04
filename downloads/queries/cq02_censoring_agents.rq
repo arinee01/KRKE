@@ -1,0 +1,11 @@
+# CQ2. Who or which institution imposed censorship on a work?
+PREFIX cc:   <http://example.org/censorcreate#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?title ?event ?agentName WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:imposedBy ?agent .
+  ?work cc:title ?title .
+  ?agent rdfs:label ?agentName .
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+ORDER BY ?title

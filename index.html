@@ -41,21 +41,21 @@
         ConCreCen
       </a>
 
+      
       <ul class="nav-links">
-        <li class="nav-item"><a href="#home">Home</a></li>
-        <li class="nav-item"><a href="#overview">Overview</a></li>
-        <li class="nav-item">
-          <a href="#theoretical-framework">Theoretical Framework</a>
-        </li>
-        <li class="nav-item"><a href="#methodology">Methodology</a></li>
-        <li class="nav-item">
-          <a href="#knowledge-representation">Knowledge Representation</a>
-        </li>
-        <li class="nav-item">
-          <a href="#knowledge-extraction">Knowledge Extraction</a>
-        </li>
-        <li class="nav-item"><a href="#ai-experiment">AI Experiment</a></li>
-        <li class="nav-item"><a href="#epilogue">Epilogue</a></li>
+        <li class="nav-item"><a href="#home"><span class="nav-num">1</span>Project Idea</a></li>
+        <li class="nav-item"><a href="#domain"><span class="nav-num">2</span>Domain</a></li>
+        <li class="nav-item"><a href="#theoretical-framework"><span class="nav-num">3</span>Theoretical Framework</a></li>
+        <li class="nav-item"><a href="#methodology"><span class="nav-num">4</span>Methodology</a></li>
+        <li class="nav-item"><a href="#knowledge-representation"><span class="nav-num">5</span>Knowledge Representation</a></li>
+        <li class="nav-item"><a href="#knowledge-extraction"><span class="nav-num">6</span>Knowledge Extraction</a></li>
+        <li class="nav-item"><a href="#knowledge-graph"><span class="nav-num">7</span>Knowledge Graph</a></li>
+        <li class="nav-item"><a href="#sparql"><span class="nav-num">8</span>SPARQL</a></li>
+        <li class="nav-item"><a href="#case-studies"><span class="nav-num">9</span>Case Studies</a></li>
+        <li class="nav-item"><a href="#evaluation"><span class="nav-num">10</span>Evaluation</a></li>
+        <li class="nav-item"><a href="#conclusions"><span class="nav-num">11</span>Conclusions</a></li>
+        <li class="nav-item"><a href="#bibliography"><span class="nav-num">12</span>Bibliography</a></li>
+        <li class="nav-item"><a href="#downloads"><span class="nav-num">13</span>Downloads</a></li>
       </ul>
 
       <div class="repo-link">
@@ -79,41 +79,28 @@
           GitHub Repository
         </a>
       </div>
+    
     </nav>
 
     <!-- CONTENT -->
-  <main id="main-content" class="main-content">
-      <!-- HOME SECTION -->
+    <main id="main-content" class="main-content">
+
       <section id="home" class="section">
         <h1 class="title-large">ConCreCen</h1>
-        <p class="subtitle-large">
-          Constraint-Driven Creativity under Censorship
-        </p>
-
+        <p class="subtitle-large">Constraint-Driven Creativity under Censorship</p>
+        <p class="kg-eyebrow">1. Project Idea</p>
+        <div class="callout">
+          <p><strong>Research question.</strong> How can censorship constraints and the creative responses to them be formally represented and explored through an ontology and knowledge graph?</p>
+          <p><strong>Hypothesis.</strong> Censorship may function both as a barrier to creative expression and, in some documented cases, as a constraint that prompts alternative creative strategies.</p>
+        </div>
         <p>
-          Creativity is often imagined as an expression of freedom — an
-          unrestricted flow of ideas, forms, and meanings. Yet historically and
-          contemporarily, some of the most distinctive creative practices have
-          emerged precisely under conditions of restriction. Political regimes,
-          moral norms, institutional controls, and algorithmic systems have
-          repeatedly attempted to regulate artistic and expressive production.
-          Paradoxically, these constraints have not only suppressed creativity
-          but have also reshaped it, giving rise to indirect, symbolic, and
-          highly inventive forms of expression.
+          ConCreCen models censorship as a process with consequences. A censorship event imposes a constraint on a
+          creative work. The creator may respond to that constraint with a strategy, and that response
+          has an outcome, which can range from suppression to creative adaptation. The project does not try to prove that censorship
+          increases creativity. It records, with sources, the conditions under which creators respond to
+          censorship, the strategies they use, and the outcomes that follow.
         </p>
-
-        <p>
-          <strong>ConCreCen</strong> (Constraint-Driven Creativity under
-          Censorship) explores this tension. The project investigates how
-          censorship functions simultaneously as a barrier and as a productive
-          friction within creative processes. Rather than treating censorship
-          solely as a negative external force, we model it as a complex system
-          of constraints that interact with creators, media, technologies, and
-          cultural contexts — sometimes silencing expression, sometimes
-          stimulating innovation through indirection.
-        </p>
-
-        <!-- Home Gallery -->
+        <pre><code>CensorshipEvent → CensorshipConstraint → CreativeResponse → CreativeStrategy → OutcomeType</code></pre>
         <div class="home-gallery">
           <div class="gallery-item">
             <img src="images/3-94.jpg" alt="Artwork — protest collage" loading="lazy" />
@@ -210,2132 +197,540 @@
             />
           </div>
         </div>
+      </section>
 
-        <h2>Why Censorship and Creativity?</h2>
+      <section id="domain" class="section">
+        <h1>2. Domain</h1>
+        <h2>Censorship</h2>
         <p>
-          Across different historical periods and media environments, creators
-          have repeatedly adapted their strategies in response to censorship:
+          Censorship refers to the control, restriction, modification, or suppression of information and creative
+          expression by an authority or institution. In the cultural domain, censorship may affect literature,
+          film, music, visual arts, and other forms of creative production.
         </p>
-        <ul>
-          <li>
-            In <strong>authoritarian regimes</strong>, writers and artists have
-            relied on allegory, metaphor, and coded language to convey
-            prohibited meanings.
-          </li>
-          <li>
-            In <strong>popular culture</strong>, censorship has been
-            aestheticized and strategically incorporated into artistic
-            identities.
-          </li>
-          <li>
-            In <strong>contemporary digital platforms</strong>, AI-driven
-            content moderation systems silently reshape creative behavior
-            through algorithmic filtering, uncertainty, and self-censorship.
-          </li>
-        </ul>
         <p>
-          These cases suggest that censorship does not simply remove creative
-          possibilities; it reconfigures the creative space itself, altering how
-          ideas are formed, expressed, and interpreted.
+          Censorship can take different forms, including complete bans, removal of specific content, required
+          modifications, restrictions on publication or distribution, and prior approval by censoring authorities.
         </p>
-
-        <h2>Project Aim</h2>
+        <h2>Creativity under constraints</h2>
         <p>
-          The goal of ConCreCen is to develop an ontology-based framework that
-          formally models:
+          Creativity does not necessarily occur in conditions of complete freedom. Creative processes often take
+          place within different kinds of limitations, such as technical, economic, social, legal, or institutional
+          constraints.
         </p>
-        <ul>
-          <li>different types of censorship and constraints;</li>
-          <li>
-            creative processes and strategies developed in response to them;
-          </li>
-          <li>
-            the social, historical, and technological contexts in which these
-            dynamics occur;
-          </li>
-          <li>
-            the consequences of censorship for creative production, ranging from
-            suppression to innovation under constraint.
-          </li>
-        </ul>
         <p>
-          By representing these elements in a structured knowledge model, the
-          project enables systematic analysis of how creativity operates under
-          restriction — both in historical cases and in contemporary,
-          AI-mediated environments.
-        </p>
-
-        <h2>From History to AI-Driven Censorship</h2>
-        <p>
-          ConCreCen deliberately spans multiple temporal and technological
-          contexts. It connects well-documented historical cases of censorship
-          in literature, art, and music with present-day forms of platform-based
-          and AI-driven moderation. In doing so, the project highlights a
-          critical shift: censorship is increasingly delegated to automated
-          systems, whose opaque decision-making processes introduce new forms of
-          constraint, uncertainty, and creative adaptation.
-        </p>
-        <p>This transition raises new questions:</p>
-        <ul>
-          <li>
-            How does algorithmic censorship differ from institutional or state
-            censorship?
-          </li>
-          <li>
-            What kinds of creative strategies emerge when creators must
-            anticipate machine judgment?
-          </li>
-          <li>
-            Can restriction imposed by AI systems unintentionally foster new
-            forms of symbolic, visual, or memetic creativity?
-          </li>
-        </ul>
-
-        <h2>Methodological Perspective</h2>
-        <p>ConCreCen follows a knowledge-engineering approach grounded in:</p>
-        <ul>
-          <li>theoretical work on creativity, constraints, and censorship;</li>
-          <li>
-            ontology design patterns and alignment with existing semantic
-            resources;
-          </li>
-          <li>
-            the construction of a knowledge graph combining historical and
-            synthetic cases;
-          </li>
-          <li>
-            exploratory experiments involving large language models (LLMs) for
-            generation and evaluation under constrained conditions.
-          </li>
-        </ul>
-        <p>
-          Rather than offering a normative answer to whether censorship is
-          “good” or “bad” for creativity, the project provides a formal
-          analytical tool for examining how creativity adapts, transforms, or
-          collapses under different forms of restriction.
-        </p>
-
-        <h2>A Core Insight</h2>
-        <p>At the heart of ConCreCen lies a simple but powerful observation:</p>
-        <div class="callout">
-          <strong
-            >Censorship does not only restrict creativity — in certain
-            conditions, it reorganizes and intensifies it.</strong
-          >
-        </div>
-        <p>
-          This ontology makes that insight explicit, traceable, and
-          computationally explorable.
+          Constraints can reduce the range of available solutions, but they can also lead creators to search for
+          alternative forms of expression.
         </p>
       </section>
 
-        <!-- Analysis / Queries placeholder removed (merged into Analysis / Queries section) -->
-
-      <!-- OVERVIEW SECTION -->
-      <section id="overview" class="section">
-        <h1>Overview</h1>
-
-        <p>
-          The <strong>ConCreCen project</strong> (Constraint-Driven Creativity
-          under Censorship) investigates the complex and often paradoxical
-          relationship between censorship, constraints, and creative production,
-          with particular attention to contemporary forms of AI-driven
-          censorship systems. While censorship is conventionally framed as a
-          purely suppressive mechanism that limits freedom of expression and
-          diminishes creative output, historical, sociological, and cognitive
-          studies increasingly suggest a more nuanced dynamic: constraints may
-          also function as productive frictions, stimulating indirect
-          expression, divergence, and innovative creative strategies.
-        </p>
-
-        <p>
-          This project adopts the position that creativity should not be
-          understood solely as a process unfolding under conditions of freedom,
-          but rather as a situated, adaptive phenomenon, shaped by
-          institutional, social, technological, and psychological pressures.
-          Censorship, in this sense, constitutes a specific class of constraints
-          that actively intervene in creative processes, influencing not only
-          what can be expressed, but also how expression is structured, encoded,
-          displaced, or transformed.
-        </p>
-
-        <p>
-          ConCreCen aims to formalize this relationship through the construction
-          of a domain ontology and knowledge graph that model:
-        </p>
-        <ul>
-          <li>
-            different types of censorship (political, moral, religious,
-            corporate, social, self-censorship),
-          </li>
-          <li>
-            diverse mechanisms of enforcement, including traditional manual
-            review and contemporary AI-powered content moderation,
-          </li>
-          <li>
-            the creative processes and strategies developed in response to
-            restrictive environments,
-          </li>
-          <li>
-            and the resulting impacts on creativity, ranging from suppression
-            and chilling effects to innovation under constraint and the
-            emergence of alternative expressive forms.
-          </li>
-        </ul>
-
-        <p>
-          A central theoretical assumption underlying the project is that
-          censorship does not merely block creativity, but often redirects it,
-          encouraging the use of allegory, metaphor, genre displacement,
-          symbolic protest, and underground or coded modes of expression. This
-          assumption is supported both by historical cases—such as creative
-          production under authoritarian regimes in the 20th century—and by
-          contemporary digital contexts, where algorithmic filtering and
-          predictive moderation systems reshape creative behavior on online
-          platforms.
-        </p>
-
-        <p>
-          Methodologically, ConCreCen follows an eXtreme Design (XD) and CLOWN
-          (Context, Literature, Ontology, Workflow, Narrative) approach,
-          combining theoretical research with iterative ontology engineering.
-          The project integrates:
-        </p>
-        <ul>
-          <li>
-            a theoretical framework drawing from creativity studies, censorship
-            theory, and cultural history;
-          </li>
-          <li>
-            the use of large language models (LLMs) to generate definitions,
-            scenarios, and user stories that inform ontology design;
-          </li>
-          <li>
-            a set of competency questions that articulate the reasoning goals of
-            the ontology;
-          </li>
-          <li>
-            and a structured dataset of historical, contemporary, and
-            AI-mediated censorship cases, represented as RDF triples within a
-            knowledge graph.
-          </li>
-        </ul>
-
-        <p>
-          The ontology developed in ConCreCen serves a dual function. First, it
-          acts as a conceptual and analytical framework for describing and
-          comparing how different forms of censorship interact with creative
-          agents, works, and processes across contexts. Second, it functions as
-          an operational artifact that can be used to guide and evaluate AI
-          systems: either by constraining generative models to produce creative
-          outputs under specified censorship conditions, or by enabling
-          evaluative tasks in which AI assesses creativity according to
-          ontology-defined criteria.
-        </p>
-
-        <p>
-          By explicitly modeling AI-driven government and platform censorship,
-          including content moderation algorithms, surveillance systems, and
-          predictive filtering mechanisms, ConCreCen addresses a critical
-          contemporary shift in the governance of creative expression. These
-          systems introduce new forms of scalability, opacity, and algorithmic
-          bias, generating novel constraints that affect not only what content
-          is removed, but how creators anticipate and adapt to automated
-          judgment.
-        </p>
-
-        <p>
-          Ultimately, ConCreCen positions censorship as a structuring force
-          within creative systems, rather than as an external anomaly. Through
-          formal knowledge representation, the project demonstrates how
-          constraints can simultaneously inhibit and activate creativity,
-          revealing patterns of adaptation, divergence, and innovation that
-          remain difficult to capture without an explicit ontological model.
-        </p>
-
-        <p>
-          By making these dynamics explicit, ConCreCen contributes both to
-          knowledge representation research and to broader discussions on
-          creativity, cultural production, and AI governance, offering a
-          reusable semantic framework for studying creativity under constraint
-          in historical and contemporary settings.
-        </p>
-      </section>
-
-      <!-- THEORETICAL FRAMEWORK SECTION -->
       <section id="theoretical-framework" class="section">
-        <h1>Theoretical Framework</h1>
-
-        <h2>Creativity as a Process under Constraints</h2>
+        <h1>3. Theoretical Framework</h1>
         <p>
-          Creativity has long been conceptualized not merely as the production
-          of novel artifacts, but as a complex process shaped by cognitive,
-          social, and environmental factors. Contemporary theories emphasize
-          that creative production does not occur in a vacuum; rather, it is
-          deeply influenced by contextual pressures, limitations, and
-          constraints (Rhodes, 1961; Stokes, 2005).
+          This project investigates the relationship between censorship, constraint, and creative response. Its
+          starting point is an apparent paradox: censorship is primarily intended to restrict expression, yet in
+          some documented cases creators react to such restrictions by modifying their methods of expression,
+          adopting indirect forms of communication, or producing alternative versions of their works.
         </p>
         <p>
-          Research on constraint-based creativity suggests that
-          limitations—whether formal, material, or ideological—can play a
-          productive role in creative thinking. Constraints reduce the space of
-          possible solutions, forcing creators to explore unconventional paths,
-          reinterpret existing forms, and develop indirect modes of expression.
-          In this sense, constraints may stimulate divergent thinking by
-          requiring creative agents to work "around" obstacles rather than
-          within unrestricted expressive freedom (Stokes, 2005).
-        </p>
-        <p>
-          This perspective aligns with integrated models of creativity, such as
-          those proposed in Aldo Gangemi's CreOn framework, which conceptualizes
-          creativity as a situated process involving agents, goals, phases, and
-          environmental pressures. Creativity emerges through interaction
-          between individual intention and external conditions, including
-          institutional and cultural limitations (Gangemi et al., 2021).
+          The ontology is based on three complementary theoretical perspectives: Robert Darnton on censorship,
+          Patricia D. Stokes on creativity under constraints, and Brent D. Rosso on the enabling and disabling
+          effects of constraints.
         </p>
 
-        <h2>Forms of Censorship</h2>
+        <h2>Darnton: censorship as an institutional process</h2>
         <p>
-          Censorship represents a specific and historically persistent form of
-          constraint on creative expression. It can be defined as the systematic
-          restriction, modification, or suppression of expressive content by
-          authoritative entities or internalized social norms (Petley, 2007).
+          In <em>Censors at Work: How States Shaped Literature</em> (2014), Robert Darnton approaches censorship
+          historically and comparatively through cases from eighteenth-century France, nineteenth-century British
+          India, and twentieth-century East Germany. He presents censorship as more than a simple distinction
+          between “allowed” and “forbidden” works, describing it as an institutional process involving
+          authorities, censors, authors, editors, regulations, negotiations, revisions, and bans. This perspective
+          supports modelling censorship as an event or process, rather than as a simple property of a work:
+        </p>
+        <pre><code>CensorshipEvent → targetsWork → CreativeWork
+CensorshipEvent → imposedBy → CensoringAgent
+CensorshipEvent → usesMechanism → CensorshipMechanism</code></pre>
+        <p>
+          Darnton also distinguishes censorship from constraints in general: not every limitation is censorship.
+          This allows the ontology to represent <code>CensorshipConstraint</code> as a specific type of
+          <code>Constraint</code>.
         </p>
         <p>
-          Scholars commonly distinguish between several forms of censorship:
-        </p>
-        <ul>
-          <li>
-            Political censorship, enforced by state institutions to control
-            ideological narratives and public discourse;
-          </li>
-          <li>
-            Moral and religious censorship, grounded in normative frameworks
-            regulating acceptable representations of sexuality, violence, or
-            belief;
-          </li>
-          <li>
-            Corporate censorship, exercised by media companies and digital
-            platforms through editorial policies and content moderation;
-          </li>
-          <li>
-            Self-censorship, where creators internalize external pressures and
-            preemptively limit their own expression (Foucault, 1977).
-          </li>
-        </ul>
-        <p>
-          These forms often coexist and interact, producing layered constraint
-          environments in which creative agents operate.
+          His work also shows that censorship may operate through interaction and negotiation rather than only
+          through complete prohibition. In the cases he studies, the relationships between authors, editors,
+          censoring institutions, and cultural production could involve revisions, negotiations, approvals,
+          surveillance, and self-censorship. For this reason, the ontology does not reduce all censorship
+          mechanisms to <code>Ban</code>, but distinguishes <code>Ban</code>, <code>Removal</code>,
+          <code>Redaction</code>, <code>ModificationRequirement</code>, <code>DistributionRestriction</code>,
+          <code>PublicationRestriction</code>, <code>PriorApproval</code> and <code>SelfCensorship</code>.
         </p>
 
-        <h2>Censorship as Creative Pressure</h2>
+        <h2>Stokes: creativity from constraints</h2>
         <p>
-          While censorship is conventionally understood as a purely suppressive
-          force, historical and sociological studies demonstrate a more
-          ambivalent relationship between censorship and creativity. Under
-          restrictive regimes, creators have frequently developed indirect
-          expressive strategies—such as allegory, metaphor, symbolic
-          abstraction, genre displacement, and formal experimentation—to convey
-          prohibited meanings (Bourdieu, 1993; Petley, 2007).
+          The second and central theoretical component is Patricia D. Stokes’s model of creativity from
+          constraints. In “Creativity from Constraints: What Can We Learn from Motherwell? From Mondrian? From
+          Klee?” (2008), Stokes presents creativity as a form of problem solving structured by constraints. Her
+          model directly questions the intuitive assumption that creativity requires maximum freedom. Stokes
+          describes a system of paired constraints: one constraint can preclude or limit the search among
+          familiar and reliable solutions, while another can promote or direct the search toward novel
+          alternatives. In simplified form:
+        </p>
+        <pre><code>Constraint → blocks a conventional solution → encourages search for alternatives</code></pre>
+        <p>
+          Applied to censorship, a restriction on direct expression may lead a creator to use another strategy,
+          such as metaphor, allegory, symbolism, or indirect representation. In the ontology this is represented
+          by <code>Constraint</code>, <code>CreativeResponse</code>, <code>CreativeStrategy</code> and
+          <code>OutcomeType</code>, and by the relations <code>imposesConstraint</code>, <code>respondsTo</code>,
+          <code>usesStrategy</code> and <code>hasOutcome</code>.
         </p>
         <p>
-          In such contexts, censorship functions as a form of creative pressure
-          or friction. Rather than eliminating expression altogether, it
-          reshapes creative processes by privileging ambiguity, multi-layered
-          interpretation, and coded communication. As a result, some cultural
-          products created under heavy censorship exhibit high levels of formal
-          innovation and interpretive complexity.
-        </p>
-        <p>
-          This paradoxical effect—where restriction leads to
-          innovation—constitutes a central theoretical assumption of the
-          ConCreCen project.
-        </p>
-
-        <h2>From Historical to Algorithmic Censorship</h2>
-        <p>
-          In the 21st century, censorship has increasingly been mediated by
-          algorithmic systems. Governments and digital platforms now rely on
-          AI-driven content moderation, automated filtering, and predictive
-          surveillance technologies to regulate expressive content at scale
-          (Gillespie, 2018).
-        </p>
-        <p>
-          Algorithmic censorship introduces new dynamics into the relationship
-          between constraints and creativity. While it enables unprecedented
-          reach and efficiency, it also produces novel forms of uncertainty,
-          such as false positives, opaque decision-making, and algorithmic bias.
-          These conditions often intensify the chilling effect, encouraging
-          widespread self-censorship among creators who cannot anticipate how
-          automated systems will interpret their work.
-        </p>
-        <p>
-          At the same time, algorithmic censorship has prompted the emergence of
-          new creative strategies, including visual obfuscation, coded language,
-          meme-based communication, and platform-specific aesthetic adaptations.
+          The important point is that the constraint does not automatically create creativity: it changes the
+          space of available solutions. A previously available solution becomes unavailable or less accessible,
+          potentially forcing or encouraging the search for another solution. Censorship is therefore modelled
+          not merely as an act of suppression but as a change in the conditions under which creative problem
+          solving takes place.
         </p>
 
-        <h2>Implications for Knowledge Representation</h2>
+        <h2>Rosso: enabling and disabling constraints</h2>
         <p>
-          The diversity of censorship forms, creative strategies, and contextual
-          conditions highlights the need for a structured and formal
-          representation framework. Informal descriptions are insufficient to
-          capture the complex relationships between censorship mechanisms,
-          creative processes, and their outcomes.
+          Brent D. Rosso’s “Creativity and Constraints” (2014) adds an important qualification: constraints do
+          not always improve creativity. Depending on their type and context, they may have either enabling or
+          disabling effects. For this reason, the ontology does not assume <code>Censorship → causes →
+          Creativity</code>. Instead, it represents multiple possible outcomes:
         </p>
-        <p>
-          By grounding the project in established theories of creativity and
-          censorship, ConCreCen provides a conceptual foundation for modeling
-          these interactions through an ontology and knowledge graph. This
-          theoretical framework informs the design of classes, relations, and
-          datasets developed in subsequent stages of the project.
-        </p>
-        <p>
-          Based on this theoretical grounding, the project proceeds to an
-          empirical and modeling phase. Large Language Models (LLMs) are
-          employed to generate user stories, creative scenarios, and preliminary
-          interpretations of censorship contexts. These narratives serve as the
-          basis for defining competency questions, which guide the formal design
-          of the ontology and the subsequent construction of the knowledge
-          graph.
-        </p>
+        <pre><code>CensorshipConstraint → CreativeResponse → hasOutcome → CreativeAdaptation
+CensorshipConstraint → CreativeResponse → hasOutcome → Suppression</code></pre>
+        <p>This makes the model conditional rather than deterministic.</p>
 
-        <h2>References</h2>
-        <ul>
-          <li>
-            Rhodes, M. (1961). <em>An Analysis of Creativity</em>. Phi Delta
-            Kappan.
-          </li>
-          <li>
-            Stokes, P. D. (2005).
-            <em>Creativity from Constraints: The Psychology of Breakthrough</em
-            >. Springer.
-          </li>
-          <li>
-            Gangemi, A., et al. (2021).
-            <em>CreOn: An Ontology of Creativity Theories</em>. Semantic Web
-            Journal.
-          </li>
-          <li>
-            Petley, J. (2007). <em>Censorship and the Arts</em>. Index on
-            Censorship.
-          </li>
-          <li>
-            Bourdieu, P. (1993). <em>The Field of Cultural Production</em>.
-            Columbia University Press.
-          </li>
-          <li>
-            Foucault, M. (1977). <em>Discipline and Punish</em>. Pantheon Books.
-          </li>
-          <li>
-            Gillespie, T. (2018).
-            <em
-              >Custodians of the Internet: Platforms, Content Moderation, and
-              the Hidden Decisions That Shape Social Media</em
-            >. Yale University Press.
-          </li>
-        </ul>
+        <h2>Conceptual model</h2>
+        <pre><code>Censorship Event → Constraint → Creative Response → Creative Strategy → Outcome</code></pre>
+        <p>
+          Darnton explains who censors, what is censored, and how censorship operates. Stokes explains how
+          constraints can redirect creative problem solving. Rosso explains why constraints may either stimulate
+          adaptation or suppress creativity. The ontology therefore does not attempt to prove that censorship
+          increases creativity. Instead, it models the conditions under which creators respond to censorship, the
+          strategies they use, and the outcomes that follow.
+        </p>
       </section>
 
-      <!-- METHODOLOGY SECTION -->
       <section id="methodology" class="section">
-        <h1>Methodology</h1>
+        <h1>4. Methodology</h1>
+        <h2>Scope</h2>
         <p>
-          This page describes the lifecycle of the ConCreCen knowledge graph
-          construction.
+          The knowledge graph covers documented cases of censorship of creative works in three media (literature,
+          music and film) and three censorship regimes: the German Democratic Republic, the Soviet Union and the
+          Hollywood Production Code. Together they span the period from 1936 to 1985. A case is included only if at least the censorship event is documented in
+          a scholarly or documentary source. A creative response is recorded only if a source documents it. If
+          a source reports a ban without a response, the case is recorded as an event without a response, not
+          as an inferred adaptation.
         </p>
-
-        <h2>NeOn Methodology</h2>
+        <h2>Sources</h2>
         <p>
-          We adopted the NeOn methodology for a flexible, scenario-based
-          development process. Key activities included domain analysis, re-using
-          existing vocabularies (DC, FOAF), and continuous evaluation against
-          competency questions.
+          The 11 sources include scholarly monographs and chapters (Frolova-Walker &amp; Walker; Billheimer;
+          Guibert-Yeche), historical and critical articles (Darnton in <em>The New York Review of Books</em>,
+          Höpcke in <em>Die Weltbühne</em>), and publisher and programme texts. Wikipedia entries were used only for
+          orientation and are marked as tertiary sources. The full list is available in <a href="#bibliography">Bibliography</a>.
         </p>
-      </section>
-
-      <!-- KNOWLEDGE REPRESENTATION SECTION -->
-      <section id="knowledge-representation" class="section">
-        <h1>Knowledge Representation</h1>
-
-        <p class="callout">
-          Access to the ontology file. To find the Turtle (TTL) file of our
-          ontology, navigate to the GitHub repository.
-        </p>
-
-        <h2 id="kr-ontology">4.1 The Ontology</h2>
+        <h2>Extraction</h2>
         <p>
-          ConCreCen (Constraint-Driven Creativity under Censorship) formalizes
-          constraint-driven creativity as an interaction between creative
-          agents, creative works, enforcement authorities, and the constraints
-          that shape production, circulation, and reception. The ontology models
-          censorship not only as an external suppressive force, but as a
-          structured set of constraints that can redirect creative processes and
-          provoke adaptive strategies (e.g., allegory, coded language, genre
-          shifts, visual obfuscation).
+          Facts were extracted manually into a fixed template (<code>cases.csv</code>), with one row per
+          event–response pair. Every relation between a censorship event and a creative response is stored as a
+          <code>Claim</code> with its supporting sources and a confidence level (high or medium). Interpretations
+          that remain contested in the literature have medium confidence. An LLM assistant was used to search for
+          and summarise sources and to draft Turtle code. Every fact entered into the dataset was checked against
+          the cited source.
         </p>
+        <h2>Ontology design methodology</h2>
         <p>
-          We distinguish between institutional censorship (state, religious,
-          corporate, social) and self-censorship, while extending the model to
-          contemporary AI-driven moderation. This extension captures algorithmic
-          mechanisms (e.g., keyword filtering, pattern recognition,
-          pre-/post-publication review), their operational artifacts (e.g.,
-          shadowbanning, throttling/downranking, automated removals), and side
-          effects such as false positives and algorithmic bias.
+          The ontology was developed iteratively and driven by competency questions, following the eXtreme
+          Design approach:
         </p>
-
-        <h2 id="kr-modeling">4.2 Modeling</h2>
-        <p>
-          The ontology was developed iteratively using a bottom-up extreme
-          design approach. We started from narrative scenarios and user stories,
-          derived competency questions (CQs), and then refined the TBox
-          (classes) and properties until each CQ could be expressed as a SPARQL
-          query over the resulting knowledge graph.
-        </p>
-
-        <h3>User Stories</h3>
-        <div class="user-stories">
-          <div class="user-story-card">
-            <div class="user-story-icon">👤</div>
-            <div class="user-story-content">
-              <h3>User Story 1 — Creator Perspective</h3>
-              <p>
-                As a writer working under restrictive political and technological
-                conditions, I want to express ideas that challenge dominant
-                narratives without triggering censorship mechanisms. I operate
-                within an environment shaped by both institutional regulations
-                and opaque algorithmic moderation systems. Explicit political
-                critique risks bans, account suspension, or legal consequences.
-                To navigate these constraints, I adopt creative strategies such
-                as allegory, metaphor, and genre displacement. My goal is not
-                only to avoid censorship but to communicate meaning to an
-                informed audience capable of interpreting coded messages. I am
-                constantly balancing expressive ambition with self-censorship,
-                uncertainty, and adaptation. Understanding how different
-                constraints shape creative outcomes would help me choose more
-                effective strategies.
-              </p>
-            </div>
-          </div>
-
-          <div class="user-story-card">
-            <div class="user-story-icon">🔬</div>
-            <div class="user-story-content">
-              <h3>User Story 2 — Researcher Perspective</h3>
-              <p>
-                As a researcher in digital humanities and knowledge
-                representation, I want to analyze how different forms of
-                censorship influence creative strategies and cultural
-                production. I aim to compare historical and contemporary cases
-                across media, regimes, and platforms. By modeling censorship
-                acts, constraints, and creative responses in a knowledge graph,
-                I want to identify patterns such as which constraints lead to
-                innovation versus suppression. I also want to explore how
-                AI-driven censorship differs from traditional forms in its
-                effects on creativity. My goal is to support comparative
-                analysis through structured queries rather than anecdotal
-                evidence.
-              </p>
-            </div>
-          </div>
-
-          <div class="user-story-card">
-            <div class="user-story-icon">🤖</div>
-            <div class="user-story-content">
-              <h3>User Story 3 — Platform / AI Moderation Perspective</h3>
-              <p>
-                As a designer of AI-based content moderation systems, I want to
-                understand how automated censorship affects creative expression.
-                My system must enforce content policies at scale, but false
-                positives and ambiguous interpretations are unavoidable.
-                Creators adapt by developing new expressive strategies that
-                evade detection, sometimes undermining policy goals. By
-                analyzing these interactions, I want to identify unintended
-                consequences such as chilling effects or emergent coded
-                communication. A structured ontology would help evaluate how
-                moderation mechanisms shape creative behavior.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4.2.1 LLM Outputs (Stage 3) -->
-        <h2 id="kr-llm-outputs">4.2.1 LLM Outputs (Stage 3)</h2>
-
-        <h2 id="kr-llm-method">LLM Generation Methodology</h2>
-        <p>
-          To support ontology design, we employed Large Language Models (LLMs)
-          to generate representative scenarios, user stories, and competency
-          questions. This approach enables rapid exploration of domain
-          complexity while maintaining a structured design workflow. Below are
-          representative examples of the prompting process.
-        </p>
-
-        <h2 id="kr-prompts">Prompts & Excerpts</h2>
-
-        <div class="llm-prompt">
-          <div class="callout-header">
-            <span class="callout-icon">💬</span>
-            <span class="callout-title">LLM Prompt</span>
-          </div>
-          <div class="callout-content">
-            <pre class="prompt-text">
-Generate 10 diverse scenarios illustrating the relationship between censorship and creativity across different historical periods, political contexts, and technological environments. Each scenario should include:
-
-- Temporal and geographic context
-- Type of censorship mechanism (institutional, algorithmic, self-censorship)
-- Creative domain (literature, film, music, digital art, journalism)
-- Specific creative strategies used to navigate constraint
-- Outcome and impact on creative expression
-
-Focus on cases where constraint leads to innovation, suppression, or both.</pre
-            >
-          </div>
-        </div>
-
-        <div class="llm-output">
-          <div class="callout-header">
-            <span class="callout-icon">🤖</span>
-            <span class="callout-title">LLM Output (excerpt)</span>
-          </div>
-          <div class="callout-content">
-            <p>
-              <strong
-                >Scenario 1 — Allegory under Totalitarian Rule (1930s
-                Europe)</strong
-              >
-            </p>
-            <p>
-              In the late 1930s, a novelist living under an authoritarian regime
-              in Southern Europe faces strict political censorship enforced by a
-              state ministry of culture. Explicit criticism of the government
-              and references to political repression are prohibited. The author
-              writes a fictional novel set in a distant, imaginary kingdom where
-              animals govern humans, using allegory to reflect real political
-              dynamics...
-            </p>
-            <p class="output-note">
-              <em
-                ><a href="#kr-scenarios"
-                  >Read more — See all 10 scenarios below</a
-                ></em
-              >
-            </p>
-          </div>
-        </div>
-
-        <div class="llm-prompt">
-          <div class="callout-header">
-            <span class="callout-icon">💬</span>
-            <span class="callout-title">LLM Prompt</span>
-          </div>
-          <div class="callout-content">
-            <pre class="prompt-text">
-Based on these scenarios, generate competency questions that an ontology should be able to answer. Format each as a natural language question followed by the required entities and relations needed to answer it.</pre
-            >
-          </div>
-        </div>
-
-        <div class="llm-output">
-          <div class="callout-header">
-            <span class="callout-icon">🤖</span>
-            <span class="callout-title">LLM Output (excerpt)</span>
-          </div>
-          <div class="callout-content">
-            <p>
-              <strong>CQ1:</strong> What types of censorship constrain a given
-              creative work in a specific context?
-            </p>
-            <p class="output-note">
-              Needed entities/relations: CreativeWork, Context, Censorship,
-              hasConstraint, occursInContext
-            </p>
-            <p class="output-note">
-              <em
-                ><a href="#kr-competency"
-                  >Read more — See all 12 competency questions below</a
-                ></em
-              >
-            </p>
-          </div>
-        </div>
-
-        <h2 id="kr-scenarios">Scenarios</h2>
-
-        <div class="accordion-controls">
-          <button class="btn-accordion-control" id="expand-all">
-            Open All
-          </button>
-          <button class="btn-accordion-control" id="collapse-all">
-            Close All
-          </button>
-        </div>
-
-        <div class="scenario-accordion">
-          <details class="scenario-item">
-            <summary class="scenario-summary">
-              <strong
-                >Scenario 1 — Allegory under Totalitarian Rule (1930s
-                Europe)</strong
-              >
-            </summary>
-            <div class="scenario-content">
-              <p>
-                In the late 1930s, a novelist living under an authoritarian
-                regime faces strict political censorship. Explicit criticism is
-                prohibited; the author writes a novel set in an imaginary
-                kingdom using allegory to reflect political dynamics, allowing
-                subversive meanings to circulate without direct reference to
-                real institutions.
-              </p>
-            </div>
-          </details>
-
-          <details class="scenario-item">
-            <summary class="scenario-summary">
-              <strong>Scenario 2 — Underground Theatre (1960s)</strong>
-            </summary>
-            <div class="scenario-content">
-              <p>
-                A theatre collective stages plays in clandestine venues to avoid
-                state censorship. Scripts are coded with double meanings and
-                performed for trusted audiences; distribution is through
-                samizdat-style networks. The constraint shapes formal choices
-                and audience practices.
-              </p>
-            </div>
-          </details>
-
-          <details class="scenario-item">
-            <summary class="scenario-summary">
-              <strong
-                >Scenario 3 — Satirical Music under Corporate Pressure
-                (2010s)</strong
-              >
-            </summary>
-            <div class="scenario-content">
-              <p>
-                Musicians face removal from playlists and demonetization for
-                overt political satire. Artists adapt by releasing instrumental
-                variations, pseudonymous accounts, or live-only performances,
-                altering production and distribution strategies to preserve
-                voice and avoid platform takedowns.
-              </p>
-            </div>
-          </details>
-
-          <details class="scenario-item">
-            <summary class="scenario-summary">
-              <strong
-                >Scenario 4 — Visual Artist and Platform Policy
-                (2010s–2020s)</strong
-              >
-            </summary>
-            <div class="scenario-content">
-              <p>
-                An image-sharing platform's nudity policy and automated filters
-                repeatedly flag an artist's work. The artist experiments with
-                abstraction and stylization to retain expressivity while
-                avoiding automatic removals; some works are accepted, others are
-                downranked, creating a patchwork of visibility.
-              </p>
-            </div>
-          </details>
-
-          <details class="scenario-item">
-            <summary class="scenario-summary">
-              <strong
-                >Scenario 5 — Academic Self-Censorship (Contemporary)</strong
-              >
-            </summary>
-            <div class="scenario-content">
-              <p>
-                A researcher anticipates peer-review and funding risks and omits
-                controversial case studies from a manuscript. Institutional and
-                reputational constraints shape research questions and language,
-                resulting in cautious framing and reduced critical disclosure.
-              </p>
-            </div>
-          </details>
-
-          <details class="scenario-item">
-            <summary class="scenario-summary">
-              <strong
-                >Scenario 6 — Meme Culture as Workaround (Internet Age)</strong
-              >
-            </summary>
-            <div class="scenario-content">
-              <p>
-                Creators use memetic forms and coded visual tropes to transmit
-                prohibited meanings; memes travel across platforms and can evade
-                moderation through rapid mutation, enabling indirect political
-                commentary under surveillance.
-              </p>
-            </div>
-          </details>
-          <details class="scenario-item">
-            <summary class="scenario-summary">
-              Scenario 7 — Music under Religious Norms
-              <span class="scenario-context">(1990s Iran)</span>
-            </summary>
-            <div class="scenario-content">
-              <p>
-                A musician in 1990s Iran faces religious censorship restricting
-                certain musical styles and public performances.
-                Western-influenced genres are prohibited. The artist composes
-                instrumental music using traditional structures while subtly
-                incorporating modern harmonies. The creative strategy involves
-                genre blending and formal experimentation. Performances occur in
-                semi-private cultural venues. The outcome is limited public
-                exposure but sustained creative innovation.
-              </p>
-            </div>
-          </details>
-
-          <details class="scenario-item">
-            <summary class="scenario-summary">
-              Scenario 8 — Platform AI Bias in Visual Art Moderation
-              <span class="scenario-context">(2020s)</span>
-            </summary>
-            <div class="scenario-content">
-              <p>
-                A contemporary visual artist uploads digital artwork depicting
-                abstract human forms to an image-sharing platform. AI-driven
-                moderation systems misclassify the artwork as violating nudity
-                policies. The artist modifies the style using geometric
-                abstraction and visual distortion. The revised works are
-                approved but lose some expressive clarity. The outcome reflects
-                algorithmic bias and adaptive creativity.
-              </p>
-            </div>
-          </details>
-
-          <details class="scenario-item">
-            <summary class="scenario-summary">
-              Scenario 9 — Journalistic Censorship during Armed Conflict
-              <span class="scenario-context">(2000s)</span>
-            </summary>
-            <div class="scenario-content">
-              <p>
-                A journalist reporting on a military conflict in the early 2000s
-                faces state-imposed political censorship. Reporting on civilian
-                casualties is restricted. The journalist writes literary
-                reportage using personal narratives and fragmented storytelling.
-                The creative strategy reframes factual reporting as
-                human-interest literature. The work is published internationally
-                but banned domestically. The outcome is suppression in the local
-                context and innovation in narrative form.
-              </p>
-            </div>
-          </details>
-
-          <details class="scenario-item">
-            <summary class="scenario-summary">
-              Scenario 10 — Predictive AI Censorship on Streaming Platforms
-              <span class="scenario-context">(Future-Oriented)</span>
-            </summary>
-            <div class="scenario-content">
-              <p>
-                A screenwriter working for a global streaming platform submits a
-                politically sensitive script. Predictive AI systems flag the
-                script as potentially controversial before publication.
-                Corporate authorities request revisions. The writer rewrites the
-                narrative using speculative fiction and alternate timelines. The
-                series is released with altered themes. The outcome shows
-                pre-emptive censorship and strategic genre shift.
-              </p>
-            </div>
-          </details>
-        </div>
-
-        <!-- User Stories moved earlier under Scenarios; duplicate removed -->
-        <section id="kr-core-classes" class="kr-core-classes">
-          <div class="kr-tree card">
-            <h2 id="kr-classes-properties">4.2.2 Classes &amp; Properties</h2>
-            <p class="subtitle-small">Ontology Class Taxonomy (TBox)</p>
-
-            <h3>Core Domain Entities</h3>
-            <ul class="tree-children taxonomy">
-              <li>
-                <strong>CreativeAgent</strong> — creator/actor producing a
-                creative work under constraints (writer, artist, journalist,
-                content creator).
-              </li>
-              <li>
-                <strong>CreativeWork</strong> — the creative artifact (novel,
-                film, song, artwork, post, video).
-              </li>
-              <li>
-                <strong>CreativeProcess</strong> — the production activity
-                shaping the work (writing, filming, publishing, posting,
-                revising).
-              </li>
-              <li>
-                <strong>Medium</strong> — channel/form of expression
-                (literature, film, theatre, music, visual art, digital media,
-                journalism).
-              </li>
-            </ul>
-
-            <h3>Constraint &amp; Censorship Layer</h3>
-            <ul class="tree-children taxonomy">
-              <li>
-                <strong>Constraint</strong> — any limitation affecting creative
-                production (superclass).
-              </li>
-              <li>
-                <strong>LegalConstraint</strong> — laws, decrees, criminal
-                liability.
-              </li>
-              <li>
-                <strong>InstitutionalConstraint</strong> — publishers, studios,
-                committees, platform rules.
-              </li>
-              <li>
-                <strong>SocialConstraint</strong> — community norms, taboos,
-                moral sanctions.
-              </li>
-              <li>
-                <strong>PsychologicalConstraint</strong> — fear, risk
-                perception, internal pressure.
-              </li>
-              <li>
-                <strong>Censorship</strong> — a specialized Constraint aimed at
-                restricting expression.
-                <ul class="tax-children">
-                  <li>GovernmentCensorship</li>
-                  <li>CorporateCensorship</li>
-                  <li>ReligiousCensorship</li>
-                  <li>SocialCensorship</li>
-                  <li>SelfCensorship</li>
-                  <li>AIDrivenCensorship</li>
-                </ul>
-              </li>
-              <li>
-                <strong>CensorshipAct</strong> — a concrete censorship event
-                (ban, edit request, takedown, suppression, blacklisting,
-                shadowban).
-              </li>
-            </ul>
-
-            <h3>Actors &amp; Context</h3>
-            <ul class="tree-children taxonomy">
-              <li>
-                <strong>Authority</strong> — entity enforcing censorship (state
-                agency, platform, institution, community moderators).
-              </li>
-              <li>
-                <strong>Context</strong> — conditions where
-                censorship/creativity occurs.
-                <ul class="tax-children">
-                  <li>TemporalContext (decade / period)</li>
-                  <li>SpatialContext (country / region)</li>
-                  <li>HistoricalContext (e.g., “late Soviet period”)</li>
-                  <li>
-                    PoliticalContext (e.g., authoritarian regime / wartime)
-                  </li>
-                  <li>
-                    PlatformContext (e.g., “major social media platform”,
-                    “Chinese platform ecology”)
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-            <h3>Creative Response &amp; Outcomes</h3>
-            <ul class="tree-children taxonomy">
-              <li>
-                <strong>CreativeStrategy</strong> — strategy to bypass/cope with
-                constraint.
-                <ul class="tax-children">
-                  <li>AllegoryStrategy</li>
-                  <li>MetaphorStrategy</li>
-                  <li>SymbolismStrategy</li>
-                  <li>GenreShiftStrategy</li>
-                  <li>FormalExperimentationStrategy</li>
-                  <li>CodedLanguageStrategy</li>
-                  <li>VisualObfuscationStrategy</li>
-                  <li>MemeBasedCommunicationStrategy</li>
-                  <li>UndergroundDistributionStrategy</li>
-                  <li>SelfCensorshipStrategy</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Outcome</strong> — administrative/public result of a
-                censorship act.
-                <ul class="tax-children">
-                  <li>Banned</li>
-                  <li>Edited</li>
-                  <li>Approved</li>
-                  <li>Removed</li>
-                  <li>Shadowbanned / Downranked</li>
-                  <li>AllowedWithChanges</li>
-                  <li>CirculatedUnderground</li>
-                </ul>
-              </li>
-              <li>
-                <strong>ImpactOnCreativity</strong> — broader cultural/creative
-                consequences.
-                <ul class="tax-children">
-                  <li>SuppressionOfIdeas</li>
-                  <li>ChillingEffect</li>
-                  <li>InnovationUnderConstraint</li>
-                  <li>EmergenceOfUndergroundArt</li>
-                </ul>
-              </li>
-            </ul>
-
-            <h3>AI Extension (Algorithmic / AI-driven Censorship)</h3>
-            <ul class="tree-children taxonomy">
-              <li>
-                <strong>AISystem</strong> — automated system used to
-                moderate/control content.
-                <ul class="tax-children">
-                  <li>ContentModerationAI</li>
-                  <li>SurveillanceAI</li>
-                  <li>PredictiveCensorshipAI</li>
-                </ul>
-              </li>
-              <li>
-                <strong>CensorshipMechanism</strong>
-                <ul class="tax-children">
-                  <li>ManualReview</li>
-                  <li>AutomatedFiltering</li>
-                  <li>KeywordFiltering</li>
-                  <li>PatternRecognition</li>
-                  <li>PrePublicationReview</li>
-                  <li>PostPublicationRemoval</li>
-                </ul>
-              </li>
-              <li>
-                <strong>DigitalBarrier</strong>
-                <ul class="tax-children">
-                  <li>Shadowban</li>
-                  <li>Throttling / Downranking</li>
-                  <li>AutoRemoval</li>
-                  <li>AccountLimitation</li>
-                </ul>
-              </li>
-              <li>
-                <strong>AlgorithmicBias</strong> — systematic errors (false
-                positives/unequal treatment).
-              </li>
-            </ul>
-
-            <h3>Object Properties (Relations)</h3>
-            <p class="subtitle-small">Core censorship–creativity relations</p>
-
-            <!-- Property Definitions as cards -->
-            <div class="property-defs">
-              <h3>Property Definitions (ConCreCen)</h3>
-              <p class="subtitle-small">Core censorship–creativity relations</p>
-
-              <div class="prop-grid">
-                <div id="prop-isEnforcedBy" class="scenario-card prop-card">
-                  <h4>isEnforcedBy</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> CensorshipAct → Authority
-                  </p>
-                  <p>
-                    Links a censorship policy/act to the authority that applies
-                    it (state body, institution, platform, community).
-                    Establishes who controls the restriction.
-                  </p>
-                </div>
-
-                <div id="prop-occursInContext" class="scenario-card prop-card">
-                  <h4>occursInContext</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> (CensorshipAct |
-                    CreativeWork | CreativeStrategy) → Context
-                  </p>
-                  <p>
-                    Connects censorship acts, creative works, or strategies to
-                    their historical / geopolitical / platform context (time
-                    period, regime, country, platform ecosystem). Enables
-                    comparison across contexts.
-                  </p>
-                </div>
-
-                <div
-                  id="prop-hasCensorshipType"
-                  class="scenario-card prop-card"
-                >
-                  <h4>hasCensorshipType</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> Censorship → CensorshipType
-                  </p>
-                  <p>
-                    Classifies censorship as political, moral, religious,
-                    corporate, social, self-censorship, or AI-driven. Supports
-                    querying patterns by type.
-                  </p>
-                </div>
-
-                <div
-                  id="prop-imposesConstraint"
-                  class="scenario-card prop-card"
-                >
-                  <h4>imposesConstraint</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> (Censorship | Authority) →
-                    Constraint
-                  </p>
-                  <p>
-                    Connects censorship (or an authority) to the concrete
-                    constraint that defines what is prohibited (banned topics,
-                    banned symbols, banned keywords, disallowed depictions).
-                  </p>
-                </div>
-
-                <div id="prop-targetsWork" class="scenario-card prop-card">
-                  <h4>targetsWork</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> CensorshipAct →
-                    CreativeWork
-                  </p>
-                  <p>
-                    Specifies which creative work is directly targeted by a
-                    censorship act (book, film, artwork, post, song, etc.).
-                  </p>
-                </div>
-
-                <div
-                  id="prop-constrainsProcess"
-                  class="scenario-card prop-card"
-                >
-                  <h4>constrainsProcess</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> Constraint →
-                    CreativeProcess
-                  </p>
-                  <p>
-                    Links a constraint to the creative process it shapes
-                    (writing, filming, publishing, posting, revising). Captures
-                    censorship as pressure on process, not only on finished
-                    products.
-                  </p>
-                </div>
-
-                <div id="prop-producesWork" class="scenario-card prop-card">
-                  <h4>producesWork</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> CreativeAgent →
-                    CreativeWork
-                  </p>
-                  <p>
-                    Connects creators (individuals or collectives) to the
-                    creative works they produce, allowing attribution and
-                    tracing creative agency.
-                  </p>
-                </div>
-
-                <div id="prop-usesMedium" class="scenario-card prop-card">
-                  <h4>usesMedium</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> CreativeWork → Medium
-                  </p>
-                  <p>
-                    Associates a creative work with its medium (literature,
-                    film, theatre, music, digital media, journalism), enabling
-                    medium-specific analysis.
-                  </p>
-                </div>
-
-                <div
-                  id="prop-respondsWithStrategy"
-                  class="scenario-card prop-card"
-                >
-                  <h4>respondsWithStrategy</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> (CreativeAgent |
-                    CreativeProcess) → CreativeStrategy
-                  </p>
-                  <p>
-                    Links a creator (or a creative work/process) to the strategy
-                    used to navigate constraints (allegory, metaphor, genre
-                    shift, coded language, etc.).
-                  </p>
-                </div>
-
-                <div id="prop-triggersStrategy" class="scenario-card prop-card">
-                  <h4>triggersStrategy</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> Constraint →
-                    CreativeStrategy
-                  </p>
-                  <p>
-                    Connects a constraint/censorship type to strategies that it
-                    provokes or makes likely, enabling analysis of “what kinds
-                    of censorship produce which workaround strategies.”
-                  </p>
-                </div>
-
-                <div id="prop-hasOutcome" class="scenario-card prop-card">
-                  <h4>hasOutcome</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> CensorshipAct → Outcome
-                  </p>
-                  <p>
-                    Represents the administrative/public outcome of censorship:
-                    banned, edited, approved, shadowbanned, removed,
-                    age-restricted, allowed-with-changes,
-                    circulated-underground.
-                  </p>
-                </div>
-
-                <div id="prop-hasImpact" class="scenario-card prop-card">
-                  <h4>hasImpact</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> (Censorship | Constraint) →
-                    ImpactOnCreativity
-                  </p>
-                  <p>
-                    Links censorship/constraints to broader consequences for
-                    creativity and culture (suppression of ideas, chilling
-                    effect, innovation under constraint, emergence of
-                    underground art).
-                  </p>
-                </div>
-
-                <!-- Additional AI / data properties added -->
-                <div id="prop-employsMechanism" class="scenario-card prop-card">
-                  <h4>employsMechanism</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> Censorship →
-                    CensorshipMechanism
-                  </p>
-                  <p>
-                    Connects Censorship to a CensorshipMechanism (ManualReview,
-                    AutomatedFiltering, KeywordFiltering, PatternRecognition).
-                  </p>
-                </div>
-
-                <div id="prop-utilizesSystem" class="scenario-card prop-card">
-                  <h4>utilizesSystem</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> AIDrivenCensorship →
-                    AISystem
-                  </p>
-                  <p>
-                    Connects AIDrivenCensorship to an AISystem
-                    (ContentModerationAI, SurveillanceAI,
-                    PredictiveCensorshipAI).
-                  </p>
-                </div>
-
-                <div
-                  id="prop-monitorsFlagsContent"
-                  class="scenario-card prop-card"
-                >
-                  <h4>monitors / flagsContent</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> AISystem → CreativeWork
-                  </p>
-                  <p>
-                    Connects AISystem to CreativeWork for detection, flagging,
-                    and monitoring.
-                  </p>
-                </div>
-
-                <div
-                  id="prop-imposesDigitalBarrier"
-                  class="scenario-card prop-card"
-                >
-                  <h4>imposesDigitalBarrier</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> AIDrivenCensorship →
-                    DigitalBarrier
-                  </p>
-                  <p>
-                    Links AIDrivenCensorship to platform-specific barriers
-                    (shadowban, throttling, auto-removal).
-                  </p>
-                </div>
-
-                <div id="prop-hasAccuracyRate" class="scenario-card prop-card">
-                  <h4>hasAccuracyRate</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> AISystem → xsd:decimal
-                  </p>
-                  <p>
-                    Data property describing the empirical accuracy of an
-                    AISystem (useful for bias and reliability analyses).
-                  </p>
-                </div>
-
-                <div
-                  id="prop-falsePositiveRate"
-                  class="scenario-card prop-card"
-                >
-                  <h4>falsePositiveRate</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> AISystem → xsd:decimal
-                  </p>
-                  <p>
-                    Data property recording rate of false positives (important
-                    for studying chilling effects and erroneous takedowns).
-                  </p>
-                </div>
-
-                <div
-                  id="prop-restrictionSeverity"
-                  class="scenario-card prop-card"
-                >
-                  <h4>restrictionSeverity</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> Constraint → SeverityLevel
-                  </p>
-                  <p>
-                    Data property capturing the intensity of a constraint (soft
-                    guideline, removal, criminal sanction), useful to rank and
-                    compare constraints.
-                  </p>
-                </div>
-
-                <div id="prop-hasOutcomeType" class="scenario-card prop-card">
-                  <h4>hasOutcomeType</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> Outcome → OutcomeType
-                  </p>
-                  <p>
-                    Classifies an Outcome with a controlled vocabulary (e.g.,
-                    Banned, Edited, Approved, Shadowbanned), improving CQ
-                    precision.
-                  </p>
-                </div>
-
-                <div id="prop-hasOutcomeDate" class="scenario-card prop-card">
-                  <h4>hasOutcomeDate</h4>
-                  <p class="prop-meta">
-                    <strong>Domain → Range:</strong> Outcome → xsd:date
-                  </p>
-                  <p>
-                    Date when the outcome (ban/edit/removal) was applied;
-                    supports temporal queries.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Duplicate user stories removed; canonical user-stories block appears earlier in 4.2 Modeling -->
-
-        <h2 id="kr-competency">4.2.3 Competency Questions</h2>
-
-        <ol class="competency-questions">
-          <li>
-            <div class="cq-question">
-              What types of censorship constrain a given creative work in a
-              specific context?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>CreativeWork</code>,
-              <code>Context</code>, <code>Censorship</code>,
-              <code>hasConstraint</code>, <code>occursInContext</code>
-            </div>
-          </li>
-          <li>
-            <div class="cq-question">
-              Which authorities enforce censorship in different historical and
-              digital environments?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>Authority</code>,
-              <code>Censorship</code>, <code>isEnforcedBy</code>
-            </div>
-          </li>
-          <li>
-            <div class="cq-question">
-              What creative strategies are used under political versus AI-driven
-              censorship?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>CensorshipType</code>,
-              <code>CreativeStrategy</code>,
-              <code>triggersStrategy</code>
-            </div>
-          </li>
-          <li>
-            <div class="cq-question">
-              Which creative works were banned, edited, or approved under
-              censorship?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>CreativeWork</code>,
-              <code>CensorshipAct</code>, <code>Outcome</code>
-            </div>
-          </li>
-          <li>
-            <div class="cq-question">
-              In which contexts does censorship lead to innovation under
-              constraint rather than suppression?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>Context</code>,
-              <code>ImpactOnCreativity</code>, <code>hasImpact</code>
-            </div>
-          </li>
-          <li>
-            <div class="cq-question">
-              How does self-censorship differ from institutional censorship in
-              its effects on creativity?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>SelfCensorship</code>,
-              <code>InstitutionalCensorship</code>,
-              <code>CreativeProcess</code>
-            </div>
-          </li>
-          <li>
-            <div class="cq-question">
-              Which media types are most affected by AI-driven censorship
-              mechanisms?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>Medium</code>,
-              <code>AIDrivenCensorship</code>, <code>targetsWork</code>
-            </div>
-          </li>
-          <li>
-            <div class="cq-question">
-              What forms of algorithmic bias occur in automated content
-              moderation?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>AISystem</code>,
-              <code>AlgorithmicBias</code>, <code>hasImpact</code>
-            </div>
-          </li>
-          <li>
-            <div class="cq-question">
-              Which creative strategies correlate with high constraint
-              environments?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>Constraint</code>,
-              <code>CreativeStrategy</code>, <code>CreativeProcess</code>
-            </div>
-          </li>
-          <li>
-            <div class="cq-question">
-              How do censorship mechanisms differ between pre-publication and
-              post-publication control?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>CensorshipMechanism</code>,
-              <code>PrePublication</code>,
-              <code>PostPublication</code>
-            </div>
-          </li>
-          <li>
-            <div class="cq-question">
-              Which works circulate through underground distribution networks
-              due to censorship?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>CreativeWork</code>,
-              <code>DistributionStrategy</code>, <code>Outcome</code>
-            </div>
-          </li>
-          <li>
-            <div class="cq-question">
-              How does predictive AI censorship alter creative planning and
-              genre selection?
-            </div>
-            <div class="cq-entities">
-              Needed entities/relations: <code>PredictiveCensorshipAI</code>,
-              <code>CreativeStrategy</code>, <code>Genre</code>
-            </div>
-          </li>
+        <ol>
+          <li><strong>Theory → competency questions.</strong> The ten CQs were derived from the theoretical framework.</li>
+          <li><strong>Core TBox (v1).</strong> The classes and properties needed by the CQs were modelled in OWL and edited and inspected in WebProtégé, together with a synthetic test case.</li>
+          <li><strong>Revision (v2).</strong> The domain of <code>hasOutcome</code> was narrowed from <code>Event</code> to <code>CreativeResponse</code>, because an outcome belongs to a creator’s response, not to the act of censorship. English and Russian labels and definitions were added to all entities.</li>
+          <li><strong>Population and refinement (v2.1).</strong> Populating the graph with real cases required new controlled values (<code>Irony</code>, <code>ParatextualFraming</code>, <code>Fragmentation</code>, <code>StylisticRestriction</code>), a <code>resultsInWork</code> relation and subclasses of <code>Source</code>.</li>
+          <li><strong>Validation.</strong> The HermiT reasoner checked consistency, and the CQs were run as SPARQL queries (see <a href="#evaluation">Evaluation</a>).</li>
         </ol>
-
-        <!-- Strategy Genealogy (analogous to "Inspiration Sources") -->
-        <section id="strategy-genealogy" class="section">
-          <h2>Strategy Genealogy</h2>
-
-          <p><strong>Research Question</strong></p>
-          <p>
-            What creative strategies are associated with different types of
-            censorship?
-          </p>
-
-          <p><strong>Finding</strong></p>
-          <p>
-            Based on the prototype scenario dataset, institutional censorship
-            (government/religious) is most frequently associated with allegory,
-            coded language, genre shifts, and underground distribution, while
-            AI-driven and platform censorship is associated with visual
-            obfuscation, memetic communication, and stylistic distortion.
-            Self-censorship is primarily linked to omission and cautious
-            framing.
-          </p>
-
-          <h3>📋 SPARQL-example</h3>
-          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
-
-SELECT ?censorshipType
-       (GROUP_CONCAT(DISTINCT ?strategy; SEPARATOR=", ") AS ?strategies)
-WHERE {
-  ?c a ?censorshipType ;
-     :triggersStrategy ?strategy .
-  FILTER (?censorshipType IN (
-    :GovernmentCensorship,
-    :ReligiousCensorship,
-    :CorporateCensorship,
-    :AIDrivenCensorship,
-    :SelfCensorship
-  ))
-}
-GROUP BY ?censorshipType
-ORDER BY ?censorshipType</code></pre>
-
-          <h3>
-            📊 Query Results: Strategies by Censorship Type (Prototype Dataset)
-          </h3>
-          <table class="results-table">
-            <thead>
-              <tr>
-                <th>Censorship Type</th>
-                <th>Strategies</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>GovernmentCensorship</td>
-                <td>
-                  AllegoryStrategy, CodedLanguageStrategy, GenreShiftStrategy,
-                  UndergroundDistributionStrategy
-                </td>
-              </tr>
-              <tr>
-                <td>ReligiousCensorship</td>
-                <td>GenreShiftStrategy, FormalExperimentationStrategy</td>
-              </tr>
-              <tr>
-                <td>CorporateCensorship</td>
-                <td>FormalExperimentationStrategy, SelfCensorshipStrategy</td>
-              </tr>
-              <tr>
-                <td>AIDrivenCensorship</td>
-                <td>
-                  VisualObfuscationStrategy, MemeBasedCommunicationStrategy,
-                  CodedLanguageStrategy
-                </td>
-              </tr>
-              <tr>
-                <td>SelfCensorship</td>
-                <td>SelfCensorshipStrategy</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>Outcome Patterns</h3>
-          <p><strong>Research Question</strong></p>
-          <p>
-            What outcomes are most common under different censorship mechanisms?
-          </p>
-
-          <p><strong>Finding</strong></p>
-          <p>
-            Post-publication enforcement is associated with Removed /
-            Shadowbanned / Banned outcomes, whereas pre-publication and
-            predictive review are more often associated with Edited /
-            AllowedWithChanges outcomes.
-          </p>
-
-          <h3>📋 SPARQL-example</h3>
-          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
-
-SELECT ?mechanism
-       (GROUP_CONCAT(DISTINCT ?outType; SEPARATOR=", ") AS ?outcomes)
-WHERE {
-  ?c :employsMechanism ?mechanism .
-  ?act a :CensorshipAct ;
-       :hasOutcome ?out .
-  ?out :hasOutcomeType ?outType .
-}
-GROUP BY ?mechanism
-ORDER BY ?mechanism</code></pre>
-
-          <h3>📊 Query Results: Outcomes by Mechanism (Prototype Dataset)</h3>
-          <table class="results-table">
-            <thead>
-              <tr>
-                <th>Mechanism</th>
-                <th>Outcomes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>PrePublicationReview</td>
-                <td>Approved, Edited, AllowedWithChanges</td>
-              </tr>
-              <tr>
-                <td>PredictiveFiltering</td>
-                <td>AllowedWithChanges</td>
-              </tr>
-              <tr>
-                <td>ManualReview</td>
-                <td>AllowedWithChanges, CirculatedUnderground</td>
-              </tr>
-              <tr>
-                <td>AutomatedFiltering</td>
-                <td>Shadowbanned, Removed</td>
-              </tr>
-              <tr>
-                <td>PostPublicationRemoval</td>
-                <td>Removed, Banned</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>Context Matrix</h3>
-          <p><strong>Research Question</strong></p>
-          <p>
-            Which contexts are associated with innovation under constraint vs.
-            suppression?
-          </p>
-
-          <p><strong>Finding</strong></p>
-          <p>
-            Innovation under constraint appears across both historical and
-            contemporary cases, but suppression dominates in conflict and
-            high-stakes state contexts. Platform contexts show mixed outcomes
-            depending on mechanism opacity and false positives.
-          </p>
-
-          <h3>📋 SPARQL-example</h3>
-          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
-
-SELECT ?context
-       (GROUP_CONCAT(DISTINCT ?impact; SEPARATOR=", ") AS ?impacts)
-WHERE {
-  ?c a :Censorship ;
-     :occursInContext ?context ;
-     :hasImpact ?impact .
-}
-GROUP BY ?context
-ORDER BY ?context</code></pre>
-
-          <h3>📊 Query Results: Context vs Impact (Prototype Dataset)</h3>
-          <table class="results-table">
-            <thead>
-              <tr>
-                <th>Context (prototype labels)</th>
-                <th>Impacts</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1930s authoritarian Europe</td>
-                <td>InnovationUnderConstraint</td>
-              </tr>
-              <tr>
-                <td>1960s clandestine theatre</td>
-                <td>EmergenceOfUndergroundArt</td>
-              </tr>
-              <tr>
-                <td>1990s Iran religious norms</td>
-                <td>InnovationUnderConstraint</td>
-              </tr>
-              <tr>
-                <td>early 2000s armed conflict</td>
-                <td>SuppressionOfIdeas, InnovationUnderConstraint</td>
-              </tr>
-              <tr>
-                <td>2010s platform satire</td>
-                <td>ChillingEffect</td>
-              </tr>
-              <tr>
-                <td>2010s–2020s nudity moderation</td>
-                <td>ChillingEffect</td>
-              </tr>
-              <tr>
-                <td>2020s AI misclassification</td>
-                <td>InnovationUnderConstraint, ChillingEffect</td>
-              </tr>
-              <tr>
-                <td>internet surveillance meme ecology</td>
-                <td>InnovationUnderConstraint</td>
-              </tr>
-              <tr>
-                <td>academia peer-review/funding</td>
-                <td>ChillingEffect</td>
-              </tr>
-              <tr>
-                <td>future predictive streaming review</td>
-                <td>ChillingEffect</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <!-- Additional analysis blocks provided by the user -->
-        <!-- Medium vs Outcomes -->
-        <section id="analysis-medium-outcomes" class="section">
-          <h2>Medium-Based Outcomes</h2>
-
-          <p>
-            <strong>Research Question:</strong><br />
-            Which media types are most affected by different censorship
-            outcomes?
-          </p>
-
-          <p>
-            <strong>Finding:</strong><br />
-            In the prototype dataset, platform-facing media (visual art, digital
-            posts, music distribution) show higher rates of
-            <em>shadowbanning</em> and <em>removal</em>, while state-controlled
-            contexts more frequently result in <em>bans</em> or
-            <em>underground circulation</em>. Academic and professional writing
-            contexts tend to produce <em>edits</em> through anticipatory
-            self-censorship.
-          </p>
-
-          <h3>📋 SPARQL-example</h3>
-          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
-
-SELECT ?medium
-       (GROUP_CONCAT(DISTINCT ?outType; SEPARATOR=", ") AS ?outcomes)
-WHERE {
-  ?act a :CensorshipAct ;
-       :targetsWork ?work ;
-       :hasOutcome ?out .
-  ?work :usesMedium ?medium .
-  ?out :hasOutcomeType ?outType .
-}
-GROUP BY ?medium
-ORDER BY ?medium</code></pre>
-
-          <h3>📊 Query Results: Outcomes by Medium (Prototype Dataset)</h3>
-          <table class="results-table">
-            <thead>
-              <tr>
-                <th>Medium</th>
-                <th>Outcomes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Literature</td>
-                <td>Approved</td>
-              </tr>
-              <tr>
-                <td>Theatre</td>
-                <td>CirculatedUnderground</td>
-              </tr>
-              <tr>
-                <td>Music</td>
-                <td>Removed, AllowedWithChanges</td>
-              </tr>
-              <tr>
-                <td>VisualArt</td>
-                <td>Shadowban, Removed, Approved</td>
-              </tr>
-              <tr>
-                <td>Journalism</td>
-                <td>Banned</td>
-              </tr>
-              <tr>
-                <td>AcademicText</td>
-                <td>Edited</td>
-              </tr>
-              <tr>
-                <td>Film/Streaming</td>
-                <td>AllowedWithChanges</td>
-              </tr>
-              <tr>
-                <td>DigitalMedia</td>
-                <td>Approved</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <!-- Digital Barriers vs Impact -->
-        <section id="analysis-barriers-impact" class="section">
-          <h2>Digital Barriers and Impact on Creativity</h2>
-
-          <p>
-            <strong>Research Question:</strong><br />
-            How do platform-specific digital barriers
-            (shadowban/downranking/removal) relate to broader impacts on
-            creativity?
-          </p>
-
-          <p>
-            <strong>Finding:</strong><br />
-            Non-transparent barriers such as <em>shadowbanning</em> and
-            <em>downranking</em> are strongly associated with
-            <em>chilling effects</em> (uncertainty and self-limitation), while
-            full <em>removal</em> correlates with explicit suppression. At the
-            same time, repeated barriers can also trigger adaptive innovation
-            (e.g., obfuscation and stylization).
-          </p>
-
-          <h3>📋 SPARQL-example</h3>
-          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
-
-SELECT ?barrier
-       (GROUP_CONCAT(DISTINCT ?impact; SEPARATOR=", ") AS ?impacts)
-WHERE {
-  ?c a :AIDrivenCensorship ;
-     :imposesDigitalBarrier ?barrier ;
-     :hasImpact ?impact .
-}
-GROUP BY ?barrier
-ORDER BY ?barrier</code></pre>
-
-          <h3>
-            📊 Query Results: Digital Barriers vs Impact (Prototype Dataset)
-          </h3>
-          <table class="results-table">
-            <thead>
-              <tr>
-                <th>Digital Barrier</th>
-                <th>Impacts</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Shadowban</td>
-                <td>ChillingEffect</td>
-              </tr>
-              <tr>
-                <td>Throttling / Downranking</td>
-                <td>ChillingEffect</td>
-              </tr>
-              <tr>
-                <td>AutoRemoval</td>
-                <td>SuppressionOfIdeas</td>
-              </tr>
-              <tr>
-                <td>AccountLimitation</td>
-                <td>ChillingEffect</td>
-              </tr>
-              <tr>
-                <td>(Repeated barriers)</td>
-                <td>InnovationUnderConstraint</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <!-- Authority vs Censorship Type -->
-        <section id="analysis-authority-types" class="section">
-          <h2>Authority Patterns Across Censorship Types</h2>
-
-          <p>
-            <strong>Research Question:</strong><br />
-            Which authorities enforce different censorship types across
-            historical and digital environments?
-          </p>
-
-          <p>
-            <strong>Finding:</strong><br />
-            State and religious authorities dominate institutional censorship
-            contexts, while platforms act as key authorities in corporate and
-            AI-driven moderation environments. The dataset also demonstrates how
-            authority and mechanism can diverge: the same platform authority may
-            enforce both human review and automated filtering.
-          </p>
-
-          <h3>📋 SPARQL-example</h3>
-          <pre><code>PREFIX : &lt;http://webprotege.stanford.edu/&gt;
-
-SELECT ?cType
-       (GROUP_CONCAT(DISTINCT ?authority; SEPARATOR=", ") AS ?authorities)
-WHERE {
-  ?act a :CensorshipAct ;
-       :isEnforcedBy ?authority .
-  ?c a ?cType .
-  FILTER (?cType IN (:GovernmentCensorship, :ReligiousCensorship, :CorporateCensorship, :AIDrivenCensorship, :SelfCensorship))
-}
-GROUP BY ?cType
-ORDER BY ?cType</code></pre>
-
-          <h3>
-            📊 Query Results: Authorities by Censorship Type (Prototype Dataset)
-          </h3>
-          <table class="results-table">
-            <thead>
-              <tr>
-                <th>Censorship Type</th>
-                <th>Authorities</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>GovernmentCensorship</td>
-                <td>StateMinistry, StateAgency</td>
-              </tr>
-              <tr>
-                <td>ReligiousCensorship</td>
-                <td>ReligiousAuthority</td>
-              </tr>
-              <tr>
-                <td>CorporateCensorship</td>
-                <td>Platform, StreamingPlatform</td>
-              </tr>
-              <tr>
-                <td>AIDrivenCensorship</td>
-                <td>Platform (via AISystem)</td>
-              </tr>
-              <tr>
-                <td>SelfCensorship</td>
-                <td>Creator / Researcher (internalized)</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+        <p class="kg-meta">Years are typed as <code>xsd:integer</code> rather than <code>xsd:gYear</code>, because <code>gYear</code> is not part of the OWL 2 datatype map supported by HermiT.</p>
       </section>
 
-      <!-- Duplicate Analysis/Queries block removed to avoid repeated IDs -->
+      <section id="knowledge-representation" class="section">
+        <h1>5. Knowledge Representation</h1>
+        <p>
+          The ConCreCen core ontology (v2.1, namespace <code>http://example.org/censorcreate#</code>) contains
+          33 classes, 20 object properties, 11 data properties and four controlled
+          vocabularies. All of them are described below. An interactive view is in <a href="#knowledge-graph">Knowledge Graph</a>.
+        </p>
+        <h2>5.1 Competency questions</h2>
+        <ol class="competency-questions"><li><div class="cq-question">Which creative works were subjected to censorship?</div><div class="cq-entities">Entities/relations: <code>CensorshipEvent</code>, <code>targetsWork</code>, <code>CreativeWork</code></div></li><li><div class="cq-question">Who or which institution imposed censorship on a work?</div><div class="cq-entities">Entities/relations: <code>imposedBy</code>, <code>CensoringAgent</code></div></li><li><div class="cq-question">Which censorship mechanism was used?</div><div class="cq-entities">Entities/relations: <code>usesMechanism</code>, <code>CensorshipMechanism</code></div></li><li><div class="cq-question">What element or aspect of the work was constrained?</div><div class="cq-entities">Entities/relations: <code>imposesConstraint</code>, <code>constrainsElement</code>, <code>WorkElement</code></div></li><li><div class="cq-question">What constraint resulted from the censorship event?</div><div class="cq-entities">Entities/relations: <code>CensorshipConstraint</code>, <code>hasConstraintType</code>, <code>ConstraintType</code></div></li><li><div class="cq-question">How did the creator respond to the constraint?</div><div class="cq-entities">Entities/relations: <code>hasResponse</code>, <code>CreativeResponse</code>, <code>respondsTo</code>, <code>performedBy</code></div></li><li><div class="cq-question">Which creative strategy was used in the response?</div><div class="cq-entities">Entities/relations: <code>usesStrategy</code>, <code>CreativeStrategy</code></div></li><li><div class="cq-question">What was the outcome: adaptation, modification, suppression, abandonment, etc.?</div><div class="cq-entities">Entities/relations: <code>hasOutcome</code>, <code>OutcomeType</code></div></li><li><div class="cq-question">Which creative strategies recur across different media or censorship mechanisms?</div><div class="cq-entities">Entities/relations: <code>usesStrategy</code>, <code>CreativeWork subclasses</code>, <code>usesMechanism</code></div></li><li><div class="cq-question">Which sources support the claimed relationship between a censorship event and a creative response?</div><div class="cq-entities">Entities/relations: <code>Claim</code>, <code>aboutCensorshipEvent</code>, <code>aboutCreativeResponse</code>, <code>supportedBy</code>, <code>Source</code></div></li></ol>
+        <h2>5.2 Classes</h2>
+        <div class="kg-table-wrap"><table class="results-table"><thead><tr><th>Class</th><th>Subclass of</th><th>Definition</th></tr></thead><tbody><tr><td><code>AdaptiveCreativeResponse</code></td><td>CreativeResponse</td><td>A creative response that uses at least one creative strategy and has the outcome CreativeAdaptation. Membership is inferred by a reasoner.</td></tr><tr><td><code>Agent</code></td><td>—</td><td>A person, group, or institution that can act in a censorship or creative process.</td></tr><tr><td><code>AudioElement</code></td><td>WorkElement</td><td>A sound, musical passage, or spoken audio component of a creative work.</td></tr><tr><td><code>Book</code></td><td>Source</td><td>A monograph or edited volume used as a source. Added in v2.1.</td></tr><tr><td><code>BookChapter</code></td><td>Source</td><td>A chapter in an edited or collected volume used as a source. Added in v2.1.</td></tr><tr><td><code>CensoredWork</code></td><td>CreativeWork</td><td>A creative work that is the target of at least one censorship event. Membership is inferred by a reasoner.</td></tr><tr><td><code>CensoringAgent</code></td><td>Agent</td><td>An agent who imposes or carries out censorship, such as a censor, editor, publisher, board, or platform.</td></tr><tr><td><code>CensoringAuthority</code></td><td>CensoringAgent</td><td>An institutional censoring agent with formal power to approve, restrict, or prohibit creative works, such as a state censorship office or official board.</td></tr><tr><td><code>CensorshipConstraint</code></td><td>Constraint</td><td>A constraint imposed by a censorship event. Not every constraint is censorship; this class covers only constraints resulting from censorship.</td></tr><tr><td><code>CensorshipEvent</code></td><td>Event</td><td>A documented act or process of censorship affecting a creative work, carried out by a censoring agent through a censorship mechanism.</td></tr><tr><td><code>CensorshipMechanism</code></td><td>—</td><td>A method through which censorship is applied to a creative work, such as a ban, removal, or required modification.</td></tr><tr><td><code>Claim</code></td><td>—</td><td>A statement linking a censorship event and a creative response, supported by one or more sources. Used to make the evidence for each relation explicit.</td></tr><tr><td><code>Constraint</code></td><td>—</td><td>A limitation on the range of available solutions in a creative process. Constraints may be technical, economic, social, legal, or institutional.</td></tr><tr><td><code>ConstraintType</code></td><td>—</td><td>A controlled category describing what a censorship constraint restricts, for example content, subject, or direct representation.</td></tr><tr><td><code>CreativeResponse</code></td><td>Event</td><td>A documented action of a creator in reaction to a censorship constraint, for example revising, encoding, relocating, or abandoning a work.</td></tr><tr><td><code>CreativeStrategy</code></td><td>—</td><td>A method of expression a creator uses within a creative response, such as allegory, metaphor, or indirect representation.</td></tr><tr><td><code>CreativeWork</code></td><td>—</td><td>A product of creative activity, such as a literary work, film, musical work, or visual artwork.</td></tr><tr><td><code>Creator</code></td><td>Agent</td><td>An agent who creates a creative work: an author, filmmaker, composer, visual artist, or similar.</td></tr><tr><td><code>Event</code></td><td>—</td><td>Something that happens at a certain time and involves agents and creative works.</td></tr><tr><td><code>Film</code></td><td>CreativeWork</td><td>A creative work expressed as a motion picture.</td></tr><tr><td><code>LiteraryWork</code></td><td>CreativeWork</td><td>A creative work expressed primarily in written language: novel, poem, play, essay, and similar.</td></tr><tr><td><code>MusicalWork</code></td><td>CreativeWork</td><td>A creative work expressed primarily through music, with or without lyrics.</td></tr><tr><td><code>OutcomeType</code></td><td>—</td><td>A controlled category describing the result of a creative response, ranging from suppression to creative adaptation.</td></tr><tr><td><code>PeriodicalArticle</code></td><td>Source</td><td>An article in a journal, review, magazine, or newspaper. Added in v2.1.</td></tr><tr><td><code>Scene</code></td><td>WorkElement</td><td>A distinct scene or episode of a film, play, or narrative.</td></tr><tr><td><code>Source</code></td><td>—</td><td>A documentary or scholarly source (book, article, archival document, interview, etc.) that provides evidence about events and responses.</td></tr><tr><td><code>TextualElement</code></td><td>WorkElement</td><td>A word, passage, line, title, or lyric within a creative work.</td></tr><tr><td><code>Theme</code></td><td>WorkElement</td><td>A subject, idea, or topic addressed by a creative work.</td></tr><tr><td><code>VisualArtwork</code></td><td>CreativeWork</td><td>A creative work expressed primarily through visual means: painting, drawing, photograph, sculpture, installation, and similar.</td></tr><tr><td><code>VisualElement</code></td><td>WorkElement</td><td>An image, shot, symbol, or other visual component of a creative work.</td></tr><tr><td><code>WebSource</code></td><td>Source</td><td>A web page such as a publisher page, programme note, or encyclopedia entry. Tertiary web sources are used for orientation only. Added in v2.1.</td></tr><tr><td><code>WorkElement</code></td><td>—</td><td>A part or aspect of a creative work that can be targeted by a constraint.</td></tr><tr><td><code>WorkVersion</code></td><td>CreativeWork</td><td>A specific version of a creative work, for example a revised, cut, re-edited, or alternative version produced in response to censorship.</td></tr></tbody></table></div>
+        <h2>5.3 Object properties</h2>
+        <div class="kg-table-wrap"><table class="results-table"><thead><tr><th>Property</th><th>Domain</th><th>Range</th><th>Definition</th></tr></thead><tbody><tr><td><code>aboutCensorshipEvent</code></td><td>Claim</td><td>CensorshipEvent</td><td>Links a claim to the censorship event it concerns.</td></tr><tr><td><code>aboutCreativeResponse</code></td><td>Claim</td><td>CreativeResponse</td><td>Links a claim to the creative response it concerns.</td></tr><tr><td><code>constrainsElement</code></td><td>CensorshipConstraint</td><td>WorkElement</td><td>Links a censorship constraint to the specific element of a work it restricts.</td></tr><tr><td><code>createdBy</code></td><td>CreativeWork</td><td>Creator</td><td>Links a creative work to its creator.</td></tr><tr><td><code>documentedBy</code></td><td>Event</td><td>Source</td><td>Links a censorship event or creative response to a source that documents it.</td></tr><tr><td><code>hasConstraintType</code></td><td>CensorshipConstraint</td><td>ConstraintType</td><td>Classifies a censorship constraint by what it restricts.</td></tr><tr><td><code>hasOutcome</code></td><td>CreativeResponse</td><td>OutcomeType</td><td>Links a creative response to its outcome. In v2 the domain is CreativeResponse (previously Event).</td></tr><tr><td><code>hasResponse</code></td><td>CensorshipEvent</td><td>CreativeResponse</td><td>Links a censorship event to a documented creative response to it.</td></tr><tr><td><code>imposedBy</code></td><td>CensorshipEvent</td><td>CensoringAgent</td><td>Links a censorship event to the censoring agent responsible for it.</td></tr><tr><td><code>imposesConstraint</code></td><td>CensorshipEvent</td><td>CensorshipConstraint</td><td>Links a censorship event to the constraint it creates for the creator.</td></tr><tr><td><code>isTargetOf</code></td><td>CreativeWork</td><td>CensorshipEvent</td><td>Inverse of targetsWork: links a creative work to a censorship event that affects it.</td></tr><tr><td><code>performedBy</code></td><td>CreativeResponse</td><td>Creator</td><td>Links a creative response to the creator who carried it out.</td></tr><tr><td><code>producesVersion</code></td><td>CreativeResponse</td><td>WorkVersion</td><td>Links a creative response to a new version of the work that resulted from it.</td></tr><tr><td><code>respondsTo</code></td><td>CreativeResponse</td><td>CensorshipConstraint</td><td>Links a creative response to the censorship constraint it reacts to.</td></tr><tr><td><code>resultsInWork</code></td><td>CreativeResponse</td><td>CreativeWork</td><td>Links a creative response to a new, separate creative work that resulted from it (for a new version of the same work use producesVersion). Added in v2.1.</td></tr><tr><td><code>supportedBy</code></td><td>Claim</td><td>Source</td><td>Links a claim to a source that supports it.</td></tr><tr><td><code>targetsWork</code></td><td>CensorshipEvent</td><td>CreativeWork</td><td>Links a censorship event to the creative work it affects.</td></tr><tr><td><code>usesMechanism</code></td><td>CensorshipEvent</td><td>CensorshipMechanism</td><td>Links a censorship event to the mechanism through which censorship was applied.</td></tr><tr><td><code>usesStrategy</code></td><td>CreativeResponse</td><td>CreativeStrategy</td><td>Links a creative response to the creative strategy used in it.</td></tr><tr><td><code>versionOf</code></td><td>WorkVersion</td><td>CreativeWork</td><td>Links a work version to the original creative work.</td></tr></tbody></table></div>
+        <p class="kg-meta"><code>isTargetOf</code> is declared as the inverse of <code>targetsWork</code>.</p>
+        <h2>5.4 Data properties</h2>
+        <div class="kg-table-wrap"><table class="results-table"><thead><tr><th>Property</th><th>Domain</th><th>Datatype</th><th>Definition</th></tr></thead><tbody><tr><td><code>bibliographicCitation</code></td><td>Source</td><td>xsd:string</td><td>A full bibliographic reference for a source, including page numbers where relevant.</td></tr><tr><td><code>claimText</code></td><td>Claim</td><td>xsd:string</td><td>The statement made by the claim, in plain language.</td></tr><tr><td><code>confidenceLevel</code></td><td>Claim</td><td>xsd:string</td><td>How strongly the sources support the claim: high, medium, or low.</td></tr><tr><td><code>creationYear</code></td><td>CreativeWork</td><td>xsd:integer</td><td>The year a creative work was created or completed.</td></tr><tr><td><code>dataProvenance</code></td><td>owl:Thing</td><td>xsd:string</td><td>Marks whether an individual is documented (real case), synthetic (test or AI-generated), or a template.</td></tr><tr><td><code>description</code></td><td>owl:Thing</td><td>xsd:string</td><td>A short free-text description of an individual (event, response, constraint, element).</td></tr><tr><td><code>eventDate</code></td><td>Event</td><td>xsd:integer</td><td>The year a censorship event or creative response took place (recorded as a year).</td></tr><tr><td><code>publicationYear</code></td><td>Source</td><td>xsd:integer</td><td>The year a source was published.</td></tr><tr><td><code>sourceTitle</code></td><td>Source</td><td>xsd:string</td><td>The title of a source.</td></tr><tr><td><code>sourceURL</code></td><td>Source</td><td>xsd:anyURI</td><td>A web address where the source can be accessed.</td></tr><tr><td><code>title</code></td><td>CreativeWork</td><td>xsd:string</td><td>The title of a creative work.</td></tr></tbody></table></div>
+        <h2>5.5 Controlled vocabularies</h2>
+        <p>Mechanisms, constraint types, strategies and outcomes are modelled as named individuals of their classes, so that they can be reused across cases and counted in queries.</p>
+        <div class="kg-table-wrap"><table class="results-table"><thead><tr><th>Class</th><th>Values</th></tr></thead><tbody><tr><td><code>CensorshipMechanism</code></td><td><code>Ban</code>, <code>DistributionRestriction</code>, <code>ModificationRequirement</code>, <code>PriorApproval</code>, <code>PublicationRestriction</code>, <code>Redaction</code>, <code>Removal</code>, <code>SelfCensorship</code></td></tr><tr><td><code>ConstraintType</code></td><td><code>ContentRestriction</code>, <code>DirectRepresentationRestriction</code>, <code>StylisticRestriction</code>, <code>SubjectRestriction</code></td></tr><tr><td><code>CreativeStrategy</code></td><td><code>Allegory</code>, <code>Ambiguity</code>, <code>Euphemism</code>, <code>Fragmentation</code>, <code>IndirectRepresentation</code>, <code>Irony</code>, <code>Metaphor</code>, <code>ParatextualFraming</code>, <code>Symbolism</code></td></tr><tr><td><code>OutcomeType</code></td><td><code>Abandonment</code>, <code>AlternativeVersionProduced</code>, <code>CreativeAdaptation</code>, <code>Modification</code>, <code>Suppression</code>, <code>UnpublishedWork</code></td></tr></tbody></table></div>
+        <h2>5.6 Defined classes</h2>
+        <ul>
+          <li><code>CensoredWork</code> ≡ <code>CreativeWork</code> and (<code>isTargetOf</code> some <code>CensorshipEvent</code>)</li>
+          <li><code>AdaptiveCreativeResponse</code> ≡ <code>CreativeResponse</code> and (<code>usesStrategy</code> some <code>CreativeStrategy</code>) and (<code>hasOutcome</code> value <code>CreativeAdaptation</code>)</li>
+        </ul>
+        <p>These classes are not asserted. The reasoner infers their members from the data.</p>
+        <h2>5.7 Ontology in WebProtégé</h2>
+        <p>The ontology was edited and inspected in WebProtégé. <span class="kg-muted">[Add screenshots of the class hierarchy and the object properties here.]</span></p>
+      </section>
 
-      <!-- KNOWLEDGE EXTRACTION SECTION -->
       <section id="knowledge-extraction" class="section">
-        <h1>Knowledge Extraction</h1>
-
-        <p>
-          Following the refinement of the ConCreCen ontology, we proceeded to
-          validate the knowledge captured by the model through dataset
-          instantiation and qualitative analysis. This stage operationalizes
-          the ontology by populating it with concrete cases of
-          constraint-driven creativity under censorship, allowing us to
-          examine whether the defined classes, properties, and relations
-          adequately represent real-world and historically grounded
-          phenomena.
-        </p>
-
-        <p>
-          This section first introduces the dataset used to instantiate the
-          ontology, including the selection of seed cases and the use of
-          LLM-assisted data augmentation. Subsequently, we present an initial
-          descriptive analysis of the dataset to identify emerging patterns
-          prior to formal SPARQL-based evaluation.
-        </p>
-
-        <h2>5.1 Dataset</h2>
-
-        <h3>Dataset design and seed cases</h3>
-        <p>
-          In line with our bottom-up eXtreme Design methodology, the dataset
-          construction began with a small set of seed cases that directly
-          informed and validated the ontology’s structure. These initial
-          cases were selected to reflect diverse historical periods,
-          political contexts, media types, and censorship mechanisms,
-          ensuring broad coverage of the conceptual space modeled by
-          ConCreCen.
-        </p>
-
-        <p>The six seed cases include:</p>
+        <h1>6. Knowledge Extraction</h1>
+        <h2>6.1 Corpus</h2>
+        <p>The corpus consists of 11 sources about three cases (see <a href="#bibliography">Bibliography</a>). Each source is typed as <code>Book</code>, <code>BookChapter</code>, <code>PeriodicalArticle</code> or <code>WebSource</code>.</p>
+        <h2>6.2 Extraction pipeline</h2>
+        <pre><code>Sources → manual extraction → cases.csv + sources.csv → build_kg.py (Python, rdflib) → cases-triples.ttl
+       → merge with TBox → censorcreate-v2-with-cases.owl → HermiT reasoner → SPARQL (CQ1–CQ10)</code></pre>
+        <h2>6.3 Dataset</h2>
+        <p><code>cases.csv</code> contains 7 rows, one per event–response pair. A row without a response records a documented event with no documented creative response. Multiple values are separated by semicolons.</p>
+        <div class="kg-table-wrap"><table class="data-table"><thead><tr><th>Column</th><th>Content</th></tr></thead><tbody><tr><td><code>case_id</code></td><td>Case identifier</td></tr><tr><td><code>work_*</code></td><td>Work: id, title, type (class), creation year</td></tr><tr><td><code>creator_*</code></td><td>Creator id and name</td></tr><tr><td><code>event_*</code></td><td>Censorship event: id, description, year</td></tr><tr><td><code>agent_*</code></td><td>Censoring agent: id, name, type</td></tr><tr><td><code>mechanisms</code></td><td>One or more CensorshipMechanism values</td></tr><tr><td><code>constraint_*</code></td><td>Constraint: id, type(s), description</td></tr><tr><td><code>element_*</code></td><td>Constrained work element: id, type, description</td></tr><tr><td><code>response_*</code></td><td>Creative response: id, description, year</td></tr><tr><td><code>performer_*</code></td><td>Agent who performed the response</td></tr><tr><td><code>strategies</code></td><td>One or more CreativeStrategy values</td></tr><tr><td><code>outcome</code></td><td>OutcomeType value</td></tr><tr><td><code>result_*</code></td><td>Resulting work or work version</td></tr><tr><td><code>claim_*</code></td><td>Claim id and text</td></tr><tr><td><code>confidence</code></td><td>high / medium / low</td></tr><tr><td><code>sources</code></td><td>Source ids (see sources.csv)</td></tr></tbody></table></div>
+        <h2>6.4 Validation</h2>
         <ul>
-          <li>
-            <strong>Allegorical novel under totalitarian censorship (1930s
-            Europe)</strong><br />A novelist employs allegory and symbolism
-            to bypass state-imposed political censorship.
-          </li>
-          <li>
-            <strong>Samizdat theatre under authoritarian surveillance (Cold
-            War Eastern Europe)</strong><br />A theatre collective stages
-            clandestine performances using coded language and underground
-            distribution.
-          </li>
-          <li>
-            <strong>Instrumental music under religious censorship (1990s
-            Iran)</strong><br />A musician adapts musical form and genre to
-            comply with religious restrictions on performance.
-          </li>
-          <li>
-            <strong>Journalistic literary reportage under wartime censorship
-            (early 2000s)</strong><br />A journalist reframes factual
-            reporting through personal narrative to avoid suppression.
-          </li>
-          <li>
-            <strong>Digital visual art under AI-driven moderation
-            (contemporary platforms)</strong><br />An artist modifies visual
-            style to evade automated nudity detection systems.
-          </li>
-          <li>
-            <strong>Screenwriting under predictive AI censorship (global
-            streaming platforms)</strong><br />A writer adapts narrative
-            structure using speculative fiction to pass algorithmic
-            pre-screening.
-          </li>
+          <li><strong>Source check.</strong> Every claim is linked to at least one source. Dates and quotations were checked against the cited source.</li>
+          <li><strong>Provenance.</strong> Every individual carries <code>dataProvenance</code> (“documented case” or “synthetic test individual”). Synthetic data is excluded from all queries.</li>
+          <li><strong>Logical check.</strong> The merged ontology is consistent under HermiT (see <a href="#evaluation">Evaluation</a>).</li>
         </ul>
-
-        <p>
-          These seed cases were iteratively enriched during ontology
-          development and later served as anchors for generating additional
-          instances.
-        </p>
-
-        <h3>LLM-assisted dataset augmentation</h3>
-        <p>
-          To expand the dataset beyond the initial seed cases, we employed a
-          Large Language Model (LLM) to generate additional instances that
-          conform to the ConCreCen ontological framework. The LLM was
-          provided with:
-        </p>
-        <ul>
-          <li>The ontology schema (Turtle file)</li>
-          <li>Structured descriptions of the six seed cases</li>
-          <li>
-            Explicit instructions to generate new cases by reusing existing
-            classes and properties only
-          </li>
-        </ul>
-
-        <p>
-          This process resulted in a dataset of 24 creative instances,
-          combining historically grounded cases and plausible contemporary
-          scenarios. While the LLM successfully generated structurally
-          coherent instances, manual review in Protégé revealed occasional
-          omissions or underspecified relations, particularly regarding
-          creative outputs and process granularity. These limitations are
-          documented as part of the model’s evaluation rather than treated as
-          errors.
-        </p>
-
-        <h3>Dataset structure (CSV)</h3>
-        <p>
-          The dataset was initially compiled in tabular form and later
-          converted into RDF triples. The CSV schema reflects the
-          ontology’s core classes and relations.
-        </p>
-
-        <p><strong>CSV schema:</strong></p>
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Column name</th>
-              <th>Ontology class / property</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>case_id</td><td>identifier</td></tr>
-            <tr><td>creative_agent</td><td>CreativeAgent</td></tr>
-            <tr><td>creative_work</td><td>CreativeWork</td></tr>
-            <tr><td>medium</td><td>Medium</td></tr>
-            <tr><td>censorship_type</td><td>CensorshipType</td></tr>
-            <tr><td>authority</td><td>Authority</td></tr>
-            <tr><td>constraint</td><td>Constraint</td></tr>
-            <tr><td>creative_strategy</td><td>CreativeStrategy</td></tr>
-            <tr><td>outcome</td><td>Outcome</td></tr>
-            <tr><td>impact</td><td>ImpactOnCreativity</td></tr>
-            <tr><td>temporal_context</td><td>TemporalContext</td></tr>
-            <tr><td>spatial_context</td><td>SpatialContext</td></tr>
-            <tr><td>platform_context</td><td>PlatformContext</td></tr>
-          </tbody>
-        </table>
-
-        <p><strong>Example rows (excerpt):</strong></p>
-        <pre class="csv-excerpt">case_id	creative_agent	creative_work	medium	censorship_type	authority	creative_strategy	outcome	impact	temporal_context	spatial_context
-C01	Novelist	Allegorical Novel	Literature	GovernmentCensorship	State Ministry	AllegoryStrategy	Approved	InnovationUnderConstraint	1930s	Southern Europe
-C05	Visual Artist	Abstract Digital Artwork	DigitalMedia	AIDrivenCensorship	Platform AI	VisualObfuscationStrategy	Shadowbanned	ChillingEffect	2020s	Global
-C12	Musician	Instrumental Album	Music	ReligiousCensorship	Religious Authority	GenreShiftStrategy	AllowedWithChanges	InnovationUnderConstraint	1990s	Iran</pre>
-
-        <h3>5.1.1 Dataset Analysis</h3>
-        <p>
-          An initial descriptive analysis of the dataset reveals several
-          notable patterns regarding censorship mechanisms, creative
-          strategies, and outcomes.
-        </p>
-
-        <h4>Distribution of censorship types</h4>
-        <p>Across the 24 instances:</p>
-        <ul>
-          <li>Institutional censorship (governmental, religious, corporate) appears in 14 cases</li>
-          <li>AI-driven censorship appears in 7 cases</li>
-          <li>Self-censorship is explicitly modeled in 9 cases, often co-occurring with institutional or algorithmic constraints</li>
-        </ul>
-
-        <p>
-          This suggests that self-censorship frequently emerges as a
-          secondary adaptive response rather than an isolated phenomenon.
-        </p>
-
-        <h4>Creative strategies under constraint</h4>
-        <p>The most frequently observed creative strategies are:</p>
-        <ul>
-          <li>Allegory / Metaphor strategies (10 cases)</li>
-          <li>Genre shift and formal experimentation (8 cases)</li>
-          <li>Visual obfuscation and coded language (7 cases)</li>
-          <li>Underground distribution (6 cases)</li>
-        </ul>
-
-        <p>
-          While allegorical strategies dominate historically grounded cases,
-          visual and formal strategies are more prevalent in AI-moderated
-          digital environments.
-        </p>
-
-        <h4>Outcomes and impacts</h4>
-        <p>The dataset shows a relatively balanced distribution of outcomes:</p>
-        <ul>
-          <li>Approved or AllowedWithChanges: 9 cases</li>
-          <li>Banned or Removed: 6 cases</li>
-          <li>Shadowbanned / Downranked: 5 cases</li>
-          <li>CirculatedUnderground: 4 cases</li>
-        </ul>
-
-        <p>
-          Importantly, innovation under constraint is identified in 13
-          cases, often co-occurring with partial suppression rather than
-          outright approval. This supports the hypothesis that censorship
-          does not exclusively suppress creativity but can redirect it toward
-          alternative expressive forms.
-        </p>
-
-        <h4>Interpretation: constraints as creative structuring forces</h4>
-        <p>
-          The dataset analysis highlights a key distinction between
-          constraint severity and creative outcome. High-severity constraints
-          do not uniformly result in suppression; instead, they correlate
-          strongly with the emergence of indirect, encoded, or formally
-          experimental strategies. Conversely, AI-driven censorship tends to
-          produce diffuse outcomes such as shadowbanning and throttling,
-          contributing more frequently to chilling effects than to overt
-          bans.
-        </p>
-
-        <p>
-          These findings suggest that censorship operates not merely as a
-          prohibitive force but as a structuring condition that shapes
-          creative processes, media choices, and cultural circulation
-          patterns—precisely the dynamic captured by the ConCreCen
-          ontology.
-        </p>
       </section>
 
-      <!-- AI EXPERIMENT SECTION -->
-      <section id="ai-experiment" class="section">
-        <h1>AI Experiment</h1>
-        <p>This section reports on our empirical study of LLM behavior.</p>
-
-        <h2>Probing the Black Box</h2>
+      <section id="knowledge-graph" class="section">
+        <h1>7. Knowledge Graph</h1>
+        <h2>7.1 Interactive visualization</h2>
         <p>
-          We subjected models (GPT-4, Claude, Llama) to a series of "borderline"
-          prompts. The results map the "latent censorship" inherent in RLHF
-          training, comparing it to historical codes of conduct.
+          The <strong>Ontology (TBox)</strong> view shows the classes and the object properties that connect them,
+          from domain to range, with <code>subClassOf</code> as dashed lines. The <strong>Knowledge Graph (ABox)</strong>
+          view shows the documented cases as individuals and their asserted relations.
         </p>
+        <div class="og-toolbar">
+          <div class="og-tabs" role="tablist">
+            <button class="og-tab active" data-view="ontology" type="button">Ontology (TBox)</button>
+            <button class="og-tab" data-view="kg" type="button">Knowledge Graph (ABox)</button>
+          </div>
+          <label id="og-sub-toggle" class="og-toggle"><input type="checkbox" id="og-sub-cb" checked /> show subClassOf</label>
+          <label id="og-ev-toggle" class="og-toggle"><input type="checkbox" id="og-ev-cb" /> show sources &amp; claims</label>
+          <button id="og-fit" class="og-btn" type="button">Fit to view</button>
+          <span id="og-counts" class="kg-meta"></span>
+        </div>
+        <div class="og-layout">
+          <div id="og-canvas" class="og-canvas"></div>
+          <aside id="og-info" class="og-info"></aside>
+        </div>
+        <div id="og-legend" class="og-legend"></div>
+        <p class="kg-meta">Drag nodes to rearrange, scroll to zoom, and click a node to highlight its neighbourhood. Generated from <a href="downloads/censorcreate-v2-with-cases.ttl">censorcreate-v2-with-cases.ttl</a>.</p>
+        <h2>7.2 Statistics</h2>
+        <div class="kg-stats"><div class="kg-stat"><div class="kg-stat-num">4</div><div class="kg-stat-label">censored works</div></div><div class="kg-stat"><div class="kg-stat-num">5</div><div class="kg-stat-label">censorship events</div></div><div class="kg-stat"><div class="kg-stat-num">5</div><div class="kg-stat-label">creative responses</div></div><div class="kg-stat"><div class="kg-stat-num">7</div><div class="kg-stat-label">evidence claims</div></div><div class="kg-stat"><div class="kg-stat-num">11</div><div class="kg-stat-label">sources</div></div><div class="kg-stat"><div class="kg-stat-num">932</div><div class="kg-stat-label">triples (schema + data)</div></div></div>
       </section>
 
-      <!-- EPILOGUE SECTION -->
-      <section id="epilogue" class="section">
-        <h1>Epilogue</h1>
-        <p>Concluding thoughts and future horizons.</p>
+      <section id="sparql" class="section">
+        <h1>8. SPARQL</h1>
         <p>
-          ConCreCen stands as a proof-of-concept that the "negative space"
-          created by censorship is as information-rich as the content itself.
-          Future iterations will visualize these constraint topologies in 3D
-          space.
+          Each competency question is a SPARQL query over the merged ontology and knowledge graph. The queries use asserted
+          triples only, and synthetic test individuals are excluded. The query files are on the
+          <a href="#downloads">Downloads</a> page.
         </p>
+        <div class="kg-cq">
+<h3>CQ1. Which creative works were subjected to censorship?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq01_censored_works.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT ?work ?title ?year WHERE {
+  ?event a cc:CensorshipEvent ;
+         cc:targetsWork ?work .
+  ?work cc:title ?title .
+  OPTIONAL { ?work cc:creationYear ?year }
+  FILTER NOT EXISTS { ?work cc:dataProvenance &quot;synthetic test individual&quot; }
+}
+ORDER BY ?year</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>work</th><th>title</th><th>year</th></tr></thead><tbody><tr><td>LadyMacbethMtsensk</td><td>Lady Macbeth of the Mtsensk District</td><td>1932</td></tr><tr><td>ShostakovichSymphony4</td><td>Symphony No. 4 in C minor, Op. 43</td><td>1936</td></tr><tr><td>Notorious1946</td><td>Notorious</td><td>1946</td></tr><tr><td>HinzeKunzeRoman</td><td>Hinze-Kunze-Roman</td><td>1981</td></tr></tbody></table></div>
+<p class="kg-meta">4 result rows</p></div><div class="kg-cq">
+<h3>CQ2. Who or which institution imposed censorship on a work?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq02_censoring_agents.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?event ?agentName WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:imposedBy ?agent .
+  ?work cc:title ?title .
+  ?agent rdfs:label ?agentName .
+  FILTER NOT EXISTS { ?work cc:dataProvenance &quot;synthetic test individual&quot; }
+}
+ORDER BY ?title</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>event</th><th>agentName</th></tr></thead><tbody><tr><td>Hinze-Kunze-Roman</td><td>EV_HKR_PrintApproval</td><td>Hauptverwaltung Verlage und Buchhandel (GDR Ministry of Culture)</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>EV_Pravda1936</td><td>Pravda (Communist Party newspaper; editorial expressing the official Party line)</td></tr><tr><td>Notorious</td><td>EV_Notorious_PCAReview</td><td>Production Code Administration (headed by Joseph Breen)</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>EV_Sym4_Cancellation</td><td>Union of Soviet Composers and Party officials</td></tr></tbody></table></div>
+<p class="kg-meta">4 result rows</p></div><div class="kg-cq">
+<h3>CQ3. Which censorship mechanism was used?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq03_mechanisms.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?event ?mechanism WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:usesMechanism ?m .
+  ?work cc:title ?title .
+  ?m rdfs:label ?mechanism . FILTER(lang(?mechanism) = &quot;en&quot;)
+  FILTER NOT EXISTS { ?work cc:dataProvenance &quot;synthetic test individual&quot; }
+}
+ORDER BY ?title ?event</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>event</th><th>mechanism</th></tr></thead><tbody><tr><td>Hinze-Kunze-Roman</td><td>EV_HKR_DistributionStop</td><td>Distribution restriction</td></tr><tr><td>Hinze-Kunze-Roman</td><td>EV_HKR_PrintApproval</td><td>Modification requirement</td></tr><tr><td>Hinze-Kunze-Roman</td><td>EV_HKR_PrintApproval</td><td>Prior approval</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>EV_Pravda1936</td><td>Ban</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>EV_Pravda1936</td><td>Removal</td></tr><tr><td>Notorious</td><td>EV_Notorious_PCAReview</td><td>Modification requirement</td></tr><tr><td>Notorious</td><td>EV_Notorious_PCAReview</td><td>Prior approval</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>EV_Sym4_Cancellation</td><td>Ban</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>EV_Sym4_Cancellation</td><td>Self-censorship</td></tr></tbody></table></div>
+<p class="kg-meta">9 result rows</p></div><div class="kg-cq">
+<h3>CQ4. What element or aspect of the work was constrained?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq04_constrained_elements.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?elementType ?element WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:imposesConstraint ?c .
+  ?c cc:constrainsElement ?el .
+  ?el a ?t ; cc:description ?element .
+  ?t rdfs:subClassOf cc:WorkElement ; rdfs:label ?elementType . FILTER(lang(?elementType) = &quot;en&quot;)
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance &quot;synthetic test individual&quot; }
+}</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>elementType</th><th>element</th></tr></thead><tbody><tr><td>Lady Macbeth of the Mtsensk District</td><td>Audio element</td><td>Dissonant, modernist musical idiom of Lady Macbeth (and of the Fourth Symphony in progress).</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>Audio element</td><td>Dissonant, modernist musical idiom of Lady Macbeth (and of the Fourth Symphony in progress).</td></tr><tr><td>Notorious</td><td>Scene</td><td>Love scene between Devlin (Cary Grant) and Alicia (Ingrid Bergman) in her Rio apartment.</td></tr><tr><td>Hinze-Kunze-Roman</td><td>Theme</td><td>Ironic portrayal of a Party functionary (Kunze) and his chauffeur (Hinze); apparatchik privilege at the heart of the plot.</td></tr><tr><td>Notorious</td><td>Theme</td><td>Characterisation of Alicia Huberman&#x27;s sexual morality.</td></tr></tbody></table></div>
+<p class="kg-meta">5 result rows</p></div><div class="kg-cq">
+<h3>CQ5. What constraint resulted from the censorship event?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq05_constraints.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?event ?constraintType ?constraint WHERE {
+  ?event a cc:CensorshipEvent ;
+         cc:imposesConstraint ?c .
+  ?c cc:hasConstraintType ?ct ;
+     cc:description ?constraint .
+  ?ct rdfs:label ?constraintType . FILTER(lang(?constraintType) = &quot;en&quot;)
+}
+ORDER BY ?event</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>event</th><th>constraintType</th><th>constraint</th></tr></thead><tbody><tr><td>EV_HKR_DistributionStop</td><td>Content restriction</td><td>Circulation of the already published novel halted.</td></tr><tr><td>EV_HKR_PrintApproval</td><td>Subject restriction</td><td>Objections that the irony targets socialism, distorts the concept of freedom and represents the Liebknecht-Luxemburg commemoration unworthily (Neubert report, July 1984).</td></tr><tr><td>EV_Notorious_PCAReview</td><td>Subject restriction</td><td>Alicia must not appear as a &#x27;grossly immoral woman&#x27;; any suggestion of sexual promiscuity to be avoided; the word &#x27;tramp&#x27; to be removed.</td></tr><tr><td>EV_Notorious_PCAReview</td><td>Content restriction</td><td>Production Code: &#x27;Excessive and lustful kissing ... are not to be shown&#x27;; enforced through an unofficial rule of thumb that a screen kiss should not exceed about three seconds.</td></tr><tr><td>EV_Notorious_PCAReview</td><td>Direct representation restriction</td><td>Production Code: &#x27;Excessive and lustful kissing ... are not to be shown&#x27;; enforced through an unofficial rule of thumb that a screen kiss should not exceed about three seconds.</td></tr><tr><td>EV_Pravda1936</td><td>Stylistic restriction</td><td>Condemnation of &#x27;formalism&#x27;: dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works.</td></tr><tr><td>EV_Sym4_Cancellation</td><td>Stylistic restriction</td><td>Condemnation of &#x27;formalism&#x27;: dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works.</td></tr></tbody></table></div>
+<p class="kg-meta">7 result rows</p></div><div class="kg-cq">
+<h3>CQ6. How did the creator respond to the constraint?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq06_responses.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?creator ?response ?description WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:hasResponse ?response .
+  ?response cc:performedBy ?p ;
+            cc:description ?description .
+  ?p rdfs:label ?creator .
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance &quot;synthetic test individual&quot; }
+}
+ORDER BY ?title</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>creator</th><th>response</th><th>description</th></tr></thead><tbody><tr><td>Hinze-Kunze-Roman</td><td>Volker Braun</td><td>RE_HKR_IronicNarration</td><td>Braun frames the critique in an ironic, Diderot-like master-servant narrative with an intrusive narrator who comments on what &#x27;cannot be said directly&#x27;.</td></tr><tr><td>Hinze-Kunze-Roman</td><td>Dieter Schlenstedt</td><td>RE_HKR_Lesehilfe</td><td>Dieter Schlenstedt, one of the manuscript&#x27;s first reviewers, writes an appended &#x27;schöngeistige Lesehilfe&#x27;: five fictional letters that ironise the review process and guide readers; the text was meant both to placate the censors and to guide reading.</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>Dmitri Shostakovich</td><td>RE_Shost_FifthSymphony</td><td>Fifth Symphony (composed 18 April–20 July 1937; premiered 21 November 1937, Leningrad Philharmonic, Mravinsky): a turn &#x27;towards greater accessibility, towards greater simplicity&#x27;, classical form and tonal harmony, with a finale whose triumph has been heard as sincere or ironic.</td></tr><tr><td>Notorious</td><td>Alfred Hitchcock</td><td>RE_Notorious_FragmentedKiss</td><td>Hitchcock stages a scene of about two and a half to three minutes as a chain of short kisses (none longer than ~3 seconds), interrupted by talk and a telephone call, so the scene stays within the rule but reads as one continuous embrace.</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>Dmitri Shostakovich</td><td>RE_Sym4_Withdrawal</td><td>Shostakovich withdraws the Fourth Symphony; it remains unperformed until 1961.</td></tr></tbody></table></div>
+<p class="kg-meta">5 result rows</p></div><div class="kg-cq">
+<h3>CQ7. Which creative strategy was used in the response?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq07_strategies.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?response ?strategy WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:hasResponse ?response .
+  ?response cc:usesStrategy ?s .
+  ?s rdfs:label ?strategy . FILTER(lang(?strategy) = &quot;en&quot;)
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance &quot;synthetic test individual&quot; }
+}
+ORDER BY ?title</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>response</th><th>strategy</th></tr></thead><tbody><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_IronicNarration</td><td>Allegory</td></tr><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_IronicNarration</td><td>Irony</td></tr><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_Lesehilfe</td><td>Irony</td></tr><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_Lesehilfe</td><td>Paratextual framing</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>RE_Shost_FifthSymphony</td><td>Ambiguity</td></tr><tr><td>Notorious</td><td>RE_Notorious_FragmentedKiss</td><td>Fragmentation</td></tr><tr><td>Notorious</td><td>RE_Notorious_FragmentedKiss</td><td>Indirect representation</td></tr></tbody></table></div>
+<p class="kg-meta">7 result rows</p></div><div class="kg-cq">
+<h3>CQ8. What was the outcome: adaptation, modification, suppression, abandonment, etc.?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq08_outcomes.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?response ?outcome WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:hasResponse ?response .
+  ?response cc:hasOutcome ?o .
+  ?o rdfs:label ?outcome . FILTER(lang(?outcome) = &quot;en&quot;)
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance &quot;synthetic test individual&quot; }
+}
+ORDER BY ?outcome</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>response</th><th>outcome</th></tr></thead><tbody><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_Lesehilfe</td><td>Alternative version produced</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>RE_Shost_FifthSymphony</td><td>Creative adaptation</td></tr><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_IronicNarration</td><td>Creative adaptation</td></tr><tr><td>Notorious</td><td>RE_Notorious_FragmentedKiss</td><td>Creative adaptation</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>RE_Sym4_Withdrawal</td><td>Unpublished work</td></tr></tbody></table></div>
+<p class="kg-meta">5 result rows</p></div><div class="kg-cq">
+<h3>CQ9. Which creative strategies recur across different media or censorship mechanisms?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq09_recurring_strategies.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?strategy (COUNT(DISTINCT ?medium) AS ?media) (COUNT(DISTINCT ?mech) AS ?mechanisms) WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:usesMechanism ?mech ;
+         cc:hasResponse ?response .
+  ?response cc:usesStrategy ?strategy .
+  ?work a ?medium .
+  ?medium rdfs:subClassOf cc:CreativeWork .
+  FILTER(?medium != cc:CensoredWork &amp;&amp; ?medium != cc:WorkVersion)
+  FILTER NOT EXISTS { ?work cc:dataProvenance &quot;synthetic test individual&quot; }
+}
+GROUP BY ?strategy
+ORDER BY DESC(?media) DESC(?mechanisms)</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>strategy</th><th>media</th><th>mechanisms</th></tr></thead><tbody><tr><td>Allegory</td><td>1</td><td>2</td></tr><tr><td>Irony</td><td>1</td><td>2</td></tr><tr><td>ParatextualFraming</td><td>1</td><td>2</td></tr><tr><td>Fragmentation</td><td>1</td><td>2</td></tr><tr><td>IndirectRepresentation</td><td>1</td><td>2</td></tr><tr><td>Ambiguity</td><td>1</td><td>2</td></tr></tbody></table></div>
+<p class="kg-meta">6 result rows</p></div><div class="kg-cq">
+<h3>CQ10. Which sources support the claimed relationship between a censorship event and a creative response?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq10_evidence.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?event ?response ?confidence ?source WHERE {
+  ?claim a cc:Claim ;
+         cc:aboutCensorshipEvent ?event ;
+         cc:aboutCreativeResponse ?response ;
+         cc:confidenceLevel ?confidence ;
+         cc:supportedBy ?s .
+  ?s cc:bibliographicCitation ?source .
+}
+ORDER BY ?event ?response</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>event</th><th>response</th><th>confidence</th><th>source</th></tr></thead><tbody><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_IronicNarration</td><td>medium</td><td>Darnton, R. (1991). The Good Old Days. The New York Review of Books, 16 May 1991.</td></tr><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_IronicNarration</td><td>medium</td><td>Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation).</td></tr><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_Lesehilfe</td><td>high</td><td>Guibert-Yeche, H. Censure et autocensure en RDA. ENS Éditions (OpenEdition Books), pp. 127–144.</td></tr><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_Lesehilfe</td><td>high</td><td>Höpcke, K. (1985). Über Volker Brauns Hinze-Kunze-Roman. Die Weltbühne 33–34/1985; reprinted in Das Blättchen, April 2025.</td></tr><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_Lesehilfe</td><td>high</td><td>Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation).</td></tr><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_Lesehilfe</td><td>high</td><td>Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR. Aus Politik und Zeitgeschichte, Bundeszentrale für politische Bildung.</td></tr><tr><td>EV_Notorious_PCAReview</td><td>RE_Notorious_FragmentedKiss</td><td>high</td><td>Billheimer, J. (2019). Hitchcock and the Censors. University Press of Kentucky, pp. 118–128. DOI 10.5810/kentucky/9780813177427.003.0015</td></tr><tr><td>EV_Notorious_PCAReview</td><td>RE_Notorious_FragmentedKiss</td><td>high</td><td>Production Code Administration. The Alfred Hitchcock Wiki (quotes the Production Code and Bergman&#x27;s recollection).</td></tr><tr><td>EV_Pravda1936</td><td>RE_Shost_FifthSymphony</td><td>medium</td><td>Frolova-Walker, M. &amp; Walker, J. (2023). Shostakovich&#x27;s Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001</td></tr><tr><td>EV_Pravda1936</td><td>RE_Shost_FifthSymphony</td><td>medium</td><td>Robinson, H. Symphony No. 5 (Shostakovich). Boston Symphony Orchestra programme note.</td></tr><tr><td>EV_Pravda1936</td><td>RE_Shost_FifthSymphony</td><td>medium</td><td>Muddle Instead of Music. Wikipedia (tertiary source, used for orientation only).</td></tr><tr><td>EV_Sym4_Cancellation</td><td>RE_Sym4_Withdrawal</td><td>high</td><td>Frolova-Walker, M. &amp; Walker, J. (2023). Shostakovich&#x27;s Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001</td></tr><tr><td>EV_Sym4_Cancellation</td><td>RE_Sym4_Withdrawal</td><td>high</td><td>Symphony No. 4 (Shostakovich). Wikipedia (tertiary source, used for orientation only).</td></tr></tbody></table></div>
+<p class="kg-meta">13 result rows</p></div>
       </section>
+
+      <section id="case-studies" class="section">
+        <h1>9. Case Studies</h1>
+        <p>
+          Three documented cases from three media and three censorship regimes. Every relation between a censorship
+          event and a creative response is recorded as a <code>Claim</code> with its sources and a confidence level.
+        </p>
+        <div class="scenario-accordion"><details class="scenario-item kg-case" open>
+<summary class="scenario-summary">Volker Braun, <em>Hinze-Kunze-Roman</em> (GDR, 1981–1985) <span class="kg-chip kg-chip-medium">Literature</span></summary>
+<div class="scenario-content"><p>A satirical novel about a Party functionary and his chauffeur waited four years for a print permit. The case follows Darnton’s model of censorship as negotiation: expert reports, demanded changes, an afterword written to placate the censors, publication, and a halt to distribution.</p><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Hinze-Kunze-Roman <span class="kg-meta">(Literary work, 1981; Volker Braun)</span></td></tr>
+<tr><th>Censorship event</th><td>Four-year GDR print-approval process: manuscript submitted to Mitteldeutscher Verlag end 1981, passed to the Hauptverwaltung end 1983; negative expert report by Werner Neubert (July 1984); Höpcke changed &#x27;refusal&#x27; to &#x27;needs further work&#x27;; renewed unsuccessful attempts to obtain changes; approval early 1985.</td></tr>
+<tr><th>Imposed by</th><td>Hauptverwaltung Verlage und Buchhandel (GDR Ministry of Culture)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Prior approval</span> <span class="kg-chip">Modification requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Subject restriction</span><div class="kg-meta">Objections that the irony targets socialism, distorts the concept of freedom and represents the Liebknecht-Luxemburg commemoration unworthily (Neubert report, July 1984).</div></td></tr>
+<tr><th>Constrained element</th><td>Theme: Ironic portrayal of a Party functionary (Kunze) and his chauffeur (Hinze); apparatchik privilege at the heart of the plot.</td></tr><tr><th>Creative response</th><td>Braun frames the critique in an ironic, Diderot-like master-servant narrative with an intrusive narrator who comments on what &#x27;cannot be said directly&#x27;.<div class="kg-meta">performed by Volker Braun</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Irony</span> <span class="kg-chip">Allegory</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Creative adaptation</span></td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-medium">medium confidence</span> The preface to the French edition argues that Braun uses the ruse and irony of Enlightenment writers (Diderot&#x27;s Jacques le fataliste) to pass subversive ideas; the narrator explicitly thematises why so much &#x27;cannot be said directly&#x27;. This is an interpretation by the preface author, and the novel was written (1981) before the formal review began.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://editions-metailie.com/livre/le-roman-de-hinze-et-kunze/" target="_blank" rel="noopener noreferrer">Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation).</a></li><li><a href="https://www.nybooks.com/articles/1991/05/16/the-good-old-days/" target="_blank" rel="noopener noreferrer">Darnton, R. (1991). The Good Old Days. The New York Review of Books, 16 May 1991.</a></li></ul></td></tr>
+</table></div><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Hinze-Kunze-Roman <span class="kg-meta">(Literary work, 1981; Volker Braun)</span></td></tr>
+<tr><th>Censorship event</th><td>Four-year GDR print-approval process: manuscript submitted to Mitteldeutscher Verlag end 1981, passed to the Hauptverwaltung end 1983; negative expert report by Werner Neubert (July 1984); Höpcke changed &#x27;refusal&#x27; to &#x27;needs further work&#x27;; renewed unsuccessful attempts to obtain changes; approval early 1985.</td></tr>
+<tr><th>Imposed by</th><td>Hauptverwaltung Verlage und Buchhandel (GDR Ministry of Culture)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Prior approval</span> <span class="kg-chip">Modification requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Subject restriction</span><div class="kg-meta">Objections that the irony targets socialism, distorts the concept of freedom and represents the Liebknecht-Luxemburg commemoration unworthily (Neubert report, July 1984).</div></td></tr>
+<tr><th>Creative response</th><td>Dieter Schlenstedt, one of the manuscript&#x27;s first reviewers, writes an appended &#x27;schöngeistige Lesehilfe&#x27;: five fictional letters that ironise the review process and guide readers; the text was meant both to placate the censors and to guide reading.<div class="kg-meta">performed by Dieter Schlenstedt</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Paratextual framing</span> <span class="kg-chip">Irony</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Alternative version produced</span></td></tr><tr><th>Result</th><td>Hinze-Kunze-Roman, Mitteldeutscher Verlag (Halle) 1985 edition with Schlenstedt&#x27;s afterword; the simultaneous Suhrkamp edition appeared without it (1985)</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> The 1985 GDR edition appeared with Schlenstedt&#x27;s text, intended &#x27;d&#x27;une part à amadouer la censure, d&#x27;autre part à guider le lecteur&#x27;; the Suhrkamp edition in the West was published without it.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://books.openedition.org/enseditions/19283" target="_blank" rel="noopener noreferrer">Guibert-Yeche, H. Censure et autocensure en RDA. ENS Éditions (OpenEdition Books), pp. 127–144.</a></li><li><a href="https://editions-metailie.com/livre/le-roman-de-hinze-et-kunze/" target="_blank" rel="noopener noreferrer">Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation).</a></li><li><a href="https://www.bpb.de/shop/zeitschriften/apuz/archiv/535791/das-wechselspiel-von-selbstzensur-und-literaturlenkung-in-der-ddr/" target="_blank" rel="noopener noreferrer">Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR. Aus Politik und Zeitgeschichte, Bundeszentrale für politische Bildung.</a></li><li><a href="https://das-blaettchen.de/2025/04/ueber-volker-brauns-hinze-kunze-roman-71622.html" target="_blank" rel="noopener noreferrer">Höpcke, K. (1985). Über Volker Brauns Hinze-Kunze-Roman. Die Weltbühne 33–34/1985; reprinted in Das Blättchen, April 2025.</a></li></ul></td></tr>
+</table></div><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Hinze-Kunze-Roman <span class="kg-meta">(Literary work, 1981; Volker Braun)</span></td></tr>
+<tr><th>Censorship event</th><td>After publication and hostile reviews (Neues Deutschland; critic Anneliese Löffler), distribution of the novel in the GDR was stopped on 10 September 1985; Höpcke received a formal Party censure. A new GDR edition appeared only in 1988.</td></tr>
+<tr><th>Imposed by</th><td><span class="kg-muted">not named in the sources</span></td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Distribution restriction</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Content restriction</span><div class="kg-meta">Circulation of the already published novel halted.</div></td></tr>
+<tr><th>Creative response</th><td class="kg-muted">No documented creative response. The event is recorded without a response.</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> Distribution was stopped on 10 September 1985 (agent not named in the source); Höpcke was &#x27;called on the carpet and given a formal censure&#x27;. No documented creative response to this second event.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://editions-metailie.com/livre/le-roman-de-hinze-et-kunze/" target="_blank" rel="noopener noreferrer">Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation).</a></li><li><a href="https://www.nybooks.com/articles/1991/05/16/the-good-old-days/" target="_blank" rel="noopener noreferrer">Darnton, R. (1991). The Good Old Days. The New York Review of Books, 16 May 1991.</a></li></ul></td></tr>
+</table></div></div></details><details class="scenario-item kg-case" open>
+<summary class="scenario-summary">Dmitri Shostakovich, <em>Lady Macbeth</em> → Symphonies 4 and 5 (USSR, 1936–1937) <span class="kg-chip kg-chip-medium">Music</span></summary>
+<div class="scenario-content"><p>After the <em>Pravda</em> editorial “Muddle Instead of Music” (28 January 1936), the opera vanished from the repertoire. One constraint produced two contrasting responses: suppression (the Fourth Symphony, withdrawn until 1961) and adaptation (the Fifth Symphony, 1937). This illustrates Rosso’s enabling and disabling effects.</p><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Lady Macbeth of the Mtsensk District <span class="kg-meta">(Musical work, 1932; Dmitri Shostakovich)</span></td></tr>
+<tr><th>Censorship event</th><td>Unsigned Pravda editorial &#x27;Muddle Instead of Music&#x27; (28 January 1936), two days after Stalin attended the opera; further Pravda attacks followed; the opera disappeared from the repertoire (last performance 11 March 1936).</td></tr>
+<tr><th>Imposed by</th><td>Pravda (Communist Party newspaper; editorial expressing the official Party line)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Ban</span> <span class="kg-chip">Removal</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Stylistic restriction</span><div class="kg-meta">Condemnation of &#x27;formalism&#x27;: dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works.</div></td></tr>
+<tr><th>Constrained element</th><td>Audio element: Dissonant, modernist musical idiom of Lady Macbeth (and of the Fourth Symphony in progress).</td></tr><tr><th>Creative response</th><td>Fifth Symphony (composed 18 April–20 July 1937; premiered 21 November 1937, Leningrad Philharmonic, Mravinsky): a turn &#x27;towards greater accessibility, towards greater simplicity&#x27;, classical form and tonal harmony, with a finale whose triumph has been heard as sincere or ironic.<div class="kg-meta">performed by Dmitri Shostakovich</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Ambiguity</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Creative adaptation</span></td></tr><tr><th>Result</th><td>Symphony No. 5 in D minor, Op. 47 (1937)</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-medium">medium confidence</span> The Fifth Symphony is documented as Shostakovich&#x27;s response to the 1936 criticism (&#x27;a Soviet artist&#x27;s creative reply to just criticism&#x27;) and led to his rehabilitation; whether the finale is sincere or ironic remains debated, so the Ambiguity strategy is an interpretation.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://academic.oup.com/book/55321/chapter/428777077" target="_blank" rel="noopener noreferrer">Frolova-Walker, M. &amp; Walker, J. (2023). Shostakovich&#x27;s Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001</a></li><li><a href="https://www.bso.org/works/symphony-no-5-shostakovich" target="_blank" rel="noopener noreferrer">Robinson, H. Symphony No. 5 (Shostakovich). Boston Symphony Orchestra programme note.</a></li><li><a href="https://en.wikipedia.org/wiki/Muddle_Instead_of_Music" target="_blank" rel="noopener noreferrer">Muddle Instead of Music. Wikipedia (tertiary source, used for orientation only).</a></li></ul></td></tr>
+</table></div><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Symphony No. 4 in C minor, Op. 43 <span class="kg-meta">(Musical work, 1936; Dmitri Shostakovich)</span></td></tr>
+<tr><th>Censorship event</th><td>Premiere planned for 11 December 1936 (Leningrad Philharmonic, Stiedry) cancelled after rehearsals; officially presented as the composer&#x27;s withdrawal, while other accounts (Glikman) report pressure from Party and Composers&#x27; Union officials.</td></tr>
+<tr><th>Imposed by</th><td>Union of Soviet Composers and Party officials</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Self-censorship</span> <span class="kg-chip">Ban</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Stylistic restriction</span><div class="kg-meta">Condemnation of &#x27;formalism&#x27;: dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works.</div></td></tr>
+<tr><th>Creative response</th><td>Shostakovich withdraws the Fourth Symphony; it remains unperformed until 1961.<div class="kg-meta">performed by Dmitri Shostakovich</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-muted">—</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Unpublished work</span></td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> The Fourth Symphony was withdrawn from rehearsal in 1936 and not performed until 1961; sources disagree on whether the withdrawal was voluntary or imposed, hence both SelfCensorship and Ban are recorded.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://en.wikipedia.org/wiki/Symphony_No._4_(Shostakovich)" target="_blank" rel="noopener noreferrer">Symphony No. 4 (Shostakovich). Wikipedia (tertiary source, used for orientation only).</a></li><li><a href="https://academic.oup.com/book/55321/chapter/428777077" target="_blank" rel="noopener noreferrer">Frolova-Walker, M. &amp; Walker, J. (2023). Shostakovich&#x27;s Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001</a></li></ul></td></tr>
+</table></div></div></details><details class="scenario-item kg-case" open>
+<summary class="scenario-summary">Alfred Hitchcock, <em>Notorious</em> (USA, 1945–1946) <span class="kg-chip kg-chip-medium">Film</span></summary>
+<div class="scenario-content"><p>The Production Code Administration reviewed the script and restricted how sexuality could be shown. Hitchcock’s fragmented kiss is a clear example of a constraint that redirected a creative solution instead of blocking it, in Stokes’s sense.</p><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Notorious <span class="kg-meta">(Film, 1946; Alfred Hitchcock)</span></td></tr>
+<tr><th>Censorship event</th><td>Production Code Administration review of the script: Joseph Breen called it &#x27;definitely unacceptable&#x27; (25 May 1945); a further review (25 July 1945) listed 17 required changes, incl. removing five uses of &#x27;tramp&#x27; for Alicia.</td></tr>
+<tr><th>Imposed by</th><td>Production Code Administration (headed by Joseph Breen)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Prior approval</span> <span class="kg-chip">Modification requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Content restriction</span> <span class="kg-chip">Direct representation restriction</span><div class="kg-meta">Production Code: &#x27;Excessive and lustful kissing ... are not to be shown&#x27;; enforced through an unofficial rule of thumb that a screen kiss should not exceed about three seconds.</div></td></tr>
+<tr><th>Constrained element</th><td>Scene: Love scene between Devlin (Cary Grant) and Alicia (Ingrid Bergman) in her Rio apartment.</td></tr><tr><th>Creative response</th><td>Hitchcock stages a scene of about two and a half to three minutes as a chain of short kisses (none longer than ~3 seconds), interrupted by talk and a telephone call, so the scene stays within the rule but reads as one continuous embrace.<div class="kg-meta">performed by Alfred Hitchcock</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Fragmentation</span> <span class="kg-chip">Indirect representation</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Creative adaptation</span></td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> Hitchcock &#x27;concocted&#x27; the kiss scene specifically to get around the supposed three-second rule; Bergman recalled that the censors &#x27;couldn&#x27;t and didn&#x27;t cut the scene because we never at any one point kissed for more than three seconds&#x27;.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://academic.oup.com/kentucky-scholarship-online/book/34148/chapter/289477434" target="_blank" rel="noopener noreferrer">Billheimer, J. (2019). Hitchcock and the Censors. University Press of Kentucky, pp. 118–128. DOI 10.5810/kentucky/9780813177427.003.0015</a></li><li><a href="https://the.hitchcock.zone/wiki/Production_Code_Administration" target="_blank" rel="noopener noreferrer">Production Code Administration. The Alfred Hitchcock Wiki (quotes the Production Code and Bergman&#x27;s recollection).</a></li></ul></td></tr>
+</table></div><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Notorious <span class="kg-meta">(Film, 1946; Alfred Hitchcock)</span></td></tr>
+<tr><th>Censorship event</th><td>Production Code Administration review of the script: Joseph Breen called it &#x27;definitely unacceptable&#x27; (25 May 1945); a further review (25 July 1945) listed 17 required changes, incl. removing five uses of &#x27;tramp&#x27; for Alicia.</td></tr>
+<tr><th>Imposed by</th><td>Production Code Administration (headed by Joseph Breen)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Prior approval</span> <span class="kg-chip">Modification requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Subject restriction</span><div class="kg-meta">Alicia must not appear as a &#x27;grossly immoral woman&#x27;; any suggestion of sexual promiscuity to be avoided; the word &#x27;tramp&#x27; to be removed.</div></td></tr>
+<tr><th>Constrained element</th><td>Theme: Characterisation of Alicia Huberman&#x27;s sexual morality.</td></tr><tr><th>Creative response</th><td class="kg-muted">No documented creative response. The event is recorded without a response.</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> The PCA found Alicia&#x27;s characterisation unacceptable and listed 17 changes (25 July 1945). How each change was implemented is not yet documented here — to be checked in Billheimer, ch. 14.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://academic.oup.com/kentucky-scholarship-online/book/34148/chapter/289477434" target="_blank" rel="noopener noreferrer">Billheimer, J. (2019). Hitchcock and the Censors. University Press of Kentucky, pp. 118–128. DOI 10.5810/kentucky/9780813177427.003.0015</a></li></ul></td></tr>
+</table></div></div></details></div>
+      </section>
+
+      <section id="evaluation" class="section">
+        <h1>10. Evaluation</h1>
+        <h2>10.1 Reasoner</h2>
+        <p>
+          The merged file <code>censorcreate-v2-with-cases.owl</code> was classified with HermiT. The ontology is
+          <strong>consistent</strong>. The reasoner infers that all four targeted works belong to
+          <code>CensoredWork</code>. It also infers that three responses belong to <code>AdaptiveCreativeResponse</code>:
+          Braun’s ironic narration, Shostakovich’s Fifth Symphony and Hitchcock’s fragmented kiss.
+        </p>
+        <h2>10.2 CQ coverage</h2>
+        <div class="kg-table-wrap"><table class="results-table"><thead><tr><th>CQ</th><th>Question</th><th>Rows</th><th>Status</th></tr></thead><tbody><tr><td>CQ1</td><td>Which creative works were subjected to censorship?</td><td>4</td><td>✓ answered</td></tr><tr><td>CQ2</td><td>Who or which institution imposed censorship on a work?</td><td>4</td><td>✓ answered</td></tr><tr><td>CQ3</td><td>Which censorship mechanism was used?</td><td>9</td><td>✓ answered</td></tr><tr><td>CQ4</td><td>What element or aspect of the work was constrained?</td><td>5</td><td>✓ answered</td></tr><tr><td>CQ5</td><td>What constraint resulted from the censorship event?</td><td>7</td><td>✓ answered</td></tr><tr><td>CQ6</td><td>How did the creator respond to the constraint?</td><td>5</td><td>✓ answered</td></tr><tr><td>CQ7</td><td>Which creative strategy was used in the response?</td><td>7</td><td>✓ answered</td></tr><tr><td>CQ8</td><td>What was the outcome: adaptation, modification, suppression, abandonment, etc.?</td><td>5</td><td>✓ answered</td></tr><tr><td>CQ9</td><td>Which creative strategies recur across different media or censorship mechanisms?</td><td>6</td><td>✓ answered</td></tr><tr><td>CQ10</td><td>Which sources support the claimed relationship between a censorship event and a creative response?</td><td>13</td><td>✓ answered</td></tr></tbody></table></div>
+        <p>All ten competency questions can be expressed in SPARQL and return answers over the current graph.</p>
+        <h2>10.3 Limitations</h2>
+        <ul>
+          <li><strong>Small sample.</strong> Three cases are enough to test the model, but not to generalise. CQ9 is answerable, yet with this sample each strategy appears in only one medium.</li>
+          <li><strong>Interpretive claims.</strong> The role of irony in Braun’s novel and the sincerity of Shostakovich’s finale are contested in the literature. They have medium confidence and are not treated as facts.</li>
+          <li><strong>Causality.</strong> The model records documented responses to a constraint. It does not claim that the constraint alone caused the creative result.</li>
+          <li><strong>Agents.</strong> Some agents are not named in the sources (for example, who stopped the distribution of Braun’s novel). These relations are left empty instead of being guessed.</li>
+          <li><strong>Source depth.</strong> Some claims still rely on tertiary or web sources and should be checked against primary archival material (for example, Mix 1993 on the publication history of <em>Hinze-Kunze-Roman</em>).</li>
+        </ul>
+      </section>
+
+      <section id="conclusions" class="section">
+        <h1>11. Conclusions</h1>
+        <p>
+          ConCreCen shows that censorship and the creative responses to it can be represented as a chain of events,
+          constraints, responses, strategies and outcomes. Each link in that chain can be traced to its sources.
+        </p>
+        <ul>
+          <li><strong>Outcomes are conditional, not deterministic.</strong> The same 1936 constraint led Shostakovich both to suppress one work (the Fourth Symphony) and to adapt in another (the Fifth Symphony). This supports Rosso’s view of constraints as enabling and disabling.</li>
+          <li><strong>Censorship is negotiated.</strong> In the GDR and in Hollywood, prior approval combined with modification requirements produced responses inside the approval process itself, such as Schlenstedt’s afterword or the PCA-compliant kiss. This fits Darnton’s account of censorship as negotiation.</li>
+          <li><strong>Constraints redirect solutions.</strong> Fragmentation (<em>Notorious</em>), irony and allegory (Braun) and ambiguity (Shostakovich) are alternative solutions that became attractive once the direct one was blocked, as in Stokes’s model of paired constraints.</li>
+          <li><strong>Evidence is part of the model.</strong> Modelling every relation as a sourced <code>Claim</code> with a confidence level keeps documented facts separate from interpretations.</li>
+        </ul>
+        <h2>Future work</h2>
+        <ul>
+          <li>Add more cases (for example, Iranian cinema or Soviet Aesopian language) to test whether strategies recur across media (CQ9).</li>
+          <li>Extend the model with a module on AI-driven content moderation.</li>
+          <li>Align the ontology with existing vocabularies such as Dublin Core and FOAF.</li>
+        </ul>
+      </section>
+
+      <section id="bibliography" class="section">
+        <h1>12. Bibliography</h1>
+        <h2>Theoretical framework</h2>
+        <ul><li>Darnton, R. (2014). <em>Censors at Work: How States Shaped Literature</em>. New York: W. W. Norton.</li><li>Stokes, P. D. (2008). Creativity from Constraints: What Can We Learn from Motherwell? From Mondrian? From Klee? <em>The Journal of Creative Behavior</em>, 42(4), 223–236. DOI: <a href="https://doi.org/10.1002/j.2162-6057.2008.tb01297.x" target="_blank" rel="noopener noreferrer">10.1002/j.2162-6057.2008.tb01297.x</a></li><li>Rosso, B. D. (2014). Creativity and Constraints: Exploring the Role of Constraints in the Creative Processes of Research and Development Teams. <em>Organization Studies</em>, 35(4), 551–585. DOI: <a href="https://doi.org/10.1177/0170840613517600" target="_blank" rel="noopener noreferrer">10.1177/0170840613517600</a></li></ul>
+        <h2>Case study sources</h2>
+        <ul><li>Billheimer, J. (2019). Hitchcock and the Censors. University Press of Kentucky, pp. 118–128. DOI 10.5810/kentucky/9780813177427.003.0015 <a href="https://academic.oup.com/kentucky-scholarship-online/book/34148/chapter/289477434" target="_blank" rel="noopener noreferrer">Link</a></li><li>Darnton, R. (1991). The Good Old Days. The New York Review of Books, 16 May 1991. <a href="https://www.nybooks.com/articles/1991/05/16/the-good-old-days/" target="_blank" rel="noopener noreferrer">Link</a></li><li>Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR. Aus Politik und Zeitgeschichte, Bundeszentrale für politische Bildung. <a href="https://www.bpb.de/shop/zeitschriften/apuz/archiv/535791/das-wechselspiel-von-selbstzensur-und-literaturlenkung-in-der-ddr/" target="_blank" rel="noopener noreferrer">Link</a></li><li>Frolova-Walker, M. &amp; Walker, J. (2023). Shostakovich&#x27;s Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001 <a href="https://academic.oup.com/book/55321/chapter/428777077" target="_blank" rel="noopener noreferrer">Link</a></li><li>Guibert-Yeche, H. Censure et autocensure en RDA. ENS Éditions (OpenEdition Books), pp. 127–144. <a href="https://books.openedition.org/enseditions/19283" target="_blank" rel="noopener noreferrer">Link</a></li><li>Höpcke, K. (1985). Über Volker Brauns Hinze-Kunze-Roman. Die Weltbühne 33–34/1985; reprinted in Das Blättchen, April 2025. <a href="https://das-blaettchen.de/2025/04/ueber-volker-brauns-hinze-kunze-roman-71622.html" target="_blank" rel="noopener noreferrer">Link</a></li><li>Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation). <a href="https://editions-metailie.com/livre/le-roman-de-hinze-et-kunze/" target="_blank" rel="noopener noreferrer">Link</a></li><li>Muddle Instead of Music. Wikipedia (tertiary source, used for orientation only). <a href="https://en.wikipedia.org/wiki/Muddle_Instead_of_Music" target="_blank" rel="noopener noreferrer">Link</a></li><li>Production Code Administration. The Alfred Hitchcock Wiki (quotes the Production Code and Bergman&#x27;s recollection). <a href="https://the.hitchcock.zone/wiki/Production_Code_Administration" target="_blank" rel="noopener noreferrer">Link</a></li><li>Robinson, H. Symphony No. 5 (Shostakovich). Boston Symphony Orchestra programme note. <a href="https://www.bso.org/works/symphony-no-5-shostakovich" target="_blank" rel="noopener noreferrer">Link</a></li><li>Symphony No. 4 (Shostakovich). Wikipedia (tertiary source, used for orientation only). <a href="https://en.wikipedia.org/wiki/Symphony_No._4_(Shostakovich)" target="_blank" rel="noopener noreferrer">Link</a></li></ul>
+      </section>
+
+      <section id="downloads" class="section">
+        <h1>13. Downloads</h1>
+        <p>All project files are available for reuse and reproducibility.</p>
+        <table class="data-table"><thead><tr><th>File</th><th>Content</th></tr></thead><tbody><tr><td><a href="downloads/censorcreate-core-v2.ttl">Core ontology v2.1 (Turtle)</a></td><td>TBox: classes, properties, controlled vocabularies</td></tr><tr><td><a href="downloads/censorcreate-core-v2.owl">Core ontology v2.1 (OWL/RDF-XML)</a></td><td>Same schema, for Protégé / WebProtégé</td></tr><tr><td><a href="downloads/censorcreate-v2-with-cases.owl">Ontology + knowledge graph (OWL)</a></td><td>TBox + ABox, used for the evaluation</td></tr><tr><td><a href="downloads/censorcreate-v2-with-cases.ttl">Ontology + knowledge graph (Turtle)</a></td><td>TBox + ABox</td></tr><tr><td><a href="downloads/cases-triples.ttl">Knowledge graph triples</a></td><td>ABox only (documented cases)</td></tr><tr><td><a href="downloads/data/cases.csv">Dataset: cases</a></td><td>One row per event–response pair</td></tr><tr><td><a href="downloads/data/sources.csv">Dataset: sources</a></td><td>Bibliographic sources with URLs</td></tr><tr><td><a href="downloads/sparql-results.md">SPARQL results</a></td><td>Results of CQ1–CQ10</td></tr><tr><td><a href="downloads/build_kg.py">Build script</a></td><td>CSV → RDF conversion (Python, rdflib)</td></tr>
+        <tr><td>SPARQL queries</td><td><a href="downloads/queries/cq01_censored_works.rq">CQ01</a> · <a href="downloads/queries/cq02_censoring_agents.rq">CQ02</a> · <a href="downloads/queries/cq03_mechanisms.rq">CQ03</a> · <a href="downloads/queries/cq04_constrained_elements.rq">CQ04</a> · <a href="downloads/queries/cq05_constraints.rq">CQ05</a> · <a href="downloads/queries/cq06_responses.rq">CQ06</a> · <a href="downloads/queries/cq07_strategies.rq">CQ07</a> · <a href="downloads/queries/cq08_outcomes.rq">CQ08</a> · <a href="downloads/queries/cq09_recurring_strategies.rq">CQ09</a> · <a href="downloads/queries/cq10_evidence.rq">CQ10</a></td></tr>
+        <tr><td>GitHub</td><td><span class="kg-muted">[Add repository link]</span></td></tr></tbody></table>
+        <p class="kg-meta">Namespace: <code>http://example.org/censorcreate#</code> (prefix <code>cc:</code>).</p>
+      </section>
+
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+    <script src="ontology-graph-data.js"></script>
+    <script src="ontology-graph.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

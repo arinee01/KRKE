@@ -1,0 +1,11 @@
+# CQ5. What constraint resulted from the censorship event?
+PREFIX cc:   <http://example.org/censorcreate#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?event ?constraintType ?constraint WHERE {
+  ?event a cc:CensorshipEvent ;
+         cc:imposesConstraint ?c .
+  ?c cc:hasConstraintType ?ct ;
+     cc:description ?constraint .
+  ?ct rdfs:label ?constraintType . FILTER(lang(?constraintType) = "en")
+}
+ORDER BY ?event

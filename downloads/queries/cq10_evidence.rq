@@ -1,0 +1,12 @@
+# CQ10. Which sources support the claimed relationship between a censorship event and a creative response?
+PREFIX cc:   <http://example.org/censorcreate#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?event ?response ?confidence ?source WHERE {
+  ?claim a cc:Claim ;
+         cc:aboutCensorshipEvent ?event ;
+         cc:aboutCreativeResponse ?response ;
+         cc:confidenceLevel ?confidence ;
+         cc:supportedBy ?s .
+  ?s cc:bibliographicCitation ?source .
+}
+ORDER BY ?event ?response

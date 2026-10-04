@@ -1,0 +1,12 @@
+# CQ4. What element or aspect of the work was constrained?
+PREFIX cc:   <http://example.org/censorcreate#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?title ?elementType ?element WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:imposesConstraint ?c .
+  ?c cc:constrainsElement ?el .
+  ?el a ?t ; cc:description ?element .
+  ?t rdfs:subClassOf cc:WorkElement ; rdfs:label ?elementType . FILTER(lang(?elementType) = "en")
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}

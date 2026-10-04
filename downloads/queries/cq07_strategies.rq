@@ -1,0 +1,12 @@
+# CQ7. Which creative strategy was used in the response?
+PREFIX cc:   <http://example.org/censorcreate#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?title ?response ?strategy WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:hasResponse ?response .
+  ?response cc:usesStrategy ?s .
+  ?s rdfs:label ?strategy . FILTER(lang(?strategy) = "en")
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+ORDER BY ?title

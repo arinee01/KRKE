@@ -1,0 +1,11 @@
+# CQ3. Which censorship mechanism was used?
+PREFIX cc:   <http://example.org/censorcreate#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?title ?event ?mechanism WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:usesMechanism ?m .
+  ?work cc:title ?title .
+  ?m rdfs:label ?mechanism . FILTER(lang(?mechanism) = "en")
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+ORDER BY ?title ?event

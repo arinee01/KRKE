@@ -1,0 +1,13 @@
+# CQ6. How did the creator respond to the constraint?
+PREFIX cc:   <http://example.org/censorcreate#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?title ?creator ?response ?description WHERE {
+  ?event cc:targetsWork ?work ;
+         cc:hasResponse ?response .
+  ?response cc:performedBy ?p ;
+            cc:description ?description .
+  ?p rdfs:label ?creator .
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+ORDER BY ?title
