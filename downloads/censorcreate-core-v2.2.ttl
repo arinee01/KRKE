@@ -34,7 +34,7 @@
 
 :AesopianLanguage a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Aesopian language" ;
+    rdfs:label "Aesopian language"@en ;
     rdfs:comment "A strategy of expressing sensitive meanings indirectly through coded or ambiguous language." .
 
 :Allegory a :CreativeStrategy,
@@ -45,7 +45,7 @@
 
 :AlternativePublication a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Alternative publication" ;
+    rdfs:label "Alternative publication"@en ;
     rdfs:comment "A strategy of publishing a work through an alternative channel when normal publication is restricted." .
 
 :AlternativeVersionProduced a :OutcomeType,
@@ -102,12 +102,12 @@
 
 :CharacterTransformation a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Character transformation" ;
+    rdfs:label "Character transformation"@en ;
     rdfs:comment "A strategy of changing a character’s identity, role, or status to meet censorship constraints." .
 
 :Circumvention a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Circumvention" ;
+    rdfs:label "Circumvention"@en ;
     rdfs:comment "A strategy of finding a way around a censorship restriction without directly complying with it." .
 
 :ContentRestriction a :ConstraintType,
@@ -122,6 +122,11 @@
         "Ограничение распространения"@ru ;
     rdfs:comment "A limitation on the circulation, screening, sale, or audience of a work (added in v2)."@en .
 
+:CreativeActivity a owl:Class ;
+    rdfs:subClassOf :WorkElement ;
+    rdfs:label "Creative activity"@en ;
+    rdfs:comment "An ongoing creative activity within a practice, such as film directing or art making, that can be restricted by censorship. Added in v2.2."@en .
+
 :Editor a owl:Class ;
     rdfs:label "Editor" ;
     rdfs:subClassOf :Agent .
@@ -134,7 +139,7 @@
 
 :ExpressionRestriction a :ConstraintType,
         owl:NamedIndividual ;
-    rdfs:label "Expression restriction" ;
+    rdfs:label "Expression restriction"@en ;
     rdfs:comment "A constraint that limits how ideas, themes, or meanings may be expressed." .
 
 :Fragmentation a :CreativeStrategy,
@@ -145,7 +150,7 @@
 
 :HistoricalDisplacement a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Historical displacement" ;
+    rdfs:label "Historical displacement"@en ;
     rdfs:comment "Moving sensitive content to another historical context to reduce its directness." .
 
 :IndirectRepresentation a :CreativeStrategy,
@@ -156,7 +161,7 @@
 
 :InstitutionalCircumvention a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Institutional circumvention" ;
+    rdfs:label "Institutional circumvention"@en ;
     rdfs:comment "Avoiding or bypassing the institution imposing the restriction." .
 
 :Irony a :CreativeStrategy,
@@ -173,12 +178,12 @@
 
 :MaterialRestriction a :ConstraintType,
         owl:NamedIndividual ;
-    rdfs:label "Material restriction" ;
+    rdfs:label "Material restriction"@en ;
     rdfs:comment "A constraint that limits the materials or technical means available for creative work." .
 
 :MediumAdaptation a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Medium adaptation" ;
+    rdfs:label "Medium adaptation"@en ;
     rdfs:comment "Сhanging the artistic medium or technique in response to a constraint." .
 
 :Metaphor a :CreativeStrategy,
@@ -189,7 +194,7 @@
 
 :MinimalProduction a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Minimal production" ;
+    rdfs:label "Minimal production"@en ;
     rdfs:comment "Reducing production scale or resources to continue creating under restrictions." .
 
 :Modification a :OutcomeType,
@@ -206,12 +211,12 @@
 
 :NarrativeModification a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Narrative modification" ;
+    rdfs:label "Narrative modification"@en ;
     rdfs:comment "Altering plot, dialogue, or story structure in response to censorship." .
 
 :NarrativeTransposition a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Narrative transposition" ;
+    rdfs:label "Narrative transposition"@en ;
     rdfs:comment "Relocating a narrative to a different setting or context while preserving its core structure." .
 
 :ParatextualFraming a :CreativeStrategy,
@@ -234,7 +239,7 @@
 
 :ProfessionalPracticeRestriction a :ConstraintType,
         owl:NamedIndividual ;
-    rdfs:label "Professional practice restriction" ;
+    rdfs:label "Professional practice restriction"@en ;
     rdfs:comment "A constraint that limits or prohibits a creator from carrying out their professional creative activity." .
 
 :PublicationRestriction a :CensorshipMechanism,
@@ -245,7 +250,7 @@
 
 :PublicationRestrictionConstraint a :ConstraintType,
         owl:NamedIndividual ;
-    rdfs:label "Publication restriction сonstraint" ;
+    rdfs:label "Publication restriction constraint"@en ;
     rdfs:comment "A constraint that limits or prevents the publication of a creative work." .
 
 :Redaction a :CensorshipMechanism,
@@ -262,7 +267,7 @@
 
 :Satire a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Satire" ;
+    rdfs:label "Satire"@en ;
     rdfs:comment "Using irony, exaggeration, or ridicule to express criticism indirectly." .
 
 :Scene a owl:Class ;
@@ -273,7 +278,7 @@
 
 :SecretProduction a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Secret production" ;
+    rdfs:label "Secret production"@en ;
     rdfs:comment "Creating a work privately or clandestinely when public production is prohibited." .
 
 :SelfCensorship a :CensorshipMechanism,
@@ -284,7 +289,7 @@
 
 :SelfReflexivity a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Self-reflexivity" ;
+    rdfs:label "Self-reflexivity"@en ;
     rdfs:comment "A strategy in which the work explicitly reflects on its own creation, form, or conditions of production." .
 
 :StylisticRestriction a :ConstraintType,
@@ -322,7 +327,7 @@
 
 :TextualRestoration a :CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Textual restoration" ;
+    rdfs:label "Textual restoration"@en ;
     rdfs:comment "Restoring material removed or altered by censorship." .
 
 :Theme a owl:Class ;

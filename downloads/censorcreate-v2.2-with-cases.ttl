@@ -1,4 +1,4 @@
-@prefix : <http://example.org/censorcreate#> .
+@prefix cc: <http://example.org/censorcreate#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,423 +14,423 @@
     owl:versionInfo "v2.2 (merged: +5 cases, +Editor/+CreativePractice, performedBy->Agent, producesWork unified into resultsInWork)" ;
     skos:changeNote "v2: (1) domain of hasOutcome narrowed from Event to CreativeResponse; (2) English and Russian labels and English definitions added to all classes, properties and controlled values; (3) DistributionRestriction mechanism and a small set of documentation data properties added; (4) test individuals kept and marked as synthetic; (5) no real historical cases added. v2.1: data properties aligned with project documentation (eventDate, publicationYear); added resultsInWork, StylisticRestriction, Irony, ParatextualFraming, Fragmentation."@en .
 
-:AdaptiveCreativeResponse a owl:Class ;
+cc:AdaptiveCreativeResponse a owl:Class ;
     rdfs:label "Adaptive creative response"@en,
         "Адаптивный творческий ответ"@ru ;
     rdfs:comment "A creative response that uses at least one creative strategy and has the outcome CreativeAdaptation. Membership is inferred by a reasoner."@en ;
-    rdfs:subClassOf :CreativeResponse ;
+    rdfs:subClassOf cc:CreativeResponse ;
     owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( :CreativeResponse [ a owl:Restriction ;
-                        owl:onProperty :usesStrategy ;
-                        owl:someValuesFrom :CreativeStrategy ] [ a owl:Restriction ;
-                        owl:hasValue :CreativeAdaptation ;
-                        owl:onProperty :hasOutcome ] ) ] .
+            owl:intersectionOf ( cc:CreativeResponse [ a owl:Restriction ;
+                        owl:onProperty cc:usesStrategy ;
+                        owl:someValuesFrom cc:CreativeStrategy ] [ a owl:Restriction ;
+                        owl:hasValue cc:CreativeAdaptation ;
+                        owl:onProperty cc:hasOutcome ] ) ] .
 
-:CL_Ballo_Naples a :Claim,
+cc:CL_Ballo_Naples a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_Ballo_NaplesCensorship1858 ;
-    :aboutCreativeResponse :RE_Ballo_LeaveNaples ;
-    :claimText "Ricordi's critical-edition documentation states that censorship demands were severe enough for Verdi to break the Naples contract; scholarship on Verdi's censorship confirms that Un ballo in maschera had been rejected elsewhere before its Roman premiere." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_Giger1999_Ballo,
-        :SRC_Ricordi_BalloCritical .
+    cc:aboutCensorshipEvent cc:EV_Ballo_NaplesCensorship1858 ;
+    cc:aboutCreativeResponse cc:RE_Ballo_LeaveNaples ;
+    cc:claimText "Ricordi's critical-edition documentation states that censorship demands were severe enough for Verdi to break the Naples contract; scholarship on Verdi's censorship confirms that Un ballo in maschera had been rejected elsewhere before its Roman premiere." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Ricordi_BalloCritical .
 
-:CL_Ballo_Transposition a :Claim,
+cc:CL_Ballo_Transposition a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_Ballo_RomeCensorship1858 ;
-    :aboutCreativeResponse :RE_Ballo_Transposition ;
-    :claimText "The Metropolitan Opera and Verdi critical-edition sources explicitly link the Boston setting and transformed characters to negotiations with the censors. This is a strong example of narrative transposition used to preserve a censored dramatic structure." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_Giger1999_Ballo,
-        :SRC_Met_Ballo,
-        :SRC_Ricordi_BalloCritical .
+    cc:aboutCensorshipEvent cc:EV_Ballo_RomeCensorship1858 ;
+    cc:aboutCreativeResponse cc:RE_Ballo_Transposition ;
+    cc:claimText "The Metropolitan Opera and Verdi critical-edition sources explicitly link the Boston setting and transformed characters to negotiations with the censors. This is a strong example of narrative transposition used to preserve a censored dramatic structure." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Met_Ballo,
+        cc:SRC_Ricordi_BalloCritical .
 
-:CL_Bulgakov_Aesopian a :Claim,
+cc:CL_Bulgakov_Aesopian a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_Bulgakov_LiterarySuppression1930s ;
-    :aboutCreativeResponse :RE_Bulgakov_AesopianExpression ;
-    :claimText "The link between Soviet censorship and Aesopian strategies is interpretative rather than a directly documented causal statement by Bulgakov. Rosenshield documents the suppression of Bulgakov's publication opportunities, while Pope discusses Aesopian readings of politically suggestive passages in the novel. This relation should therefore be represented as a Claim, not as unquestioned causality." ;
-    :confidenceLevel "medium" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_Pope1977_Bulgakov,
-        :SRC_Rosenshield1997_Bulgakov .
+    cc:aboutCensorshipEvent cc:EV_Bulgakov_LiterarySuppression1930s ;
+    cc:aboutCreativeResponse cc:RE_Bulgakov_AesopianExpression ;
+    cc:claimText "The link between Soviet censorship and Aesopian strategies is interpretative rather than a directly documented causal statement by Bulgakov. Rosenshield documents the suppression of Bulgakov's publication opportunities, while Pope discusses Aesopian readings of politically suggestive passages in the novel. This relation should therefore be represented as a Claim, not as unquestioned causality." ;
+    cc:confidenceLevel "medium" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Pope1977_Bulgakov,
+        cc:SRC_Rosenshield1997_Bulgakov .
 
-:CL_HKR_Distribution a :Claim,
+cc:CL_HKR_Distribution a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_HKR_DistributionStop ;
-    :claimText "Distribution was stopped on 10 September 1985 (agent not named in the source); Höpcke was 'called on the carpet and given a formal censure'. No documented creative response to this second event." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_Darnton1991,
-        :SRC_Lance_Metailie .
+    cc:aboutCensorshipEvent cc:EV_HKR_DistributionStop ;
+    cc:claimText "Distribution was stopped on 10 September 1985 (agent not named in the source); Höpcke was 'called on the carpet and given a formal censure'. No documented creative response to this second event." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Darnton1991,
+        cc:SRC_Lance_Metailie .
 
-:CL_HKR_Irony a :Claim,
+cc:CL_HKR_Irony a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_HKR_PrintApproval ;
-    :aboutCreativeResponse :RE_HKR_IronicNarration ;
-    :claimText "The preface to the French edition argues that Braun uses the ruse and irony of Enlightenment writers (Diderot's Jacques le fataliste) to pass subversive ideas; the narrator explicitly thematises why so much 'cannot be said directly'. This is an interpretation by the preface author, and the novel was written (1981) before the formal review began." ;
-    :confidenceLevel "medium" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_Darnton1991,
-        :SRC_Lance_Metailie .
+    cc:aboutCensorshipEvent cc:EV_HKR_PrintApproval ;
+    cc:aboutCreativeResponse cc:RE_HKR_IronicNarration ;
+    cc:claimText "The preface to the French edition argues that Braun uses the ruse and irony of Enlightenment writers (Diderot's Jacques le fataliste) to pass subversive ideas; the narrator explicitly thematises why so much 'cannot be said directly'. This is an interpretation by the preface author, and the novel was written (1981) before the formal review began." ;
+    cc:confidenceLevel "medium" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Darnton1991,
+        cc:SRC_Lance_Metailie .
 
-:CL_HKR_Lesehilfe a :Claim,
+cc:CL_HKR_Lesehilfe a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_HKR_PrintApproval ;
-    :aboutCreativeResponse :RE_HKR_Lesehilfe ;
-    :claimText "The 1985 GDR edition appeared with Schlenstedt's text, intended 'd'une part à amadouer la censure, d'autre part à guider le lecteur'; the Suhrkamp edition in the West was published without it." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_GuibertYeche,
-        :SRC_Hoepcke1985,
-        :SRC_Lance_Metailie,
-        :SRC_bpb_Selbstzensur .
+    cc:aboutCensorshipEvent cc:EV_HKR_PrintApproval ;
+    cc:aboutCreativeResponse cc:RE_HKR_Lesehilfe ;
+    cc:claimText "The 1985 GDR edition appeared with Schlenstedt's text, intended 'd'une part à amadouer la censure, d'autre part à guider le lecteur'; the Suhrkamp edition in the West was published without it." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_GuibertYeche,
+        cc:SRC_Hoepcke1985,
+        cc:SRC_Lance_Metailie,
+        cc:SRC_bpb_Selbstzensur .
 
-:CL_MasterMargarita_Publication a :Claim,
+cc:CL_MasterMargarita_Publication a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_MasterMargarita_MoskvaCensorship1966 ;
-    :aboutCreativeResponse :RE_MasterMargarita_TextRestoration ;
-    :claimText "Curtis documents that the Moskva text was authorised with substantial politically and ideologically motivated cuts and describes the later route to full publication abroad; Pope explicitly distinguishes the censored Moskva edition from complete Russian versions. The posthumous response is performed by an editor/estate representative rather than by the original creator." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_Curtis2019_Bulgakov,
-        :SRC_Pope1977_Bulgakov .
+    cc:aboutCensorshipEvent cc:EV_MasterMargarita_MoskvaCensorship1966 ;
+    cc:aboutCreativeResponse cc:RE_MasterMargarita_TextRestoration ;
+    cc:claimText "Curtis documents that the Moskva text was authorised with substantial politically and ideologically motivated cuts and describes the later route to full publication abroad; Pope explicitly distinguishes the censored Moskva edition from complete Russian versions. The posthumous response is performed by an editor/estate representative rather than by the original creator." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Curtis2019_Bulgakov,
+        cc:SRC_Pope1977_Bulgakov .
 
-:CL_Nolde_Watercolours a :Claim,
+cc:CL_Nolde_Watercolours a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_Nolde_ProfessionalBan1941 ;
-    :aboutCreativeResponse :RE_Nolde_UnpaintedPictures ;
-    :claimText "The Nolde Museum records the 1941 expulsion and professional ban followed by further small-format watercolours; the National Gallery of Ireland states that despite the ban he continued to create, turning to small watercolour compositions painted in secret. Because Nolde had already used this medium before 1941, the claim is about continuation/adaptation under constraint rather than the invention of a new medium." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_NGI_NoldeDegenerate,
-        :SRC_NoldeMuseum_Artist .
+    cc:aboutCensorshipEvent cc:EV_Nolde_ProfessionalBan1941 ;
+    cc:aboutCreativeResponse cc:RE_Nolde_UnpaintedPictures ;
+    cc:claimText "The Nolde Museum records the 1941 expulsion and professional ban followed by further small-format watercolours; the National Gallery of Ireland states that despite the ban he continued to create, turning to small watercolour compositions painted in secret. Because Nolde had already used this medium before 1941, the claim is about continuation/adaptation under constraint rather than the invention of a new medium." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_NGI_NoldeDegenerate,
+        cc:SRC_NoldeMuseum_Artist .
 
-:CL_Notorious_Character a :Claim,
+cc:CL_Notorious_Character a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_Notorious_PCAReview ;
-    :claimText "The PCA found Alicia's characterisation unacceptable and listed 17 changes (25 July 1945). How each change was implemented is not yet documented here — to be checked in Billheimer, ch. 14." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_Billheimer2019 .
+    cc:aboutCensorshipEvent cc:EV_Notorious_PCAReview ;
+    cc:claimText "The PCA found Alicia's characterisation unacceptable and listed 17 changes (25 July 1945). How each change was implemented is not yet documented here — to be checked in Billheimer, ch. 14." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Billheimer2019 .
 
-:CL_Notorious_Kiss a :Claim,
+cc:CL_Notorious_Kiss a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_Notorious_PCAReview ;
-    :aboutCreativeResponse :RE_Notorious_FragmentedKiss ;
-    :claimText "Hitchcock 'concocted' the kiss scene specifically to get around the supposed three-second rule; Bergman recalled that the censors 'couldn't and didn't cut the scene because we never at any one point kissed for more than three seconds'." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_Billheimer2019,
-        :SRC_HitchZone_PCA .
+    cc:aboutCensorshipEvent cc:EV_Notorious_PCAReview ;
+    cc:aboutCreativeResponse cc:RE_Notorious_FragmentedKiss ;
+    cc:claimText "Hitchcock 'concocted' the kiss scene specifically to get around the supposed three-second rule; Bergman recalled that the censors 'couldn't and didn't cut the scene because we never at any one point kissed for more than three seconds'." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Billheimer2019,
+        cc:SRC_HitchZone_PCA .
 
-:CL_Panahi_Restrictions a :Claim,
+cc:CL_Panahi_Restrictions a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_Panahi_2010FilmmakingBan ;
-    :aboutCreativeResponse :RE_Panahi_ThisIsNotAFilm ;
-    :claimText "Cannes stated that Panahi and Rasoulof's films were made under semi-clandestine conditions and quoted Panahi that the desire to keep Iranian filmmaking alive motivated them to overcome the restrictions. This Is Not a Film directly documents Panahi's situation as a filmmaker forbidden to work." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_Cannes_Panahi2011,
-        :SRC_Cannes_ThisIsNotAFilm2011,
-        :SRC_CinemaIranica_TINAF,
-        :SRC_IranHumanRights_Panahi2010 .
+    cc:aboutCensorshipEvent cc:EV_Panahi_2010FilmmakingBan ;
+    cc:aboutCreativeResponse cc:RE_Panahi_ThisIsNotAFilm ;
+    cc:claimText "Cannes stated that Panahi and Rasoulof's films were made under semi-clandestine conditions and quoted Panahi that the desire to keep Iranian filmmaking alive motivated them to overcome the restrictions. This Is Not a Film directly documents Panahi's situation as a filmmaker forbidden to work." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Cannes_Panahi2011,
+        cc:SRC_Cannes_ThisIsNotAFilm2011,
+        cc:SRC_CinemaIranica_TINAF,
+        cc:SRC_IranHumanRights_Panahi2010 .
 
-:CL_Shost_Fifth a :Claim,
+cc:CL_Shost_Fifth a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_Pravda1936 ;
-    :aboutCreativeResponse :RE_Shost_FifthSymphony ;
-    :claimText "The Fifth Symphony is documented as Shostakovich's response to the 1936 criticism ('a Soviet artist's creative reply to just criticism') and led to his rehabilitation; whether the finale is sincere or ironic remains debated, so the Ambiguity strategy is an interpretation." ;
-    :confidenceLevel "medium" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_FrolovaWalker2023,
-        :SRC_Robinson_BSO,
-        :SRC_Wiki_Muddle .
+    cc:aboutCensorshipEvent cc:EV_Pravda1936 ;
+    cc:aboutCreativeResponse cc:RE_Shost_FifthSymphony ;
+    cc:claimText "The Fifth Symphony is documented as Shostakovich's response to the 1936 criticism ('a Soviet artist's creative reply to just criticism') and led to his rehabilitation; whether the finale is sincere or ironic remains debated, so the Ambiguity strategy is an interpretation." ;
+    cc:confidenceLevel "medium" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Robinson_BSO,
+        cc:SRC_Wiki_Muddle .
 
-:CL_Streetcar_Cuts a :Claim,
+cc:CL_Streetcar_Cuts a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_Streetcar_LegionCuts1951 ;
-    :claimText "AFI records that the studio made twelve cuts without consulting Kazan and that Kazan believed some cuts changed the interpretation of the characters. This row represents a disabling/suppressive outcome rather than a creative response by the creators." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_AFI_Streetcar1951,
-        :SRC_Szabo2019_Streetcar .
+    cc:aboutCensorshipEvent cc:EV_Streetcar_LegionCuts1951 ;
+    cc:claimText "AFI records that the studio made twelve cuts without consulting Kazan and that Kazan believed some cuts changed the interpretation of the characters. This row represents a disabling/suppressive outcome rather than a creative response by the creators." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_AFI_Streetcar1951,
+        cc:SRC_Szabo2019_Streetcar .
 
-:CL_Streetcar_Rewrite a :Claim,
+cc:CL_Streetcar_Rewrite a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_Streetcar_PCAReview1950 ;
-    :aboutCreativeResponse :RE_Streetcar_ScreenplayRewrite ;
-    :claimText "AFI's production-history record documents the PCA objections and Williams's rewritten ending, while scholarship on the adaptation describes the film as preserving much of the play's meaning through alterations required by censorship." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_AFI_Streetcar1951,
-        :SRC_Szabo2019_Streetcar .
+    cc:aboutCensorshipEvent cc:EV_Streetcar_PCAReview1950 ;
+    cc:aboutCreativeResponse cc:RE_Streetcar_ScreenplayRewrite ;
+    cc:claimText "AFI's production-history record documents the PCA objections and Williams's rewritten ending, while scholarship on the adaptation describes the film as preserving much of the play's meaning through alterations required by censorship." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_AFI_Streetcar1951,
+        cc:SRC_Szabo2019_Streetcar .
 
-:CL_Sym4_Withdrawal a :Claim,
+cc:CL_Sym4_Withdrawal a cc:Claim,
         owl:NamedIndividual ;
-    :aboutCensorshipEvent :EV_Sym4_Cancellation ;
-    :aboutCreativeResponse :RE_Sym4_Withdrawal ;
-    :claimText "The Fourth Symphony was withdrawn from rehearsal in 1936 and not performed until 1961; sources disagree on whether the withdrawal was voluntary or imposed, hence both SelfCensorship and Ban are recorded." ;
-    :confidenceLevel "high" ;
-    :dataProvenance "documented case" ;
-    :supportedBy :SRC_FrolovaWalker2023,
-        :SRC_Wiki_Sym4 .
+    cc:aboutCensorshipEvent cc:EV_Sym4_Cancellation ;
+    cc:aboutCreativeResponse cc:RE_Sym4_Withdrawal ;
+    cc:claimText "The Fourth Symphony was withdrawn from rehearsal in 1936 and not performed until 1961; sources disagree on whether the withdrawal was voluntary or imposed, hence both SelfCensorship and Ban are recorded." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Wiki_Sym4 .
 
-:CensoredWork a owl:Class ;
+cc:CensoredWork a owl:Class ;
     rdfs:label "Censored work"@en,
         "Цензурированное произведение"@ru ;
     rdfs:comment "A creative work that is the target of at least one censorship event. Membership is inferred by a reasoner."@en ;
-    rdfs:subClassOf :CreativeWork ;
+    rdfs:subClassOf cc:CreativeWork ;
     owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( :CreativeWork [ a owl:Restriction ;
-                        owl:onProperty :isTargetOf ;
-                        owl:someValuesFrom :CensorshipEvent ] ) ] .
+            owl:intersectionOf ( cc:CreativeWork [ a owl:Restriction ;
+                        owl:onProperty cc:isTargetOf ;
+                        owl:someValuesFrom cc:CensorshipEvent ] ) ] .
 
-:Editor a owl:Class ;
+cc:Editor a owl:Class ;
     rdfs:label "Editor" ;
-    rdfs:subClassOf :Agent .
+    rdfs:subClassOf cc:Agent .
 
-:Euphemism a :CreativeStrategy,
+cc:Euphemism a cc:CreativeStrategy,
         owl:NamedIndividual ;
     rdfs:label "Euphemism"@en,
         "Эвфемизм"@ru ;
     rdfs:comment "Replacement of a restricted word or expression with a milder or indirect one."@en .
 
-:Metaphor a :CreativeStrategy,
+cc:Metaphor a cc:CreativeStrategy,
         owl:NamedIndividual ;
     rdfs:label "Metaphor"@en,
         "Метафора"@ru ;
     rdfs:comment "Expression of a restricted idea through figurative comparison."@en .
 
-:Modification a :OutcomeType,
+cc:Modification a cc:OutcomeType,
         owl:NamedIndividual ;
     rdfs:label "Modification"@en,
         "Изменение"@ru ;
     rdfs:comment "The work was altered to comply with the constraint, without documented creative adaptation."@en .
 
-:PublicationRestrictionConstraint a :ConstraintType,
+cc:PublicationRestrictionConstraint a cc:ConstraintType,
         owl:NamedIndividual ;
-    rdfs:label "Publication restriction сonstraint" ;
+    rdfs:label "Publication restriction constraint"@en ;
     rdfs:comment "A constraint that limits or prevents the publication of a creative work." .
 
-:Streetcar1951_ReleaseCut a :WorkVersion,
+cc:Streetcar1951_ReleaseCut a cc:WorkVersion,
         owl:NamedIndividual ;
     rdfs:label "A Streetcar Named Desire (1951 theatrical release with Legion/PCA cuts)"@en ;
-    :createdBy :EliaKazan,
-        :TennesseeWilliams ;
-    :creationYear 1951 ;
-    :dataProvenance "documented case" ;
-    :title "A Streetcar Named Desire (1951 theatrical release with Legion/PCA cuts)" ;
-    :versionOf :Streetcar1951 .
+    cc:createdBy cc:EliaKazan,
+        cc:TennesseeWilliams ;
+    cc:creationYear 1951 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "A Streetcar Named Desire (1951 theatrical release with Legion/PCA cuts)" ;
+    cc:versionOf cc:Streetcar1951 .
 
-:TestEvent a :CensorshipEvent,
+cc:TestEvent a cc:CensorshipEvent,
         owl:NamedIndividual ;
     rdfs:label "Test censorship event"@en ;
-    :dataProvenance "synthetic test individual" ;
-    :hasResponse :TestResponse ;
-    :imposesConstraint :TestConstraint ;
-    :targetsWork :TestFilm ;
-    :usesMechanism :ModificationRequirement .
+    cc:dataProvenance "synthetic test individual" ;
+    cc:hasResponse cc:TestResponse ;
+    cc:imposesConstraint cc:TestConstraint ;
+    cc:targetsWork cc:TestFilm ;
+    cc:usesMechanism cc:ModificationRequirement .
 
-:VisualElement a owl:Class ;
+cc:VisualElement a owl:Class ;
     rdfs:label "Visual element"@en,
         "Визуальный элемент"@ru ;
     rdfs:comment "An image, shot, symbol, or other visual component of a creative work."@en ;
-    rdfs:subClassOf :WorkElement .
+    rdfs:subClassOf cc:WorkElement .
 
-:aboutCensorshipEvent a owl:ObjectProperty ;
+cc:aboutCensorshipEvent a owl:ObjectProperty ;
     rdfs:label "about censorship event"@en,
         "о цензурном событии"@ru ;
     rdfs:comment "Links a claim to the censorship event it concerns."@en ;
-    rdfs:domain :Claim ;
-    rdfs:range :CensorshipEvent .
+    rdfs:domain cc:Claim ;
+    rdfs:range cc:CensorshipEvent .
 
-:aboutCreativeResponse a owl:ObjectProperty ;
+cc:aboutCreativeResponse a owl:ObjectProperty ;
     rdfs:label "about creative response"@en,
         "о творческом ответе"@ru ;
     rdfs:comment "Links a claim to the creative response it concerns."@en ;
-    rdfs:domain :Claim ;
-    rdfs:range :CreativeResponse .
+    rdfs:domain cc:Claim ;
+    rdfs:range cc:CreativeResponse .
 
-:bibliographicCitation a owl:DatatypeProperty ;
+cc:bibliographicCitation a owl:DatatypeProperty ;
     rdfs:label "bibliographic citation"@en,
         "библиографическая ссылка"@ru ;
     rdfs:comment "A full bibliographic reference for a source, including page numbers where relevant."@en ;
-    rdfs:domain :Source ;
+    rdfs:domain cc:Source ;
     rdfs:range xsd:string .
 
-:claimText a owl:DatatypeProperty ;
+cc:claimText a owl:DatatypeProperty ;
     rdfs:label "claim text"@en,
         "текст утверждения"@ru ;
     rdfs:comment "The statement made by the claim, in plain language."@en ;
-    rdfs:domain :Claim ;
+    rdfs:domain cc:Claim ;
     rdfs:range xsd:string .
 
-:confidenceLevel a owl:DatatypeProperty ;
+cc:confidenceLevel a owl:DatatypeProperty ;
     rdfs:label "confidence level"@en,
         "уровень уверенности"@ru ;
     rdfs:comment "How strongly the sources support the claim: high, medium, or low."@en ;
-    rdfs:domain :Claim ;
+    rdfs:domain cc:Claim ;
     rdfs:range xsd:string .
 
-:constrainsElement a owl:ObjectProperty ;
+cc:constrainsElement a owl:ObjectProperty ;
     rdfs:label "constrains element"@en,
         "ограничивает элемент"@ru ;
     rdfs:comment "Links a censorship constraint to the specific element of a work it restricts."@en ;
-    rdfs:domain :CensorshipConstraint ;
-    rdfs:range :WorkElement .
+    rdfs:domain cc:CensorshipConstraint ;
+    rdfs:range cc:WorkElement .
 
-:createdBy a owl:ObjectProperty ;
+cc:createdBy a owl:ObjectProperty ;
     rdfs:label "created by"@en,
         "создано"@ru ;
     rdfs:comment "Links a creative work to its creator."@en ;
-    rdfs:domain :CreativeWork ;
-    rdfs:range :Creator .
+    rdfs:domain cc:CreativeWork ;
+    rdfs:range cc:Creator .
 
-:creationYear a owl:DatatypeProperty ;
+cc:creationYear a owl:DatatypeProperty ;
     rdfs:label "creation year"@en,
         "год создания"@ru ;
     rdfs:comment "The year a creative work was created or completed."@en ;
-    rdfs:domain :CreativeWork ;
+    rdfs:domain cc:CreativeWork ;
     rdfs:range xsd:integer .
 
-:dataProvenance a owl:DatatypeProperty ;
+cc:dataProvenance a owl:DatatypeProperty ;
     rdfs:label "data provenance"@en,
         "происхождение данных"@ru ;
     rdfs:comment "Marks whether an individual is documented (real case), synthetic (test or AI-generated), or a template."@en ;
     rdfs:range xsd:string .
 
-:description a owl:DatatypeProperty ;
+cc:description a owl:DatatypeProperty ;
     rdfs:label "description"@en,
         "описание"@ru ;
     rdfs:comment "A short free-text description of an individual (event, response, constraint, element)."@en ;
     rdfs:range xsd:string .
 
-:documentedBy a owl:ObjectProperty ;
+cc:documentedBy a owl:ObjectProperty ;
     rdfs:label "documented by"@en,
         "задокументировано в"@ru ;
     rdfs:comment "Links a censorship event or creative response to a source that documents it."@en ;
-    rdfs:domain :Event ;
-    rdfs:range :Source .
+    rdfs:domain cc:Event ;
+    rdfs:range cc:Source .
 
-:eventDate a owl:DatatypeProperty ;
+cc:eventDate a owl:DatatypeProperty ;
     rdfs:label "event date"@en,
         "дата события"@ru ;
     rdfs:comment "The year a censorship event or creative response took place (recorded as a year)."@en ;
-    rdfs:domain :Event ;
+    rdfs:domain cc:Event ;
     rdfs:range xsd:integer .
 
-:hasConstraintType a owl:ObjectProperty ;
+cc:hasConstraintType a owl:ObjectProperty ;
     rdfs:label "has constraint type"@en,
         "имеет тип ограничения"@ru ;
     rdfs:comment "Classifies a censorship constraint by what it restricts."@en ;
-    rdfs:domain :CensorshipConstraint ;
-    rdfs:range :ConstraintType .
+    rdfs:domain cc:CensorshipConstraint ;
+    rdfs:range cc:ConstraintType .
 
-:hasResponse a owl:ObjectProperty ;
+cc:hasResponse a owl:ObjectProperty ;
     rdfs:label "has response"@en,
         "имеет ответ"@ru ;
     rdfs:comment "Links a censorship event to a documented creative response to it."@en ;
-    rdfs:domain :CensorshipEvent ;
-    rdfs:range :CreativeResponse .
+    rdfs:domain cc:CensorshipEvent ;
+    rdfs:range cc:CreativeResponse .
 
-:imposedBy a owl:ObjectProperty ;
+cc:imposedBy a owl:ObjectProperty ;
     rdfs:label "imposed by"@en,
         "наложено"@ru ;
     rdfs:comment "Links a censorship event to the censoring agent responsible for it."@en ;
-    rdfs:domain :CensorshipEvent ;
-    rdfs:range :CensoringAgent .
+    rdfs:domain cc:CensorshipEvent ;
+    rdfs:range cc:CensoringAgent .
 
-:imposesConstraint a owl:ObjectProperty ;
+cc:imposesConstraint a owl:ObjectProperty ;
     rdfs:label "imposes constraint"@en,
         "накладывает ограничение"@ru ;
     rdfs:comment "Links a censorship event to the constraint it creates for the creator."@en ;
-    rdfs:domain :CensorshipEvent ;
-    rdfs:range :CensorshipConstraint .
+    rdfs:domain cc:CensorshipEvent ;
+    rdfs:range cc:CensorshipConstraint .
 
-:performedBy a owl:ObjectProperty ;
+cc:performedBy a owl:ObjectProperty ;
     rdfs:label "performed by"@en,
         "выполнено"@ru ;
     rdfs:comment "Links a creative response to the creator who carried it out."@en ;
-    rdfs:domain :CreativeResponse ;
-    rdfs:range :Agent .
+    rdfs:domain cc:CreativeResponse ;
+    rdfs:range cc:Agent .
 
-:producesVersion a owl:ObjectProperty ;
+cc:producesVersion a owl:ObjectProperty ;
     rdfs:label "produces version"@en,
         "создаёт версию"@ru ;
     rdfs:comment "Links a creative response to a new version of the work that resulted from it."@en ;
-    rdfs:domain :CreativeResponse ;
-    rdfs:range :WorkVersion .
+    rdfs:domain cc:CreativeResponse ;
+    rdfs:range cc:WorkVersion .
 
-:publicationYear a owl:DatatypeProperty ;
+cc:publicationYear a owl:DatatypeProperty ;
     rdfs:label "publication year"@en,
         "год публикации"@ru ;
     rdfs:comment "The year a source was published."@en ;
-    rdfs:domain :Source ;
+    rdfs:domain cc:Source ;
     rdfs:range xsd:integer .
 
-:respondsTo a owl:ObjectProperty ;
+cc:respondsTo a owl:ObjectProperty ;
     rdfs:label "responds to"@en,
         "отвечает на"@ru ;
     rdfs:comment "Links a creative response to the censorship constraint it reacts to."@en ;
-    rdfs:domain :CreativeResponse ;
-    rdfs:range :CensorshipConstraint .
+    rdfs:domain cc:CreativeResponse ;
+    rdfs:range cc:CensorshipConstraint .
 
-:resultsInWork a owl:ObjectProperty ;
+cc:resultsInWork a owl:ObjectProperty ;
     rdfs:label "results in work"@en,
         "приводит к произведению"@ru ;
     rdfs:comment "Links a creative response to a new, separate creative work that resulted from it (for a new version of the same work use producesVersion). Added in v2.1."@en ;
-    rdfs:domain :CreativeResponse ;
-    rdfs:range :CreativeWork .
+    rdfs:domain cc:CreativeResponse ;
+    rdfs:range cc:CreativeWork .
 
-:sourceTitle a owl:DatatypeProperty ;
+cc:sourceTitle a owl:DatatypeProperty ;
     rdfs:label "source title"@en,
         "название источника"@ru ;
     rdfs:comment "The title of a source."@en ;
-    rdfs:domain :Source ;
+    rdfs:domain cc:Source ;
     rdfs:range xsd:string .
 
-:sourceURL a owl:DatatypeProperty ;
+cc:sourceURL a owl:DatatypeProperty ;
     rdfs:label "source URL"@en,
         "URL источника"@ru ;
     rdfs:comment "A web address where the source can be accessed."@en ;
-    rdfs:domain :Source ;
+    rdfs:domain cc:Source ;
     rdfs:range xsd:anyURI .
 
-:supportedBy a owl:ObjectProperty ;
+cc:supportedBy a owl:ObjectProperty ;
     rdfs:label "supported by"@en,
         "подтверждается"@ru ;
     rdfs:comment "Links a claim to a source that supports it."@en ;
-    rdfs:domain :Claim ;
-    rdfs:range :Source .
+    rdfs:domain cc:Claim ;
+    rdfs:range cc:Source .
 
-:targetsPractice a owl:ObjectProperty ;
+cc:targetsPractice a owl:ObjectProperty ;
     rdfs:label "targetsPractice" ;
-    rdfs:domain :CensorshipEvent ;
-    rdfs:range :CreativePractice .
+    rdfs:domain cc:CensorshipEvent ;
+    rdfs:range cc:CreativePractice .
 
-:title a owl:DatatypeProperty ;
+cc:title a owl:DatatypeProperty ;
     rdfs:label "title"@en,
         "название"@ru ;
     rdfs:comment "The title of a creative work."@en ;
-    rdfs:domain :CreativeWork ;
+    rdfs:domain cc:CreativeWork ;
     rdfs:range xsd:string .
 
-:usesMechanism a owl:ObjectProperty ;
+cc:usesMechanism a owl:ObjectProperty ;
     rdfs:label "uses mechanism"@en,
         "использует механизм"@ru ;
     rdfs:comment "Links a censorship event to the mechanism through which censorship was applied."@en ;
-    rdfs:domain :CensorshipEvent ;
-    rdfs:range :CensorshipMechanism .
+    rdfs:domain cc:CensorshipEvent ;
+    rdfs:range cc:CensorshipMechanism .
 
-:versionOf a owl:ObjectProperty ;
+cc:versionOf a owl:ObjectProperty ;
     rdfs:label "version of"@en,
         "версия произведения"@ru ;
     rdfs:comment "Links a work version to the original creative work."@en ;
-    rdfs:domain :WorkVersion ;
-    rdfs:range :CreativeWork .
+    rdfs:domain cc:WorkVersion ;
+    rdfs:range cc:CreativeWork .
 
 dcterms:title a owl:AnnotationProperty .
 
@@ -438,1440 +438,1445 @@ skos:changeNote a owl:AnnotationProperty .
 
 skos:definition a owl:AnnotationProperty .
 
-:Abandonment a :OutcomeType,
+cc:Abandonment a cc:OutcomeType,
         owl:NamedIndividual ;
     rdfs:label "Abandonment"@en,
         "Отказ от замысла"@ru ;
     rdfs:comment "The creator abandoned the work or project."@en .
 
-:AesopianLanguage a :CreativeStrategy,
+cc:AesopianLanguage a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Aesopian language" ;
+    rdfs:label "Aesopian language"@en ;
     rdfs:comment "A strategy of expressing sensitive meanings indirectly through coded or ambiguous language." .
 
-:Allegory a :CreativeStrategy,
+cc:Allegory a cc:CreativeStrategy,
         owl:NamedIndividual ;
     rdfs:label "Allegory"@en,
         "Аллегория"@ru ;
     rdfs:comment "An extended narrative or image in which the surface story stands for another, restricted meaning."@en .
 
-:AlternativePublication a :CreativeStrategy,
+cc:AlternativePublication a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Alternative publication" ;
+    rdfs:label "Alternative publication"@en ;
     rdfs:comment "A strategy of publishing a work through an alternative channel when normal publication is restricted." .
 
-:AudioElement a owl:Class ;
+cc:AudioElement a owl:Class ;
     rdfs:label "Audio element"@en,
         "Аудиоэлемент"@ru ;
     rdfs:comment "A sound, musical passage, or spoken audio component of a creative work."@en ;
-    rdfs:subClassOf :WorkElement .
+    rdfs:subClassOf cc:WorkElement .
 
-:BookChapter a owl:Class ;
+cc:BookChapter a owl:Class ;
     rdfs:label "Book chapter"@en,
         "Глава книги"@ru ;
     rdfs:comment "A chapter in an edited or collected volume used as a source. Added in v2.1."@en ;
-    rdfs:subClassOf :Source .
+    rdfs:subClassOf cc:Source .
 
-:CON_HKR_Distribution a :CensorshipConstraint,
+cc:CON_HKR_Distribution a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Circulation of the already published novel halted." ;
-    :hasConstraintType :ContentRestriction .
+    cc:dataProvenance "documented case" ;
+    cc:description "Circulation of the already published novel halted." ;
+    cc:hasConstraintType cc:ContentRestriction .
 
-:CON_Notorious_Character a :CensorshipConstraint,
+cc:CON_Notorious_Character a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_Notorious_AliciaCharacter ;
-    :dataProvenance "documented case" ;
-    :description "Alicia must not appear as a 'grossly immoral woman'; any suggestion of sexual promiscuity to be avoided; the word 'tramp' to be removed." ;
-    :hasConstraintType :SubjectRestriction .
+    cc:constrainsElement cc:EL_Notorious_AliciaCharacter ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Alicia must not appear as a 'grossly immoral woman'; any suggestion of sexual promiscuity to be avoided; the word 'tramp' to be removed." ;
+    cc:hasConstraintType cc:SubjectRestriction .
 
-:CON_Streetcar_ReleaseCuts a :CensorshipConstraint,
+cc:CON_Streetcar_ReleaseCuts a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_Streetcar_CutScenes ;
-    :dataProvenance "documented case" ;
-    :description "Sexual and 'carnal' material had to be reduced or removed for release without condemnation." ;
-    :hasConstraintType :ContentRestriction .
+    cc:constrainsElement cc:EL_Streetcar_CutScenes ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Sexual and 'carnal' material had to be reduced or removed for release without condemnation." ;
+    cc:hasConstraintType cc:ContentRestriction .
 
-:CatholicLegionOfDecency a :CensoringAgent,
+cc:CatholicLegionOfDecency a cc:CensoringAgent,
         owl:NamedIndividual ;
     rdfs:label "Catholic Legion of Decency, with MPAA involvement"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:CharacterTransformation a :CreativeStrategy,
+cc:CharacterTransformation a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Character transformation" ;
+    rdfs:label "Character transformation"@en ;
     rdfs:comment "A strategy of changing a character’s identity, role, or status to meet censorship constraints." .
 
-:Circumvention a :CreativeStrategy,
+cc:Circumvention a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Circumvention" ;
+    rdfs:label "Circumvention"@en ;
     rdfs:comment "A strategy of finding a way around a censorship restriction without directly complying with it." .
 
-:Constraint a owl:Class ;
+cc:Constraint a owl:Class ;
     rdfs:label "Constraint"@en,
         "Ограничение"@ru ;
     rdfs:comment "A limitation on the range of available solutions in a creative process. Constraints may be technical, economic, social, legal, or institutional."@en .
 
-:DistributionRestriction a :CensorshipMechanism,
+cc:DistributionRestriction a cc:CensorshipMechanism,
         owl:NamedIndividual ;
     rdfs:label "Distribution restriction"@en,
         "Ограничение распространения"@ru ;
     rdfs:comment "A limitation on the circulation, screening, sale, or audience of a work (added in v2)."@en .
 
-:EL_Ballo_RegicidePlot a :Theme,
+cc:EL_Ballo_RegicidePlot a cc:Theme,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "The historical regicide plot based on the assassination of King Gustav III of Sweden." .
+    cc:dataProvenance "documented case" ;
+    cc:description "The historical regicide plot based on the assassination of King Gustav III of Sweden." .
 
-:EL_Ballo_SettingCharacters a :Theme,
+cc:EL_Ballo_SettingCharacters a cc:Theme,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Historical setting, political status of the protagonist, character identities, and context of the assassination." .
+    cc:dataProvenance "documented case" ;
+    cc:description "Historical setting, political status of the protagonist, character identities, and context of the assassination." .
 
-:EL_Bulgakov_PoliticalSatire a :Theme,
+cc:EL_Bulgakov_PoliticalSatire a cc:Theme,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Satirical and political treatment of Soviet institutions and social life." .
+    cc:dataProvenance "documented case" ;
+    cc:description "Satirical and political treatment of Soviet institutions and social life." .
 
-:EL_HKR_PartyPrivilegeSatire a :Theme,
+cc:EL_HKR_PartyPrivilegeSatire a cc:Theme,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Ironic portrayal of a Party functionary (Kunze) and his chauffeur (Hinze); apparatchik privilege at the heart of the plot." .
+    cc:dataProvenance "documented case" ;
+    cc:description "Ironic portrayal of a Party functionary (Kunze) and his chauffeur (Hinze); apparatchik privilege at the heart of the plot." .
 
-:EL_MasterMargarita_CutPassages a :TextualElement,
+cc:EL_MasterMargarita_CutPassages a cc:TextualElement,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Politically sensitive passages, references to arrests and the secret police, attacks on the Soviet literary establishment, sexual/nudity material, and other excised text." .
+    cc:dataProvenance "documented case" ;
+    cc:description "Politically sensitive passages, references to arrests and the secret police, attacks on the Soviet literary establishment, sexual/nudity material, and other excised text." .
 
-:EL_Nolde_ArtMaking a :CreativeActivity,
+cc:EL_Nolde_ArtMaking a cc:CreativeActivity,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Professional production and public circulation of visual art." .
+    cc:dataProvenance "documented case" ;
+    cc:description "Professional production and public circulation of visual art." .
 
-:EL_Notorious_AliciaCharacter a :Theme,
+cc:EL_Notorious_AliciaCharacter a cc:Theme,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Characterisation of Alicia Huberman's sexual morality." .
+    cc:dataProvenance "documented case" ;
+    cc:description "Characterisation of Alicia Huberman's sexual morality." .
 
-:EL_Notorious_KissScene a :Scene,
+cc:EL_Notorious_KissScene a cc:Scene,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Love scene between Devlin (Cary Grant) and Alicia (Ingrid Bergman) in her Rio apartment." .
+    cc:dataProvenance "documented case" ;
+    cc:description "Love scene between Devlin (Cary Grant) and Alicia (Ingrid Bergman) in her Rio apartment." .
 
-:EL_Panahi_FilmmakingActivity a :CreativeActivity,
+cc:EL_Panahi_FilmmakingActivity a cc:CreativeActivity,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Film directing and screenplay writing." .
+    cc:dataProvenance "documented case" ;
+    cc:description "Film directing and screenplay writing." .
 
-:EL_Shost_ModernistIdiom a :AudioElement,
+cc:EL_Shost_ModernistIdiom a cc:AudioElement,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Dissonant, modernist musical idiom of Lady Macbeth (and of the Fourth Symphony in progress)." .
+    cc:dataProvenance "documented case" ;
+    cc:description "Dissonant, modernist musical idiom of Lady Macbeth (and of the Fourth Symphony in progress)." .
 
-:EL_Streetcar_CutScenes a :Scene,
+cc:EL_Streetcar_CutScenes a cc:Scene,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Several scenes and lines, including the Stella stairway sequence and dialogue surrounding Stanley's attack on Blanche." .
+    cc:dataProvenance "documented case" ;
+    cc:description "Several scenes and lines, including the Stella stairway sequence and dialogue surrounding Stanley's attack on Blanche." .
 
-:EL_Streetcar_SexualThemes a :Theme,
+cc:EL_Streetcar_SexualThemes a cc:Theme,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Allan Grey's homosexuality, Blanche's sexuality, Stanley's rape of Blanche, and the moral consequences of Stanley's actions." .
+    cc:dataProvenance "documented case" ;
+    cc:description "Allan Grey's homosexuality, Blanche's sexuality, Stanley's rape of Blanche, and the moral consequences of Stanley's actions." .
 
-:EV_Ballo_NaplesCensorship1858 a :CensorshipEvent,
+cc:EV_Ballo_NaplesCensorship1858 a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "The opera intended for Teatro San Carlo in Naples encountered censorial objections to a plot based on the assassination of a monarch. The demanded changes became so extensive that Verdi broke the contract with the Naples theatre and took the project elsewhere." ;
-    :documentedBy :SRC_Giger1999_Ballo,
-        :SRC_Ricordi_BalloCritical ;
-    :eventDate 1858 ;
-    :hasResponse :RE_Ballo_LeaveNaples ;
-    :imposedBy :NeapolitanCensors ;
-    :imposesConstraint :CON_Ballo_Regicide ;
-    :targetsWork :GustavoIII_OperaProject ;
-    :usesMechanism :ModificationRequirement,
-        :PriorApproval .
+    cc:dataProvenance "documented case" ;
+    cc:description "The opera intended for Teatro San Carlo in Naples encountered censorial objections to a plot based on the assassination of a monarch. The demanded changes became so extensive that Verdi broke the contract with the Naples theatre and took the project elsewhere." ;
+    cc:documentedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Ricordi_BalloCritical ;
+    cc:eventDate 1858 ;
+    cc:hasResponse cc:RE_Ballo_LeaveNaples ;
+    cc:imposedBy cc:NeapolitanCensors ;
+    cc:imposesConstraint cc:CON_Ballo_Regicide ;
+    cc:targetsWork cc:GustavoIII_OperaProject ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:PriorApproval .
 
-:EV_Ballo_RomeCensorship1858 a :CensorshipEvent,
+cc:EV_Ballo_RomeCensorship1858 a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "The project also underwent censorship in papal Rome. The final compromise relocated the action outside Europe to colonial Boston and transformed the historical Swedish king into the fictional Governor Riccardo, with corresponding changes to character names and political context." ;
-    :documentedBy :SRC_Giger1999_Ballo,
-        :SRC_Met_Ballo,
-        :SRC_Ricordi_BalloCritical ;
-    :eventDate 1858 ;
-    :hasResponse :RE_Ballo_Transposition ;
-    :imposedBy :PapalRomanCensors ;
-    :imposesConstraint :CON_Ballo_SovereignRepresentation ;
-    :targetsWork :GustavoIII_OperaProject ;
-    :usesMechanism :ModificationRequirement,
-        :PriorApproval .
+    cc:dataProvenance "documented case" ;
+    cc:description "The project also underwent censorship in papal Rome. The final compromise relocated the action outside Europe to colonial Boston and transformed the historical Swedish king into the fictional Governor Riccardo, with corresponding changes to character names and political context." ;
+    cc:documentedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Met_Ballo,
+        cc:SRC_Ricordi_BalloCritical ;
+    cc:eventDate 1858 ;
+    cc:hasResponse cc:RE_Ballo_Transposition ;
+    cc:imposedBy cc:PapalRomanCensors ;
+    cc:imposesConstraint cc:CON_Ballo_SovereignRepresentation ;
+    cc:targetsWork cc:GustavoIII_OperaProject ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:PriorApproval .
 
-:EV_Bulgakov_LiterarySuppression1930s a :CensorshipEvent,
+cc:EV_Bulgakov_LiterarySuppression1930s a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "By the late 1920s and 1930s Bulgakov's prospects for publishing original fiction had sharply deteriorated; scholarly accounts describe him as no longer able to publish original fiction while he continued work on The Master and Margarita." ;
-    :documentedBy :SRC_Pope1977_Bulgakov,
-        :SRC_Rosenshield1997_Bulgakov ;
-    :eventDate "1930s" ;
-    :hasResponse :RE_Bulgakov_AesopianExpression ;
-    :imposedBy :SovietLiteraryEstablishment ;
-    :imposesConstraint :CON_Bulgakov_PoliticalExpression ;
-    :targetsWork :MasterAndMargarita ;
-    :usesMechanism :PublicationRestriction .
+    cc:dataProvenance "documented case" ;
+    cc:description "By the late 1920s and 1930s Bulgakov's prospects for publishing original fiction had sharply deteriorated; scholarly accounts describe him as no longer able to publish original fiction while he continued work on The Master and Margarita." ;
+    cc:documentedBy cc:SRC_Pope1977_Bulgakov,
+        cc:SRC_Rosenshield1997_Bulgakov ;
+    cc:eventDate "1930s" ;
+    cc:hasResponse cc:RE_Bulgakov_AesopianExpression ;
+    cc:imposedBy cc:SovietLiteraryEstablishment ;
+    cc:imposesConstraint cc:CON_Bulgakov_PoliticalExpression ;
+    cc:targetsWork cc:MasterAndMargarita ;
+    cc:usesMechanism cc:PublicationRestriction .
 
-:EV_HKR_DistributionStop a :CensorshipEvent,
+cc:EV_HKR_DistributionStop a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "After publication and hostile reviews (Neues Deutschland; critic Anneliese Löffler), distribution of the novel in the GDR was stopped on 10 September 1985; Höpcke received a formal Party censure. A new GDR edition appeared only in 1988." ;
-    :documentedBy :SRC_Darnton1991,
-        :SRC_Lance_Metailie ;
-    :eventDate 1985 ;
-    :imposesConstraint :CON_HKR_Distribution ;
-    :targetsWork :HinzeKunzeRoman ;
-    :usesMechanism :DistributionRestriction .
+    cc:dataProvenance "documented case" ;
+    cc:description "After publication and hostile reviews (Neues Deutschland; critic Anneliese Löffler), distribution of the novel in the GDR was stopped on 10 September 1985; Höpcke received a formal Party censure. A new GDR edition appeared only in 1988." ;
+    cc:documentedBy cc:SRC_Darnton1991,
+        cc:SRC_Lance_Metailie ;
+    cc:eventDate 1985 ;
+    cc:imposesConstraint cc:CON_HKR_Distribution ;
+    cc:targetsWork cc:HinzeKunzeRoman ;
+    cc:usesMechanism cc:DistributionRestriction .
 
-:EV_MasterMargarita_MoskvaCensorship1966 a :CensorshipEvent,
+cc:EV_MasterMargarita_MoskvaCensorship1966 a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "The novel's first Soviet publication in Moskva (1966-1967) was authorised only in a heavily cut form. Political and ideological passages, references to the secret police and arrests, attacks on the Soviet literary establishment, and other material were removed." ;
-    :documentedBy :SRC_Curtis2019_Bulgakov,
-        :SRC_Pope1977_Bulgakov ;
-    :eventDate "1966-1967" ;
-    :hasResponse :RE_MasterMargarita_TextRestoration ;
-    :imposedBy :SovietCensorship_Moskva ;
-    :imposesConstraint :CON_MasterMargarita_PublicationCuts ;
-    :targetsWork :MasterAndMargarita ;
-    :usesMechanism :PublicationRestriction,
-        :Redaction .
+    cc:dataProvenance "documented case" ;
+    cc:description "The novel's first Soviet publication in Moskva (1966-1967) was authorised only in a heavily cut form. Political and ideological passages, references to the secret police and arrests, attacks on the Soviet literary establishment, and other material were removed." ;
+    cc:documentedBy cc:SRC_Curtis2019_Bulgakov,
+        cc:SRC_Pope1977_Bulgakov ;
+    cc:eventDate "1966-1967" ;
+    cc:hasResponse cc:RE_MasterMargarita_TextRestoration ;
+    cc:imposedBy cc:SovietCensorship_Moskva ;
+    cc:imposesConstraint cc:CON_MasterMargarita_PublicationCuts ;
+    cc:targetsWork cc:MasterAndMargarita ;
+    cc:usesMechanism cc:PublicationRestriction,
+        cc:Redaction .
 
-:EV_Nolde_ProfessionalBan1941 a :CensorshipEvent,
+cc:EV_Nolde_ProfessionalBan1941 a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "In 1941 Nolde was expelled from the Reich Chamber of Fine Arts and subjected to a professional ban. Official museum sources record that he nevertheless continued producing small-format watercolours, the so-called Unpainted Pictures." ;
-    :documentedBy :SRC_NGI_NoldeDegenerate,
-        :SRC_NoldeMuseum_Artist ;
-    :eventDate 1941 ;
-    :hasResponse :RE_Nolde_UnpaintedPictures ;
-    :imposedBy :ReichChamberFineArts ;
-    :imposesConstraint :CON_Nolde_ProfessionalPractice ;
-    :targetsPractice :NoldeArtisticPractice ;
-    :usesMechanism :Ban .
+    cc:dataProvenance "documented case" ;
+    cc:description "In 1941 Nolde was expelled from the Reich Chamber of Fine Arts and subjected to a professional ban. Official museum sources record that he nevertheless continued producing small-format watercolours, the so-called Unpainted Pictures." ;
+    cc:documentedBy cc:SRC_NGI_NoldeDegenerate,
+        cc:SRC_NoldeMuseum_Artist ;
+    cc:eventDate 1941 ;
+    cc:hasResponse cc:RE_Nolde_UnpaintedPictures ;
+    cc:imposedBy cc:ReichChamberFineArts ;
+    cc:imposesConstraint cc:CON_Nolde_ProfessionalPractice ;
+    cc:targetsPractice cc:NoldeArtisticPractice ;
+    cc:usesMechanism cc:Ban .
 
-:EV_Panahi_2010FilmmakingBan a :CensorshipEvent,
+cc:EV_Panahi_2010FilmmakingBan a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "On 20 December 2010, Panahi was sentenced to six years in prison and a 20-year ban on making films, writing screenplays, giving interviews, and travelling abroad. In 2011, Cannes described This Is Not a Film as made under semi-clandestine conditions while the ban was in force." ;
-    :documentedBy :SRC_Cannes_Panahi2011,
-        :SRC_Cannes_ThisIsNotAFilm2011,
-        :SRC_CinemaIranica_TINAF,
-        :SRC_IranHumanRights_Panahi2010 ;
-    :eventDate 2010 ;
-    :hasResponse :RE_Panahi_ThisIsNotAFilm ;
-    :imposedBy :TehranRevolutionaryCourt_Branch26 ;
-    :imposesConstraint :CON_Panahi_Filmmaking ;
-    :targetsPractice :PanahiFilmmakingPractice ;
-    :usesMechanism :Ban .
+    cc:dataProvenance "documented case" ;
+    cc:description "On 20 December 2010, Panahi was sentenced to six years in prison and a 20-year ban on making films, writing screenplays, giving interviews, and travelling abroad. In 2011, Cannes described This Is Not a Film as made under semi-clandestine conditions while the ban was in force." ;
+    cc:documentedBy cc:SRC_Cannes_Panahi2011,
+        cc:SRC_Cannes_ThisIsNotAFilm2011,
+        cc:SRC_CinemaIranica_TINAF,
+        cc:SRC_IranHumanRights_Panahi2010 ;
+    cc:eventDate 2010 ;
+    cc:hasResponse cc:RE_Panahi_ThisIsNotAFilm ;
+    cc:imposedBy cc:TehranRevolutionaryCourt_Branch26 ;
+    cc:imposesConstraint cc:CON_Panahi_Filmmaking ;
+    cc:targetsPractice cc:PanahiFilmmakingPractice ;
+    cc:usesMechanism cc:Ban .
 
-:EV_Pravda1936 a :CensorshipEvent,
+cc:EV_Pravda1936 a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Unsigned Pravda editorial 'Muddle Instead of Music' (28 January 1936), two days after Stalin attended the opera; further Pravda attacks followed; the opera disappeared from the repertoire (last performance 11 March 1936)." ;
-    :documentedBy :SRC_FrolovaWalker2023,
-        :SRC_Robinson_BSO,
-        :SRC_Wiki_Muddle ;
-    :eventDate 1936 ;
-    :hasResponse :RE_Shost_FifthSymphony ;
-    :imposedBy :Pravda ;
-    :imposesConstraint :CON_Shost_Formalism ;
-    :targetsWork :LadyMacbethMtsensk ;
-    :usesMechanism :Ban,
-        :Removal .
+    cc:dataProvenance "documented case" ;
+    cc:description "Unsigned Pravda editorial 'Muddle Instead of Music' (28 January 1936), two days after Stalin attended the opera; further Pravda attacks followed; the opera disappeared from the repertoire (last performance 11 March 1936)." ;
+    cc:documentedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Robinson_BSO,
+        cc:SRC_Wiki_Muddle ;
+    cc:eventDate 1936 ;
+    cc:hasResponse cc:RE_Shost_FifthSymphony ;
+    cc:imposedBy cc:Pravda ;
+    cc:imposesConstraint cc:CON_Shost_Formalism ;
+    cc:targetsWork cc:LadyMacbethMtsensk ;
+    cc:usesMechanism cc:Ban,
+        cc:Removal .
 
-:EV_Streetcar_LegionCuts1951 a :CensorshipEvent,
+cc:EV_Streetcar_LegionCuts1951 a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "After the film was completed, the Catholic Legion of Decency condemned it. Warner Bros., working with the MPAA and without consulting Kazan, made twelve cuts totalling roughly three to four minutes to obtain an acceptable rating." ;
-    :documentedBy :SRC_AFI_Streetcar1951,
-        :SRC_Szabo2019_Streetcar ;
-    :eventDate 1951 ;
-    :hasOutcome :Suppression ;
-    :imposedBy :CatholicLegionOfDecency ;
-    :imposesConstraint :CON_Streetcar_ReleaseCuts ;
-    :targetsWork :Streetcar1951 ;
-    :usesMechanism :ModificationRequirement,
-        :Removal .
+    cc:dataProvenance "documented case" ;
+    cc:description "After the film was completed, the Catholic Legion of Decency condemned it. Warner Bros., working with the MPAA and without consulting Kazan, made twelve cuts totalling roughly three to four minutes to obtain an acceptable rating." ;
+    cc:documentedBy cc:SRC_AFI_Streetcar1951,
+        cc:SRC_Szabo2019_Streetcar ;
+    cc:eventDate 1951 ;
+    cc:hasOutcome cc:Suppression ;
+    cc:imposedBy cc:CatholicLegionOfDecency ;
+    cc:imposesConstraint cc:CON_Streetcar_ReleaseCuts ;
+    cc:targetsWork cc:Streetcar1951 ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:Removal .
 
-:EV_Streetcar_PCAReview1950 a :CensorshipEvent,
+cc:EV_Streetcar_PCAReview1950 a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "During Production Code Administration review in 1950, the screenplay was challenged over three principal issues: the homosexuality of Blanche's late husband, Blanche's sexual behaviour, and the rape. The PCA proposed plot and dialogue changes before approval." ;
-    :documentedBy :SRC_AFI_Streetcar1951,
-        :SRC_Szabo2019_Streetcar ;
-    :eventDate 1950 ;
-    :hasResponse :RE_Streetcar_ScreenplayRewrite ;
-    :imposedBy :PCA ;
-    :imposesConstraint :CON_Streetcar_SexualContent ;
-    :targetsWork :Streetcar1951 ;
-    :usesMechanism :ModificationRequirement,
-        :PriorApproval .
+    cc:dataProvenance "documented case" ;
+    cc:description "During Production Code Administration review in 1950, the screenplay was challenged over three principal issues: the homosexuality of Blanche's late husband, Blanche's sexual behaviour, and the rape. The PCA proposed plot and dialogue changes before approval." ;
+    cc:documentedBy cc:SRC_AFI_Streetcar1951,
+        cc:SRC_Szabo2019_Streetcar ;
+    cc:eventDate 1950 ;
+    cc:hasResponse cc:RE_Streetcar_ScreenplayRewrite ;
+    cc:imposedBy cc:PCA ;
+    cc:imposesConstraint cc:CON_Streetcar_SexualContent ;
+    cc:targetsWork cc:Streetcar1951 ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:PriorApproval .
 
-:EV_Sym4_Cancellation a :CensorshipEvent,
+cc:EV_Sym4_Cancellation a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Premiere planned for 11 December 1936 (Leningrad Philharmonic, Stiedry) cancelled after rehearsals; officially presented as the composer's withdrawal, while other accounts (Glikman) report pressure from Party and Composers' Union officials." ;
-    :documentedBy :SRC_FrolovaWalker2023,
-        :SRC_Wiki_Sym4 ;
-    :eventDate 1936 ;
-    :hasResponse :RE_Sym4_Withdrawal ;
-    :imposedBy :SovietComposersUnion ;
-    :imposesConstraint :CON_Shost_Formalism ;
-    :targetsWork :ShostakovichSymphony4 ;
-    :usesMechanism :Ban,
-        :SelfCensorship .
+    cc:dataProvenance "documented case" ;
+    cc:description "Premiere planned for 11 December 1936 (Leningrad Philharmonic, Stiedry) cancelled after rehearsals; officially presented as the composer's withdrawal, while other accounts (Glikman) report pressure from Party and Composers' Union officials." ;
+    cc:documentedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Wiki_Sym4 ;
+    cc:eventDate 1936 ;
+    cc:hasResponse cc:RE_Sym4_Withdrawal ;
+    cc:imposedBy cc:SovietComposersUnion ;
+    cc:imposesConstraint cc:CON_Shost_Formalism ;
+    cc:targetsWork cc:ShostakovichSymphony4 ;
+    cc:usesMechanism cc:Ban,
+        cc:SelfCensorship .
 
-:Fragmentation a :CreativeStrategy,
+cc:Fragmentation a cc:CreativeStrategy,
         owl:NamedIndividual ;
     rdfs:label "Fragmentation"@en,
         "Фрагментация"@ru ;
     rdfs:comment "Breaking a restricted action or representation into a series of short units, each of which stays within the permitted limit. Added in v2.1."@en .
 
-:HKR_GDR_1985 a :WorkVersion,
+cc:HKR_GDR_1985 a cc:WorkVersion,
         owl:NamedIndividual ;
     rdfs:label "Hinze-Kunze-Roman, Mitteldeutscher Verlag (Halle) 1985 edition with Schlenstedt's afterword; the simultaneous Suhrkamp edition appeared without it"@en ;
-    :createdBy :DieterSchlenstedt,
-        :VolkerBraun ;
-    :creationYear 1985 ;
-    :dataProvenance "documented case" ;
-    :title "Hinze-Kunze-Roman, Mitteldeutscher Verlag (Halle) 1985 edition with Schlenstedt's afterword; the simultaneous Suhrkamp edition appeared without it" ;
-    :versionOf :HinzeKunzeRoman .
+    cc:createdBy cc:DieterSchlenstedt,
+        cc:VolkerBraun ;
+    cc:creationYear 1985 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Hinze-Kunze-Roman, Mitteldeutscher Verlag (Halle) 1985 edition with Schlenstedt's afterword; the simultaneous Suhrkamp edition appeared without it" ;
+    cc:versionOf cc:HinzeKunzeRoman .
 
-:HV_Verlage_Buchhandel a :CensoringAgent,
-        :CensoringAuthority,
+cc:HV_Verlage_Buchhandel a cc:CensoringAgent,
+        cc:CensoringAuthority,
         owl:NamedIndividual ;
     rdfs:label "Hauptverwaltung Verlage und Buchhandel (GDR Ministry of Culture)"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:HistoricalDisplacement a :CreativeStrategy,
+cc:HistoricalDisplacement a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Historical displacement" ;
+    rdfs:label "Historical displacement"@en ;
     rdfs:comment "Moving sensitive content to another historical context to reduce its directness." .
 
-:InstitutionalCircumvention a :CreativeStrategy,
+cc:InstitutionalCircumvention a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Institutional circumvention" ;
+    rdfs:label "Institutional circumvention"@en ;
     rdfs:comment "Avoiding or bypassing the institution imposing the restriction." .
 
-:LadyMacbethMtsensk a :MusicalWork,
+cc:LadyMacbethMtsensk a cc:MusicalWork,
         owl:NamedIndividual ;
     rdfs:label "Lady Macbeth of the Mtsensk District"@en ;
-    :createdBy :DmitriShostakovich ;
-    :creationYear 1932 ;
-    :dataProvenance "documented case" ;
-    :title "Lady Macbeth of the Mtsensk District" .
+    cc:createdBy cc:DmitriShostakovich ;
+    cc:creationYear 1932 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Lady Macbeth of the Mtsensk District" .
 
-:MasterMargarita_FullRussian1969 a :WorkVersion,
+cc:MasterMargarita_FullRussian1969 a cc:WorkVersion,
         owl:NamedIndividual ;
     rdfs:label "The Master and Margarita (complete Russian edition, Possev)"@en ;
-    :createdBy :ElenaBulgakova,
-        :MikhailBulgakov ;
-    :creationYear 1969 ;
-    :dataProvenance "documented case" ;
-    :title "The Master and Margarita (complete Russian edition, Possev)" ;
-    :versionOf :MasterAndMargarita .
+    cc:createdBy cc:ElenaBulgakova,
+        cc:MikhailBulgakov ;
+    cc:creationYear 1969 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "The Master and Margarita (complete Russian edition, Possev)" ;
+    cc:versionOf cc:MasterAndMargarita .
 
-:MaterialRestriction a :ConstraintType,
+cc:MaterialRestriction a cc:ConstraintType,
         owl:NamedIndividual ;
-    rdfs:label "Material restriction" ;
+    rdfs:label "Material restriction"@en ;
     rdfs:comment "A constraint that limits the materials or technical means available for creative work." .
 
-:MediumAdaptation a :CreativeStrategy,
+cc:MediumAdaptation a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Medium adaptation" ;
+    rdfs:label "Medium adaptation"@en ;
     rdfs:comment "Сhanging the artistic medium or technique in response to a constraint." .
 
-:MinimalProduction a :CreativeStrategy,
+cc:MinimalProduction a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Minimal production" ;
+    rdfs:label "Minimal production"@en ;
     rdfs:comment "Reducing production scale or resources to continue creating under restrictions." .
 
-:NarrativeModification a :CreativeStrategy,
+cc:NarrativeModification a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Narrative modification" ;
+    rdfs:label "Narrative modification"@en ;
     rdfs:comment "Altering plot, dialogue, or story structure in response to censorship." .
 
-:NarrativeTransposition a :CreativeStrategy,
+cc:NarrativeTransposition a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Narrative transposition" ;
+    rdfs:label "Narrative transposition"@en ;
     rdfs:comment "Relocating a narrative to a different setting or context while preserving its core structure." .
 
-:NeapolitanCensors a :CensoringAuthority,
+cc:NeapolitanCensors a cc:CensoringAuthority,
         owl:NamedIndividual ;
     rdfs:label "Censors of the Kingdom of Naples"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:NoldeArtisticPractice a :CreativePractice,
+cc:NoldeArtisticPractice a cc:CreativePractice,
         owl:NamedIndividual ;
     rdfs:label "Emil Nolde's artistic practice"@en ;
-    :dataProvenance "documented case" ;
-    :title "Emil Nolde's artistic practice" .
+    cc:dataProvenance "documented case" ;
+    cc:title "Emil Nolde's artistic practice" .
 
-:Nolde_UnpaintedPictures a :VisualArtwork,
+cc:Nolde_UnpaintedPictures a cc:VisualArtwork,
         owl:NamedIndividual ;
     rdfs:label "Unpainted Pictures (Ungemalte Bilder)"@en ;
-    :createdBy :EmilNolde ;
-    :creationYear "1941-1945" ;
-    :dataProvenance "documented case" ;
-    :title "Unpainted Pictures (Ungemalte Bilder)" .
+    cc:createdBy cc:EmilNolde ;
+    cc:creationYear "1941-1945" ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Unpainted Pictures (Ungemalte Bilder)" .
 
-:Notorious1946 a :Film,
+cc:Notorious1946 a cc:Film,
         owl:NamedIndividual ;
     rdfs:label "Notorious"@en ;
-    :createdBy :AlfredHitchcock ;
-    :creationYear 1946 ;
-    :dataProvenance "documented case" ;
-    :title "Notorious" .
+    cc:createdBy cc:AlfredHitchcock ;
+    cc:creationYear 1946 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Notorious" .
 
-:PanahiFilmmakingPractice a :CreativePractice,
+cc:PanahiFilmmakingPractice a cc:CreativePractice,
         owl:NamedIndividual ;
     rdfs:label "Jafar Panahi's filmmaking practice"@en ;
-    :dataProvenance "documented case" ;
-    :title "Jafar Panahi's filmmaking practice" .
+    cc:dataProvenance "documented case" ;
+    cc:title "Jafar Panahi's filmmaking practice" .
 
-:PapalRomanCensors a :CensoringAuthority,
+cc:PapalRomanCensors a cc:CensoringAuthority,
         owl:NamedIndividual ;
     rdfs:label "Censors of the Papal States in Rome"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:ParatextualFraming a :CreativeStrategy,
+cc:ParatextualFraming a cc:CreativeStrategy,
         owl:NamedIndividual ;
     rdfs:label "Paratextual framing"@en,
         "Паратекстуальное обрамление"@ru ;
     rdfs:comment "Adding a preface, afterword, commentary, or other accompanying text that guides interpretation and makes the work acceptable to censors. Added in v2.1."@en .
 
-:Pravda a :CensoringAgent,
+cc:Pravda a cc:CensoringAgent,
         owl:NamedIndividual ;
     rdfs:label "Pravda (Communist Party newspaper; editorial expressing the official Party line)"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:Redaction a :CensorshipMechanism,
+cc:Redaction a cc:CensorshipMechanism,
         owl:NamedIndividual ;
     rdfs:label "Redaction"@en,
         "Вымарывание"@ru ;
     rdfs:comment "Deletion or obscuring of specific passages, scenes, or elements of a work."@en .
 
-:ReichChamberFineArts a :CensoringAuthority,
+cc:ReichChamberFineArts a cc:CensoringAuthority,
         owl:NamedIndividual ;
     rdfs:label "Reich Chamber of Fine Arts (Reichskammer der bildenden Künste)"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:Satire a :CreativeStrategy,
+cc:Satire a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Satire" ;
+    rdfs:label "Satire"@en ;
     rdfs:comment "Using irony, exaggeration, or ridicule to express criticism indirectly." .
 
-:SecretProduction a :CreativeStrategy,
+cc:SecretProduction a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Secret production" ;
+    rdfs:label "Secret production"@en ;
     rdfs:comment "Creating a work privately or clandestinely when public production is prohibited." .
 
-:SelfCensorship a :CensorshipMechanism,
+cc:SelfCensorship a cc:CensorshipMechanism,
         owl:NamedIndividual ;
     rdfs:label "Self-censorship"@en,
         "Самоцензура"@ru ;
     rdfs:comment "Restriction of expression by the creator in anticipation of censorship or sanctions."@en .
 
-:SelfReflexivity a :CreativeStrategy,
+cc:SelfReflexivity a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Self-reflexivity" ;
+    rdfs:label "Self-reflexivity"@en ;
     rdfs:comment "A strategy in which the work explicitly reflects on its own creation, form, or conditions of production." .
 
-:ShostakovichSymphony4 a :MusicalWork,
+cc:ShostakovichSymphony4 a cc:MusicalWork,
         owl:NamedIndividual ;
     rdfs:label "Symphony No. 4 in C minor, Op. 43"@en ;
-    :createdBy :DmitriShostakovich ;
-    :creationYear 1936 ;
-    :dataProvenance "documented case" ;
-    :title "Symphony No. 4 in C minor, Op. 43" .
+    cc:createdBy cc:DmitriShostakovich ;
+    cc:creationYear 1936 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Symphony No. 4 in C minor, Op. 43" .
 
-:ShostakovichSymphony5 a :MusicalWork,
+cc:ShostakovichSymphony5 a cc:MusicalWork,
         owl:NamedIndividual ;
     rdfs:label "Symphony No. 5 in D minor, Op. 47"@en ;
-    :createdBy :DmitriShostakovich ;
-    :creationYear 1937 ;
-    :dataProvenance "documented case" ;
-    :title "Symphony No. 5 in D minor, Op. 47" .
+    cc:createdBy cc:DmitriShostakovich ;
+    cc:creationYear 1937 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Symphony No. 5 in D minor, Op. 47" .
 
-:SovietCensorship_Moskva a :CensoringAuthority,
+cc:SovietCensorship_Moskva a cc:CensoringAuthority,
         owl:NamedIndividual ;
     rdfs:label "Soviet censorship and the editors of Moskva"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:SovietComposersUnion a :CensoringAgent,
+cc:SovietComposersUnion a cc:CensoringAgent,
         owl:NamedIndividual ;
     rdfs:label "Union of Soviet Composers and Party officials"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:SovietLiteraryEstablishment a :CensoringAuthority,
+cc:SovietLiteraryEstablishment a cc:CensoringAuthority,
         owl:NamedIndividual ;
     rdfs:label "Soviet literary and censorship establishment"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:Streetcar1951_PCAApprovedVersion a :WorkVersion,
+cc:Streetcar1951_PCAApprovedVersion a cc:WorkVersion,
         owl:NamedIndividual ;
     rdfs:label "A Streetcar Named Desire (PCA-approved film version)"@en ;
-    :createdBy :EliaKazan,
-        :TennesseeWilliams ;
-    :creationYear 1951 ;
-    :dataProvenance "documented case" ;
-    :title "A Streetcar Named Desire (PCA-approved film version)" ;
-    :versionOf :Streetcar1951 .
+    cc:createdBy cc:EliaKazan,
+        cc:TennesseeWilliams ;
+    cc:creationYear 1951 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "A Streetcar Named Desire (PCA-approved film version)" ;
+    cc:versionOf cc:Streetcar1951 .
 
-:StylisticRestriction a :ConstraintType,
+cc:StylisticRestriction a cc:ConstraintType,
         owl:NamedIndividual ;
     rdfs:label "Stylistic restriction"@en,
         "Стилистическое ограничение"@ru ;
     rdfs:comment "A constraint on the artistic style, form, or idiom of a work (for example, condemnation of 'formalism'), rather than on its subject. Added in v2.1."@en .
 
-:Suppression a :OutcomeType,
+cc:Suppression a cc:OutcomeType,
         owl:NamedIndividual ;
     rdfs:label "Suppression"@en,
         "Подавление"@ru ;
     rdfs:comment "The expression was effectively suppressed and did not reach its audience in the intended form."@en .
 
-:Symbolism a :CreativeStrategy,
+cc:Symbolism a cc:CreativeStrategy,
         owl:NamedIndividual ;
     rdfs:label "Symbolism"@en,
         "Символизм"@ru ;
     rdfs:comment "Use of objects, images, or signs that stand for restricted ideas."@en .
 
-:TehranRevolutionaryCourt_Branch26 a :CensoringAuthority,
+cc:TehranRevolutionaryCourt_Branch26 a cc:CensoringAuthority,
         owl:NamedIndividual ;
     rdfs:label "Branch 26 of the Tehran Revolutionary Court / Iranian judiciary"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:TestFilm a :Film,
+cc:TestFilm a cc:Film,
         owl:NamedIndividual ;
     rdfs:label "Test film"@en ;
-    :dataProvenance "synthetic test individual" ;
-    :title "Test Film" .
+    cc:dataProvenance "synthetic test individual" ;
+    cc:title "Test Film" .
 
-:TestResponse a :CreativeResponse,
+cc:TestResponse a cc:CreativeResponse,
         owl:NamedIndividual ;
     rdfs:label "Test creative response"@en ;
-    :dataProvenance "synthetic test individual" ;
-    :hasOutcome :CreativeAdaptation ;
-    :respondsTo :TestConstraint ;
-    :usesStrategy :Symbolism .
+    cc:dataProvenance "synthetic test individual" ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:respondsTo cc:TestConstraint ;
+    cc:usesStrategy cc:Symbolism .
 
-:TextualElement a owl:Class ;
+cc:TextualElement a owl:Class ;
     rdfs:label "Textual element"@en,
         "Текстовый элемент"@ru ;
     rdfs:comment "A word, passage, line, title, or lyric within a creative work."@en ;
-    rdfs:subClassOf :WorkElement .
+    rdfs:subClassOf cc:WorkElement .
 
-:TextualRestoration a :CreativeStrategy,
+cc:TextualRestoration a cc:CreativeStrategy,
         owl:NamedIndividual ;
-    rdfs:label "Textual restoration" ;
+    rdfs:label "Textual restoration"@en ;
     rdfs:comment "Restoring material removed or altered by censorship." .
 
-:ThisIsNotAFilm a :Film,
+cc:ThisIsNotAFilm a cc:Film,
         owl:NamedIndividual ;
     rdfs:label "This Is Not a Film (In Film Nist)"@en ;
-    :createdBy :JafarPanahi,
-        :MojtabaMirtahmasb ;
-    :creationYear 2011 ;
-    :dataProvenance "documented case" ;
-    :title "This Is Not a Film (In Film Nist)" .
+    cc:createdBy cc:JafarPanahi,
+        cc:MojtabaMirtahmasb ;
+    cc:creationYear 2011 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "This Is Not a Film (In Film Nist)" .
 
-:UnBalloInMaschera1859 a :WorkVersion,
+cc:UnBalloInMaschera1859 a cc:WorkVersion,
         owl:NamedIndividual ;
     rdfs:label "Un ballo in maschera"@en ;
-    :createdBy :AntonioSomma,
-        :GiuseppeVerdi ;
-    :creationYear 1859 ;
-    :dataProvenance "documented case" ;
-    :title "Un ballo in maschera" ;
-    :versionOf :GustavoIII_OperaProject .
+    cc:createdBy cc:AntonioSomma,
+        cc:GiuseppeVerdi ;
+    cc:creationYear 1859 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Un ballo in maschera" ;
+    cc:versionOf cc:GustavoIII_OperaProject .
 
-:UnpublishedWork a :OutcomeType,
+cc:UnpublishedWork a cc:OutcomeType,
         owl:NamedIndividual ;
     rdfs:label "Unpublished work"@en,
         "Неопубликованное произведение"@ru ;
     rdfs:comment "The work remained unpublished, unreleased, or unexhibited as a result of censorship."@en .
 
-:VisualArtwork a owl:Class ;
+cc:VisualArtwork a owl:Class ;
     rdfs:label "Visual artwork"@en,
         "Произведение изобразительного искусства"@ru ;
     rdfs:comment "A creative work expressed primarily through visual means: painting, drawing, photograph, sculpture, installation, and similar."@en ;
-    rdfs:subClassOf :CreativeWork .
+    rdfs:subClassOf cc:CreativeWork .
 
-:hasOutcome a owl:ObjectProperty ;
+cc:hasOutcome a owl:ObjectProperty ;
     rdfs:label "has outcome"@en,
         "имеет результат"@ru ;
     rdfs:comment "Links a creative response to its outcome. In v2 the domain is CreativeResponse (previously Event)."@en ;
-    rdfs:domain :CreativeResponse ;
-    rdfs:range :OutcomeType .
+    rdfs:domain cc:CreativeResponse ;
+    rdfs:range cc:OutcomeType .
 
-:isTargetOf a owl:ObjectProperty ;
+cc:isTargetOf a owl:ObjectProperty ;
     rdfs:label "is target of"@en,
         "является объектом"@ru ;
     rdfs:comment "Inverse of targetsWork: links a creative work to a censorship event that affects it."@en ;
-    rdfs:domain :CreativeWork ;
-    rdfs:range :CensorshipEvent ;
-    owl:inverseOf :targetsWork .
+    rdfs:domain cc:CreativeWork ;
+    rdfs:range cc:CensorshipEvent ;
+    owl:inverseOf cc:targetsWork .
 
-:targetsWork a owl:ObjectProperty ;
+cc:targetsWork a owl:ObjectProperty ;
     rdfs:label "targets work"@en,
         "направлено на произведение"@ru ;
     rdfs:comment "Links a censorship event to the creative work it affects."@en ;
-    rdfs:domain :CensorshipEvent ;
-    rdfs:range :CreativeWork .
+    rdfs:domain cc:CensorshipEvent ;
+    rdfs:range cc:CreativeWork .
 
-:usesStrategy a owl:ObjectProperty ;
+cc:usesStrategy a owl:ObjectProperty ;
     rdfs:label "uses strategy"@en,
         "использует стратегию"@ru ;
     rdfs:comment "Links a creative response to the creative strategy used in it."@en ;
-    rdfs:domain :CreativeResponse ;
-    rdfs:range :CreativeStrategy .
+    rdfs:domain cc:CreativeResponse ;
+    rdfs:range cc:CreativeStrategy .
 
-:AlfredHitchcock a :Creator,
+cc:AlfredHitchcock a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Alfred Hitchcock"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:AlternativeVersionProduced a :OutcomeType,
+cc:AlternativeVersionProduced a cc:OutcomeType,
         owl:NamedIndividual ;
     rdfs:label "Alternative version produced"@en,
         "Создана альтернативная версия"@ru ;
     rdfs:comment "A separate version of the work was produced, for example for a different audience or country."@en .
 
-:CON_Ballo_Regicide a :CensorshipConstraint,
+cc:CON_Ballo_Regicide a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_Ballo_RegicidePlot ;
-    :dataProvenance "documented case" ;
-    :description "A royal assassination and the sovereign status of the protagonist could not be represented in the proposed form." ;
-    :hasConstraintType :DirectRepresentationRestriction,
-        :SubjectRestriction .
+    cc:constrainsElement cc:EL_Ballo_RegicidePlot ;
+    cc:dataProvenance "documented case" ;
+    cc:description "A royal assassination and the sovereign status of the protagonist could not be represented in the proposed form." ;
+    cc:hasConstraintType cc:DirectRepresentationRestriction,
+        cc:SubjectRestriction .
 
-:CON_Ballo_SovereignRepresentation a :CensorshipConstraint,
+cc:CON_Ballo_SovereignRepresentation a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_Ballo_SettingCharacters ;
-    :dataProvenance "documented case" ;
-    :description "The central assassination plot could remain only after the sovereign and European political context were transformed." ;
-    :hasConstraintType :DirectRepresentationRestriction,
-        :SubjectRestriction .
+    cc:constrainsElement cc:EL_Ballo_SettingCharacters ;
+    cc:dataProvenance "documented case" ;
+    cc:description "The central assassination plot could remain only after the sovereign and European political context were transformed." ;
+    cc:hasConstraintType cc:DirectRepresentationRestriction,
+        cc:SubjectRestriction .
 
-:CON_Bulgakov_PoliticalExpression a :CensorshipConstraint,
+cc:CON_Bulgakov_PoliticalExpression a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_Bulgakov_PoliticalSatire ;
-    :dataProvenance "documented case" ;
-    :description "Political and satirical expression had to be developed in an environment in which Bulgakov could not expect normal publication of original fiction." ;
-    :hasConstraintType :ExpressionRestriction,
-        :PublicationRestriction .
+    cc:constrainsElement cc:EL_Bulgakov_PoliticalSatire ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Political and satirical expression had to be developed in an environment in which Bulgakov could not expect normal publication of original fiction." ;
+    cc:hasConstraintType cc:ExpressionRestriction,
+        cc:PublicationRestriction .
 
-:CON_MasterMargarita_PublicationCuts a :CensorshipConstraint,
+cc:CON_MasterMargarita_PublicationCuts a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_MasterMargarita_CutPassages ;
-    :dataProvenance "documented case" ;
-    :description "Only a substantially abridged version of the novel could appear in the Soviet journal." ;
-    :hasConstraintType :ContentRestriction .
+    cc:constrainsElement cc:EL_MasterMargarita_CutPassages ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Only a substantially abridged version of the novel could appear in the Soviet journal." ;
+    cc:hasConstraintType cc:ContentRestriction .
 
-:CON_Nolde_ProfessionalPractice a :CensorshipConstraint,
+cc:CON_Nolde_ProfessionalPractice a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_Nolde_ArtMaking ;
-    :dataProvenance "documented case" ;
-    :description "The professional ban prevented Nolde from officially practising, exhibiting, and selling art and limited his access to normal artistic materials and channels." ;
-    :hasConstraintType :MaterialRestriction,
-        :ProfessionalPracticeRestriction .
+    cc:constrainsElement cc:EL_Nolde_ArtMaking ;
+    cc:dataProvenance "documented case" ;
+    cc:description "The professional ban prevented Nolde from officially practising, exhibiting, and selling art and limited his access to normal artistic materials and channels." ;
+    cc:hasConstraintType cc:MaterialRestriction,
+        cc:ProfessionalPracticeRestriction .
 
-:CON_Notorious_Kissing a :CensorshipConstraint,
+cc:CON_Notorious_Kissing a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_Notorious_KissScene ;
-    :dataProvenance "documented case" ;
-    :description "Production Code: 'Excessive and lustful kissing ... are not to be shown'; enforced through an unofficial rule of thumb that a screen kiss should not exceed about three seconds." ;
-    :hasConstraintType :ContentRestriction,
-        :DirectRepresentationRestriction .
+    cc:constrainsElement cc:EL_Notorious_KissScene ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Production Code: 'Excessive and lustful kissing ... are not to be shown'; enforced through an unofficial rule of thumb that a screen kiss should not exceed about three seconds." ;
+    cc:hasConstraintType cc:ContentRestriction,
+        cc:DirectRepresentationRestriction .
 
-:CON_Panahi_Filmmaking a :CensorshipConstraint,
+cc:CON_Panahi_Filmmaking a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_Panahi_FilmmakingActivity ;
-    :dataProvenance "documented case" ;
-    :description "Panahi was prohibited from making or directing films and from writing screenplays for twenty years." ;
-    :hasConstraintType :ExpressionRestriction,
-        :ProfessionalPracticeRestriction .
+    cc:constrainsElement cc:EL_Panahi_FilmmakingActivity ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Panahi was prohibited from making or directing films and from writing screenplays for twenty years." ;
+    cc:hasConstraintType cc:ExpressionRestriction,
+        cc:ProfessionalPracticeRestriction .
 
-:CON_Streetcar_SexualContent a :CensorshipConstraint,
+cc:CON_Streetcar_SexualContent a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_Streetcar_SexualThemes ;
-    :dataProvenance "documented case" ;
-    :description "The adaptation could not directly represent or clearly state several sexual themes in the same form as the play, and the filmmakers were pressed to alter their treatment." ;
-    :hasConstraintType :ContentRestriction,
-        :DirectRepresentationRestriction,
-        :SubjectRestriction .
+    cc:constrainsElement cc:EL_Streetcar_SexualThemes ;
+    cc:dataProvenance "documented case" ;
+    cc:description "The adaptation could not directly represent or clearly state several sexual themes in the same form as the play, and the filmmakers were pressed to alter their treatment." ;
+    cc:hasConstraintType cc:ContentRestriction,
+        cc:DirectRepresentationRestriction,
+        cc:SubjectRestriction .
 
-:DieterSchlenstedt a :Creator,
+cc:CreativeActivity a owl:Class ;
+    rdfs:label "Creative activity"@en ;
+    rdfs:comment "An ongoing creative activity within a practice, such as film directing or art making, that can be restricted by censorship. Added in v2.2."@en ;
+    rdfs:subClassOf cc:WorkElement .
+
+cc:DieterSchlenstedt a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Dieter Schlenstedt"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:EV_HKR_PrintApproval a :CensorshipEvent,
+cc:EV_HKR_PrintApproval a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Four-year GDR print-approval process: manuscript submitted to Mitteldeutscher Verlag end 1981, passed to the Hauptverwaltung end 1983; negative expert report by Werner Neubert (July 1984); Höpcke changed 'refusal' to 'needs further work'; renewed unsuccessful attempts to obtain changes; approval early 1985." ;
-    :documentedBy :SRC_Darnton1991,
-        :SRC_GuibertYeche,
-        :SRC_Hoepcke1985,
-        :SRC_Lance_Metailie,
-        :SRC_bpb_Selbstzensur ;
-    :eventDate 1985 ;
-    :hasResponse :RE_HKR_IronicNarration,
-        :RE_HKR_Lesehilfe ;
-    :imposedBy :HV_Verlage_Buchhandel ;
-    :imposesConstraint :CON_HKR_Ideology ;
-    :targetsWork :HinzeKunzeRoman ;
-    :usesMechanism :ModificationRequirement,
-        :PriorApproval .
+    cc:dataProvenance "documented case" ;
+    cc:description "Four-year GDR print-approval process: manuscript submitted to Mitteldeutscher Verlag end 1981, passed to the Hauptverwaltung end 1983; negative expert report by Werner Neubert (July 1984); Höpcke changed 'refusal' to 'needs further work'; renewed unsuccessful attempts to obtain changes; approval early 1985." ;
+    cc:documentedBy cc:SRC_Darnton1991,
+        cc:SRC_GuibertYeche,
+        cc:SRC_Hoepcke1985,
+        cc:SRC_Lance_Metailie,
+        cc:SRC_bpb_Selbstzensur ;
+    cc:eventDate 1985 ;
+    cc:hasResponse cc:RE_HKR_IronicNarration,
+        cc:RE_HKR_Lesehilfe ;
+    cc:imposedBy cc:HV_Verlage_Buchhandel ;
+    cc:imposesConstraint cc:CON_HKR_Ideology ;
+    cc:targetsWork cc:HinzeKunzeRoman ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:PriorApproval .
 
-:EV_Notorious_PCAReview a :CensorshipEvent,
+cc:EV_Notorious_PCAReview a cc:CensorshipEvent,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Production Code Administration review of the script: Joseph Breen called it 'definitely unacceptable' (25 May 1945); a further review (25 July 1945) listed 17 required changes, incl. removing five uses of 'tramp' for Alicia." ;
-    :documentedBy :SRC_Billheimer2019,
-        :SRC_HitchZone_PCA ;
-    :eventDate 1945 ;
-    :hasResponse :RE_Notorious_FragmentedKiss ;
-    :imposedBy :PCA ;
-    :imposesConstraint :CON_Notorious_Character,
-        :CON_Notorious_Kissing ;
-    :targetsWork :Notorious1946 ;
-    :usesMechanism :ModificationRequirement,
-        :PriorApproval .
+    cc:dataProvenance "documented case" ;
+    cc:description "Production Code Administration review of the script: Joseph Breen called it 'definitely unacceptable' (25 May 1945); a further review (25 July 1945) listed 17 required changes, incl. removing five uses of 'tramp' for Alicia." ;
+    cc:documentedBy cc:SRC_Billheimer2019,
+        cc:SRC_HitchZone_PCA ;
+    cc:eventDate 1945 ;
+    cc:hasResponse cc:RE_Notorious_FragmentedKiss ;
+    cc:imposedBy cc:PCA ;
+    cc:imposesConstraint cc:CON_Notorious_Character,
+        cc:CON_Notorious_Kissing ;
+    cc:targetsWork cc:Notorious1946 ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:PriorApproval .
 
-:ElenaBulgakova a :Creator,
+cc:ElenaBulgakova a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Elena Bulgakova"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:EmilNolde a :Creator,
+cc:EmilNolde a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Emil Nolde"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:ExpressionRestriction a :ConstraintType,
+cc:ExpressionRestriction a cc:ConstraintType,
         owl:NamedIndividual ;
-    rdfs:label "Expression restriction" ;
+    rdfs:label "Expression restriction"@en ;
     rdfs:comment "A constraint that limits how ideas, themes, or meanings may be expressed." .
 
-:Irony a :CreativeStrategy,
+cc:Irony a cc:CreativeStrategy,
         owl:NamedIndividual ;
     rdfs:label "Irony"@en,
         "Ирония"@ru ;
     rdfs:comment "Saying one thing while meaning another, so that criticism is conveyed under an outwardly acceptable surface. Added in v2.1."@en .
 
-:JafarPanahi a :Creator,
+cc:JafarPanahi a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Jafar Panahi"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:LiteraryWork a owl:Class ;
+cc:LiteraryWork a owl:Class ;
     rdfs:label "Literary work"@en,
         "Литературное произведение"@ru ;
     rdfs:comment "A creative work expressed primarily in written language: novel, poem, play, essay, and similar."@en ;
-    rdfs:subClassOf :CreativeWork .
+    rdfs:subClassOf cc:CreativeWork .
 
-:MojtabaMirtahmasb a :Creator,
+cc:MojtabaMirtahmasb a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Mojtaba Mirtahmasb"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:PCA a :CensoringAgent,
-        :CensoringAuthority,
+cc:PCA a cc:CensoringAgent,
+        cc:CensoringAuthority,
         owl:NamedIndividual ;
     rdfs:label "Production Code Administration (MPAA)"@en,
         "Production Code Administration (headed by Joseph Breen)"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:ProfessionalPracticeRestriction a :ConstraintType,
+cc:ProfessionalPracticeRestriction a cc:ConstraintType,
         owl:NamedIndividual ;
-    rdfs:label "Professional practice restriction" ;
+    rdfs:label "Professional practice restriction"@en ;
     rdfs:comment "A constraint that limits or prohibits a creator from carrying out their professional creative activity." .
 
-:RE_Ballo_LeaveNaples a :CreativeResponse,
+cc:RE_Ballo_LeaveNaples a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Verdi rejected the most drastic demanded alterations, broke the contract with Teatro San Carlo, and moved the project to Rome." ;
-    :documentedBy :SRC_Giger1999_Ballo,
-        :SRC_Ricordi_BalloCritical ;
-    :eventDate 1858 ;
-    :hasOutcome :Abandonment ;
-    :performedBy :GiuseppeVerdi ;
-    :respondsTo :CON_Ballo_Regicide ;
-    :usesStrategy :InstitutionalCircumvention .
+    cc:dataProvenance "documented case" ;
+    cc:description "Verdi rejected the most drastic demanded alterations, broke the contract with Teatro San Carlo, and moved the project to Rome." ;
+    cc:documentedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Ricordi_BalloCritical ;
+    cc:eventDate 1858 ;
+    cc:hasOutcome cc:Abandonment ;
+    cc:performedBy cc:GiuseppeVerdi ;
+    cc:respondsTo cc:CON_Ballo_Regicide ;
+    cc:usesStrategy cc:InstitutionalCircumvention .
 
-:RE_Ballo_Transposition a :CreativeResponse,
+cc:RE_Ballo_Transposition a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Verdi and Somma transformed the setting and identities while preserving the dramatic structure: Sweden became colonial Boston, Gustav III became Governor Riccardo, and other characters were renamed." ;
-    :documentedBy :SRC_Giger1999_Ballo,
-        :SRC_Met_Ballo,
-        :SRC_Ricordi_BalloCritical ;
-    :eventDate "1858-1859" ;
-    :hasOutcome :CreativeAdaptation ;
-    :performedBy :AntonioSomma,
-        :GiuseppeVerdi ;
-    :producesVersion :UnBalloInMaschera1859 ;
-    :respondsTo :CON_Ballo_SovereignRepresentation ;
-    :usesStrategy :CharacterTransformation,
-        :HistoricalDisplacement,
-        :NarrativeTransposition .
+    cc:dataProvenance "documented case" ;
+    cc:description "Verdi and Somma transformed the setting and identities while preserving the dramatic structure: Sweden became colonial Boston, Gustav III became Governor Riccardo, and other characters were renamed." ;
+    cc:documentedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Met_Ballo,
+        cc:SRC_Ricordi_BalloCritical ;
+    cc:eventDate "1858-1859" ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:AntonioSomma,
+        cc:GiuseppeVerdi ;
+    cc:producesVersion cc:UnBalloInMaschera1859 ;
+    cc:respondsTo cc:CON_Ballo_SovereignRepresentation ;
+    cc:usesStrategy cc:CharacterTransformation,
+        cc:HistoricalDisplacement,
+        cc:NarrativeTransposition .
 
-:RE_Bulgakov_AesopianExpression a :CreativeResponse,
+cc:RE_Bulgakov_AesopianExpression a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "The novel uses satire, ambiguity, fantastic displacement, and passages that scholars have discussed in terms of Aesopian language: indirect expression capable of carrying concealed political or social meanings." ;
-    :documentedBy :SRC_Pope1977_Bulgakov,
-        :SRC_Rosenshield1997_Bulgakov ;
-    :eventDate "1930s" ;
-    :hasOutcome :CreativeAdaptation ;
-    :performedBy :MikhailBulgakov ;
-    :respondsTo :CON_Bulgakov_PoliticalExpression ;
-    :resultsInWork :MasterAndMargarita ;
-    :usesStrategy :AesopianLanguage,
-        :Ambiguity,
-        :IndirectRepresentation,
-        :Satire .
+    cc:dataProvenance "documented case" ;
+    cc:description "The novel uses satire, ambiguity, fantastic displacement, and passages that scholars have discussed in terms of Aesopian language: indirect expression capable of carrying concealed political or social meanings." ;
+    cc:documentedBy cc:SRC_Pope1977_Bulgakov,
+        cc:SRC_Rosenshield1997_Bulgakov ;
+    cc:eventDate "1930s" ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:MikhailBulgakov ;
+    cc:respondsTo cc:CON_Bulgakov_PoliticalExpression ;
+    cc:resultsInWork cc:MasterAndMargarita ;
+    cc:usesStrategy cc:AesopianLanguage,
+        cc:Ambiguity,
+        cc:IndirectRepresentation,
+        cc:Satire .
 
-:RE_HKR_IronicNarration a :CreativeResponse,
+cc:RE_HKR_IronicNarration a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Braun frames the critique in an ironic, Diderot-like master-servant narrative with an intrusive narrator who comments on what 'cannot be said directly'." ;
-    :documentedBy :SRC_Darnton1991,
-        :SRC_Lance_Metailie ;
-    :eventDate 1981 ;
-    :hasOutcome :CreativeAdaptation ;
-    :performedBy :VolkerBraun ;
-    :respondsTo :CON_HKR_Ideology ;
-    :usesStrategy :Allegory,
-        :Irony .
+    cc:dataProvenance "documented case" ;
+    cc:description "Braun frames the critique in an ironic, Diderot-like master-servant narrative with an intrusive narrator who comments on what 'cannot be said directly'." ;
+    cc:documentedBy cc:SRC_Darnton1991,
+        cc:SRC_Lance_Metailie ;
+    cc:eventDate 1981 ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:VolkerBraun ;
+    cc:respondsTo cc:CON_HKR_Ideology ;
+    cc:usesStrategy cc:Allegory,
+        cc:Irony .
 
-:RE_HKR_Lesehilfe a :CreativeResponse,
+cc:RE_HKR_Lesehilfe a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Dieter Schlenstedt, one of the manuscript's first reviewers, writes an appended 'schöngeistige Lesehilfe': five fictional letters that ironise the review process and guide readers; the text was meant both to placate the censors and to guide reading." ;
-    :documentedBy :SRC_GuibertYeche,
-        :SRC_Hoepcke1985,
-        :SRC_Lance_Metailie,
-        :SRC_bpb_Selbstzensur ;
-    :eventDate 1985 ;
-    :hasOutcome :AlternativeVersionProduced ;
-    :performedBy :DieterSchlenstedt ;
-    :producesVersion :HKR_GDR_1985 ;
-    :respondsTo :CON_HKR_Ideology ;
-    :usesStrategy :Irony,
-        :ParatextualFraming .
+    cc:dataProvenance "documented case" ;
+    cc:description "Dieter Schlenstedt, one of the manuscript's first reviewers, writes an appended 'schöngeistige Lesehilfe': five fictional letters that ironise the review process and guide readers; the text was meant both to placate the censors and to guide reading." ;
+    cc:documentedBy cc:SRC_GuibertYeche,
+        cc:SRC_Hoepcke1985,
+        cc:SRC_Lance_Metailie,
+        cc:SRC_bpb_Selbstzensur ;
+    cc:eventDate 1985 ;
+    cc:hasOutcome cc:AlternativeVersionProduced ;
+    cc:performedBy cc:DieterSchlenstedt ;
+    cc:producesVersion cc:HKR_GDR_1985 ;
+    cc:respondsTo cc:CON_HKR_Ideology ;
+    cc:usesStrategy cc:Irony,
+        cc:ParatextualFraming .
 
-:RE_MasterMargarita_TextRestoration a :CreativeResponse,
+cc:RE_MasterMargarita_TextRestoration a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Elena Bulgakova preserved and prepared the text for publication; omitted passages circulated outside the censored journal version, and complete versions were subsequently published abroad, including a complete Russian text." ;
-    :documentedBy :SRC_Curtis2019_Bulgakov,
-        :SRC_Pope1977_Bulgakov ;
-    :eventDate "1966-1969" ;
-    :hasOutcome :AlternativeVersionProduced ;
-    :performedBy :ElenaBulgakova ;
-    :producesVersion :MasterMargarita_FullRussian1969 ;
-    :respondsTo :CON_MasterMargarita_PublicationCuts ;
-    :usesStrategy :AlternativePublication,
-        :TextualRestoration .
+    cc:dataProvenance "documented case" ;
+    cc:description "Elena Bulgakova preserved and prepared the text for publication; omitted passages circulated outside the censored journal version, and complete versions were subsequently published abroad, including a complete Russian text." ;
+    cc:documentedBy cc:SRC_Curtis2019_Bulgakov,
+        cc:SRC_Pope1977_Bulgakov ;
+    cc:eventDate "1966-1969" ;
+    cc:hasOutcome cc:AlternativeVersionProduced ;
+    cc:performedBy cc:ElenaBulgakova ;
+    cc:producesVersion cc:MasterMargarita_FullRussian1969 ;
+    cc:respondsTo cc:CON_MasterMargarita_PublicationCuts ;
+    cc:usesStrategy cc:AlternativePublication,
+        cc:TextualRestoration .
 
-:RE_Nolde_UnpaintedPictures a :CreativeResponse,
+cc:RE_Nolde_UnpaintedPictures a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Nolde continued working privately and produced further small-format watercolours in Seebüll. Museum accounts describe these works as being made secretly during the period of prohibition." ;
-    :documentedBy :SRC_NGI_NoldeDegenerate,
-        :SRC_NoldeMuseum_Artist ;
-    :eventDate "1941-1945" ;
-    :hasOutcome :CreativeAdaptation ;
-    :performedBy :EmilNolde ;
-    :respondsTo :CON_Nolde_ProfessionalPractice ;
-    :resultsInWork :Nolde_UnpaintedPictures ;
-    :usesStrategy :MediumAdaptation,
-        :SecretProduction .
+    cc:dataProvenance "documented case" ;
+    cc:description "Nolde continued working privately and produced further small-format watercolours in Seebüll. Museum accounts describe these works as being made secretly during the period of prohibition." ;
+    cc:documentedBy cc:SRC_NGI_NoldeDegenerate,
+        cc:SRC_NoldeMuseum_Artist ;
+    cc:eventDate "1941-1945" ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:EmilNolde ;
+    cc:respondsTo cc:CON_Nolde_ProfessionalPractice ;
+    cc:resultsInWork cc:Nolde_UnpaintedPictures ;
+    cc:usesStrategy cc:MediumAdaptation,
+        cc:SecretProduction .
 
-:RE_Notorious_FragmentedKiss a :CreativeResponse,
+cc:RE_Notorious_FragmentedKiss a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Hitchcock stages a scene of about two and a half to three minutes as a chain of short kisses (none longer than ~3 seconds), interrupted by talk and a telephone call, so the scene stays within the rule but reads as one continuous embrace." ;
-    :documentedBy :SRC_Billheimer2019,
-        :SRC_HitchZone_PCA ;
-    :eventDate 1946 ;
-    :hasOutcome :CreativeAdaptation ;
-    :performedBy :AlfredHitchcock ;
-    :respondsTo :CON_Notorious_Kissing ;
-    :usesStrategy :Fragmentation,
-        :IndirectRepresentation .
+    cc:dataProvenance "documented case" ;
+    cc:description "Hitchcock stages a scene of about two and a half to three minutes as a chain of short kisses (none longer than ~3 seconds), interrupted by talk and a telephone call, so the scene stays within the rule but reads as one continuous embrace." ;
+    cc:documentedBy cc:SRC_Billheimer2019,
+        cc:SRC_HitchZone_PCA ;
+    cc:eventDate 1946 ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:AlfredHitchcock ;
+    cc:respondsTo cc:CON_Notorious_Kissing ;
+    cc:usesStrategy cc:Fragmentation,
+        cc:IndirectRepresentation .
 
-:RE_Panahi_ThisIsNotAFilm a :CreativeResponse,
+cc:RE_Panahi_ThisIsNotAFilm a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Panahi and Mojtaba Mirtahmasb made a self-reflexive video diary largely inside Panahi's apartment. Panahi stages and describes an unproduced screenplay and turns the conditions of being forbidden to make films into part of the film's subject and form." ;
-    :documentedBy :SRC_Cannes_Panahi2011,
-        :SRC_Cannes_ThisIsNotAFilm2011,
-        :SRC_CinemaIranica_TINAF,
-        :SRC_IranHumanRights_Panahi2010 ;
-    :eventDate 2011 ;
-    :hasOutcome :CreativeAdaptation ;
-    :performedBy :JafarPanahi,
-        :MojtabaMirtahmasb ;
-    :respondsTo :CON_Panahi_Filmmaking ;
-    :resultsInWork :ThisIsNotAFilm ;
-    :usesStrategy :Circumvention,
-        :MinimalProduction,
-        :SelfReflexivity .
+    cc:dataProvenance "documented case" ;
+    cc:description "Panahi and Mojtaba Mirtahmasb made a self-reflexive video diary largely inside Panahi's apartment. Panahi stages and describes an unproduced screenplay and turns the conditions of being forbidden to make films into part of the film's subject and form." ;
+    cc:documentedBy cc:SRC_Cannes_Panahi2011,
+        cc:SRC_Cannes_ThisIsNotAFilm2011,
+        cc:SRC_CinemaIranica_TINAF,
+        cc:SRC_IranHumanRights_Panahi2010 ;
+    cc:eventDate 2011 ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:JafarPanahi,
+        cc:MojtabaMirtahmasb ;
+    cc:respondsTo cc:CON_Panahi_Filmmaking ;
+    cc:resultsInWork cc:ThisIsNotAFilm ;
+    cc:usesStrategy cc:Circumvention,
+        cc:MinimalProduction,
+        cc:SelfReflexivity .
 
-:RE_Shost_FifthSymphony a :CreativeResponse,
+cc:RE_Shost_FifthSymphony a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Fifth Symphony (composed 18 April–20 July 1937; premiered 21 November 1937, Leningrad Philharmonic, Mravinsky): a turn 'towards greater accessibility, towards greater simplicity', classical form and tonal harmony, with a finale whose triumph has been heard as sincere or ironic." ;
-    :documentedBy :SRC_FrolovaWalker2023,
-        :SRC_Robinson_BSO,
-        :SRC_Wiki_Muddle ;
-    :eventDate 1937 ;
-    :hasOutcome :CreativeAdaptation ;
-    :performedBy :DmitriShostakovich ;
-    :respondsTo :CON_Shost_Formalism ;
-    :resultsInWork :ShostakovichSymphony5 ;
-    :usesStrategy :Ambiguity .
+    cc:dataProvenance "documented case" ;
+    cc:description "Fifth Symphony (composed 18 April–20 July 1937; premiered 21 November 1937, Leningrad Philharmonic, Mravinsky): a turn 'towards greater accessibility, towards greater simplicity', classical form and tonal harmony, with a finale whose triumph has been heard as sincere or ironic." ;
+    cc:documentedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Robinson_BSO,
+        cc:SRC_Wiki_Muddle ;
+    cc:eventDate 1937 ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:DmitriShostakovich ;
+    cc:respondsTo cc:CON_Shost_Formalism ;
+    cc:resultsInWork cc:ShostakovichSymphony5 ;
+    cc:usesStrategy cc:Ambiguity .
 
-:RE_Streetcar_ScreenplayRewrite a :CreativeResponse,
+cc:RE_Streetcar_ScreenplayRewrite a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Kazan and Williams negotiated and altered the screenplay. Williams rewrote the ending so that Stella appears, somewhat ambiguously, to leave Stanley rather than return to him; other restricted material was handled more indirectly." ;
-    :documentedBy :SRC_AFI_Streetcar1951,
-        :SRC_Szabo2019_Streetcar ;
-    :eventDate 1950 ;
-    :hasOutcome :CreativeAdaptation ;
-    :performedBy :EliaKazan,
-        :TennesseeWilliams ;
-    :producesVersion :Streetcar1951_PCAApprovedVersion ;
-    :respondsTo :CON_Streetcar_SexualContent ;
-    :usesStrategy :Ambiguity,
-        :IndirectRepresentation,
-        :NarrativeModification .
+    cc:dataProvenance "documented case" ;
+    cc:description "Kazan and Williams negotiated and altered the screenplay. Williams rewrote the ending so that Stella appears, somewhat ambiguously, to leave Stanley rather than return to him; other restricted material was handled more indirectly." ;
+    cc:documentedBy cc:SRC_AFI_Streetcar1951,
+        cc:SRC_Szabo2019_Streetcar ;
+    cc:eventDate 1950 ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:EliaKazan,
+        cc:TennesseeWilliams ;
+    cc:producesVersion cc:Streetcar1951_PCAApprovedVersion ;
+    cc:respondsTo cc:CON_Streetcar_SexualContent ;
+    cc:usesStrategy cc:Ambiguity,
+        cc:IndirectRepresentation,
+        cc:NarrativeModification .
 
-:RE_Sym4_Withdrawal a :CreativeResponse,
+cc:RE_Sym4_Withdrawal a cc:CreativeResponse,
         owl:NamedIndividual ;
-    :dataProvenance "documented case" ;
-    :description "Shostakovich withdraws the Fourth Symphony; it remains unperformed until 1961." ;
-    :documentedBy :SRC_FrolovaWalker2023,
-        :SRC_Wiki_Sym4 ;
-    :eventDate 1936 ;
-    :hasOutcome :UnpublishedWork ;
-    :performedBy :DmitriShostakovich ;
-    :respondsTo :CON_Shost_Formalism .
+    cc:dataProvenance "documented case" ;
+    cc:description "Shostakovich withdraws the Fourth Symphony; it remains unperformed until 1961." ;
+    cc:documentedBy cc:SRC_FrolovaWalker2023,
+        cc:SRC_Wiki_Sym4 ;
+    cc:eventDate 1936 ;
+    cc:hasOutcome cc:UnpublishedWork ;
+    cc:performedBy cc:DmitriShostakovich ;
+    cc:respondsTo cc:CON_Shost_Formalism .
 
-:Removal a :CensorshipMechanism,
+cc:Removal a cc:CensorshipMechanism,
         owl:NamedIndividual ;
     rdfs:label "Removal"@en,
         "Изъятие"@ru ;
     rdfs:comment "Withdrawal of a work, or of a part of it, from circulation, display, or a collection."@en .
 
-:Scene a owl:Class ;
+cc:Scene a owl:Class ;
     rdfs:label "Scene"@en,
         "Сцена"@ru ;
     rdfs:comment "A distinct scene or episode of a film, play, or narrative."@en ;
-    rdfs:subClassOf :WorkElement .
+    rdfs:subClassOf cc:WorkElement .
 
-:TestConstraint a :CensorshipConstraint,
+cc:TestConstraint a cc:CensorshipConstraint,
         owl:NamedIndividual ;
     rdfs:label "Test constraint"@en ;
-    :dataProvenance "synthetic test individual" ;
-    :hasConstraintType :DirectRepresentationRestriction .
+    cc:dataProvenance "synthetic test individual" ;
+    cc:hasConstraintType cc:DirectRepresentationRestriction .
 
-:Ambiguity a :CreativeStrategy,
+cc:Ambiguity a cc:CreativeStrategy,
         owl:NamedIndividual ;
     rdfs:label "Ambiguity"@en,
         "Двусмысленность"@ru ;
     rdfs:comment "Deliberate openness of meaning that allows several readings, including a restricted one."@en .
 
-:AntonioSomma a :Creator,
+cc:AntonioSomma a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Antonio Somma"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:Book a owl:Class ;
+cc:Book a owl:Class ;
     rdfs:label "Book"@en,
         "Книга"@ru ;
     rdfs:comment "A monograph or edited volume used as a source. Added in v2.1."@en ;
-    rdfs:subClassOf :Source .
+    rdfs:subClassOf cc:Source .
 
-:CON_HKR_Ideology a :CensorshipConstraint,
+cc:CON_HKR_Ideology a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_HKR_PartyPrivilegeSatire ;
-    :dataProvenance "documented case" ;
-    :description "Objections that the irony targets socialism, distorts the concept of freedom and represents the Liebknecht-Luxemburg commemoration unworthily (Neubert report, July 1984)." ;
-    :hasConstraintType :SubjectRestriction .
+    cc:constrainsElement cc:EL_HKR_PartyPrivilegeSatire ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Objections that the irony targets socialism, distorts the concept of freedom and represents the Liebknecht-Luxemburg commemoration unworthily (Neubert report, July 1984)." ;
+    cc:hasConstraintType cc:SubjectRestriction .
 
-:CreativePractice a owl:Class .
+cc:CreativePractice a owl:Class .
 
-:GustavoIII_OperaProject a :MusicalWork,
+cc:GustavoIII_OperaProject a cc:MusicalWork,
         owl:NamedIndividual ;
     rdfs:label "Gustavo III / Una vendetta in dominò (opera project)"@en ;
-    :createdBy :AntonioSomma,
-        :GiuseppeVerdi ;
-    :creationYear "1857-1858" ;
-    :dataProvenance "documented case" ;
-    :title "Gustavo III / Una vendetta in dominò (opera project)" .
+    cc:createdBy cc:AntonioSomma,
+        cc:GiuseppeVerdi ;
+    cc:creationYear "1857-1858" ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Gustavo III / Una vendetta in dominò (opera project)" .
 
-:HinzeKunzeRoman a :LiteraryWork,
+cc:HinzeKunzeRoman a cc:LiteraryWork,
         owl:NamedIndividual ;
     rdfs:label "Hinze-Kunze-Roman"@en ;
-    :createdBy :VolkerBraun ;
-    :creationYear 1981 ;
-    :dataProvenance "documented case" ;
-    :title "Hinze-Kunze-Roman" .
+    cc:createdBy cc:VolkerBraun ;
+    cc:creationYear 1981 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Hinze-Kunze-Roman" .
 
-:IndirectRepresentation a :CreativeStrategy,
+cc:IndirectRepresentation a cc:CreativeStrategy,
         owl:NamedIndividual ;
     rdfs:label "Indirect representation"@en,
         "Косвенное изображение"@ru ;
     rdfs:comment "Showing a restricted subject through suggestion, displacement, or implication rather than directly."@en .
 
-:MikhailBulgakov a :Creator,
+cc:MikhailBulgakov a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Mikhail Bulgakov"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:PublicationRestriction a :CensorshipMechanism,
+cc:PublicationRestriction a cc:CensorshipMechanism,
         owl:NamedIndividual ;
     rdfs:label "Publication restriction"@en,
         "Ограничение публикации"@ru ;
     rdfs:comment "A limitation on whether, when, or in what form a work may be published."@en .
 
-:SRC_Cannes_Panahi2011 a :WebSource,
+cc:SRC_Cannes_Panahi2011 a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "Jafar Panahi and Mohammad Rasoulof in the Cannes Official Selection!"@en ;
-    :bibliographicCitation "Festival de Cannes. (2011). Jafar Panahi and Mohammad Rasoulof in the Cannes Official Selection! 7 May 2011." ;
-    :dataProvenance "documented case" ;
-    :publicationYear 2011 ;
-    :sourceTitle "Jafar Panahi and Mohammad Rasoulof in the Cannes Official Selection!" ;
-    :sourceURL "https://www.festival-cannes.com/en/2011/jafar-panahi-and-mohammad-rasoulof-in-the-cannes-official-selection/"^^xsd:anyURI .
+    cc:bibliographicCitation "Festival de Cannes. (2011). Jafar Panahi and Mohammad Rasoulof in the Cannes Official Selection! 7 May 2011." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2011 ;
+    cc:sourceTitle "Jafar Panahi and Mohammad Rasoulof in the Cannes Official Selection!" ;
+    cc:sourceURL "https://www.festival-cannes.com/en/2011/jafar-panahi-and-mohammad-rasoulof-in-the-cannes-official-selection/"^^xsd:anyURI .
 
-:SRC_Cannes_ThisIsNotAFilm2011 a :WebSource,
+cc:SRC_Cannes_ThisIsNotAFilm2011 a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "In Film Nist (This Is Not A Film) by Jafar Panahi"@en ;
-    :bibliographicCitation "Festival de Cannes. (2011). In Film Nist (This Is Not A Film) by Jafar Panahi. 20 May 2011." ;
-    :dataProvenance "documented case" ;
-    :publicationYear 2011 ;
-    :sourceTitle "In Film Nist (This Is Not A Film) by Jafar Panahi" ;
-    :sourceURL "https://www.festival-cannes.com/en/2011/in-film-nist-this-is-not-a-film-by-jafar-panahi/"^^xsd:anyURI .
+    cc:bibliographicCitation "Festival de Cannes. (2011). In Film Nist (This Is Not A Film) by Jafar Panahi. 20 May 2011." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2011 ;
+    cc:sourceTitle "In Film Nist (This Is Not A Film) by Jafar Panahi" ;
+    cc:sourceURL "https://www.festival-cannes.com/en/2011/in-film-nist-this-is-not-a-film-by-jafar-panahi/"^^xsd:anyURI .
 
-:SRC_CinemaIranica_TINAF a :WebSource,
+cc:SRC_CinemaIranica_TINAF a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "This Is Not a Film"@en ;
-    :bibliographicCitation "Cinema Iranica. This Is Not a Film (film entry)." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "This Is Not a Film" ;
-    :sourceURL "https://cinema.iranicaonline.org/film/this-is-not-a-film/"^^xsd:anyURI .
+    cc:bibliographicCitation "Cinema Iranica. This Is Not a Film (film entry)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "This Is Not a Film" ;
+    cc:sourceURL "https://cinema.iranicaonline.org/film/this-is-not-a-film/"^^xsd:anyURI .
 
-:SRC_Curtis2019_Bulgakov a :Book,
+cc:SRC_Curtis2019_Bulgakov a cc:Book,
         owl:NamedIndividual ;
     rdfs:label "A Reader's Companion to Mikhail Bulgakov's The Master and Margarita"@en ;
-    :bibliographicCitation "Curtis, J. A. E. (2019). A Reader's Companion to Mikhail Bulgakov's The Master and Margarita. Boston: Academic Studies Press." ;
-    :dataProvenance "documented case" ;
-    :publicationYear 2019 ;
-    :sourceTitle "A Reader's Companion to Mikhail Bulgakov's The Master and Margarita" ;
-    :sourceURL "https://www.masterandmargarita.eu/estore/pdf/emen062_curtis.pdf"^^xsd:anyURI .
+    cc:bibliographicCitation "Curtis, J. A. E. (2019). A Reader's Companion to Mikhail Bulgakov's The Master and Margarita. Boston: Academic Studies Press." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2019 ;
+    cc:sourceTitle "A Reader's Companion to Mikhail Bulgakov's The Master and Margarita" ;
+    cc:sourceURL "https://www.masterandmargarita.eu/estore/pdf/emen062_curtis.pdf"^^xsd:anyURI .
 
-:SRC_GuibertYeche a :BookChapter,
+cc:SRC_GuibertYeche a cc:BookChapter,
         owl:NamedIndividual ;
     rdfs:label "Censure et autocensure en RDA : la littérature socialiste des années quatre-vingt face au pouvoir"@en ;
-    :bibliographicCitation "Guibert-Yeche, H. Censure et autocensure en RDA. ENS Éditions (OpenEdition Books), pp. 127–144." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "Censure et autocensure en RDA : la littérature socialiste des années quatre-vingt face au pouvoir" ;
-    :sourceURL "https://books.openedition.org/enseditions/19283"^^xsd:anyURI .
+    cc:bibliographicCitation "Guibert-Yeche, H. Censure et autocensure en RDA. ENS Éditions (OpenEdition Books), pp. 127–144." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Censure et autocensure en RDA : la littérature socialiste des années quatre-vingt face au pouvoir" ;
+    cc:sourceURL "https://books.openedition.org/enseditions/19283"^^xsd:anyURI .
 
-:SRC_HitchZone_PCA a :WebSource,
+cc:SRC_HitchZone_PCA a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "Production Code Administration"@en ;
-    :bibliographicCitation "Production Code Administration. The Alfred Hitchcock Wiki (quotes the Production Code and Bergman's recollection)." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "Production Code Administration" ;
-    :sourceURL "https://the.hitchcock.zone/wiki/Production_Code_Administration"^^xsd:anyURI .
+    cc:bibliographicCitation "Production Code Administration. The Alfred Hitchcock Wiki (quotes the Production Code and Bergman's recollection)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Production Code Administration" ;
+    cc:sourceURL "https://the.hitchcock.zone/wiki/Production_Code_Administration"^^xsd:anyURI .
 
-:SRC_Hoepcke1985 a :PeriodicalArticle,
+cc:SRC_Hoepcke1985 a cc:PeriodicalArticle,
         owl:NamedIndividual ;
     rdfs:label "Über Volker Brauns HINZE-KUNZE-ROMAN"@en ;
-    :bibliographicCitation "Höpcke, K. (1985). Über Volker Brauns Hinze-Kunze-Roman. Die Weltbühne 33–34/1985; reprinted in Das Blättchen, April 2025." ;
-    :dataProvenance "documented case" ;
-    :publicationYear 1985 ;
-    :sourceTitle "Über Volker Brauns HINZE-KUNZE-ROMAN" ;
-    :sourceURL "https://das-blaettchen.de/2025/04/ueber-volker-brauns-hinze-kunze-roman-71622.html"^^xsd:anyURI .
+    cc:bibliographicCitation "Höpcke, K. (1985). Über Volker Brauns Hinze-Kunze-Roman. Die Weltbühne 33–34/1985; reprinted in Das Blättchen, April 2025." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 1985 ;
+    cc:sourceTitle "Über Volker Brauns HINZE-KUNZE-ROMAN" ;
+    cc:sourceURL "https://das-blaettchen.de/2025/04/ueber-volker-brauns-hinze-kunze-roman-71622.html"^^xsd:anyURI .
 
-:SRC_IranHumanRights_Panahi2010 a :WebSource,
+cc:SRC_IranHumanRights_Panahi2010 a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "Jafar Panahi Sentenced To Six Years In Prison, Banned From Making Films For 20 Years"@en ;
-    :bibliographicCitation "Center for Human Rights in Iran. (2010). Jafar Panahi Sentenced To Six Years In Prison, Banned From Making Films For 20 Years. 20 December 2010." ;
-    :dataProvenance "documented case" ;
-    :publicationYear 2010 ;
-    :sourceTitle "Jafar Panahi Sentenced To Six Years In Prison, Banned From Making Films For 20 Years" ;
-    :sourceURL "https://iranhumanrights.org/2010/12/jafar-panahi-sentenced-to-six-years-in-prison-banned-from-making-films-for-20-years/"^^xsd:anyURI .
+    cc:bibliographicCitation "Center for Human Rights in Iran. (2010). Jafar Panahi Sentenced To Six Years In Prison, Banned From Making Films For 20 Years. 20 December 2010." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2010 ;
+    cc:sourceTitle "Jafar Panahi Sentenced To Six Years In Prison, Banned From Making Films For 20 Years" ;
+    cc:sourceURL "https://iranhumanrights.org/2010/12/jafar-panahi-sentenced-to-six-years-in-prison-banned-from-making-films-for-20-years/"^^xsd:anyURI .
 
-:SRC_Met_Ballo a :WebSource,
+cc:SRC_Met_Ballo a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "Un Ballo in Maschera"@en ;
-    :bibliographicCitation "The Metropolitan Opera. Un Ballo in Maschera (work/season guide)." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "Un Ballo in Maschera" ;
-    :sourceURL "https://www.metopera.org/user-information/old-seasons/2023-24-season/un-ballo-in-maschera/"^^xsd:anyURI .
+    cc:bibliographicCitation "The Metropolitan Opera. Un Ballo in Maschera (work/season guide)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Un Ballo in Maschera" ;
+    cc:sourceURL "https://www.metopera.org/user-information/old-seasons/2023-24-season/un-ballo-in-maschera/"^^xsd:anyURI .
 
-:SRC_NGI_NoldeDegenerate a :WebSource,
+cc:SRC_NGI_NoldeDegenerate a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "Entartete Kunst / Degenerate Art"@en ;
-    :bibliographicCitation "National Gallery of Ireland. Entartete Kunst / Degenerate Art (Emil Nolde: Colour is Life exhibition material)." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "Entartete Kunst / Degenerate Art" ;
-    :sourceURL "https://www.nationalgallery.ie/emil-nolde-colour-life/entartete-kunst-degenerate-art"^^xsd:anyURI .
+    cc:bibliographicCitation "National Gallery of Ireland. Entartete Kunst / Degenerate Art (Emil Nolde: Colour is Life exhibition material)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Entartete Kunst / Degenerate Art" ;
+    cc:sourceURL "https://www.nationalgallery.ie/emil-nolde-colour-life/entartete-kunst-degenerate-art"^^xsd:anyURI .
 
-:SRC_NoldeMuseum_Artist a :WebSource,
+cc:SRC_NoldeMuseum_Artist a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "The Artist"@en ;
-    :bibliographicCitation "Nolde Museum Seebüll. The Artist (biographical chronology of Emil Nolde)." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "The Artist" ;
-    :sourceURL "https://www.nolde-museum.de/en/museum/der-kuenstler"^^xsd:anyURI .
+    cc:bibliographicCitation "Nolde Museum Seebüll. The Artist (biographical chronology of Emil Nolde)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "The Artist" ;
+    cc:sourceURL "https://www.nolde-museum.de/en/museum/der-kuenstler"^^xsd:anyURI .
 
-:SRC_Robinson_BSO a :WebSource,
+cc:SRC_Robinson_BSO a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "Symphony No. 5 (programme note)"@en ;
-    :bibliographicCitation "Robinson, H. Symphony No. 5 (Shostakovich). Boston Symphony Orchestra programme note." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "Symphony No. 5 (programme note)" ;
-    :sourceURL "https://www.bso.org/works/symphony-no-5-shostakovich"^^xsd:anyURI .
+    cc:bibliographicCitation "Robinson, H. Symphony No. 5 (Shostakovich). Boston Symphony Orchestra programme note." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Symphony No. 5 (programme note)" ;
+    cc:sourceURL "https://www.bso.org/works/symphony-no-5-shostakovich"^^xsd:anyURI .
 
-:SRC_Rosenshield1997_Bulgakov a :PeriodicalArticle,
+cc:SRC_Rosenshield1997_Bulgakov a cc:PeriodicalArticle,
         owl:NamedIndividual ;
     rdfs:label "The Master and Margarita and the Poetics of Aporia: A Polemical Article"@en ;
-    :bibliographicCitation "Rosenshield, G. (1997). The Master and Margarita and the Poetics of Aporia: A Polemical Article. Slavic Review, 56(2), 187–211. DOI: 10.2307/2500782." ;
-    :dataProvenance "documented case" ;
-    :publicationYear 1997 ;
-    :sourceTitle "The Master and Margarita and the Poetics of Aporia: A Polemical Article" ;
-    :sourceURL "https://www.cambridge.org/core/journals/slavic-review/article/abs/master-and-margarita-and-the-poetics-of-aporia-a-polemical-article/1B06C78A2C4736CD2182ED5D4B6F2572"^^xsd:anyURI .
+    cc:bibliographicCitation "Rosenshield, G. (1997). The Master and Margarita and the Poetics of Aporia: A Polemical Article. Slavic Review, 56(2), 187–211. DOI: 10.2307/2500782." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 1997 ;
+    cc:sourceTitle "The Master and Margarita and the Poetics of Aporia: A Polemical Article" ;
+    cc:sourceURL "https://www.cambridge.org/core/journals/slavic-review/article/abs/master-and-margarita-and-the-poetics-of-aporia-a-polemical-article/1B06C78A2C4736CD2182ED5D4B6F2572"^^xsd:anyURI .
 
-:SRC_Wiki_Muddle a :WebSource,
+cc:SRC_Wiki_Muddle a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "Muddle Instead of Music"@en ;
-    :bibliographicCitation "Muddle Instead of Music. Wikipedia (tertiary source, used for orientation only)." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "Muddle Instead of Music" ;
-    :sourceURL "https://en.wikipedia.org/wiki/Muddle_Instead_of_Music"^^xsd:anyURI .
+    cc:bibliographicCitation "Muddle Instead of Music. Wikipedia (tertiary source, used for orientation only)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Muddle Instead of Music" ;
+    cc:sourceURL "https://en.wikipedia.org/wiki/Muddle_Instead_of_Music"^^xsd:anyURI .
 
-:SRC_Wiki_Sym4 a :WebSource,
+cc:SRC_Wiki_Sym4 a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "Symphony No. 4 (Shostakovich)"@en ;
-    :bibliographicCitation "Symphony No. 4 (Shostakovich). Wikipedia (tertiary source, used for orientation only)." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "Symphony No. 4 (Shostakovich)" ;
-    :sourceURL "https://en.wikipedia.org/wiki/Symphony_No._4_(Shostakovich)"^^xsd:anyURI .
+    cc:bibliographicCitation "Symphony No. 4 (Shostakovich). Wikipedia (tertiary source, used for orientation only)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Symphony No. 4 (Shostakovich)" ;
+    cc:sourceURL "https://en.wikipedia.org/wiki/Symphony_No._4_(Shostakovich)"^^xsd:anyURI .
 
-:SRC_bpb_Selbstzensur a :PeriodicalArticle,
+cc:SRC_bpb_Selbstzensur a cc:PeriodicalArticle,
         owl:NamedIndividual ;
     rdfs:label "Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR"@en ;
-    :bibliographicCitation "Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR. Aus Politik und Zeitgeschichte, Bundeszentrale für politische Bildung." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR" ;
-    :sourceURL "https://www.bpb.de/shop/zeitschriften/apuz/archiv/535791/das-wechselspiel-von-selbstzensur-und-literaturlenkung-in-der-ddr/"^^xsd:anyURI .
+    cc:bibliographicCitation "Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR. Aus Politik und Zeitgeschichte, Bundeszentrale für politische Bildung." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR" ;
+    cc:sourceURL "https://www.bpb.de/shop/zeitschriften/apuz/archiv/535791/das-wechselspiel-von-selbstzensur-und-literaturlenkung-in-der-ddr/"^^xsd:anyURI .
 
-:VolkerBraun a :Creator,
+cc:VolkerBraun a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Volker Braun"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:Agent a owl:Class ;
+cc:Agent a owl:Class ;
     rdfs:label "Agent"@en,
         "Агент"@ru ;
     rdfs:comment "A person, group, or institution that can act in a censorship or creative process."@en .
 
-:Ban a :CensorshipMechanism,
+cc:Ban a cc:CensorshipMechanism,
         owl:NamedIndividual ;
     rdfs:label "Ban"@en,
         "Запрет"@ru ;
     rdfs:comment "Complete prohibition of publication, performance, distribution, or access."@en .
 
-:CON_Shost_Formalism a :CensorshipConstraint,
+cc:CON_Shost_Formalism a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    :constrainsElement :EL_Shost_ModernistIdiom ;
-    :dataProvenance "documented case" ;
-    :description "Condemnation of 'formalism': dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works." ;
-    :hasConstraintType :StylisticRestriction .
+    cc:constrainsElement cc:EL_Shost_ModernistIdiom ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Condemnation of 'formalism': dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works." ;
+    cc:hasConstraintType cc:StylisticRestriction .
 
-:EliaKazan a :Creator,
+cc:EliaKazan a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Elia Kazan"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:Event a owl:Class ;
+cc:Event a owl:Class ;
     rdfs:label "Event"@en,
         "Событие"@ru ;
     rdfs:comment "Something that happens at a certain time and involves agents and creative works."@en .
 
-:Film a owl:Class ;
+cc:Film a owl:Class ;
     rdfs:label "Film"@en,
         "Фильм"@ru ;
     rdfs:comment "A creative work expressed as a motion picture."@en ;
-    rdfs:subClassOf :CreativeWork .
+    rdfs:subClassOf cc:CreativeWork .
 
-:GiuseppeVerdi a :Creator,
+cc:GiuseppeVerdi a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Giuseppe Verdi"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:MasterAndMargarita a :LiteraryWork,
+cc:MasterAndMargarita a cc:LiteraryWork,
         owl:NamedIndividual ;
     rdfs:label "The Master and Margarita"@en ;
-    :createdBy :MikhailBulgakov ;
-    :creationYear 1940,
+    cc:createdBy cc:MikhailBulgakov ;
+    cc:creationYear 1940,
         "1928-1940" ;
-    :dataProvenance "documented case" ;
-    :title "The Master and Margarita" .
+    cc:dataProvenance "documented case" ;
+    cc:title "The Master and Margarita" .
 
-:MusicalWork a owl:Class ;
+cc:MusicalWork a owl:Class ;
     rdfs:label "Musical work"@en,
         "Музыкальное произведение"@ru ;
     rdfs:comment "A creative work expressed primarily through music, with or without lyrics."@en ;
-    rdfs:subClassOf :CreativeWork .
+    rdfs:subClassOf cc:CreativeWork .
 
-:SRC_Billheimer2019 a :Book,
+cc:SRC_Billheimer2019 a cc:Book,
         owl:NamedIndividual ;
     rdfs:label "Hitchcock and the Censors (ch. 14 'Notorious (1946)')"@en ;
-    :bibliographicCitation "Billheimer, J. (2019). Hitchcock and the Censors. University Press of Kentucky, pp. 118–128. DOI 10.5810/kentucky/9780813177427.003.0015" ;
-    :dataProvenance "documented case" ;
-    :publicationYear 2019 ;
-    :sourceTitle "Hitchcock and the Censors (ch. 14 'Notorious (1946)')" ;
-    :sourceURL "https://academic.oup.com/kentucky-scholarship-online/book/34148/chapter/289477434"^^xsd:anyURI .
+    cc:bibliographicCitation "Billheimer, J. (2019). Hitchcock and the Censors. University Press of Kentucky, pp. 118–128. DOI 10.5810/kentucky/9780813177427.003.0015" ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2019 ;
+    cc:sourceTitle "Hitchcock and the Censors (ch. 14 'Notorious (1946)')" ;
+    cc:sourceURL "https://academic.oup.com/kentucky-scholarship-online/book/34148/chapter/289477434"^^xsd:anyURI .
 
-:Streetcar1951 a :Film,
+cc:Streetcar1951 a cc:Film,
         owl:NamedIndividual ;
     rdfs:label "A Streetcar Named Desire"@en ;
-    :createdBy :EliaKazan,
-        :TennesseeWilliams ;
-    :creationYear 1951 ;
-    :dataProvenance "documented case" ;
-    :title "A Streetcar Named Desire" .
+    cc:createdBy cc:EliaKazan,
+        cc:TennesseeWilliams ;
+    cc:creationYear 1951 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "A Streetcar Named Desire" .
 
-:TennesseeWilliams a :Creator,
+cc:TennesseeWilliams a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Tennessee Williams"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:ContentRestriction a :ConstraintType,
+cc:ContentRestriction a cc:ConstraintType,
         owl:NamedIndividual ;
     rdfs:label "Content restriction"@en,
         "Ограничение содержания"@ru ;
     rdfs:comment "A constraint on specific content (passages, images, scenes) that may appear in a work."@en .
 
-:DirectRepresentationRestriction a :ConstraintType,
+cc:DirectRepresentationRestriction a cc:ConstraintType,
         owl:NamedIndividual ;
     rdfs:label "Direct representation restriction"@en,
         "Запрет прямого изображения"@ru ;
     rdfs:comment "A constraint that forbids showing or naming something directly, while indirect reference may remain possible."@en .
 
-:DmitriShostakovich a :Creator,
+cc:DmitriShostakovich a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Dmitri Shostakovich"@en ;
-    :dataProvenance "documented case" .
+    cc:dataProvenance "documented case" .
 
-:PriorApproval a :CensorshipMechanism,
+cc:PriorApproval a cc:CensorshipMechanism,
         owl:NamedIndividual ;
     rdfs:label "Prior approval"@en,
         "Предварительное одобрение"@ru ;
     rdfs:comment "A requirement that a work be reviewed and approved by an authority before release."@en .
 
-:SRC_AFI_Streetcar1951 a :WebSource,
+cc:SRC_AFI_Streetcar1951 a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "A Streetcar Named Desire (1951)"@en ;
-    :bibliographicCitation "American Film Institute. AFI Catalog: A Streetcar Named Desire (1951), production history and PCA/Legion of Decency documentation." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "A Streetcar Named Desire (1951)" ;
-    :sourceURL "https://catalog.afi.com/Film/53428-A-STREETCAR-NAMED-DESIRE"^^xsd:anyURI .
+    cc:bibliographicCitation "American Film Institute. AFI Catalog: A Streetcar Named Desire (1951), production history and PCA/Legion of Decency documentation." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "A Streetcar Named Desire (1951)" ;
+    cc:sourceURL "https://catalog.afi.com/Film/53428-A-STREETCAR-NAMED-DESIRE"^^xsd:anyURI .
 
-:SRC_Darnton1991 a :PeriodicalArticle,
+cc:SRC_Darnton1991 a cc:PeriodicalArticle,
         owl:NamedIndividual ;
     rdfs:label "The Good Old Days"@en ;
-    :bibliographicCitation "Darnton, R. (1991). The Good Old Days. The New York Review of Books, 16 May 1991." ;
-    :dataProvenance "documented case" ;
-    :publicationYear 1991 ;
-    :sourceTitle "The Good Old Days" ;
-    :sourceURL "https://www.nybooks.com/articles/1991/05/16/the-good-old-days/"^^xsd:anyURI .
+    cc:bibliographicCitation "Darnton, R. (1991). The Good Old Days. The New York Review of Books, 16 May 1991." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 1991 ;
+    cc:sourceTitle "The Good Old Days" ;
+    cc:sourceURL "https://www.nybooks.com/articles/1991/05/16/the-good-old-days/"^^xsd:anyURI .
 
-:SRC_Szabo2019_Streetcar a :PeriodicalArticle,
+cc:SRC_Szabo2019_Streetcar a cc:PeriodicalArticle,
         owl:NamedIndividual ;
     rdfs:label "Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire"@en ;
-    :bibliographicCitation "Szabó, H. (2019). Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire. AMERICANA E-Journal of American Studies in Hungary, 15(1)." ;
-    :dataProvenance "documented case" ;
-    :publicationYear 2019 ;
-    :sourceTitle "Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire" ;
-    :sourceURL "https://americanaejournal.hu/index.php/americanaejournal/article/view/45438"^^xsd:anyURI .
+    cc:bibliographicCitation "Szabó, H. (2019). Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire. AMERICANA E-Journal of American Studies in Hungary, 15(1)." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2019 ;
+    cc:sourceTitle "Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire" ;
+    cc:sourceURL "https://americanaejournal.hu/index.php/americanaejournal/article/view/45438"^^xsd:anyURI .
 
-:SubjectRestriction a :ConstraintType,
+cc:SubjectRestriction a cc:ConstraintType,
         owl:NamedIndividual ;
     rdfs:label "Subject restriction"@en,
         "Ограничение темы"@ru ;
     rdfs:comment "A constraint on which topics or subjects a work may address."@en .
 
-:SRC_FrolovaWalker2023 a :Book,
+cc:SRC_FrolovaWalker2023 a cc:Book,
         owl:NamedIndividual ;
     rdfs:label "Shostakovich's Symphony No. 5 (ch. 1 'From the Fourth to the Fifth')"@en ;
-    :bibliographicCitation "Frolova-Walker, M. & Walker, J. (2023). Shostakovich's Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001" ;
-    :dataProvenance "documented case" ;
-    :publicationYear 2023 ;
-    :sourceTitle "Shostakovich's Symphony No. 5 (ch. 1 'From the Fourth to the Fifth')" ;
-    :sourceURL "https://academic.oup.com/book/55321/chapter/428777077"^^xsd:anyURI .
+    cc:bibliographicCitation "Frolova-Walker, M. & Walker, J. (2023). Shostakovich's Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001" ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2023 ;
+    cc:sourceTitle "Shostakovich's Symphony No. 5 (ch. 1 'From the Fourth to the Fifth')" ;
+    cc:sourceURL "https://academic.oup.com/book/55321/chapter/428777077"^^xsd:anyURI .
 
-:SRC_Giger1999_Ballo a :PeriodicalArticle,
+cc:SRC_Giger1999_Ballo a cc:PeriodicalArticle,
         owl:NamedIndividual ;
     rdfs:label "Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859)"@en ;
-    :bibliographicCitation "Giger, A. (1999). Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859). Cambridge Opera Journal, 11(3), 233–265. DOI: 10.1017/S0954586700005061." ;
-    :dataProvenance "documented case" ;
-    :publicationYear 1999 ;
-    :sourceTitle "Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859)" ;
-    :sourceURL "https://doi.org/10.1017/S0954586700005061"^^xsd:anyURI .
+    cc:bibliographicCitation "Giger, A. (1999). Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859). Cambridge Opera Journal, 11(3), 233–265. DOI: 10.1017/S0954586700005061." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 1999 ;
+    cc:sourceTitle "Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859)" ;
+    cc:sourceURL "https://doi.org/10.1017/S0954586700005061"^^xsd:anyURI .
 
-:SRC_Pope1977_Bulgakov a :PeriodicalArticle,
+cc:SRC_Pope1977_Bulgakov a cc:PeriodicalArticle,
         owl:NamedIndividual ;
     rdfs:label "Ambiguity and Meaning in The Master and Margarita: The Role of Afranius"@en ;
-    :bibliographicCitation "Pope, R. W. F. (1977). Ambiguity and Meaning in The Master and Margarita: The Role of Afranius. Slavic Review, 36(1), 1–24. DOI: 10.2307/2494668." ;
-    :dataProvenance "documented case" ;
-    :publicationYear 1977 ;
-    :sourceTitle "Ambiguity and Meaning in The Master and Margarita: The Role of Afranius" ;
-    :sourceURL "https://www.cambridge.org/core/journals/slavic-review/article/abs/ambiguity-and-meaning-in-the-master-and-margarita-the-role-of-afranius/C1CC1B17693788E4D6FB2F6E0B1AB372"^^xsd:anyURI .
+    cc:bibliographicCitation "Pope, R. W. F. (1977). Ambiguity and Meaning in The Master and Margarita: The Role of Afranius. Slavic Review, 36(1), 1–24. DOI: 10.2307/2494668." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 1977 ;
+    cc:sourceTitle "Ambiguity and Meaning in The Master and Margarita: The Role of Afranius" ;
+    cc:sourceURL "https://www.cambridge.org/core/journals/slavic-review/article/abs/ambiguity-and-meaning-in-the-master-and-margarita-the-role-of-afranius/C1CC1B17693788E4D6FB2F6E0B1AB372"^^xsd:anyURI .
 
-:SRC_Ricordi_BalloCritical a :WebSource,
+cc:SRC_Ricordi_BalloCritical a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "Giuseppe Verdi: Un ballo in maschera – Critical Edition"@en ;
-    :bibliographicCitation "Narici, I. (ed.). (2000). Giuseppe Verdi: Un ballo in maschera – Critical Edition. Ricordi." ;
-    :dataProvenance "documented case" ;
-    :publicationYear 2000 ;
-    :sourceTitle "Giuseppe Verdi: Un ballo in maschera – Critical Edition" ;
-    :sourceURL "https://www.ricordi.com/en-US/Critical-Editions/Verdi-Giuseppe-Critical-Editions/Verdi-Giuseppe-WGV/Verdi-Un-ballo-in-maschera.aspx"^^xsd:anyURI .
+    cc:bibliographicCitation "Narici, I. (ed.). (2000). Giuseppe Verdi: Un ballo in maschera – Critical Edition. Ricordi." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2000 ;
+    cc:sourceTitle "Giuseppe Verdi: Un ballo in maschera – Critical Edition" ;
+    cc:sourceURL "https://www.ricordi.com/en-US/Critical-Editions/Verdi-Giuseppe-Critical-Editions/Verdi-Giuseppe-WGV/Verdi-Un-ballo-in-maschera.aspx"^^xsd:anyURI .
 
-:Theme a owl:Class ;
+cc:Theme a owl:Class ;
     rdfs:label "Theme"@en,
         "Тема"@ru ;
     rdfs:comment "A subject, idea, or topic addressed by a creative work."@en ;
-    rdfs:subClassOf :WorkElement .
+    rdfs:subClassOf cc:WorkElement .
 
-:WorkElement a owl:Class ;
-    rdfs:label "Work element"@en,
-        "Элемент произведения"@ru ;
-    rdfs:comment "A part or aspect of a creative work that can be targeted by a constraint."@en .
-
-:CensoringAgent a owl:Class ;
+cc:CensoringAgent a owl:Class ;
     rdfs:label "Censoring agent"@en,
         "Цензурирующий агент"@ru ;
     rdfs:comment "An agent who imposes or carries out censorship, such as a censor, editor, publisher, board, or platform."@en ;
-    rdfs:subClassOf :Agent .
+    rdfs:subClassOf cc:Agent .
 
-:ModificationRequirement a :CensorshipMechanism,
+cc:ModificationRequirement a cc:CensorshipMechanism,
         owl:NamedIndividual ;
     rdfs:label "Modification requirement"@en,
         "Требование изменений"@ru ;
     rdfs:comment "A demand that the creator alter a work as a condition for approval or release."@en .
 
-:OutcomeType a owl:Class ;
+cc:OutcomeType a owl:Class ;
     rdfs:label "Outcome type"@en,
         "Тип результата"@ru ;
     rdfs:comment "A controlled category describing the result of a creative response, ranging from suppression to creative adaptation."@en .
 
-:PeriodicalArticle a owl:Class ;
+cc:PeriodicalArticle a owl:Class ;
     rdfs:label "Periodical article"@en,
         "Статья в периодике"@ru ;
     rdfs:comment "An article in a journal, review, magazine, or newspaper. Added in v2.1."@en ;
-    rdfs:subClassOf :Source .
+    rdfs:subClassOf cc:Source .
 
-:SRC_Lance_Metailie a :WebSource,
+cc:SRC_Lance_Metailie a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "Le Roman de Hinze et Kunze (preface, publisher page)"@en ;
-    :bibliographicCitation "Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation)." ;
-    :dataProvenance "documented case" ;
-    :sourceTitle "Le Roman de Hinze et Kunze (preface, publisher page)" ;
-    :sourceURL "https://editions-metailie.com/livre/le-roman-de-hinze-et-kunze/"^^xsd:anyURI .
+    cc:bibliographicCitation "Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Le Roman de Hinze et Kunze (preface, publisher page)" ;
+    cc:sourceURL "https://editions-metailie.com/livre/le-roman-de-hinze-et-kunze/"^^xsd:anyURI .
 
-:WorkVersion a owl:Class ;
+cc:WorkElement a owl:Class ;
+    rdfs:label "Work element"@en,
+        "Элемент произведения"@ru ;
+    rdfs:comment "A part or aspect of a creative work that can be targeted by a constraint."@en .
+
+cc:WorkVersion a owl:Class ;
     rdfs:label "Work version"@en,
         "Версия произведения"@ru ;
     rdfs:comment "A specific version of a creative work, for example a revised, cut, re-edited, or alternative version produced in response to censorship."@en ;
-    rdfs:subClassOf :CreativeWork .
+    rdfs:subClassOf cc:CreativeWork .
 
-:CensoringAuthority a owl:Class ;
+cc:CensoringAuthority a owl:Class ;
     rdfs:label "Censoring authority"@en,
         "Цензурный орган"@ru ;
     rdfs:comment "An institutional censoring agent with formal power to approve, restrict, or prohibit creative works, such as a state censorship office or official board."@en ;
-    rdfs:subClassOf :CensoringAgent .
+    rdfs:subClassOf cc:CensoringAgent .
 
-:CensorshipMechanism a owl:Class ;
+cc:CensorshipMechanism a owl:Class ;
     rdfs:label "Censorship mechanism"@en,
         "Механизм цензуры"@ru ;
     rdfs:comment "A method through which censorship is applied to a creative work, such as a ban, removal, or required modification."@en .
 
-:ConstraintType a owl:Class ;
+cc:ConstraintType a owl:Class ;
     rdfs:label "Constraint type"@en,
         "Тип ограничения"@ru ;
     rdfs:comment "A controlled category describing what a censorship constraint restricts, for example content, subject, or direct representation."@en .
 
-:CreativeAdaptation a :OutcomeType,
+cc:CreativeAdaptation a cc:OutcomeType,
         owl:NamedIndividual ;
     rdfs:label "Creative adaptation"@en,
         "Творческая адаптация"@ru ;
     rdfs:comment "The creator found an alternative form of expression that preserved or transformed the restricted meaning."@en .
 
-:Source a owl:Class ;
+cc:Source a owl:Class ;
     rdfs:label "Source"@en,
         "Источник"@ru ;
     rdfs:comment "A documentary or scholarly source (book, article, archival document, interview, etc.) that provides evidence about events and responses."@en .
 
-:CreativeWork a owl:Class ;
+cc:CreativeWork a owl:Class ;
     rdfs:label "Creative work"@en,
         "Творческое произведение"@ru ;
     rdfs:comment "A product of creative activity, such as a literary work, film, musical work, or visual artwork."@en .
 
-:Creator a owl:Class ;
+cc:Creator a owl:Class ;
     rdfs:label "Creator"@en,
         "Создатель"@ru ;
     rdfs:comment "An agent who creates a creative work: an author, filmmaker, composer, visual artist, or similar."@en ;
-    rdfs:subClassOf :Agent .
+    rdfs:subClassOf cc:Agent .
 
-:WebSource a owl:Class ;
+cc:WebSource a owl:Class ;
     rdfs:label "Web source"@en,
         "Веб-источник"@ru ;
     rdfs:comment "A web page such as a publisher page, programme note, or encyclopedia entry. Tertiary web sources are used for orientation only. Added in v2.1."@en ;
-    rdfs:subClassOf :Source .
+    rdfs:subClassOf cc:Source .
 
-:CensorshipConstraint a owl:Class ;
+cc:CensorshipConstraint a owl:Class ;
     rdfs:label "Censorship constraint"@en,
         "Цензурное ограничение"@ru ;
     rdfs:comment "A constraint imposed by a censorship event. Not every constraint is censorship; this class covers only constraints resulting from censorship."@en ;
-    rdfs:subClassOf :Constraint .
+    rdfs:subClassOf cc:Constraint .
 
-:Claim a owl:Class ;
+cc:Claim a owl:Class ;
     rdfs:label "Claim"@en,
         "Утверждение"@ru ;
     rdfs:comment "A statement linking a censorship event and a creative response, supported by one or more sources. Used to make the evidence for each relation explicit."@en .
 
-:CensorshipEvent a owl:Class ;
+cc:CensorshipEvent a owl:Class ;
     rdfs:label "Censorship event"@en,
         "Цензурное событие"@ru ;
     rdfs:comment "A documented act or process of censorship affecting a creative work, carried out by a censoring agent through a censorship mechanism."@en ;
-    rdfs:subClassOf :Event .
+    rdfs:subClassOf cc:Event .
 
-:CreativeResponse a owl:Class ;
+cc:CreativeResponse a owl:Class ;
     rdfs:label "Creative response"@en,
         "Творческий ответ"@ru ;
     rdfs:comment "A documented action of a creator in reaction to a censorship constraint, for example revising, encoding, relocating, or abandoning a work."@en ;
-    rdfs:subClassOf :Event .
+    rdfs:subClassOf cc:Event .
 
-:CreativeStrategy a owl:Class ;
+cc:CreativeStrategy a owl:Class ;
     rdfs:label "Creative strategy"@en,
         "Творческая стратегия"@ru ;
     rdfs:comment "A method of expression a creator uses within a creative response, such as allegory, metaphor, or indirect representation."@en .

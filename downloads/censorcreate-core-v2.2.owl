@@ -25,7 +25,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>A strategy in which the work explicitly reflects on its own creation, form, or conditions of production.</rdfs:comment>
-    <rdfs:label>Self-reflexivity</rdfs:label>
+    <rdfs:label xml:lang="en">Self-reflexivity</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#aboutCensorshipEvent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -136,6 +136,12 @@
     <rdfs:label xml:lang="en">publication year</rdfs:label>
     <rdfs:label xml:lang="ru">год публикации</rdfs:label>
   </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/censorcreate#CreativeActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/censorcreate#WorkElement"/>
+    <rdfs:label xml:lang="en">Creative activity</rdfs:label>
+    <rdfs:comment xml:lang="en">An ongoing creative activity within a practice, such as film directing or art making, that can be restricted by censorship. Added in v2.2.</rdfs:comment>
+  </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#Editor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://example.org/censorcreate#Agent"/>
@@ -198,7 +204,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>Using irony, exaggeration, or ridicule to express criticism indirectly.</rdfs:comment>
-    <rdfs:label>Satire</rdfs:label>
+    <rdfs:label xml:lang="en">Satire</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#CensorshipConstraint">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -241,7 +247,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>Avoiding or bypassing the institution imposing the restriction.</rdfs:comment>
-    <rdfs:label>Institutional circumvention</rdfs:label>
+    <rdfs:label xml:lang="en">Institutional circumvention</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#CensoredWork">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -255,7 +261,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>Creating a work privately or clandestinely when public production is prohibited.</rdfs:comment>
-    <rdfs:label>Secret production</rdfs:label>
+    <rdfs:label xml:lang="en">Secret production</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#StylisticRestriction">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -320,7 +326,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#ConstraintType"/>
     <rdfs:comment>A constraint that limits how ideas, themes, or meanings may be expressed.</rdfs:comment>
-    <rdfs:label>Expression restriction</rdfs:label>
+    <rdfs:label xml:lang="en">Expression restriction</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#VisualElement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -370,7 +376,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>A strategy of changing a character’s identity, role, or status to meet censorship constraints.</rdfs:comment>
-    <rdfs:label>Character transformation</rdfs:label>
+    <rdfs:label xml:lang="en">Character transformation</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ne03eb5f3a9874a239d657f5d4be45886">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -540,13 +546,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#ConstraintType"/>
     <rdfs:comment>A constraint that limits or prevents the publication of a creative work.</rdfs:comment>
-    <rdfs:label>Publication restriction сonstraint</rdfs:label>
+    <rdfs:label xml:lang="en">Publication restriction constraint</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#TextualRestoration">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>Restoring material removed or altered by censorship.</rdfs:comment>
-    <rdfs:label>Textual restoration</rdfs:label>
+    <rdfs:label xml:lang="en">Textual restoration</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#Allegory">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -559,13 +565,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#ConstraintType"/>
     <rdfs:comment>A constraint that limits the materials or technical means available for creative work.</rdfs:comment>
-    <rdfs:label>Material restriction</rdfs:label>
+    <rdfs:label xml:lang="en">Material restriction</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#AesopianLanguage">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>A strategy of expressing sensitive meanings indirectly through coded or ambiguous language.</rdfs:comment>
-    <rdfs:label>Aesopian language</rdfs:label>
+    <rdfs:label xml:lang="en">Aesopian language</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#ModificationRequirement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -597,7 +603,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>Relocating a narrative to a different setting or context while preserving its core structure.</rdfs:comment>
-    <rdfs:label>Narrative transposition</rdfs:label>
+    <rdfs:label xml:lang="en">Narrative transposition</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#IndirectRepresentation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -610,7 +616,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>Altering plot, dialogue, or story structure in response to censorship.</rdfs:comment>
-    <rdfs:label>Narrative modification</rdfs:label>
+    <rdfs:label xml:lang="en">Narrative modification</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#Claim">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -622,7 +628,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#ConstraintType"/>
     <rdfs:comment>A constraint that limits or prohibits a creator from carrying out their professional creative activity.</rdfs:comment>
-    <rdfs:label>Professional practice restriction</rdfs:label>
+    <rdfs:label xml:lang="en">Professional practice restriction</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#hasConstraintType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -672,13 +678,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>A strategy of publishing a work through an alternative channel when normal publication is restricted.</rdfs:comment>
-    <rdfs:label>Alternative publication</rdfs:label>
+    <rdfs:label xml:lang="en">Alternative publication</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#MinimalProduction">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>Reducing production scale or resources to continue creating under restrictions.</rdfs:comment>
-    <rdfs:label>Minimal production</rdfs:label>
+    <rdfs:label xml:lang="en">Minimal production</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#LiteraryWork">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -765,7 +771,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>Сhanging the artistic medium or technique in response to a constraint.</rdfs:comment>
-    <rdfs:label>Medium adaptation</rdfs:label>
+    <rdfs:label xml:lang="en">Medium adaptation</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#TestConstraint">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -802,7 +808,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>A strategy of finding a way around a censorship restriction without directly complying with it.</rdfs:comment>
-    <rdfs:label>Circumvention</rdfs:label>
+    <rdfs:label xml:lang="en">Circumvention</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/censorcreate#PeriodicalArticle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -858,7 +864,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://example.org/censorcreate#CreativeStrategy"/>
     <rdfs:comment>Moving sensitive content to another historical context to reduce its directness.</rdfs:comment>
-    <rdfs:label>Historical displacement</rdfs:label>
+    <rdfs:label xml:lang="en">Historical displacement</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N8150f05fd36a4b30b1ae9efa8cbb3d65">
     <rdf:first rdf:resource="http://example.org/censorcreate#CreativeWork"/>
