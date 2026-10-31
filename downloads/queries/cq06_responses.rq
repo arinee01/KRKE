@@ -2,8 +2,8 @@
 PREFIX cc:   <http://example.org/censorcreate#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?title ?creator ?response ?description WHERE {
-  ?event cc:targetsWork ?work ;
-         cc:hasResponse ?response .
+  { ?event cc:targetsWork ?work } UNION { ?event cc:targetsPractice ?work }
+  ?event cc:hasResponse ?response .
   ?response cc:performedBy ?p ;
             cc:description ?description .
   ?p rdfs:label ?creator .

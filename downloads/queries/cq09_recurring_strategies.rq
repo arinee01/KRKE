@@ -2,12 +2,12 @@
 PREFIX cc:   <http://example.org/censorcreate#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?strategy (COUNT(DISTINCT ?medium) AS ?media) (COUNT(DISTINCT ?mech) AS ?mechanisms) WHERE {
-  ?event cc:targetsWork ?work ;
-         cc:usesMechanism ?mech ;
+  { ?event cc:targetsWork ?work } UNION { ?event cc:targetsPractice ?work }
+  ?event cc:usesMechanism ?mech ;
          cc:hasResponse ?response .
   ?response cc:usesStrategy ?strategy .
   ?work a ?medium .
-  ?medium rdfs:subClassOf cc:CreativeWork .
+  FILTER(?medium = cc:CreativePractice || EXISTS { ?medium rdfs:subClassOf cc:CreativeWork })
   FILTER(?medium != cc:CensoredWork && ?medium != cc:WorkVersion)
   FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
 }

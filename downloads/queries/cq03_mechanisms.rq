@@ -2,8 +2,8 @@
 PREFIX cc:   <http://example.org/censorcreate#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?title ?event ?mechanism WHERE {
-  ?event cc:targetsWork ?work ;
-         cc:usesMechanism ?m .
+  { ?event cc:targetsWork ?work } UNION { ?event cc:targetsPractice ?work }
+  ?event cc:usesMechanism ?m .
   ?work cc:title ?title .
   ?m rdfs:label ?mechanism . FILTER(lang(?mechanism) = "en")
   FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }

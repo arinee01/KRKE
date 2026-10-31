@@ -2,9 +2,11 @@
 PREFIX cc:   <http://example.org/censorcreate#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?title ?response ?outcome WHERE {
-  ?event cc:targetsWork ?work ;
-         cc:hasResponse ?response .
-  ?response cc:hasOutcome ?o .
+  { ?event cc:targetsWork ?work } UNION { ?event cc:targetsPractice ?work }
+  { ?event cc:hasResponse ?response . ?response cc:hasOutcome ?o }
+  UNION
+  { ?event cc:hasOutcome ?o . FILTER NOT EXISTS { ?event cc:hasResponse ?r }
+    BIND("(no documented response)" AS ?response) }
   ?o rdfs:label ?outcome . FILTER(lang(?outcome) = "en")
   ?work cc:title ?title .
   FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
