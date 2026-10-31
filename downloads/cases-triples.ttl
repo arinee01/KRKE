@@ -3,6 +3,37 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+cc:CL_Ballo_Naples a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_Ballo_NaplesCensorship1858 ;
+    cc:aboutCreativeResponse cc:RE_Ballo_LeaveNaples ;
+    cc:claimText "Ricordi's critical-edition documentation states that censorship demands were severe enough for Verdi to break the Naples contract; scholarship on Verdi's censorship confirms that Un ballo in maschera had been rejected elsewhere before its Roman premiere." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Ricordi_BalloCritical .
+
+cc:CL_Ballo_Transposition a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_Ballo_RomeCensorship1858 ;
+    cc:aboutCreativeResponse cc:RE_Ballo_Transposition ;
+    cc:claimText "The Metropolitan Opera and Verdi critical-edition sources explicitly link the Boston setting and transformed characters to negotiations with the censors. This is a strong example of narrative transposition used to preserve a censored dramatic structure." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Met_Ballo,
+        cc:SRC_Ricordi_BalloCritical .
+
+cc:CL_Bulgakov_Aesopian a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_Bulgakov_LiterarySuppression1930s ;
+    cc:aboutCreativeResponse cc:RE_Bulgakov_AesopianExpression ;
+    cc:claimText "The link between Soviet censorship and Aesopian strategies is interpretative rather than a directly documented causal statement by Bulgakov. Rosenshield documents the suppression of Bulgakov's publication opportunities, while Pope discusses Aesopian readings of politically suggestive passages in the novel. This relation should therefore be represented as a Claim, not as unquestioned causality." ;
+    cc:confidenceLevel "medium" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Pope1977_Bulgakov,
+        cc:SRC_Rosenshield1997_Bulgakov .
+
 cc:CL_HKR_Distribution a cc:Claim,
         owl:NamedIndividual ;
     cc:aboutCensorshipEvent cc:EV_HKR_DistributionStop ;
@@ -34,6 +65,26 @@ cc:CL_HKR_Lesehilfe a cc:Claim,
         cc:SRC_Lance_Metailie,
         cc:SRC_bpb_Selbstzensur .
 
+cc:CL_MasterMargarita_Publication a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_MasterMargarita_MoskvaCensorship1966 ;
+    cc:aboutCreativeResponse cc:RE_MasterMargarita_TextRestoration ;
+    cc:claimText "Curtis documents that the Moskva text was authorised with substantial politically and ideologically motivated cuts and describes the later route to full publication abroad; Pope explicitly distinguishes the censored Moskva edition from complete Russian versions. The posthumous response is performed by an editor/estate representative rather than by the original creator." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Curtis2019_Bulgakov,
+        cc:SRC_Pope1977_Bulgakov .
+
+cc:CL_Nolde_Watercolours a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_Nolde_ProfessionalBan1941 ;
+    cc:aboutCreativeResponse cc:RE_Nolde_UnpaintedPictures ;
+    cc:claimText "The Nolde Museum records the 1941 expulsion and professional ban followed by further small-format watercolours; the National Gallery of Ireland states that despite the ban he continued to create, turning to small watercolour compositions painted in secret. Because Nolde had already used this medium before 1941, the claim is about continuation/adaptation under constraint rather than the invention of a new medium." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_NGI_NoldeDegenerate,
+        cc:SRC_NoldeMuseum_Artist .
+
 cc:CL_Notorious_Character a cc:Claim,
         owl:NamedIndividual ;
     cc:aboutCensorshipEvent cc:EV_Notorious_PCAReview ;
@@ -52,6 +103,18 @@ cc:CL_Notorious_Kiss a cc:Claim,
     cc:supportedBy cc:SRC_Billheimer2019,
         cc:SRC_HitchZone_PCA .
 
+cc:CL_Panahi_Restrictions a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_Panahi_2010FilmmakingBan ;
+    cc:aboutCreativeResponse cc:RE_Panahi_ThisIsNotAFilm ;
+    cc:claimText "Cannes stated that Panahi and Rasoulof's films were made under semi-clandestine conditions and quoted Panahi that the desire to keep Iranian filmmaking alive motivated them to overcome the restrictions. This Is Not a Film directly documents Panahi's situation as a filmmaker forbidden to work." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_Cannes_Panahi2011,
+        cc:SRC_Cannes_ThisIsNotAFilm2011,
+        cc:SRC_CinemaIranica_TINAF,
+        cc:SRC_IranHumanRights_Panahi2010 .
+
 cc:CL_Shost_Fifth a cc:Claim,
         owl:NamedIndividual ;
     cc:aboutCensorshipEvent cc:EV_Pravda1936 ;
@@ -63,6 +126,25 @@ cc:CL_Shost_Fifth a cc:Claim,
         cc:SRC_Robinson_BSO,
         cc:SRC_Wiki_Muddle .
 
+cc:CL_Streetcar_Cuts a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_Streetcar_LegionCuts1951 ;
+    cc:claimText "AFI records that the studio made twelve cuts without consulting Kazan and that Kazan believed some cuts changed the interpretation of the characters. This row represents a disabling/suppressive outcome rather than a creative response by the creators." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_AFI_Streetcar1951,
+        cc:SRC_Szabo2019_Streetcar .
+
+cc:CL_Streetcar_Rewrite a cc:Claim,
+        owl:NamedIndividual ;
+    cc:aboutCensorshipEvent cc:EV_Streetcar_PCAReview1950 ;
+    cc:aboutCreativeResponse cc:RE_Streetcar_ScreenplayRewrite ;
+    cc:claimText "AFI's production-history record documents the PCA objections and Williams's rewritten ending, while scholarship on the adaptation describes the film as preserving much of the play's meaning through alterations required by censorship." ;
+    cc:confidenceLevel "high" ;
+    cc:dataProvenance "documented case" ;
+    cc:supportedBy cc:SRC_AFI_Streetcar1951,
+        cc:SRC_Szabo2019_Streetcar .
+
 cc:CL_Sym4_Withdrawal a cc:Claim,
         owl:NamedIndividual ;
     cc:aboutCensorshipEvent cc:EV_Sym4_Cancellation ;
@@ -72,6 +154,16 @@ cc:CL_Sym4_Withdrawal a cc:Claim,
     cc:dataProvenance "documented case" ;
     cc:supportedBy cc:SRC_FrolovaWalker2023,
         cc:SRC_Wiki_Sym4 .
+
+cc:Streetcar1951_ReleaseCut a cc:WorkVersion,
+        owl:NamedIndividual ;
+    rdfs:label "A Streetcar Named Desire (1951 theatrical release with Legion/PCA cuts)"@en ;
+    cc:createdBy cc:EliaKazan,
+        cc:TennesseeWilliams ;
+    cc:creationYear 1951 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "A Streetcar Named Desire (1951 theatrical release with Legion/PCA cuts)" ;
+    cc:versionOf cc:Streetcar1951 .
 
 <http://example.org/censorcreate/cases> a owl:Ontology ;
     rdfs:label "ConCreCen — documented case studies (knowledge graph)"@en ;
@@ -90,15 +182,47 @@ cc:CON_Notorious_Character a cc:CensorshipConstraint,
     cc:description "Alicia must not appear as a 'grossly immoral woman'; any suggestion of sexual promiscuity to be avoided; the word 'tramp' to be removed." ;
     cc:hasConstraintType cc:SubjectRestriction .
 
-cc:DieterSchlenstedt a cc:Creator,
+cc:CON_Streetcar_ReleaseCuts a cc:CensorshipConstraint,
         owl:NamedIndividual ;
-    rdfs:label "Dieter Schlenstedt"@en ;
+    cc:constrainsElement cc:EL_Streetcar_CutScenes ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Sexual and 'carnal' material had to be reduced or removed for release without condemnation." ;
+    cc:hasConstraintType cc:ContentRestriction .
+
+cc:CatholicLegionOfDecency a cc:CensoringAgent,
+        owl:NamedIndividual ;
+    rdfs:label "Catholic Legion of Decency, with MPAA involvement"@en ;
     cc:dataProvenance "documented case" .
+
+cc:EL_Ballo_RegicidePlot a cc:Theme,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "The historical regicide plot based on the assassination of King Gustav III of Sweden." .
+
+cc:EL_Ballo_SettingCharacters a cc:Theme,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Historical setting, political status of the protagonist, character identities, and context of the assassination." .
+
+cc:EL_Bulgakov_PoliticalSatire a cc:Theme,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Satirical and political treatment of Soviet institutions and social life." .
 
 cc:EL_HKR_PartyPrivilegeSatire a cc:Theme,
         owl:NamedIndividual ;
     cc:dataProvenance "documented case" ;
     cc:description "Ironic portrayal of a Party functionary (Kunze) and his chauffeur (Hinze); apparatchik privilege at the heart of the plot." .
+
+cc:EL_MasterMargarita_CutPassages a cc:TextualElement,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Politically sensitive passages, references to arrests and the secret police, attacks on the Soviet literary establishment, sexual/nudity material, and other excised text." .
+
+cc:EL_Nolde_ArtMaking a cc:CreativeActivity,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Professional production and public circulation of visual art." .
 
 cc:EL_Notorious_AliciaCharacter a cc:Theme,
         owl:NamedIndividual ;
@@ -110,10 +234,67 @@ cc:EL_Notorious_KissScene a cc:Scene,
     cc:dataProvenance "documented case" ;
     cc:description "Love scene between Devlin (Cary Grant) and Alicia (Ingrid Bergman) in her Rio apartment." .
 
+cc:EL_Panahi_FilmmakingActivity a cc:CreativeActivity,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Film directing and screenplay writing." .
+
 cc:EL_Shost_ModernistIdiom a cc:AudioElement,
         owl:NamedIndividual ;
     cc:dataProvenance "documented case" ;
     cc:description "Dissonant, modernist musical idiom of Lady Macbeth (and of the Fourth Symphony in progress)." .
+
+cc:EL_Streetcar_CutScenes a cc:Scene,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Several scenes and lines, including the Stella stairway sequence and dialogue surrounding Stanley's attack on Blanche." .
+
+cc:EL_Streetcar_SexualThemes a cc:Theme,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Allan Grey's homosexuality, Blanche's sexuality, Stanley's rape of Blanche, and the moral consequences of Stanley's actions." .
+
+cc:EV_Ballo_NaplesCensorship1858 a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "The opera intended for Teatro San Carlo in Naples encountered censorial objections to a plot based on the assassination of a monarch. The demanded changes became so extensive that Verdi broke the contract with the Naples theatre and took the project elsewhere." ;
+    cc:documentedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Ricordi_BalloCritical ;
+    cc:eventDate 1858 ;
+    cc:hasResponse cc:RE_Ballo_LeaveNaples ;
+    cc:imposedBy cc:NeapolitanCensors ;
+    cc:imposesConstraint cc:CON_Ballo_Regicide ;
+    cc:targetsWork cc:GustavoIII_OperaProject ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:PriorApproval .
+
+cc:EV_Ballo_RomeCensorship1858 a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "The project also underwent censorship in papal Rome. The final compromise relocated the action outside Europe to colonial Boston and transformed the historical Swedish king into the fictional Governor Riccardo, with corresponding changes to character names and political context." ;
+    cc:documentedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Met_Ballo,
+        cc:SRC_Ricordi_BalloCritical ;
+    cc:eventDate 1858 ;
+    cc:hasResponse cc:RE_Ballo_Transposition ;
+    cc:imposedBy cc:PapalRomanCensors ;
+    cc:imposesConstraint cc:CON_Ballo_SovereignRepresentation ;
+    cc:targetsWork cc:GustavoIII_OperaProject ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:PriorApproval .
+
+cc:EV_Bulgakov_LiterarySuppression1930s a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "By the late 1920s and 1930s Bulgakov's prospects for publishing original fiction had sharply deteriorated; scholarly accounts describe him as no longer able to publish original fiction while he continued work on The Master and Margarita." ;
+    cc:documentedBy cc:SRC_Pope1977_Bulgakov,
+        cc:SRC_Rosenshield1997_Bulgakov ;
+    cc:eventDate "1930s" ;
+    cc:hasResponse cc:RE_Bulgakov_AesopianExpression ;
+    cc:imposedBy cc:SovietLiteraryEstablishment ;
+    cc:imposesConstraint cc:CON_Bulgakov_PoliticalExpression ;
+    cc:targetsWork cc:MasterAndMargarita ;
+    cc:usesMechanism cc:PublicationRestriction .
 
 cc:EV_HKR_DistributionStop a cc:CensorshipEvent,
         owl:NamedIndividual ;
@@ -125,6 +306,48 @@ cc:EV_HKR_DistributionStop a cc:CensorshipEvent,
     cc:imposesConstraint cc:CON_HKR_Distribution ;
     cc:targetsWork cc:HinzeKunzeRoman ;
     cc:usesMechanism cc:DistributionRestriction .
+
+cc:EV_MasterMargarita_MoskvaCensorship1966 a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "The novel's first Soviet publication in Moskva (1966-1967) was authorised only in a heavily cut form. Political and ideological passages, references to the secret police and arrests, attacks on the Soviet literary establishment, and other material were removed." ;
+    cc:documentedBy cc:SRC_Curtis2019_Bulgakov,
+        cc:SRC_Pope1977_Bulgakov ;
+    cc:eventDate "1966-1967" ;
+    cc:hasResponse cc:RE_MasterMargarita_TextRestoration ;
+    cc:imposedBy cc:SovietCensorship_Moskva ;
+    cc:imposesConstraint cc:CON_MasterMargarita_PublicationCuts ;
+    cc:targetsWork cc:MasterAndMargarita ;
+    cc:usesMechanism cc:PublicationRestriction,
+        cc:Redaction .
+
+cc:EV_Nolde_ProfessionalBan1941 a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "In 1941 Nolde was expelled from the Reich Chamber of Fine Arts and subjected to a professional ban. Official museum sources record that he nevertheless continued producing small-format watercolours, the so-called Unpainted Pictures." ;
+    cc:documentedBy cc:SRC_NGI_NoldeDegenerate,
+        cc:SRC_NoldeMuseum_Artist ;
+    cc:eventDate 1941 ;
+    cc:hasResponse cc:RE_Nolde_UnpaintedPictures ;
+    cc:imposedBy cc:ReichChamberFineArts ;
+    cc:imposesConstraint cc:CON_Nolde_ProfessionalPractice ;
+    cc:targetsPractice cc:NoldeArtisticPractice ;
+    cc:usesMechanism cc:Ban .
+
+cc:EV_Panahi_2010FilmmakingBan a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "On 20 December 2010, Panahi was sentenced to six years in prison and a 20-year ban on making films, writing screenplays, giving interviews, and travelling abroad. In 2011, Cannes described This Is Not a Film as made under semi-clandestine conditions while the ban was in force." ;
+    cc:documentedBy cc:SRC_Cannes_Panahi2011,
+        cc:SRC_Cannes_ThisIsNotAFilm2011,
+        cc:SRC_CinemaIranica_TINAF,
+        cc:SRC_IranHumanRights_Panahi2010 ;
+    cc:eventDate 2010 ;
+    cc:hasResponse cc:RE_Panahi_ThisIsNotAFilm ;
+    cc:imposedBy cc:TehranRevolutionaryCourt_Branch26 ;
+    cc:imposesConstraint cc:CON_Panahi_Filmmaking ;
+    cc:targetsPractice cc:PanahiFilmmakingPractice ;
+    cc:usesMechanism cc:Ban .
 
 cc:EV_Pravda1936 a cc:CensorshipEvent,
         owl:NamedIndividual ;
@@ -140,6 +363,34 @@ cc:EV_Pravda1936 a cc:CensorshipEvent,
     cc:targetsWork cc:LadyMacbethMtsensk ;
     cc:usesMechanism cc:Ban,
         cc:Removal .
+
+cc:EV_Streetcar_LegionCuts1951 a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "After the film was completed, the Catholic Legion of Decency condemned it. Warner Bros., working with the MPAA and without consulting Kazan, made twelve cuts totalling roughly three to four minutes to obtain an acceptable rating." ;
+    cc:documentedBy cc:SRC_AFI_Streetcar1951,
+        cc:SRC_Szabo2019_Streetcar ;
+    cc:eventDate 1951 ;
+    cc:hasOutcome cc:Suppression ;
+    cc:imposedBy cc:CatholicLegionOfDecency ;
+    cc:imposesConstraint cc:CON_Streetcar_ReleaseCuts ;
+    cc:targetsWork cc:Streetcar1951 ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:Removal .
+
+cc:EV_Streetcar_PCAReview1950 a cc:CensorshipEvent,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "During Production Code Administration review in 1950, the screenplay was challenged over three principal issues: the homosexuality of Blanche's late husband, Blanche's sexual behaviour, and the rape. The PCA proposed plot and dialogue changes before approval." ;
+    cc:documentedBy cc:SRC_AFI_Streetcar1951,
+        cc:SRC_Szabo2019_Streetcar ;
+    cc:eventDate 1950 ;
+    cc:hasResponse cc:RE_Streetcar_ScreenplayRewrite ;
+    cc:imposedBy cc:PCA ;
+    cc:imposesConstraint cc:CON_Streetcar_SexualContent ;
+    cc:targetsWork cc:Streetcar1951 ;
+    cc:usesMechanism cc:ModificationRequirement,
+        cc:PriorApproval .
 
 cc:EV_Sym4_Cancellation a cc:CensorshipEvent,
         owl:NamedIndividual ;
@@ -158,7 +409,8 @@ cc:EV_Sym4_Cancellation a cc:CensorshipEvent,
 cc:HKR_GDR_1985 a cc:WorkVersion,
         owl:NamedIndividual ;
     rdfs:label "Hinze-Kunze-Roman, Mitteldeutscher Verlag (Halle) 1985 edition with Schlenstedt's afterword; the simultaneous Suhrkamp edition appeared without it"@en ;
-    cc:createdBy cc:VolkerBraun ;
+    cc:createdBy cc:DieterSchlenstedt,
+        cc:VolkerBraun ;
     cc:creationYear 1985 ;
     cc:dataProvenance "documented case" ;
     cc:title "Hinze-Kunze-Roman, Mitteldeutscher Verlag (Halle) 1985 edition with Schlenstedt's afterword; the simultaneous Suhrkamp edition appeared without it" ;
@@ -178,6 +430,35 @@ cc:LadyMacbethMtsensk a cc:MusicalWork,
     cc:dataProvenance "documented case" ;
     cc:title "Lady Macbeth of the Mtsensk District" .
 
+cc:MasterMargarita_FullRussian1969 a cc:WorkVersion,
+        owl:NamedIndividual ;
+    rdfs:label "The Master and Margarita (complete Russian edition, Possev)"@en ;
+    cc:createdBy cc:ElenaBulgakova,
+        cc:MikhailBulgakov ;
+    cc:creationYear 1969 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "The Master and Margarita (complete Russian edition, Possev)" ;
+    cc:versionOf cc:MasterAndMargarita .
+
+cc:NeapolitanCensors a cc:CensoringAuthority,
+        owl:NamedIndividual ;
+    rdfs:label "Censors of the Kingdom of Naples"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:NoldeArtisticPractice a cc:CreativePractice,
+        owl:NamedIndividual ;
+    rdfs:label "Emil Nolde's artistic practice"@en ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Emil Nolde's artistic practice" .
+
+cc:Nolde_UnpaintedPictures a cc:VisualArtwork,
+        owl:NamedIndividual ;
+    rdfs:label "Unpainted Pictures (Ungemalte Bilder)"@en ;
+    cc:createdBy cc:EmilNolde ;
+    cc:creationYear "1941-1945" ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Unpainted Pictures (Ungemalte Bilder)" .
+
 cc:Notorious1946 a cc:Film,
         owl:NamedIndividual ;
     rdfs:label "Notorious"@en ;
@@ -186,15 +467,25 @@ cc:Notorious1946 a cc:Film,
     cc:dataProvenance "documented case" ;
     cc:title "Notorious" .
 
-cc:PCA a cc:CensoringAgent,
-        cc:CensoringAuthority,
+cc:PanahiFilmmakingPractice a cc:CreativePractice,
         owl:NamedIndividual ;
-    rdfs:label "Production Code Administration (headed by Joseph Breen)"@en ;
+    rdfs:label "Jafar Panahi's filmmaking practice"@en ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Jafar Panahi's filmmaking practice" .
+
+cc:PapalRomanCensors a cc:CensoringAuthority,
+        owl:NamedIndividual ;
+    rdfs:label "Censors of the Papal States in Rome"@en ;
     cc:dataProvenance "documented case" .
 
 cc:Pravda a cc:CensoringAgent,
         owl:NamedIndividual ;
     rdfs:label "Pravda (Communist Party newspaper; editorial expressing the official Party line)"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:ReichChamberFineArts a cc:CensoringAuthority,
+        owl:NamedIndividual ;
+    rdfs:label "Reich Chamber of Fine Arts (Reichskammer der bildenden Künste)"@en ;
     cc:dataProvenance "documented case" .
 
 cc:ShostakovichSymphony4 a cc:MusicalWork,
@@ -213,15 +504,98 @@ cc:ShostakovichSymphony5 a cc:MusicalWork,
     cc:dataProvenance "documented case" ;
     cc:title "Symphony No. 5 in D minor, Op. 47" .
 
+cc:SovietCensorship_Moskva a cc:CensoringAuthority,
+        owl:NamedIndividual ;
+    rdfs:label "Soviet censorship and the editors of Moskva"@en ;
+    cc:dataProvenance "documented case" .
+
 cc:SovietComposersUnion a cc:CensoringAgent,
         owl:NamedIndividual ;
     rdfs:label "Union of Soviet Composers and Party officials"@en ;
     cc:dataProvenance "documented case" .
 
+cc:SovietLiteraryEstablishment a cc:CensoringAuthority,
+        owl:NamedIndividual ;
+    rdfs:label "Soviet literary and censorship establishment"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:Streetcar1951_PCAApprovedVersion a cc:WorkVersion,
+        owl:NamedIndividual ;
+    rdfs:label "A Streetcar Named Desire (PCA-approved film version)"@en ;
+    cc:createdBy cc:EliaKazan,
+        cc:TennesseeWilliams ;
+    cc:creationYear 1951 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "A Streetcar Named Desire (PCA-approved film version)" ;
+    cc:versionOf cc:Streetcar1951 .
+
+cc:TehranRevolutionaryCourt_Branch26 a cc:CensoringAuthority,
+        owl:NamedIndividual ;
+    rdfs:label "Branch 26 of the Tehran Revolutionary Court / Iranian judiciary"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:ThisIsNotAFilm a cc:Film,
+        owl:NamedIndividual ;
+    rdfs:label "This Is Not a Film (In Film Nist)"@en ;
+    cc:createdBy cc:JafarPanahi,
+        cc:MojtabaMirtahmasb ;
+    cc:creationYear 2011 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "This Is Not a Film (In Film Nist)" .
+
+cc:UnBalloInMaschera1859 a cc:WorkVersion,
+        owl:NamedIndividual ;
+    rdfs:label "Un ballo in maschera"@en ;
+    cc:createdBy cc:AntonioSomma,
+        cc:GiuseppeVerdi ;
+    cc:creationYear 1859 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Un ballo in maschera" ;
+    cc:versionOf cc:GustavoIII_OperaProject .
+
 cc:AlfredHitchcock a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Alfred Hitchcock"@en ;
     cc:dataProvenance "documented case" .
+
+cc:CON_Ballo_Regicide a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:constrainsElement cc:EL_Ballo_RegicidePlot ;
+    cc:dataProvenance "documented case" ;
+    cc:description "A royal assassination and the sovereign status of the protagonist could not be represented in the proposed form." ;
+    cc:hasConstraintType cc:DirectRepresentationRestriction,
+        cc:SubjectRestriction .
+
+cc:CON_Ballo_SovereignRepresentation a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:constrainsElement cc:EL_Ballo_SettingCharacters ;
+    cc:dataProvenance "documented case" ;
+    cc:description "The central assassination plot could remain only after the sovereign and European political context were transformed." ;
+    cc:hasConstraintType cc:DirectRepresentationRestriction,
+        cc:SubjectRestriction .
+
+cc:CON_Bulgakov_PoliticalExpression a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:constrainsElement cc:EL_Bulgakov_PoliticalSatire ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Political and satirical expression had to be developed in an environment in which Bulgakov could not expect normal publication of original fiction." ;
+    cc:hasConstraintType cc:ExpressionRestriction,
+        cc:PublicationRestriction .
+
+cc:CON_MasterMargarita_PublicationCuts a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:constrainsElement cc:EL_MasterMargarita_CutPassages ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Only a substantially abridged version of the novel could appear in the Soviet journal." ;
+    cc:hasConstraintType cc:ContentRestriction .
+
+cc:CON_Nolde_ProfessionalPractice a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:constrainsElement cc:EL_Nolde_ArtMaking ;
+    cc:dataProvenance "documented case" ;
+    cc:description "The professional ban prevented Nolde from officially practising, exhibiting, and selling art and limited his access to normal artistic materials and channels." ;
+    cc:hasConstraintType cc:MaterialRestriction,
+        cc:ProfessionalPracticeRestriction .
 
 cc:CON_Notorious_Kissing a cc:CensorshipConstraint,
         owl:NamedIndividual ;
@@ -230,6 +604,28 @@ cc:CON_Notorious_Kissing a cc:CensorshipConstraint,
     cc:description "Production Code: 'Excessive and lustful kissing ... are not to be shown'; enforced through an unofficial rule of thumb that a screen kiss should not exceed about three seconds." ;
     cc:hasConstraintType cc:ContentRestriction,
         cc:DirectRepresentationRestriction .
+
+cc:CON_Panahi_Filmmaking a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:constrainsElement cc:EL_Panahi_FilmmakingActivity ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Panahi was prohibited from making or directing films and from writing screenplays for twenty years." ;
+    cc:hasConstraintType cc:ExpressionRestriction,
+        cc:ProfessionalPracticeRestriction .
+
+cc:CON_Streetcar_SexualContent a cc:CensorshipConstraint,
+        owl:NamedIndividual ;
+    cc:constrainsElement cc:EL_Streetcar_SexualThemes ;
+    cc:dataProvenance "documented case" ;
+    cc:description "The adaptation could not directly represent or clearly state several sexual themes in the same form as the play, and the filmmakers were pressed to alter their treatment." ;
+    cc:hasConstraintType cc:ContentRestriction,
+        cc:DirectRepresentationRestriction,
+        cc:SubjectRestriction .
+
+cc:DieterSchlenstedt a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Dieter Schlenstedt"@en ;
+    cc:dataProvenance "documented case" .
 
 cc:EV_HKR_PrintApproval a cc:CensorshipEvent,
         owl:NamedIndividual ;
@@ -264,6 +660,78 @@ cc:EV_Notorious_PCAReview a cc:CensorshipEvent,
     cc:usesMechanism cc:ModificationRequirement,
         cc:PriorApproval .
 
+cc:ElenaBulgakova a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Elena Bulgakova"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:EmilNolde a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Emil Nolde"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:JafarPanahi a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Jafar Panahi"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:MojtabaMirtahmasb a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Mojtaba Mirtahmasb"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:PCA a cc:CensoringAgent,
+        cc:CensoringAuthority,
+        owl:NamedIndividual ;
+    rdfs:label "Production Code Administration (MPAA)"@en,
+        "Production Code Administration (headed by Joseph Breen)"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:RE_Ballo_LeaveNaples a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Verdi rejected the most drastic demanded alterations, broke the contract with Teatro San Carlo, and moved the project to Rome." ;
+    cc:documentedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Ricordi_BalloCritical ;
+    cc:eventDate 1858 ;
+    cc:hasOutcome cc:Abandonment ;
+    cc:performedBy cc:GiuseppeVerdi ;
+    cc:respondsTo cc:CON_Ballo_Regicide ;
+    cc:usesStrategy cc:InstitutionalCircumvention .
+
+cc:RE_Ballo_Transposition a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Verdi and Somma transformed the setting and identities while preserving the dramatic structure: Sweden became colonial Boston, Gustav III became Governor Riccardo, and other characters were renamed." ;
+    cc:documentedBy cc:SRC_Giger1999_Ballo,
+        cc:SRC_Met_Ballo,
+        cc:SRC_Ricordi_BalloCritical ;
+    cc:eventDate "1858-1859" ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:AntonioSomma,
+        cc:GiuseppeVerdi ;
+    cc:producesVersion cc:UnBalloInMaschera1859 ;
+    cc:respondsTo cc:CON_Ballo_SovereignRepresentation ;
+    cc:usesStrategy cc:CharacterTransformation,
+        cc:HistoricalDisplacement,
+        cc:NarrativeTransposition .
+
+cc:RE_Bulgakov_AesopianExpression a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "The novel uses satire, ambiguity, fantastic displacement, and passages that scholars have discussed in terms of Aesopian language: indirect expression capable of carrying concealed political or social meanings." ;
+    cc:documentedBy cc:SRC_Pope1977_Bulgakov,
+        cc:SRC_Rosenshield1997_Bulgakov ;
+    cc:eventDate "1930s" ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:MikhailBulgakov ;
+    cc:respondsTo cc:CON_Bulgakov_PoliticalExpression ;
+    cc:resultsInWork cc:MasterAndMargarita ;
+    cc:usesStrategy cc:AesopianLanguage,
+        cc:Ambiguity,
+        cc:IndirectRepresentation,
+        cc:Satire .
+
 cc:RE_HKR_IronicNarration a cc:CreativeResponse,
         owl:NamedIndividual ;
     cc:dataProvenance "documented case" ;
@@ -293,6 +761,34 @@ cc:RE_HKR_Lesehilfe a cc:CreativeResponse,
     cc:usesStrategy cc:Irony,
         cc:ParatextualFraming .
 
+cc:RE_MasterMargarita_TextRestoration a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Elena Bulgakova preserved and prepared the text for publication; omitted passages circulated outside the censored journal version, and complete versions were subsequently published abroad, including a complete Russian text." ;
+    cc:documentedBy cc:SRC_Curtis2019_Bulgakov,
+        cc:SRC_Pope1977_Bulgakov ;
+    cc:eventDate "1966-1969" ;
+    cc:hasOutcome cc:AlternativeVersionProduced ;
+    cc:performedBy cc:ElenaBulgakova ;
+    cc:producesVersion cc:MasterMargarita_FullRussian1969 ;
+    cc:respondsTo cc:CON_MasterMargarita_PublicationCuts ;
+    cc:usesStrategy cc:AlternativePublication,
+        cc:TextualRestoration .
+
+cc:RE_Nolde_UnpaintedPictures a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Nolde continued working privately and produced further small-format watercolours in Seebüll. Museum accounts describe these works as being made secretly during the period of prohibition." ;
+    cc:documentedBy cc:SRC_NGI_NoldeDegenerate,
+        cc:SRC_NoldeMuseum_Artist ;
+    cc:eventDate "1941-1945" ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:EmilNolde ;
+    cc:respondsTo cc:CON_Nolde_ProfessionalPractice ;
+    cc:resultsInWork cc:Nolde_UnpaintedPictures ;
+    cc:usesStrategy cc:MediumAdaptation,
+        cc:SecretProduction .
+
 cc:RE_Notorious_FragmentedKiss a cc:CreativeResponse,
         owl:NamedIndividual ;
     cc:dataProvenance "documented case" ;
@@ -305,6 +801,24 @@ cc:RE_Notorious_FragmentedKiss a cc:CreativeResponse,
     cc:respondsTo cc:CON_Notorious_Kissing ;
     cc:usesStrategy cc:Fragmentation,
         cc:IndirectRepresentation .
+
+cc:RE_Panahi_ThisIsNotAFilm a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Panahi and Mojtaba Mirtahmasb made a self-reflexive video diary largely inside Panahi's apartment. Panahi stages and describes an unproduced screenplay and turns the conditions of being forbidden to make films into part of the film's subject and form." ;
+    cc:documentedBy cc:SRC_Cannes_Panahi2011,
+        cc:SRC_Cannes_ThisIsNotAFilm2011,
+        cc:SRC_CinemaIranica_TINAF,
+        cc:SRC_IranHumanRights_Panahi2010 ;
+    cc:eventDate 2011 ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:JafarPanahi,
+        cc:MojtabaMirtahmasb ;
+    cc:respondsTo cc:CON_Panahi_Filmmaking ;
+    cc:resultsInWork cc:ThisIsNotAFilm ;
+    cc:usesStrategy cc:Circumvention,
+        cc:MinimalProduction,
+        cc:SelfReflexivity .
 
 cc:RE_Shost_FifthSymphony a cc:CreativeResponse,
         owl:NamedIndividual ;
@@ -320,6 +834,22 @@ cc:RE_Shost_FifthSymphony a cc:CreativeResponse,
     cc:resultsInWork cc:ShostakovichSymphony5 ;
     cc:usesStrategy cc:Ambiguity .
 
+cc:RE_Streetcar_ScreenplayRewrite a cc:CreativeResponse,
+        owl:NamedIndividual ;
+    cc:dataProvenance "documented case" ;
+    cc:description "Kazan and Williams negotiated and altered the screenplay. Williams rewrote the ending so that Stella appears, somewhat ambiguously, to leave Stanley rather than return to him; other restricted material was handled more indirectly." ;
+    cc:documentedBy cc:SRC_AFI_Streetcar1951,
+        cc:SRC_Szabo2019_Streetcar ;
+    cc:eventDate 1950 ;
+    cc:hasOutcome cc:CreativeAdaptation ;
+    cc:performedBy cc:EliaKazan,
+        cc:TennesseeWilliams ;
+    cc:producesVersion cc:Streetcar1951_PCAApprovedVersion ;
+    cc:respondsTo cc:CON_Streetcar_SexualContent ;
+    cc:usesStrategy cc:Ambiguity,
+        cc:IndirectRepresentation,
+        cc:NarrativeModification .
+
 cc:RE_Sym4_Withdrawal a cc:CreativeResponse,
         owl:NamedIndividual ;
     cc:dataProvenance "documented case" ;
@@ -331,12 +861,26 @@ cc:RE_Sym4_Withdrawal a cc:CreativeResponse,
     cc:performedBy cc:DmitriShostakovich ;
     cc:respondsTo cc:CON_Shost_Formalism .
 
+cc:AntonioSomma a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Antonio Somma"@en ;
+    cc:dataProvenance "documented case" .
+
 cc:CON_HKR_Ideology a cc:CensorshipConstraint,
         owl:NamedIndividual ;
     cc:constrainsElement cc:EL_HKR_PartyPrivilegeSatire ;
     cc:dataProvenance "documented case" ;
     cc:description "Objections that the irony targets socialism, distorts the concept of freedom and represents the Liebknecht-Luxemburg commemoration unworthily (Neubert report, July 1984)." ;
     cc:hasConstraintType cc:SubjectRestriction .
+
+cc:GustavoIII_OperaProject a cc:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Gustavo III / Una vendetta in dominò (opera project)"@en ;
+    cc:createdBy cc:AntonioSomma,
+        cc:GiuseppeVerdi ;
+    cc:creationYear "1857-1858" ;
+    cc:dataProvenance "documented case" ;
+    cc:title "Gustavo III / Una vendetta in dominò (opera project)" .
 
 cc:HinzeKunzeRoman a cc:LiteraryWork,
         owl:NamedIndividual ;
@@ -345,6 +889,46 @@ cc:HinzeKunzeRoman a cc:LiteraryWork,
     cc:creationYear 1981 ;
     cc:dataProvenance "documented case" ;
     cc:title "Hinze-Kunze-Roman" .
+
+cc:MikhailBulgakov a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Mikhail Bulgakov"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:SRC_Cannes_Panahi2011 a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "Jafar Panahi and Mohammad Rasoulof in the Cannes Official Selection!"@en ;
+    cc:bibliographicCitation "Festival de Cannes. (2011). Jafar Panahi and Mohammad Rasoulof in the Cannes Official Selection! 7 May 2011." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2011 ;
+    cc:sourceTitle "Jafar Panahi and Mohammad Rasoulof in the Cannes Official Selection!" ;
+    cc:sourceURL "https://www.festival-cannes.com/en/2011/jafar-panahi-and-mohammad-rasoulof-in-the-cannes-official-selection/"^^xsd:anyURI .
+
+cc:SRC_Cannes_ThisIsNotAFilm2011 a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "In Film Nist (This Is Not A Film) by Jafar Panahi"@en ;
+    cc:bibliographicCitation "Festival de Cannes. (2011). In Film Nist (This Is Not A Film) by Jafar Panahi. 20 May 2011." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2011 ;
+    cc:sourceTitle "In Film Nist (This Is Not A Film) by Jafar Panahi" ;
+    cc:sourceURL "https://www.festival-cannes.com/en/2011/in-film-nist-this-is-not-a-film-by-jafar-panahi/"^^xsd:anyURI .
+
+cc:SRC_CinemaIranica_TINAF a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "This Is Not a Film"@en ;
+    cc:bibliographicCitation "Cinema Iranica. This Is Not a Film (film entry)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "This Is Not a Film" ;
+    cc:sourceURL "https://cinema.iranicaonline.org/film/this-is-not-a-film/"^^xsd:anyURI .
+
+cc:SRC_Curtis2019_Bulgakov a cc:Book,
+        owl:NamedIndividual ;
+    rdfs:label "A Reader's Companion to Mikhail Bulgakov's The Master and Margarita"@en ;
+    cc:bibliographicCitation "Curtis, J. A. E. (2019). A Reader's Companion to Mikhail Bulgakov's The Master and Margarita. Boston: Academic Studies Press." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2019 ;
+    cc:sourceTitle "A Reader's Companion to Mikhail Bulgakov's The Master and Margarita" ;
+    cc:sourceURL "https://www.masterandmargarita.eu/estore/pdf/emen062_curtis.pdf"^^xsd:anyURI .
 
 cc:SRC_GuibertYeche a cc:BookChapter,
         owl:NamedIndividual ;
@@ -371,6 +955,39 @@ cc:SRC_Hoepcke1985 a cc:PeriodicalArticle,
     cc:sourceTitle "Über Volker Brauns HINZE-KUNZE-ROMAN" ;
     cc:sourceURL "https://das-blaettchen.de/2025/04/ueber-volker-brauns-hinze-kunze-roman-71622.html"^^xsd:anyURI .
 
+cc:SRC_IranHumanRights_Panahi2010 a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "Jafar Panahi Sentenced To Six Years In Prison, Banned From Making Films For 20 Years"@en ;
+    cc:bibliographicCitation "Center for Human Rights in Iran. (2010). Jafar Panahi Sentenced To Six Years In Prison, Banned From Making Films For 20 Years. 20 December 2010." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2010 ;
+    cc:sourceTitle "Jafar Panahi Sentenced To Six Years In Prison, Banned From Making Films For 20 Years" ;
+    cc:sourceURL "https://iranhumanrights.org/2010/12/jafar-panahi-sentenced-to-six-years-in-prison-banned-from-making-films-for-20-years/"^^xsd:anyURI .
+
+cc:SRC_Met_Ballo a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "Un Ballo in Maschera"@en ;
+    cc:bibliographicCitation "The Metropolitan Opera. Un Ballo in Maschera (work/season guide)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Un Ballo in Maschera" ;
+    cc:sourceURL "https://www.metopera.org/user-information/old-seasons/2023-24-season/un-ballo-in-maschera/"^^xsd:anyURI .
+
+cc:SRC_NGI_NoldeDegenerate a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "Entartete Kunst / Degenerate Art"@en ;
+    cc:bibliographicCitation "National Gallery of Ireland. Entartete Kunst / Degenerate Art (Emil Nolde: Colour is Life exhibition material)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "Entartete Kunst / Degenerate Art" ;
+    cc:sourceURL "https://www.nationalgallery.ie/emil-nolde-colour-life/entartete-kunst-degenerate-art"^^xsd:anyURI .
+
+cc:SRC_NoldeMuseum_Artist a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "The Artist"@en ;
+    cc:bibliographicCitation "Nolde Museum Seebüll. The Artist (biographical chronology of Emil Nolde)." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "The Artist" ;
+    cc:sourceURL "https://www.nolde-museum.de/en/museum/der-kuenstler"^^xsd:anyURI .
+
 cc:SRC_Robinson_BSO a cc:WebSource,
         owl:NamedIndividual ;
     rdfs:label "Symphony No. 5 (programme note)"@en ;
@@ -378,6 +995,15 @@ cc:SRC_Robinson_BSO a cc:WebSource,
     cc:dataProvenance "documented case" ;
     cc:sourceTitle "Symphony No. 5 (programme note)" ;
     cc:sourceURL "https://www.bso.org/works/symphony-no-5-shostakovich"^^xsd:anyURI .
+
+cc:SRC_Rosenshield1997_Bulgakov a cc:PeriodicalArticle,
+        owl:NamedIndividual ;
+    rdfs:label "The Master and Margarita and the Poetics of Aporia: A Polemical Article"@en ;
+    cc:bibliographicCitation "Rosenshield, G. (1997). The Master and Margarita and the Poetics of Aporia: A Polemical Article. Slavic Review, 56(2), 187–211. DOI: 10.2307/2500782." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 1997 ;
+    cc:sourceTitle "The Master and Margarita and the Poetics of Aporia: A Polemical Article" ;
+    cc:sourceURL "https://www.cambridge.org/core/journals/slavic-review/article/abs/master-and-margarita-and-the-poetics-of-aporia-a-polemical-article/1B06C78A2C4736CD2182ED5D4B6F2572"^^xsd:anyURI .
 
 cc:SRC_Wiki_Muddle a cc:WebSource,
         owl:NamedIndividual ;
@@ -415,6 +1041,25 @@ cc:CON_Shost_Formalism a cc:CensorshipConstraint,
     cc:description "Condemnation of 'formalism': dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works." ;
     cc:hasConstraintType cc:StylisticRestriction .
 
+cc:EliaKazan a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Elia Kazan"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:GiuseppeVerdi a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Giuseppe Verdi"@en ;
+    cc:dataProvenance "documented case" .
+
+cc:MasterAndMargarita a cc:LiteraryWork,
+        owl:NamedIndividual ;
+    rdfs:label "The Master and Margarita"@en ;
+    cc:createdBy cc:MikhailBulgakov ;
+    cc:creationYear 1940,
+        "1928-1940" ;
+    cc:dataProvenance "documented case" ;
+    cc:title "The Master and Margarita" .
+
 cc:SRC_Billheimer2019 a cc:Book,
         owl:NamedIndividual ;
     rdfs:label "Hitchcock and the Censors (ch. 14 'Notorious (1946)')"@en ;
@@ -424,10 +1069,32 @@ cc:SRC_Billheimer2019 a cc:Book,
     cc:sourceTitle "Hitchcock and the Censors (ch. 14 'Notorious (1946)')" ;
     cc:sourceURL "https://academic.oup.com/kentucky-scholarship-online/book/34148/chapter/289477434"^^xsd:anyURI .
 
+cc:Streetcar1951 a cc:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A Streetcar Named Desire"@en ;
+    cc:createdBy cc:EliaKazan,
+        cc:TennesseeWilliams ;
+    cc:creationYear 1951 ;
+    cc:dataProvenance "documented case" ;
+    cc:title "A Streetcar Named Desire" .
+
+cc:TennesseeWilliams a cc:Creator,
+        owl:NamedIndividual ;
+    rdfs:label "Tennessee Williams"@en ;
+    cc:dataProvenance "documented case" .
+
 cc:DmitriShostakovich a cc:Creator,
         owl:NamedIndividual ;
     rdfs:label "Dmitri Shostakovich"@en ;
     cc:dataProvenance "documented case" .
+
+cc:SRC_AFI_Streetcar1951 a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "A Streetcar Named Desire (1951)"@en ;
+    cc:bibliographicCitation "American Film Institute. AFI Catalog: A Streetcar Named Desire (1951), production history and PCA/Legion of Decency documentation." ;
+    cc:dataProvenance "documented case" ;
+    cc:sourceTitle "A Streetcar Named Desire (1951)" ;
+    cc:sourceURL "https://catalog.afi.com/Film/53428-A-STREETCAR-NAMED-DESIRE"^^xsd:anyURI .
 
 cc:SRC_Darnton1991 a cc:PeriodicalArticle,
         owl:NamedIndividual ;
@@ -438,6 +1105,15 @@ cc:SRC_Darnton1991 a cc:PeriodicalArticle,
     cc:sourceTitle "The Good Old Days" ;
     cc:sourceURL "https://www.nybooks.com/articles/1991/05/16/the-good-old-days/"^^xsd:anyURI .
 
+cc:SRC_Szabo2019_Streetcar a cc:PeriodicalArticle,
+        owl:NamedIndividual ;
+    rdfs:label "Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire"@en ;
+    cc:bibliographicCitation "Szabó, H. (2019). Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire. AMERICANA E-Journal of American Studies in Hungary, 15(1)." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2019 ;
+    cc:sourceTitle "Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire" ;
+    cc:sourceURL "https://americanaejournal.hu/index.php/americanaejournal/article/view/45438"^^xsd:anyURI .
+
 cc:SRC_FrolovaWalker2023 a cc:Book,
         owl:NamedIndividual ;
     rdfs:label "Shostakovich's Symphony No. 5 (ch. 1 'From the Fourth to the Fifth')"@en ;
@@ -446,6 +1122,33 @@ cc:SRC_FrolovaWalker2023 a cc:Book,
     cc:publicationYear 2023 ;
     cc:sourceTitle "Shostakovich's Symphony No. 5 (ch. 1 'From the Fourth to the Fifth')" ;
     cc:sourceURL "https://academic.oup.com/book/55321/chapter/428777077"^^xsd:anyURI .
+
+cc:SRC_Giger1999_Ballo a cc:PeriodicalArticle,
+        owl:NamedIndividual ;
+    rdfs:label "Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859)"@en ;
+    cc:bibliographicCitation "Giger, A. (1999). Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859). Cambridge Opera Journal, 11(3), 233–265. DOI: 10.1017/S0954586700005061." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 1999 ;
+    cc:sourceTitle "Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859)" ;
+    cc:sourceURL "https://doi.org/10.1017/S0954586700005061"^^xsd:anyURI .
+
+cc:SRC_Pope1977_Bulgakov a cc:PeriodicalArticle,
+        owl:NamedIndividual ;
+    rdfs:label "Ambiguity and Meaning in The Master and Margarita: The Role of Afranius"@en ;
+    cc:bibliographicCitation "Pope, R. W. F. (1977). Ambiguity and Meaning in The Master and Margarita: The Role of Afranius. Slavic Review, 36(1), 1–24. DOI: 10.2307/2494668." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 1977 ;
+    cc:sourceTitle "Ambiguity and Meaning in The Master and Margarita: The Role of Afranius" ;
+    cc:sourceURL "https://www.cambridge.org/core/journals/slavic-review/article/abs/ambiguity-and-meaning-in-the-master-and-margarita-the-role-of-afranius/C1CC1B17693788E4D6FB2F6E0B1AB372"^^xsd:anyURI .
+
+cc:SRC_Ricordi_BalloCritical a cc:WebSource,
+        owl:NamedIndividual ;
+    rdfs:label "Giuseppe Verdi: Un ballo in maschera – Critical Edition"@en ;
+    cc:bibliographicCitation "Narici, I. (ed.). (2000). Giuseppe Verdi: Un ballo in maschera – Critical Edition. Ricordi." ;
+    cc:dataProvenance "documented case" ;
+    cc:publicationYear 2000 ;
+    cc:sourceTitle "Giuseppe Verdi: Un ballo in maschera – Critical Edition" ;
+    cc:sourceURL "https://www.ricordi.com/en-US/Critical-Editions/Verdi-Giuseppe-Critical-Editions/Verdi-Giuseppe-WGV/Verdi-Un-ballo-in-maschera.aspx"^^xsd:anyURI .
 
 cc:SRC_Lance_Metailie a cc:WebSource,
         owl:NamedIndividual ;
