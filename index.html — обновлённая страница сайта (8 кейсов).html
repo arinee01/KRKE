@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ConCreCen — ontology and analysis of how censorship and constraints shape creative practice, with scenarios, competency questions and SPARQL examples." />
+    <title>
+      ConCreCen – Ontology of Constraint-Driven Creativity under Censorship
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- SIDEBAR -->
+  <nav class="sidebar" aria-label="Primary navigation">
+      <a href="#home" class="brand">
+        <div class="brand-icon">
+          <!-- Simple Book Icon SVG -->
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+        </div>
+        ConCreCen
+      </a>
+
+      
+      <ul class="nav-links">
+        <li class="nav-item"><a href="#home"><span class="nav-num">1</span>Project Idea</a></li>
+        <li class="nav-item"><a href="#domain"><span class="nav-num">2</span>Domain</a></li>
+        <li class="nav-item"><a href="#theoretical-framework"><span class="nav-num">3</span>Theoretical Framework</a></li>
+        <li class="nav-item"><a href="#methodology"><span class="nav-num">4</span>Methodology</a></li>
+        <li class="nav-item"><a href="#knowledge-representation"><span class="nav-num">5</span>Knowledge Representation</a></li>
+        <li class="nav-item"><a href="#knowledge-extraction"><span class="nav-num">6</span>Knowledge Extraction</a></li>
+        <li class="nav-item"><a href="#knowledge-graph"><span class="nav-num">7</span>Knowledge Graph</a></li>
+        <li class="nav-item"><a href="#sparql"><span class="nav-num">8</span>SPARQL</a></li>
+        <li class="nav-item"><a href="#case-studies"><span class="nav-num">9</span>Case Studies</a></li>
+        <li class="nav-item"><a href="#evaluation"><span class="nav-num">10</span>Evaluation</a></li>
+        <li class="nav-item"><a href="#conclusions"><span class="nav-num">11</span>Conclusions</a></li>
+        <li class="nav-item"><a href="#bibliography"><span class="nav-num">12</span>Bibliography</a></li>
+        <li class="nav-item"><a href="#downloads"><span class="nav-num">13</span>Downloads</a></li>
+      </ul>
+
+      <div class="repo-link">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            ></path>
+          </svg>
+          GitHub Repository
+        </a>
+      </div>
+    
+    </nav>
+
+    <!-- CONTENT -->
+    <main id="main-content" class="main-content">
+
+      <section id="home" class="section">
+        <h1 class="title-large">ConCreCen</h1>
+        <p class="subtitle-large">Constraint-Driven Creativity under Censorship</p>
+        <p class="kg-eyebrow">1. Project Idea</p>
+        <div class="callout">
+          <p><strong>Research question.</strong> How can censorship constraints and the creative responses to them be formally represented and explored through an ontology and knowledge graph?</p>
+          <p><strong>Hypothesis.</strong> Censorship may function both as a barrier to creative expression and, in some documented cases, as a constraint that prompts alternative creative strategies.</p>
+        </div>
+        <p>
+          ConCreCen models censorship as a process with consequences. A censorship event imposes a constraint on a
+          creative work. The creator may respond to that constraint with a strategy, and that response
+          has an outcome, which can range from suppression to creative adaptation. The project does not try to prove that censorship
+          increases creativity. It records, with sources, the conditions under which creators respond to
+          censorship, the strategies they use, and the outcomes that follow.
+        </p>
+        <pre><code>CensorshipEvent → CensorshipConstraint → CreativeResponse → CreativeStrategy → OutcomeType</code></pre>
+        <div class="home-gallery">
+          <div class="gallery-item">
+            <img src="images/3-94.jpg" alt="Artwork — protest collage" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/ENvCW7IX0AEidDq.jpg"
+              alt="Digital artwork — stylized portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/18d7456004f666bdd7a67c9c0591eda1.jpg"
+              alt="Abstract composition — layered text and image"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/3e9c69de6cedbacf2880b2018247680b.jpg"
+              alt="Photograph — street art fragment"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/4c226c72ebb3b70a0aa174eaa4ee60c9.jpg"
+              alt="Collage — symbolic motifs"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/4fab0b1b0f13e9f0d3cf400f3a0c82d3.jpg"
+              alt="Mixed media — censorship metaphor"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/756a043a0748bcb69802e2dae1e03b1d.jpg"
+              alt="Illustration — coded symbols"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/7fc563ba69de9945072aab417324b7c9.jpg"
+              alt="Poster — protest slogan obscured"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/93328d16730db2584e49062c63c239fd.jpg"
+              alt="Graphic — visual obfuscation example"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/b8cb5802a59f35cc1a50e4ebade42c50.jpg"
+              alt="Photomontage — layered narratives"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/b97dfb8073be4089a0c18eb81a5949fb.jpg"
+              alt="Artwork — visual metaphor for censorship"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/d1aa5f05b236cab31831e3a6aa1d7af6.jpg"
+              alt="Abstract digital piece — fragmented text"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/dff03e91dadb83ec297d85e9321bb435.jpg"
+              alt="Photograph — veiled portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/dff6d82a0ddc1b0f27f104c5ddfb3abd.jpg"
+              alt="Illustration — coded language motif"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="domain" class="section">
+        <h1>2. Domain</h1>
+        <h2>Censorship</h2>
+        <p>
+          Censorship refers to the control, restriction, modification, or suppression of information and creative
+          expression by an authority or institution. In the cultural domain, censorship may affect literature,
+          film, music, visual arts, and other forms of creative production.
+        </p>
+        <p>
+          Censorship can take different forms, including complete bans, removal of specific content, required
+          modifications, restrictions on publication or distribution, and prior approval by censoring authorities.
+        </p>
+        <h2>Creativity under constraints</h2>
+        <p>
+          Creativity does not necessarily occur in conditions of complete freedom. Creative processes often take
+          place within different kinds of limitations, such as technical, economic, social, legal, or institutional
+          constraints.
+        </p>
+        <p>
+          Constraints can reduce the range of available solutions, but they can also lead creators to search for
+          alternative forms of expression.
+        </p>
+      </section>
+
+      <section id="theoretical-framework" class="section">
+        <h1>3. Theoretical Framework</h1>
+        <p>
+          This project investigates the relationship between censorship, constraint, and creative response. Its
+          starting point is an apparent paradox: censorship is primarily intended to restrict expression, yet in
+          some documented cases creators react to such restrictions by modifying their methods of expression,
+          adopting indirect forms of communication, or producing alternative versions of their works.
+        </p>
+        <p>
+          The ontology is based on three complementary theoretical perspectives: Robert Darnton on censorship,
+          Patricia D. Stokes on creativity under constraints, and Brent D. Rosso on the enabling and disabling
+          effects of constraints.
+        </p>
+
+        <h2>Darnton: censorship as an institutional process</h2>
+        <p>
+          In <em>Censors at Work: How States Shaped Literature</em> (2014), Robert Darnton approaches censorship
+          historically and comparatively through cases from eighteenth-century France, nineteenth-century British
+          India, and twentieth-century East Germany. He presents censorship as more than a simple distinction
+          between “allowed” and “forbidden” works, describing it as an institutional process involving
+          authorities, censors, authors, editors, regulations, negotiations, revisions, and bans. This perspective
+          supports modelling censorship as an event or process, rather than as a simple property of a work:
+        </p>
+        <pre><code>CensorshipEvent → targetsWork → CreativeWork
+CensorshipEvent → imposedBy → CensoringAgent
+CensorshipEvent → usesMechanism → CensorshipMechanism</code></pre>
+        <p>
+          Darnton also distinguishes censorship from constraints in general: not every limitation is censorship.
+          This allows the ontology to represent <code>CensorshipConstraint</code> as a specific type of
+          <code>Constraint</code>.
+        </p>
+        <p>
+          His work also shows that censorship may operate through interaction and negotiation rather than only
+          through complete prohibition. In the cases he studies, the relationships between authors, editors,
+          censoring institutions, and cultural production could involve revisions, negotiations, approvals,
+          surveillance, and self-censorship. For this reason, the ontology does not reduce all censorship
+          mechanisms to <code>Ban</code>, but distinguishes <code>Ban</code>, <code>Removal</code>,
+          <code>Redaction</code>, <code>ModificationRequirement</code>, <code>DistributionRestriction</code>,
+          <code>PublicationRestriction</code>, <code>PriorApproval</code> and <code>SelfCensorship</code>.
+        </p>
+
+        <h2>Stokes: creativity from constraints</h2>
+        <p>
+          The second and central theoretical component is Patricia D. Stokes’s model of creativity from
+          constraints. In “Creativity from Constraints: What Can We Learn from Motherwell? From Mondrian? From
+          Klee?” (2008), Stokes presents creativity as a form of problem solving structured by constraints. Her
+          model directly questions the intuitive assumption that creativity requires maximum freedom. Stokes
+          describes a system of paired constraints: one constraint can preclude or limit the search among
+          familiar and reliable solutions, while another can promote or direct the search toward novel
+          alternatives. In simplified form:
+        </p>
+        <pre><code>Constraint → blocks a conventional solution → encourages search for alternatives</code></pre>
+        <p>
+          Applied to censorship, a restriction on direct expression may lead a creator to use another strategy,
+          such as metaphor, allegory, symbolism, or indirect representation. In the ontology this is represented
+          by <code>Constraint</code>, <code>CreativeResponse</code>, <code>CreativeStrategy</code> and
+          <code>OutcomeType</code>, and by the relations <code>imposesConstraint</code>, <code>respondsTo</code>,
+          <code>usesStrategy</code> and <code>hasOutcome</code>.
+        </p>
+        <p>
+          The important point is that the constraint does not automatically create creativity: it changes the
+          space of available solutions. A previously available solution becomes unavailable or less accessible,
+          potentially forcing or encouraging the search for another solution. Censorship is therefore modelled
+          not merely as an act of suppression but as a change in the conditions under which creative problem
+          solving takes place.
+        </p>
+
+        <h2>Rosso: enabling and disabling constraints</h2>
+        <p>
+          Brent D. Rosso’s “Creativity and Constraints” (2014) adds an important qualification: constraints do
+          not always improve creativity. Depending on their type and context, they may have either enabling or
+          disabling effects. For this reason, the ontology does not assume <code>Censorship → causes →
+          Creativity</code>. Instead, it represents multiple possible outcomes:
+        </p>
+        <pre><code>CensorshipConstraint → CreativeResponse → hasOutcome → CreativeAdaptation
+CensorshipConstraint → CreativeResponse → hasOutcome → Suppression</code></pre>
+        <p>This makes the model conditional rather than deterministic.</p>
+
+        <h2>Conceptual model</h2>
+        <pre><code>Censorship Event → Constraint → Creative Response → Creative Strategy → Outcome</code></pre>
+        <p>
+          Darnton explains who censors, what is censored, and how censorship operates. Stokes explains how
+          constraints can redirect creative problem solving. Rosso explains why constraints may either stimulate
+          adaptation or suppress creativity. The ontology therefore does not attempt to prove that censorship
+          increases creativity. Instead, it models the conditions under which creators respond to censorship, the
+          strategies they use, and the outcomes that follow.
+        </p>
+      </section>
+
+      <section id="methodology" class="section">
+        <h1>4. Methodology</h1>
+        <h2>Scope</h2>
+        <p>
+          The knowledge graph covers documented cases of censorship of creative works in three media (literature,
+          music and film) and three censorship regimes: the German Democratic Republic, the Soviet Union and the
+          Hollywood Production Code. Together they span the period from 1936 to 1985. A case is included only if at least the censorship event is documented in
+          a scholarly or documentary source. A creative response is recorded only if a source documents it. If
+          a source reports a ban without a response, the case is recorded as an event without a response, not
+          as an inferred adaptation.
+        </p>
+        <h2>Sources</h2>
+        <p>
+          The 25 sources include scholarly monographs and chapters (Frolova-Walker & Walker; Billheimer;
+          Guibert-Yeche; Curtis), peer-reviewed articles (Szabó; Giger; Rosenshield; Pope), historical and critical
+          articles (Darnton in <em>The New York Review of Books</em>, Höpcke in <em>Die Weltbühne</em>), and
+          institutional web sources: festival documentation (Cannes), museum documentation (Nolde Museum Seebüll,
+          National Gallery of Ireland), the American Film Institute catalog, opera-house and critical-edition
+          materials (Metropolitan Opera, Ricordi), and human-rights reporting (Center for Human Rights in Iran).
+          Wikipedia entries were used only for orientation and are marked as tertiary sources. The full list is available in <a href="#bibliography">Bibliography</a>.
+        </p>
+        <h2>Extraction</h2>
+        <p>
+          Facts were extracted manually into a fixed template (<code>cases.csv</code>), with one row per
+          event–response pair. Every relation between a censorship event and a creative response is stored as a
+          <code>Claim</code> with its supporting sources and a confidence level (high or medium). Interpretations
+          that remain contested in the literature have medium confidence. An LLM assistant was used to search for
+          and summarise sources and to draft Turtle code. Every fact entered into the dataset was checked against
+          the cited source.
+        </p>
+        <h2>Ontology design methodology</h2>
+        <p>
+          The ontology was developed iteratively and driven by competency questions, following the eXtreme
+          Design approach:
+        </p>
+        <ol>
+          <li><strong>Theory → competency questions.</strong> The ten CQs were derived from the theoretical framework.</li>
+          <li><strong>Core TBox (v1).</strong> The classes and properties needed by the CQs were modelled in OWL and edited and inspected in WebProtégé, together with a synthetic test case.</li>
+          <li><strong>Revision (v2).</strong> The domain of <code>hasOutcome</code> was narrowed from <code>Event</code> to <code>CreativeResponse</code>, because an outcome belongs to a creator’s response, not to the act of censorship. English and Russian labels and definitions were added to all entities.</li>
+          <li><strong>Population and refinement (v2.1).</strong> Populating the graph with real cases required new controlled values (<code>Irony</code>, <code>ParatextualFraming</code>, <code>Fragmentation</code>, <code>StylisticRestriction</code>), a <code>resultsInWork</code> relation and subclasses of <code>Source</code>.</li>
+          <li><strong>Extension (v2.2).</strong> Five further cases added two modelling distinctions: an ongoing <code>CreativePractice</code> (Panahi, Nolde) can be the target of censorship (<code>targetsPractice</code>), and the range of <code>performedBy</code> was widened from <code>Creator</code> to <code>Agent</code> so that editors and estates (Schlenstedt, Elena Bulgakova) can perform responses. New classes <code>Editor</code> and <code>CreativePractice</code>, new data properties <code>claimText</code> and <code>bibliographicCitation</code>, and the duplicate relation <code>producesWork</code> was unified into <code>resultsInWork</code>.</li>
+          <li><strong>Validation.</strong> The HermiT reasoner checked consistency, and the CQs were run as SPARQL queries (see <a href="#evaluation">Evaluation</a>).</li>
+        </ol>
+        <p class="kg-meta">Years are typed as <code>xsd:integer</code> rather than <code>xsd:gYear</code>, because <code>gYear</code> is not part of the OWL 2 datatype map supported by HermiT.</p>
+      </section>
+
+      <section id="knowledge-representation" class="section">
+        <h1>5. Knowledge Representation</h1>
+        <p>
+          The ConCreCen core ontology (v2.2, namespace <code>http://example.org/censorcreate#</code>) contains
+          35 classes, 21 object properties, 11 data properties and four controlled
+          vocabularies. All of them are described below. An interactive view is in <a href="#knowledge-graph">Knowledge Graph</a>.
+        </p>
+        <h2>5.1 Competency questions</h2>
+        <ol class="competency-questions"><li><div class="cq-question">Which creative works were subjected to censorship?</div><div class="cq-entities">Entities/relations: <code>CensorshipEvent</code>, <code>targetsWork</code>, <code>CreativeWork</code></div></li><li><div class="cq-question">Who or which institution imposed censorship on a work?</div><div class="cq-entities">Entities/relations: <code>imposedBy</code>, <code>CensoringAgent</code></div></li><li><div class="cq-question">Which censorship mechanism was used?</div><div class="cq-entities">Entities/relations: <code>usesMechanism</code>, <code>CensorshipMechanism</code></div></li><li><div class="cq-question">What element or aspect of the work was constrained?</div><div class="cq-entities">Entities/relations: <code>imposesConstraint</code>, <code>constrainsElement</code>, <code>WorkElement</code></div></li><li><div class="cq-question">What constraint resulted from the censorship event?</div><div class="cq-entities">Entities/relations: <code>CensorshipConstraint</code>, <code>hasConstraintType</code>, <code>ConstraintType</code></div></li><li><div class="cq-question">How did the creator respond to the constraint?</div><div class="cq-entities">Entities/relations: <code>hasResponse</code>, <code>CreativeResponse</code>, <code>respondsTo</code>, <code>performedBy</code></div></li><li><div class="cq-question">Which creative strategy was used in the response?</div><div class="cq-entities">Entities/relations: <code>usesStrategy</code>, <code>CreativeStrategy</code></div></li><li><div class="cq-question">What was the outcome: adaptation, modification, suppression, abandonment, etc.?</div><div class="cq-entities">Entities/relations: <code>hasOutcome</code>, <code>OutcomeType</code></div></li><li><div class="cq-question">Which creative strategies recur across different media or censorship mechanisms?</div><div class="cq-entities">Entities/relations: <code>usesStrategy</code>, <code>CreativeWork subclasses</code>, <code>usesMechanism</code></div></li><li><div class="cq-question">Which sources support the claimed relationship between a censorship event and a creative response?</div><div class="cq-entities">Entities/relations: <code>Claim</code>, <code>aboutCensorshipEvent</code>, <code>aboutCreativeResponse</code>, <code>supportedBy</code>, <code>Source</code></div></li></ol>
+        <h2>5.2 Classes</h2>
+        <div class="kg-table-wrap"><table class="results-table"><thead><tr><th>Class</th><th>Subclass of</th><th>Definition</th></tr></thead><tbody><tr><td><code>AdaptiveCreativeResponse</code></td><td>CreativeResponse</td><td>A creative response that uses at least one creative strategy and has the outcome CreativeAdaptation. Membership is inferred by a reasoner.</td></tr><tr><td><code>Agent</code></td><td>—</td><td>A person, group, or institution that can act in a censorship or creative process.</td></tr><tr><td><code>AudioElement</code></td><td>WorkElement</td><td>A sound, musical passage, or spoken audio component of a creative work.</td></tr><tr><td><code>Book</code></td><td>Source</td><td>A monograph or edited volume used as a source. Added in v2.1.</td></tr><tr><td><code>BookChapter</code></td><td>Source</td><td>A chapter in an edited or collected volume used as a source. Added in v2.1.</td></tr><tr><td><code>CensoredWork</code></td><td>CreativeWork</td><td>A creative work that is the target of at least one censorship event. Membership is inferred by a reasoner.</td></tr><tr><td><code>CensoringAgent</code></td><td>Agent</td><td>An agent who imposes or carries out censorship, such as a censor, editor, publisher, board, or platform.</td></tr><tr><td><code>CensoringAuthority</code></td><td>CensoringAgent</td><td>An institutional censoring agent with formal power to approve, restrict, or prohibit creative works, such as a state censorship office or official board.</td></tr><tr><td><code>CensorshipConstraint</code></td><td>Constraint</td><td>A constraint imposed by a censorship event. Not every constraint is censorship; this class covers only constraints resulting from censorship.</td></tr><tr><td><code>CensorshipEvent</code></td><td>Event</td><td>A documented act or process of censorship affecting a creative work, carried out by a censoring agent through a censorship mechanism.</td></tr><tr><td><code>CensorshipMechanism</code></td><td>—</td><td>A method through which censorship is applied to a creative work, such as a ban, removal, or required modification.</td></tr><tr><td><code>Claim</code></td><td>—</td><td>A statement linking a censorship event and a creative response, supported by one or more sources. Used to make the evidence for each relation explicit.</td></tr><tr><td><code>Constraint</code></td><td>—</td><td>A limitation on the range of available solutions in a creative process. Constraints may be technical, economic, social, legal, or institutional.</td></tr><tr><td><code>ConstraintType</code></td><td>—</td><td>A controlled category describing what a censorship constraint restricts, for example content, subject, or direct representation.</td></tr><tr><td><code>CreativePractice</code></td><td>—</td><td>An ongoing creative activity of a creator, such as a filmmaking or painting practice, which can itself be the target of censorship. Added in v2.2.</td></tr><tr><td><code>CreativeResponse</code></td><td>Event</td><td>A documented action of a creator in reaction to a censorship constraint, for example revising, encoding, relocating, or abandoning a work.</td></tr><tr><td><code>CreativeStrategy</code></td><td>—</td><td>A method of expression a creator uses within a creative response, such as allegory, metaphor, or indirect representation.</td></tr><tr><td><code>CreativeWork</code></td><td>—</td><td>A product of creative activity, such as a literary work, film, musical work, or visual artwork.</td></tr><tr><td><code>Creator</code></td><td>Agent</td><td>An agent who creates a creative work: an author, filmmaker, composer, visual artist, or similar.</td></tr><tr><td><code>Editor</code></td><td>Agent</td><td>An agent who shapes a work for publication or performance, such as a literary editor or estate representative, and may perform a creative response. Added in v2.2.</td></tr><tr><td><code>Event</code></td><td>—</td><td>Something that happens at a certain time and involves agents and creative works.</td></tr><tr><td><code>Film</code></td><td>CreativeWork</td><td>A creative work expressed as a motion picture.</td></tr><tr><td><code>LiteraryWork</code></td><td>CreativeWork</td><td>A creative work expressed primarily in written language: novel, poem, play, essay, and similar.</td></tr><tr><td><code>MusicalWork</code></td><td>CreativeWork</td><td>A creative work expressed primarily through music, with or without lyrics.</td></tr><tr><td><code>OutcomeType</code></td><td>—</td><td>A controlled category describing the result of a creative response, ranging from suppression to creative adaptation.</td></tr><tr><td><code>PeriodicalArticle</code></td><td>Source</td><td>An article in a journal, review, magazine, or newspaper. Added in v2.1.</td></tr><tr><td><code>Scene</code></td><td>WorkElement</td><td>A distinct scene or episode of a film, play, or narrative.</td></tr><tr><td><code>Source</code></td><td>—</td><td>A documentary or scholarly source (book, article, archival document, interview, etc.) that provides evidence about events and responses.</td></tr><tr><td><code>TextualElement</code></td><td>WorkElement</td><td>A word, passage, line, title, or lyric within a creative work.</td></tr><tr><td><code>Theme</code></td><td>WorkElement</td><td>A subject, idea, or topic addressed by a creative work.</td></tr><tr><td><code>VisualArtwork</code></td><td>CreativeWork</td><td>A creative work expressed primarily through visual means: painting, drawing, photograph, sculpture, installation, and similar.</td></tr><tr><td><code>VisualElement</code></td><td>WorkElement</td><td>An image, shot, symbol, or other visual component of a creative work.</td></tr><tr><td><code>WebSource</code></td><td>Source</td><td>A web page such as a publisher page, programme note, or encyclopedia entry. Tertiary web sources are used for orientation only. Added in v2.1.</td></tr><tr><td><code>WorkElement</code></td><td>—</td><td>A part or aspect of a creative work that can be targeted by a constraint.</td></tr><tr><td><code>WorkVersion</code></td><td>CreativeWork</td><td>A specific version of a creative work, for example a revised, cut, re-edited, or alternative version produced in response to censorship.</td></tr></tbody></table></div>
+        <h2>5.3 Object properties</h2>
+        <div class="kg-table-wrap"><table class="results-table"><thead><tr><th>Property</th><th>Domain</th><th>Range</th><th>Definition</th></tr></thead><tbody><tr><td><code>aboutCensorshipEvent</code></td><td>Claim</td><td>CensorshipEvent</td><td>Links a claim to the censorship event it concerns.</td></tr><tr><td><code>aboutCreativeResponse</code></td><td>Claim</td><td>CreativeResponse</td><td>Links a claim to the creative response it concerns.</td></tr><tr><td><code>constrainsElement</code></td><td>CensorshipConstraint</td><td>WorkElement</td><td>Links a censorship constraint to the specific element of a work it restricts.</td></tr><tr><td><code>createdBy</code></td><td>CreativeWork</td><td>Creator</td><td>Links a creative work to its creator.</td></tr><tr><td><code>documentedBy</code></td><td>Event</td><td>Source</td><td>Links a censorship event or creative response to a source that documents it.</td></tr><tr><td><code>hasConstraintType</code></td><td>CensorshipConstraint</td><td>ConstraintType</td><td>Classifies a censorship constraint by what it restricts.</td></tr><tr><td><code>hasOutcome</code></td><td>CreativeResponse</td><td>OutcomeType</td><td>Links a creative response to its outcome. In v2 the domain is CreativeResponse (previously Event).</td></tr><tr><td><code>hasResponse</code></td><td>CensorshipEvent</td><td>CreativeResponse</td><td>Links a censorship event to a documented creative response to it.</td></tr><tr><td><code>imposedBy</code></td><td>CensorshipEvent</td><td>CensoringAgent</td><td>Links a censorship event to the censoring agent responsible for it.</td></tr><tr><td><code>imposesConstraint</code></td><td>CensorshipEvent</td><td>CensorshipConstraint</td><td>Links a censorship event to the constraint it creates for the creator.</td></tr><tr><td><code>isTargetOf</code></td><td>CreativeWork</td><td>CensorshipEvent</td><td>Inverse of targetsWork: links a creative work to a censorship event that affects it.</td></tr><tr><td><code>performedBy</code></td><td>CreativeResponse</td><td>Agent</td><td>Links a creative response to the agent who carried it out. Widened from Creator to Agent in v2.2, because responses may be performed by editors or estate representatives.</td></tr><tr><td><code>producesVersion</code></td><td>CreativeResponse</td><td>WorkVersion</td><td>Links a creative response to a new version of the work that resulted from it.</td></tr><tr><td><code>respondsTo</code></td><td>CreativeResponse</td><td>CensorshipConstraint</td><td>Links a creative response to the censorship constraint it reacts to.</td></tr><tr><td><code>resultsInWork</code></td><td>CreativeResponse</td><td>CreativeWork</td><td>Links a creative response to a new, separate creative work that resulted from it (for a new version of the same work use producesVersion). Added in v2.1.</td></tr><tr><td><code>supportedBy</code></td><td>Claim</td><td>Source</td><td>Links a claim to a source that supports it.</td></tr><tr><td><code>targetsPractice</code></td><td>CensorshipEvent</td><td>CreativePractice</td><td>Links a censorship event to an ongoing creative practice it restricts (for example a filmmaking ban). Added in v2.2.</td></tr><tr><td><code>targetsWork</code></td><td>CensorshipEvent</td><td>CreativeWork</td><td>Links a censorship event to the creative work it affects.</td></tr><tr><td><code>usesMechanism</code></td><td>CensorshipEvent</td><td>CensorshipMechanism</td><td>Links a censorship event to the mechanism through which censorship was applied.</td></tr><tr><td><code>usesStrategy</code></td><td>CreativeResponse</td><td>CreativeStrategy</td><td>Links a creative response to the creative strategy used in it.</td></tr><tr><td><code>versionOf</code></td><td>WorkVersion</td><td>CreativeWork</td><td>Links a work version to the original creative work.</td></tr></tbody></table></div>
+        <p class="kg-meta"><code>isTargetOf</code> is declared as the inverse of <code>targetsWork</code>.</p>
+        <h2>5.4 Data properties</h2>
+        <div class="kg-table-wrap"><table class="results-table"><thead><tr><th>Property</th><th>Domain</th><th>Datatype</th><th>Definition</th></tr></thead><tbody><tr><td><code>bibliographicCitation</code></td><td>Source</td><td>xsd:string</td><td>A full bibliographic reference for a source, including page numbers where relevant.</td></tr><tr><td><code>claimText</code></td><td>Claim</td><td>xsd:string</td><td>The statement made by the claim, in plain language.</td></tr><tr><td><code>confidenceLevel</code></td><td>Claim</td><td>xsd:string</td><td>How strongly the sources support the claim: high, medium, or low.</td></tr><tr><td><code>creationYear</code></td><td>CreativeWork</td><td>xsd:integer</td><td>The year a creative work was created or completed.</td></tr><tr><td><code>dataProvenance</code></td><td>owl:Thing</td><td>xsd:string</td><td>Marks whether an individual is documented (real case), synthetic (test or AI-generated), or a template.</td></tr><tr><td><code>description</code></td><td>owl:Thing</td><td>xsd:string</td><td>A short free-text description of an individual (event, response, constraint, element).</td></tr><tr><td><code>eventDate</code></td><td>Event</td><td>xsd:integer</td><td>The year a censorship event or creative response took place (recorded as a year).</td></tr><tr><td><code>publicationYear</code></td><td>Source</td><td>xsd:integer</td><td>The year a source was published.</td></tr><tr><td><code>sourceTitle</code></td><td>Source</td><td>xsd:string</td><td>The title of a source.</td></tr><tr><td><code>sourceURL</code></td><td>Source</td><td>xsd:anyURI</td><td>A web address where the source can be accessed.</td></tr><tr><td><code>title</code></td><td>CreativeWork</td><td>xsd:string</td><td>The title of a creative work.</td></tr></tbody></table></div>
+        <h2>5.5 Controlled vocabularies</h2>
+        <p>Mechanisms, constraint types, strategies and outcomes are modelled as named individuals of their classes, so that they can be reused across cases and counted in queries.</p>
+        <div class="kg-table-wrap"><table class="results-table"><thead><tr><th>Class</th><th>Values</th></tr></thead><tbody><tr><td><code>CensorshipMechanism</code></td><td><code>Ban</code>, <code>DistributionRestriction</code>, <code>ModificationRequirement</code>, <code>PriorApproval</code>, <code>PublicationRestriction</code>, <code>Redaction</code>, <code>Removal</code>, <code>SelfCensorship</code></td></tr><tr><td><code>ConstraintType</code></td><td><code>ContentRestriction</code>, <code>DirectRepresentationRestriction</code>, <code>ExpressionRestriction</code>, <code>MaterialRestriction</code>, <code>ProfessionalPracticeRestriction</code>, <code>PublicationRestrictionConstraint</code>, <code>StylisticRestriction</code>, <code>SubjectRestriction</code></td></tr><tr><td><code>CreativeStrategy</code></td><td><code>AesopianLanguage</code>, <code>Allegory</code>, <code>AlternativePublication</code>, <code>Ambiguity</code>, <code>CharacterTransformation</code>, <code>Circumvention</code>, <code>Euphemism</code>, <code>Fragmentation</code>, <code>HistoricalDisplacement</code>, <code>IndirectRepresentation</code>, <code>InstitutionalCircumvention</code>, <code>Irony</code>, <code>MediumAdaptation</code>, <code>Metaphor</code>, <code>MinimalProduction</code>, <code>NarrativeModification</code>, <code>NarrativeTransposition</code>, <code>ParatextualFraming</code>, <code>Satire</code>, <code>SecretProduction</code>, <code>SelfReflexivity</code>, <code>Symbolism</code>, <code>TextualRestoration</code></td></tr><tr><td><code>OutcomeType</code></td><td><code>Abandonment</code>, <code>AlternativeVersionProduced</code>, <code>CreativeAdaptation</code>, <code>Modification</code>, <code>Suppression</code>, <code>UnpublishedWork</code></td></tr></tbody></table></div>
+        <h2>5.6 Defined classes</h2>
+        <ul>
+          <li><code>CensoredWork</code> ≡ <code>CreativeWork</code> and (<code>isTargetOf</code> some <code>CensorshipEvent</code>)</li>
+          <li><code>AdaptiveCreativeResponse</code> ≡ <code>CreativeResponse</code> and (<code>usesStrategy</code> some <code>CreativeStrategy</code>) and (<code>hasOutcome</code> value <code>CreativeAdaptation</code>)</li>
+        </ul>
+        <p>These classes are not asserted. The reasoner infers their members from the data.</p>
+        <h2>5.7 Ontology in WebProtégé</h2>
+        <p>The ontology was edited and inspected in WebProtégé. <span class="kg-muted">[Add screenshots of the class hierarchy and the object properties here.]</span></p>
+      </section>
+
+      <section id="knowledge-extraction" class="section">
+        <h1>6. Knowledge Extraction</h1>
+        <h2>6.1 Corpus</h2>
+        <p>The corpus consists of 25 sources about eight cases (see <a href="#bibliography">Bibliography</a>). Each source is typed as <code>Book</code>, <code>BookChapter</code>, <code>PeriodicalArticle</code> or <code>WebSource</code>.</p>
+        <h2>6.2 Extraction pipeline</h2>
+        <pre><code>Sources → manual extraction → cases.csv + sources.csv → build_kg.py (Python, rdflib) → cases-triples.ttl
+       → merge with TBox → censorcreate-v2.2-with-cases.owl → HermiT reasoner → SPARQL (CQ1–CQ10)</code></pre>
+        <h2>6.3 Dataset</h2>
+        <p><code>cases.csv</code> contains 15 rows, one per event–response pair. A row without a response records a documented event with no documented creative response (for example the suppressed release cut of <em>A Streetcar Named Desire</em>). Multiple values are separated by semicolons. Rows whose <code>work_type</code> is <code>CreativePractice</code> (Panahi, Nolde) target an ongoing creative practice rather than a single work, and are linked with <code>targetsPractice</code>.</p>
+        <div class="kg-table-wrap"><table class="data-table"><thead><tr><th>Column</th><th>Content</th></tr></thead><tbody><tr><td><code>case_id</code></td><td>Case identifier</td></tr><tr><td><code>work_*</code></td><td>Work: id, title, type (class), creation year</td></tr><tr><td><code>creator_*</code></td><td>Creator id and name</td></tr><tr><td><code>event_*</code></td><td>Censorship event: id, description, year</td></tr><tr><td><code>agent_*</code></td><td>Censoring agent: id, name, type</td></tr><tr><td><code>mechanisms</code></td><td>One or more CensorshipMechanism values</td></tr><tr><td><code>constraint_*</code></td><td>Constraint: id, type(s), description</td></tr><tr><td><code>element_*</code></td><td>Constrained work element: id, type, description</td></tr><tr><td><code>response_*</code></td><td>Creative response: id, description, year</td></tr><tr><td><code>performer_*</code></td><td>Agent who performed the response</td></tr><tr><td><code>strategies</code></td><td>One or more CreativeStrategy values</td></tr><tr><td><code>outcome</code></td><td>OutcomeType value</td></tr><tr><td><code>result_*</code></td><td>Resulting work or work version</td></tr><tr><td><code>claim_*</code></td><td>Claim id and text</td></tr><tr><td><code>confidence</code></td><td>high / medium / low</td></tr><tr><td><code>sources</code></td><td>Source ids (see sources.csv)</td></tr></tbody></table></div>
+        <h2>6.4 Validation</h2>
+        <ul>
+          <li><strong>Source check.</strong> Every claim is linked to at least one source. Dates and quotations were checked against the cited source.</li>
+          <li><strong>Provenance.</strong> Every individual carries <code>dataProvenance</code> (“documented case” or “synthetic test individual”). Synthetic data is excluded from all queries.</li>
+          <li><strong>Logical check.</strong> The merged ontology is consistent under HermiT (see <a href="#evaluation">Evaluation</a>).</li>
+        </ul>
+      </section>
+
+      <section id="knowledge-graph" class="section">
+        <h1>7. Knowledge Graph</h1>
+        <h2>7.1 Interactive visualization</h2>
+        <p>
+          The <strong>Ontology (TBox)</strong> view shows the classes and the object properties that connect them,
+          from domain to range, with <code>subClassOf</code> as dashed lines. The <strong>Knowledge Graph (ABox)</strong>
+          view shows the documented cases as individuals and their asserted relations.
+        </p>
+        <div class="og-toolbar">
+          <div class="og-tabs" role="tablist">
+            <button class="og-tab active" data-view="ontology" type="button">Ontology (TBox)</button>
+            <button class="og-tab" data-view="kg" type="button">Knowledge Graph (ABox)</button>
+          </div>
+          <label id="og-sub-toggle" class="og-toggle"><input type="checkbox" id="og-sub-cb" checked /> show subClassOf</label>
+          <label id="og-ev-toggle" class="og-toggle"><input type="checkbox" id="og-ev-cb" /> show sources &amp; claims</label>
+          <button id="og-fit" class="og-btn" type="button">Fit to view</button>
+          <span id="og-counts" class="kg-meta"></span>
+        </div>
+        <div class="og-layout">
+          <div id="og-canvas" class="og-canvas"></div>
+          <aside id="og-info" class="og-info"></aside>
+        </div>
+        <div id="og-legend" class="og-legend"></div>
+        <p class="kg-meta">Drag nodes to rearrange, scroll to zoom, and click a node to highlight its neighbourhood. Generated from <a href="downloads/censorcreate-v2.2-with-cases.ttl">censorcreate-v2.2-with-cases.ttl</a>.</p>
+        <h2>7.2 Statistics</h2>
+        <div class="kg-stats"><div class="kg-stat"><div class="kg-stat-num">10</div><div class="kg-stat-label">censored works & practices</div></div><div class="kg-stat"><div class="kg-stat-num">14</div><div class="kg-stat-label">censorship events</div></div><div class="kg-stat"><div class="kg-stat-num">13</div><div class="kg-stat-label">creative responses</div></div><div class="kg-stat"><div class="kg-stat-num">15</div><div class="kg-stat-label">evidence claims</div></div><div class="kg-stat"><div class="kg-stat-num">25</div><div class="kg-stat-label">sources</div></div><div class="kg-stat"><div class="kg-stat-num">1634</div><div class="kg-stat-label">triples (schema + data)</div></div></div>
+      </section>
+
+      <section id="sparql" class="section">
+        <h1>8. SPARQL</h1>
+        <p>
+          Each competency question is a SPARQL query over the merged ontology and knowledge graph. The queries use asserted
+          triples only, and synthetic test individuals are excluded. The query files are on the
+          <a href="#downloads">Downloads</a> page.
+        </p>
+        <div class="kg-cq">
+<h3>CQ1. Which creative works (and practices) were subjected to censorship?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq01_censored_works.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT DISTINCT ?work ?title ?year WHERE {
+  { ?event a cc:CensorshipEvent ; cc:targetsWork ?work }
+  UNION
+  { ?event a cc:CensorshipEvent ; cc:targetsPractice ?work }
+  ?work cc:title ?title .
+  OPTIONAL { ?work cc:creationYear ?year }
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+ORDER BY ?year ?title
+</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>work</th><th>title</th><th>year</th></tr></thead><tbody><tr><td>NoldeArtisticPractice</td><td>Emil Nolde's artistic practice</td><td></td></tr><tr><td>PanahiFilmmakingPractice</td><td>Jafar Panahi's filmmaking practice</td><td></td></tr><tr><td>LadyMacbethMtsensk</td><td>Lady Macbeth of the Mtsensk District</td><td>1932</td></tr><tr><td>ShostakovichSymphony4</td><td>Symphony No. 4 in C minor, Op. 43</td><td>1936</td></tr><tr><td>MasterAndMargarita</td><td>The Master and Margarita</td><td>1940</td></tr><tr><td>Notorious1946</td><td>Notorious</td><td>1946</td></tr><tr><td>Streetcar1951</td><td>A Streetcar Named Desire</td><td>1951</td></tr><tr><td>HinzeKunzeRoman</td><td>Hinze-Kunze-Roman</td><td>1981</td></tr><tr><td>GustavoIII_OperaProject</td><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>1857-1858</td></tr><tr><td>MasterAndMargarita</td><td>The Master and Margarita</td><td>1928-1940</td></tr></tbody></table></div>
+<p class="kg-meta">10 result rows</p></div><div class="kg-cq">
+<h3>CQ2. Who or which institution imposed censorship on a work?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq02_censoring_agents.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?event ?agentName WHERE {
+  { ?event cc:targetsWork ?work } UNION { ?event cc:targetsPractice ?work }
+  ?event cc:imposedBy ?agent .
+  ?work cc:title ?title .
+  ?agent rdfs:label ?agentName .
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+ORDER BY ?title
+</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>event</th><th>agentName</th></tr></thead><tbody><tr><td>A Streetcar Named Desire</td><td>EV_Streetcar_LegionCuts1951</td><td>Catholic Legion of Decency, with MPAA involvement</td></tr><tr><td>A Streetcar Named Desire</td><td>EV_Streetcar_PCAReview1950</td><td>Production Code Administration (MPAA)</td></tr><tr><td>A Streetcar Named Desire</td><td>EV_Streetcar_PCAReview1950</td><td>Production Code Administration (headed by Joseph Breen)</td></tr><tr><td>Emil Nolde's artistic practice</td><td>EV_Nolde_ProfessionalBan1941</td><td>Reich Chamber of Fine Arts (Reichskammer der bildenden Künste)</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>EV_Ballo_RomeCensorship1858</td><td>Censors of the Papal States in Rome</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>EV_Ballo_NaplesCensorship1858</td><td>Censors of the Kingdom of Naples</td></tr><tr><td>Hinze-Kunze-Roman</td><td>EV_HKR_PrintApproval</td><td>Hauptverwaltung Verlage und Buchhandel (GDR Ministry of Culture)</td></tr><tr><td>Jafar Panahi's filmmaking practice</td><td>EV_Panahi_2010FilmmakingBan</td><td>Branch 26 of the Tehran Revolutionary Court / Iranian judiciary</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>EV_Pravda1936</td><td>Pravda (Communist Party newspaper; editorial expressing the official Party line)</td></tr><tr><td>Notorious</td><td>EV_Notorious_PCAReview</td><td>Production Code Administration (MPAA)</td></tr><tr><td>Notorious</td><td>EV_Notorious_PCAReview</td><td>Production Code Administration (headed by Joseph Breen)</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>EV_Sym4_Cancellation</td><td>Union of Soviet Composers and Party officials</td></tr><tr><td>The Master and Margarita</td><td>EV_Bulgakov_LiterarySuppression1930s</td><td>Soviet literary and censorship establishment</td></tr><tr><td>The Master and Margarita</td><td>EV_MasterMargarita_MoskvaCensorship1966</td><td>Soviet censorship and the editors of Moskva</td></tr></tbody></table></div>
+<p class="kg-meta">14 result rows</p></div><div class="kg-cq">
+<h3>CQ3. Which censorship mechanism was used?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq03_mechanisms.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?event ?mechanism WHERE {
+  { ?event cc:targetsWork ?work } UNION { ?event cc:targetsPractice ?work }
+  ?event cc:usesMechanism ?m .
+  ?work cc:title ?title .
+  ?m rdfs:label ?mechanism . FILTER(lang(?mechanism) = "en")
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+ORDER BY ?title ?event
+</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>event</th><th>mechanism</th></tr></thead><tbody><tr><td>A Streetcar Named Desire</td><td>EV_Streetcar_LegionCuts1951</td><td>Removal</td></tr><tr><td>A Streetcar Named Desire</td><td>EV_Streetcar_LegionCuts1951</td><td>Modification requirement</td></tr><tr><td>A Streetcar Named Desire</td><td>EV_Streetcar_PCAReview1950</td><td>Modification requirement</td></tr><tr><td>A Streetcar Named Desire</td><td>EV_Streetcar_PCAReview1950</td><td>Prior approval</td></tr><tr><td>Emil Nolde's artistic practice</td><td>EV_Nolde_ProfessionalBan1941</td><td>Ban</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>EV_Ballo_NaplesCensorship1858</td><td>Prior approval</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>EV_Ballo_NaplesCensorship1858</td><td>Modification requirement</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>EV_Ballo_RomeCensorship1858</td><td>Modification requirement</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>EV_Ballo_RomeCensorship1858</td><td>Prior approval</td></tr><tr><td>Hinze-Kunze-Roman</td><td>EV_HKR_DistributionStop</td><td>Distribution restriction</td></tr><tr><td>Hinze-Kunze-Roman</td><td>EV_HKR_PrintApproval</td><td>Modification requirement</td></tr><tr><td>Hinze-Kunze-Roman</td><td>EV_HKR_PrintApproval</td><td>Prior approval</td></tr><tr><td>Jafar Panahi's filmmaking practice</td><td>EV_Panahi_2010FilmmakingBan</td><td>Ban</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>EV_Pravda1936</td><td>Removal</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>EV_Pravda1936</td><td>Ban</td></tr><tr><td>Notorious</td><td>EV_Notorious_PCAReview</td><td>Prior approval</td></tr><tr><td>Notorious</td><td>EV_Notorious_PCAReview</td><td>Modification requirement</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>EV_Sym4_Cancellation</td><td>Ban</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>EV_Sym4_Cancellation</td><td>Self-censorship</td></tr><tr><td>The Master and Margarita</td><td>EV_Bulgakov_LiterarySuppression1930s</td><td>Publication restriction</td></tr><tr><td>The Master and Margarita</td><td>EV_MasterMargarita_MoskvaCensorship1966</td><td>Redaction</td></tr><tr><td>The Master and Margarita</td><td>EV_MasterMargarita_MoskvaCensorship1966</td><td>Publication restriction</td></tr></tbody></table></div>
+<p class="kg-meta">22 result rows</p></div><div class="kg-cq">
+<h3>CQ4. What element or aspect of the work was constrained?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq04_constrained_elements.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?elementType ?element WHERE {
+  { ?event cc:targetsWork ?work } UNION { ?event cc:targetsPractice ?work }
+  ?event cc:imposesConstraint ?c .
+  ?c cc:constrainsElement ?el .
+  ?el a ?t ; cc:description ?element .
+  ?t rdfs:subClassOf cc:WorkElement ; rdfs:label ?elementType . FILTER(lang(?elementType) = "en")
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>elementType</th><th>element</th></tr></thead><tbody><tr><td>Lady Macbeth of the Mtsensk District</td><td>Audio element</td><td>Dissonant, modernist musical idiom of Lady Macbeth (and of the Fourth Symphony in progress).</td></tr><tr><td>Hinze-Kunze-Roman</td><td>Theme</td><td>Ironic portrayal of a Party functionary (Kunze) and his chauffeur (Hinze); apparatchik privilege at the heart of the plot.</td></tr><tr><td>A Streetcar Named Desire</td><td>Scene</td><td>Several scenes and lines, including the Stella stairway sequence and dialogue surrounding Stanley's attack on Blanche.</td></tr><tr><td>A Streetcar Named Desire</td><td>Theme</td><td>Allan Grey's homosexuality, Blanche's sexuality, Stanley's rape of Blanche, and the moral consequences of Stanley's actions.</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>Theme</td><td>Historical setting, political status of the protagonist, character identities, and context of the assassination.</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>Theme</td><td>The historical regicide plot based on the assassination of King Gustav III of Sweden.</td></tr><tr><td>Notorious</td><td>Scene</td><td>Love scene between Devlin (Cary Grant) and Alicia (Ingrid Bergman) in her Rio apartment.</td></tr><tr><td>Notorious</td><td>Theme</td><td>Characterisation of Alicia Huberman's sexual morality.</td></tr><tr><td>The Master and Margarita</td><td>Theme</td><td>Satirical and political treatment of Soviet institutions and social life.</td></tr><tr><td>The Master and Margarita</td><td>Textual element</td><td>Politically sensitive passages, references to arrests and the secret police, attacks on the Soviet literary establishment, sexual/nudity material, and other excised text.</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>Audio element</td><td>Dissonant, modernist musical idiom of Lady Macbeth (and of the Fourth Symphony in progress).</td></tr><tr><td>Jafar Panahi's filmmaking practice</td><td>Creative activity</td><td>Film directing and screenplay writing.</td></tr><tr><td>Emil Nolde's artistic practice</td><td>Creative activity</td><td>Professional production and public circulation of visual art.</td></tr></tbody></table></div>
+<p class="kg-meta">13 result rows</p></div><div class="kg-cq">
+<h3>CQ5. What constraint resulted from the censorship event?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq05_constraints.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?event ?constraintType ?constraint WHERE {
+  ?event a cc:CensorshipEvent ;
+         cc:imposesConstraint ?c .
+  ?c cc:hasConstraintType ?ct ;
+     cc:description ?constraint .
+  ?ct rdfs:label ?constraintType . FILTER(lang(?constraintType) = "en")
+}
+ORDER BY ?event
+</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>event</th><th>constraintType</th><th>constraint</th></tr></thead><tbody><tr><td>EV_Ballo_NaplesCensorship1858</td><td>Subject restriction</td><td>A royal assassination and the sovereign status of the protagonist could not be represented in the proposed form.</td></tr><tr><td>EV_Ballo_NaplesCensorship1858</td><td>Direct representation restriction</td><td>A royal assassination and the sovereign status of the protagonist could not be represented in the proposed form.</td></tr><tr><td>EV_Ballo_RomeCensorship1858</td><td>Direct representation restriction</td><td>The central assassination plot could remain only after the sovereign and European political context were transformed.</td></tr><tr><td>EV_Ballo_RomeCensorship1858</td><td>Subject restriction</td><td>The central assassination plot could remain only after the sovereign and European political context were transformed.</td></tr><tr><td>EV_Bulgakov_LiterarySuppression1930s</td><td>Publication restriction</td><td>Political and satirical expression had to be developed in an environment in which Bulgakov could not expect normal publication of original fiction.</td></tr><tr><td>EV_Bulgakov_LiterarySuppression1930s</td><td>Expression restriction</td><td>Political and satirical expression had to be developed in an environment in which Bulgakov could not expect normal publication of original fiction.</td></tr><tr><td>EV_HKR_DistributionStop</td><td>Content restriction</td><td>Circulation of the already published novel halted.</td></tr><tr><td>EV_HKR_PrintApproval</td><td>Subject restriction</td><td>Objections that the irony targets socialism, distorts the concept of freedom and represents the Liebknecht-Luxemburg commemoration unworthily (Neubert report, July 1984).</td></tr><tr><td>EV_MasterMargarita_MoskvaCensorship1966</td><td>Content restriction</td><td>Only a substantially abridged version of the novel could appear in the Soviet journal.</td></tr><tr><td>EV_Nolde_ProfessionalBan1941</td><td>Material restriction</td><td>The professional ban prevented Nolde from officially practising, exhibiting, and selling art and limited his access to normal artistic materials and channels.</td></tr><tr><td>EV_Nolde_ProfessionalBan1941</td><td>Professional practice restriction</td><td>The professional ban prevented Nolde from officially practising, exhibiting, and selling art and limited his access to normal artistic materials and channels.</td></tr><tr><td>EV_Notorious_PCAReview</td><td>Subject restriction</td><td>Alicia must not appear as a 'grossly immoral woman'; any suggestion of sexual promiscuity to be avoided; the word 'tramp' to be removed.</td></tr><tr><td>EV_Notorious_PCAReview</td><td>Direct representation restriction</td><td>Production Code: 'Excessive and lustful kissing ... are not to be shown'; enforced through an unofficial rule of thumb that a screen kiss should not exceed about three seconds.</td></tr><tr><td>EV_Notorious_PCAReview</td><td>Content restriction</td><td>Production Code: 'Excessive and lustful kissing ... are not to be shown'; enforced through an unofficial rule of thumb that a screen kiss should not exceed about three seconds.</td></tr><tr><td>EV_Panahi_2010FilmmakingBan</td><td>Expression restriction</td><td>Panahi was prohibited from making or directing films and from writing screenplays for twenty years.</td></tr><tr><td>EV_Panahi_2010FilmmakingBan</td><td>Professional practice restriction</td><td>Panahi was prohibited from making or directing films and from writing screenplays for twenty years.</td></tr><tr><td>EV_Pravda1936</td><td>Stylistic restriction</td><td>Condemnation of 'formalism': dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works.</td></tr><tr><td>EV_Streetcar_LegionCuts1951</td><td>Content restriction</td><td>Sexual and 'carnal' material had to be reduced or removed for release without condemnation.</td></tr><tr><td>EV_Streetcar_PCAReview1950</td><td>Subject restriction</td><td>The adaptation could not directly represent or clearly state several sexual themes in the same form as the play, and the filmmakers were pressed to alter their treatment.</td></tr><tr><td>EV_Streetcar_PCAReview1950</td><td>Direct representation restriction</td><td>The adaptation could not directly represent or clearly state several sexual themes in the same form as the play, and the filmmakers were pressed to alter their treatment.</td></tr><tr><td>EV_Streetcar_PCAReview1950</td><td>Content restriction</td><td>The adaptation could not directly represent or clearly state several sexual themes in the same form as the play, and the filmmakers were pressed to alter their treatment.</td></tr><tr><td>EV_Sym4_Cancellation</td><td>Stylistic restriction</td><td>Condemnation of 'formalism': dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works.</td></tr></tbody></table></div>
+<p class="kg-meta">22 result rows</p></div><div class="kg-cq">
+<h3>CQ6. How did the creator respond to the constraint?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq06_responses.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?creator ?response ?description WHERE {
+  { ?event cc:targetsWork ?work } UNION { ?event cc:targetsPractice ?work }
+  ?event cc:hasResponse ?response .
+  ?response cc:performedBy ?p ;
+            cc:description ?description .
+  ?p rdfs:label ?creator .
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+ORDER BY ?title
+</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>creator</th><th>response</th><th>description</th></tr></thead><tbody><tr><td>A Streetcar Named Desire</td><td>Tennessee Williams</td><td>RE_Streetcar_ScreenplayRewrite</td><td>Kazan and Williams negotiated and altered the screenplay. Williams rewrote the ending so that Stella appears, somewhat ambiguously, to leave Stanley rather than return to him; other restricted material was handled more indirectly.</td></tr><tr><td>A Streetcar Named Desire</td><td>Elia Kazan</td><td>RE_Streetcar_ScreenplayRewrite</td><td>Kazan and Williams negotiated and altered the screenplay. Williams rewrote the ending so that Stella appears, somewhat ambiguously, to leave Stanley rather than return to him; other restricted material was handled more indirectly.</td></tr><tr><td>Emil Nolde's artistic practice</td><td>Emil Nolde</td><td>RE_Nolde_UnpaintedPictures</td><td>Nolde continued working privately and produced further small-format watercolours in Seebüll. Museum accounts describe these works as being made secretly during the period of prohibition.</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>Antonio Somma</td><td>RE_Ballo_Transposition</td><td>Verdi and Somma transformed the setting and identities while preserving the dramatic structure: Sweden became colonial Boston, Gustav III became Governor Riccardo, and other characters were renamed.</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>Giuseppe Verdi</td><td>RE_Ballo_Transposition</td><td>Verdi and Somma transformed the setting and identities while preserving the dramatic structure: Sweden became colonial Boston, Gustav III became Governor Riccardo, and other characters were renamed.</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>Giuseppe Verdi</td><td>RE_Ballo_LeaveNaples</td><td>Verdi rejected the most drastic demanded alterations, broke the contract with Teatro San Carlo, and moved the project to Rome.</td></tr><tr><td>Hinze-Kunze-Roman</td><td>Volker Braun</td><td>RE_HKR_IronicNarration</td><td>Braun frames the critique in an ironic, Diderot-like master-servant narrative with an intrusive narrator who comments on what 'cannot be said directly'.</td></tr><tr><td>Hinze-Kunze-Roman</td><td>Dieter Schlenstedt</td><td>RE_HKR_Lesehilfe</td><td>Dieter Schlenstedt, one of the manuscript's first reviewers, writes an appended 'schöngeistige Lesehilfe': five fictional letters that ironise the review process and guide readers; the text was meant both to placate the censors and to guide reading.</td></tr><tr><td>Jafar Panahi's filmmaking practice</td><td>Jafar Panahi</td><td>RE_Panahi_ThisIsNotAFilm</td><td>Panahi and Mojtaba Mirtahmasb made a self-reflexive video diary largely inside Panahi's apartment. Panahi stages and describes an unproduced screenplay and turns the conditions of being forbidden to make films into part of the film's subject and form.</td></tr><tr><td>Jafar Panahi's filmmaking practice</td><td>Mojtaba Mirtahmasb</td><td>RE_Panahi_ThisIsNotAFilm</td><td>Panahi and Mojtaba Mirtahmasb made a self-reflexive video diary largely inside Panahi's apartment. Panahi stages and describes an unproduced screenplay and turns the conditions of being forbidden to make films into part of the film's subject and form.</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>Dmitri Shostakovich</td><td>RE_Shost_FifthSymphony</td><td>Fifth Symphony (composed 18 April–20 July 1937; premiered 21 November 1937, Leningrad Philharmonic, Mravinsky): a turn 'towards greater accessibility, towards greater simplicity', classical form and tonal harmony, with a finale whose triumph has been heard as sincere or ironic.</td></tr><tr><td>Notorious</td><td>Alfred Hitchcock</td><td>RE_Notorious_FragmentedKiss</td><td>Hitchcock stages a scene of about two and a half to three minutes as a chain of short kisses (none longer than ~3 seconds), interrupted by talk and a telephone call, so the scene stays within the rule but reads as one continuous embrace.</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>Dmitri Shostakovich</td><td>RE_Sym4_Withdrawal</td><td>Shostakovich withdraws the Fourth Symphony; it remains unperformed until 1961.</td></tr><tr><td>The Master and Margarita</td><td>Mikhail Bulgakov</td><td>RE_Bulgakov_AesopianExpression</td><td>The novel uses satire, ambiguity, fantastic displacement, and passages that scholars have discussed in terms of Aesopian language: indirect expression capable of carrying concealed political or social meanings.</td></tr><tr><td>The Master and Margarita</td><td>Elena Bulgakova</td><td>RE_MasterMargarita_TextRestoration</td><td>Elena Bulgakova preserved and prepared the text for publication; omitted passages circulated outside the censored journal version, and complete versions were subsequently published abroad, including a complete Russian text.</td></tr></tbody></table></div>
+<p class="kg-meta">15 result rows</p></div><div class="kg-cq">
+<h3>CQ7. Which creative strategy was used in the response?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq07_strategies.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?response ?strategy WHERE {
+  { ?event cc:targetsWork ?work } UNION { ?event cc:targetsPractice ?work }
+  ?event cc:hasResponse ?response .
+  ?response cc:usesStrategy ?s .
+  ?s rdfs:label ?strategy . FILTER(lang(?strategy) = "en")
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+ORDER BY ?title
+</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>response</th><th>strategy</th></tr></thead><tbody><tr><td>A Streetcar Named Desire</td><td>RE_Streetcar_ScreenplayRewrite</td><td>Indirect representation</td></tr><tr><td>A Streetcar Named Desire</td><td>RE_Streetcar_ScreenplayRewrite</td><td>Narrative modification</td></tr><tr><td>A Streetcar Named Desire</td><td>RE_Streetcar_ScreenplayRewrite</td><td>Ambiguity</td></tr><tr><td>Emil Nolde's artistic practice</td><td>RE_Nolde_UnpaintedPictures</td><td>Medium adaptation</td></tr><tr><td>Emil Nolde's artistic practice</td><td>RE_Nolde_UnpaintedPictures</td><td>Secret production</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>RE_Ballo_Transposition</td><td>Historical displacement</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>RE_Ballo_Transposition</td><td>Narrative transposition</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>RE_Ballo_Transposition</td><td>Character transformation</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>RE_Ballo_LeaveNaples</td><td>Institutional circumvention</td></tr><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_IronicNarration</td><td>Allegory</td></tr><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_IronicNarration</td><td>Irony</td></tr><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_Lesehilfe</td><td>Irony</td></tr><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_Lesehilfe</td><td>Paratextual framing</td></tr><tr><td>Jafar Panahi's filmmaking practice</td><td>RE_Panahi_ThisIsNotAFilm</td><td>Circumvention</td></tr><tr><td>Jafar Panahi's filmmaking practice</td><td>RE_Panahi_ThisIsNotAFilm</td><td>Minimal production</td></tr><tr><td>Jafar Panahi's filmmaking practice</td><td>RE_Panahi_ThisIsNotAFilm</td><td>Self-reflexivity</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>RE_Shost_FifthSymphony</td><td>Ambiguity</td></tr><tr><td>Notorious</td><td>RE_Notorious_FragmentedKiss</td><td>Fragmentation</td></tr><tr><td>Notorious</td><td>RE_Notorious_FragmentedKiss</td><td>Indirect representation</td></tr><tr><td>The Master and Margarita</td><td>RE_Bulgakov_AesopianExpression</td><td>Indirect representation</td></tr><tr><td>The Master and Margarita</td><td>RE_Bulgakov_AesopianExpression</td><td>Aesopian language</td></tr><tr><td>The Master and Margarita</td><td>RE_Bulgakov_AesopianExpression</td><td>Satire</td></tr><tr><td>The Master and Margarita</td><td>RE_Bulgakov_AesopianExpression</td><td>Ambiguity</td></tr><tr><td>The Master and Margarita</td><td>RE_MasterMargarita_TextRestoration</td><td>Alternative publication</td></tr><tr><td>The Master and Margarita</td><td>RE_MasterMargarita_TextRestoration</td><td>Textual restoration</td></tr></tbody></table></div>
+<p class="kg-meta">25 result rows</p></div><div class="kg-cq">
+<h3>CQ8. What was the outcome: adaptation, modification, suppression, abandonment, etc.?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq08_outcomes.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?title ?response ?outcome WHERE {
+  { ?event cc:targetsWork ?work } UNION { ?event cc:targetsPractice ?work }
+  { ?event cc:hasResponse ?response . ?response cc:hasOutcome ?o }
+  UNION
+  { ?event cc:hasOutcome ?o . FILTER NOT EXISTS { ?event cc:hasResponse ?r }
+    BIND("(no documented response)" AS ?response) }
+  ?o rdfs:label ?outcome . FILTER(lang(?outcome) = "en")
+  ?work cc:title ?title .
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+ORDER BY ?outcome
+</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>title</th><th>response</th><th>outcome</th></tr></thead><tbody><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>RE_Ballo_LeaveNaples</td><td>Abandonment</td></tr><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_Lesehilfe</td><td>Alternative version produced</td></tr><tr><td>The Master and Margarita</td><td>RE_MasterMargarita_TextRestoration</td><td>Alternative version produced</td></tr><tr><td>Lady Macbeth of the Mtsensk District</td><td>RE_Shost_FifthSymphony</td><td>Creative adaptation</td></tr><tr><td>Hinze-Kunze-Roman</td><td>RE_HKR_IronicNarration</td><td>Creative adaptation</td></tr><tr><td>A Streetcar Named Desire</td><td>RE_Streetcar_ScreenplayRewrite</td><td>Creative adaptation</td></tr><tr><td>Gustavo III / Una vendetta in dominò (opera project)</td><td>RE_Ballo_Transposition</td><td>Creative adaptation</td></tr><tr><td>Notorious</td><td>RE_Notorious_FragmentedKiss</td><td>Creative adaptation</td></tr><tr><td>The Master and Margarita</td><td>RE_Bulgakov_AesopianExpression</td><td>Creative adaptation</td></tr><tr><td>Jafar Panahi's filmmaking practice</td><td>RE_Panahi_ThisIsNotAFilm</td><td>Creative adaptation</td></tr><tr><td>Emil Nolde's artistic practice</td><td>RE_Nolde_UnpaintedPictures</td><td>Creative adaptation</td></tr><tr><td>A Streetcar Named Desire</td><td>(no documented response)</td><td>Suppression</td></tr><tr><td>Symphony No. 4 in C minor, Op. 43</td><td>RE_Sym4_Withdrawal</td><td>Unpublished work</td></tr></tbody></table></div>
+<p class="kg-meta">13 result rows</p></div><div class="kg-cq">
+<h3>CQ9. Which creative strategies recur across different media or censorship mechanisms?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq09_recurring_strategies.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?strategy (COUNT(DISTINCT ?medium) AS ?media) (COUNT(DISTINCT ?mech) AS ?mechanisms) WHERE {
+  { ?event cc:targetsWork ?work } UNION { ?event cc:targetsPractice ?work }
+  ?event cc:usesMechanism ?mech ;
+         cc:hasResponse ?response .
+  ?response cc:usesStrategy ?strategy .
+  ?work a ?medium .
+  FILTER(?medium = cc:CreativePractice || EXISTS { ?medium rdfs:subClassOf cc:CreativeWork })
+  FILTER(?medium != cc:CensoredWork &amp;&amp; ?medium != cc:WorkVersion)
+  FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
+}
+GROUP BY ?strategy
+ORDER BY DESC(?media) DESC(?mechanisms)
+</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>strategy</th><th>media</th><th>mechanisms</th></tr></thead><tbody><tr><td>Ambiguity</td><td>3</td><td>5</td></tr><tr><td>IndirectRepresentation</td><td>2</td><td>3</td></tr><tr><td>Allegory</td><td>1</td><td>2</td></tr><tr><td>Irony</td><td>1</td><td>2</td></tr><tr><td>ParatextualFraming</td><td>1</td><td>2</td></tr><tr><td>NarrativeModification</td><td>1</td><td>2</td></tr><tr><td>HistoricalDisplacement</td><td>1</td><td>2</td></tr><tr><td>NarrativeTransposition</td><td>1</td><td>2</td></tr><tr><td>CharacterTransformation</td><td>1</td><td>2</td></tr><tr><td>InstitutionalCircumvention</td><td>1</td><td>2</td></tr><tr><td>Fragmentation</td><td>1</td><td>2</td></tr><tr><td>AlternativePublication</td><td>1</td><td>2</td></tr><tr><td>TextualRestoration</td><td>1</td><td>2</td></tr><tr><td>AesopianLanguage</td><td>1</td><td>1</td></tr><tr><td>Satire</td><td>1</td><td>1</td></tr><tr><td>Circumvention</td><td>1</td><td>1</td></tr><tr><td>MinimalProduction</td><td>1</td><td>1</td></tr><tr><td>SelfReflexivity</td><td>1</td><td>1</td></tr><tr><td>MediumAdaptation</td><td>1</td><td>1</td></tr><tr><td>SecretProduction</td><td>1</td><td>1</td></tr></tbody></table></div>
+<p class="kg-meta">20 result rows</p></div><div class="kg-cq">
+<h3>CQ10. Which sources support the claimed relationship between a censorship event and a creative response?</h3>
+<details class="kg-query"><summary>Show SPARQL query (<code>cq10_evidence.rq</code>)</summary><pre><code>PREFIX cc:   &lt;http://example.org/censorcreate#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?event ?response ?confidence ?source WHERE {
+  ?claim a cc:Claim ;
+         cc:aboutCensorshipEvent ?event ;
+         cc:aboutCreativeResponse ?response ;
+         cc:confidenceLevel ?confidence ;
+         cc:supportedBy ?s .
+  ?s cc:bibliographicCitation ?source .
+}
+ORDER BY ?event ?response
+</code></pre></details>
+<div class="kg-table-wrap"><table class="results-table"><thead><tr><th>event</th><th>response</th><th>confidence</th><th>source</th></tr></thead><tbody><tr><td>EV_Ballo_NaplesCensorship1858</td><td>RE_Ballo_LeaveNaples</td><td>high</td><td>Giger, A. (1999). Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859). Cambridge Opera Journal, 11(3), 233–265. DOI: 10.1017/S0954586700005061.</td></tr><tr><td>EV_Ballo_NaplesCensorship1858</td><td>RE_Ballo_LeaveNaples</td><td>high</td><td>Narici, I. (ed.). (2000). Giuseppe Verdi: Un ballo in maschera – Critical Edition. Ricordi.</td></tr><tr><td>EV_Ballo_RomeCensorship1858</td><td>RE_Ballo_Transposition</td><td>high</td><td>Narici, I. (ed.). (2000). Giuseppe Verdi: Un ballo in maschera – Critical Edition. Ricordi.</td></tr><tr><td>EV_Ballo_RomeCensorship1858</td><td>RE_Ballo_Transposition</td><td>high</td><td>Giger, A. (1999). Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859). Cambridge Opera Journal, 11(3), 233–265. DOI: 10.1017/S0954586700005061.</td></tr><tr><td>EV_Ballo_RomeCensorship1858</td><td>RE_Ballo_Transposition</td><td>high</td><td>The Metropolitan Opera. Un Ballo in Maschera (work/season guide).</td></tr><tr><td>EV_Bulgakov_LiterarySuppression1930s</td><td>RE_Bulgakov_AesopianExpression</td><td>medium</td><td>Pope, R. W. F. (1977). Ambiguity and Meaning in The Master and Margarita: The Role of Afranius. Slavic Review, 36(1), 1–24. DOI: 10.2307/2494668.</td></tr><tr><td>EV_Bulgakov_LiterarySuppression1930s</td><td>RE_Bulgakov_AesopianExpression</td><td>medium</td><td>Rosenshield, G. (1997). The Master and Margarita and the Poetics of Aporia: A Polemical Article. Slavic Review, 56(2), 187–211. DOI: 10.2307/2500782.</td></tr><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_IronicNarration</td><td>medium</td><td>Darnton, R. (1991). The Good Old Days. The New York Review of Books, 16 May 1991.</td></tr><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_IronicNarration</td><td>medium</td><td>Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation).</td></tr><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_Lesehilfe</td><td>high</td><td>Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR. Aus Politik und Zeitgeschichte, Bundeszentrale für politische Bildung.</td></tr><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_Lesehilfe</td><td>high</td><td>Höpcke, K. (1985). Über Volker Brauns Hinze-Kunze-Roman. Die Weltbühne 33–34/1985; reprinted in Das Blättchen, April 2025.</td></tr><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_Lesehilfe</td><td>high</td><td>Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation).</td></tr><tr><td>EV_HKR_PrintApproval</td><td>RE_HKR_Lesehilfe</td><td>high</td><td>Guibert-Yeche, H. Censure et autocensure en RDA. ENS Éditions (OpenEdition Books), pp. 127–144.</td></tr><tr><td>EV_MasterMargarita_MoskvaCensorship1966</td><td>RE_MasterMargarita_TextRestoration</td><td>high</td><td>Pope, R. W. F. (1977). Ambiguity and Meaning in The Master and Margarita: The Role of Afranius. Slavic Review, 36(1), 1–24. DOI: 10.2307/2494668.</td></tr><tr><td>EV_MasterMargarita_MoskvaCensorship1966</td><td>RE_MasterMargarita_TextRestoration</td><td>high</td><td>Curtis, J. A. E. (2019). A Reader's Companion to Mikhail Bulgakov's The Master and Margarita. Boston: Academic Studies Press.</td></tr><tr><td>EV_Nolde_ProfessionalBan1941</td><td>RE_Nolde_UnpaintedPictures</td><td>high</td><td>National Gallery of Ireland. Entartete Kunst / Degenerate Art (Emil Nolde: Colour is Life exhibition material).</td></tr><tr><td>EV_Nolde_ProfessionalBan1941</td><td>RE_Nolde_UnpaintedPictures</td><td>high</td><td>Nolde Museum Seebüll. The Artist (biographical chronology of Emil Nolde).</td></tr><tr><td>EV_Notorious_PCAReview</td><td>RE_Notorious_FragmentedKiss</td><td>high</td><td>Production Code Administration. The Alfred Hitchcock Wiki (quotes the Production Code and Bergman's recollection).</td></tr><tr><td>EV_Notorious_PCAReview</td><td>RE_Notorious_FragmentedKiss</td><td>high</td><td>Billheimer, J. (2019). Hitchcock and the Censors. University Press of Kentucky, pp. 118–128. DOI 10.5810/kentucky/9780813177427.003.0015</td></tr><tr><td>EV_Panahi_2010FilmmakingBan</td><td>RE_Panahi_ThisIsNotAFilm</td><td>high</td><td>Festival de Cannes. (2011). Jafar Panahi and Mohammad Rasoulof in the Cannes Official Selection! 7 May 2011.</td></tr><tr><td>EV_Panahi_2010FilmmakingBan</td><td>RE_Panahi_ThisIsNotAFilm</td><td>high</td><td>Cinema Iranica. This Is Not a Film (film entry).</td></tr><tr><td>EV_Panahi_2010FilmmakingBan</td><td>RE_Panahi_ThisIsNotAFilm</td><td>high</td><td>Center for Human Rights in Iran. (2010). Jafar Panahi Sentenced To Six Years In Prison, Banned From Making Films For 20 Years. 20 December 2010.</td></tr><tr><td>EV_Panahi_2010FilmmakingBan</td><td>RE_Panahi_ThisIsNotAFilm</td><td>high</td><td>Festival de Cannes. (2011). In Film Nist (This Is Not A Film) by Jafar Panahi. 20 May 2011.</td></tr><tr><td>EV_Pravda1936</td><td>RE_Shost_FifthSymphony</td><td>medium</td><td>Muddle Instead of Music. Wikipedia (tertiary source, used for orientation only).</td></tr><tr><td>EV_Pravda1936</td><td>RE_Shost_FifthSymphony</td><td>medium</td><td>Robinson, H. Symphony No. 5 (Shostakovich). Boston Symphony Orchestra programme note.</td></tr><tr><td>EV_Pravda1936</td><td>RE_Shost_FifthSymphony</td><td>medium</td><td>Frolova-Walker, M. &amp; Walker, J. (2023). Shostakovich's Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001</td></tr><tr><td>EV_Streetcar_PCAReview1950</td><td>RE_Streetcar_ScreenplayRewrite</td><td>high</td><td>Szabó, H. (2019). Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire. AMERICANA E-Journal of American Studies in Hungary, 15(1).</td></tr><tr><td>EV_Streetcar_PCAReview1950</td><td>RE_Streetcar_ScreenplayRewrite</td><td>high</td><td>American Film Institute. AFI Catalog: A Streetcar Named Desire (1951), production history and PCA/Legion of Decency documentation.</td></tr><tr><td>EV_Sym4_Cancellation</td><td>RE_Sym4_Withdrawal</td><td>high</td><td>Symphony No. 4 (Shostakovich). Wikipedia (tertiary source, used for orientation only).</td></tr><tr><td>EV_Sym4_Cancellation</td><td>RE_Sym4_Withdrawal</td><td>high</td><td>Frolova-Walker, M. &amp; Walker, J. (2023). Shostakovich's Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001</td></tr></tbody></table></div>
+<p class="kg-meta">30 result rows</p></div>
+      </section>
+
+      <section id="case-studies" class="section">
+        <h1>9. Case Studies</h1>
+        <p>
+          Eight documented cases from five media and seven censorship regimes, from papal-state opera censorship in the
+          1850s to an Iranian filmmaking ban in the 2010s. Every relation between a censorship event and a creative
+          response is recorded as a <code>Claim</code> with its sources and a confidence level. Two cases (Panahi,
+          Nolde) target an ongoing creative practice rather than a single work, and the Bulgakov case records a
+          posthumous response performed by an editor of the author&rsquo;s estate.
+        </p>
+        <div class="scenario-accordion"><details class="scenario-item kg-case" open>
+<summary class="scenario-summary">Volker Braun, <em>Hinze-Kunze-Roman</em> (GDR, 1981–1985) <span class="kg-chip kg-chip-medium">Literature</span></summary>
+<div class="scenario-content"><p>A satirical novel about a Party functionary and his chauffeur waited four years for a print permit. The case follows Darnton’s model of censorship as negotiation: expert reports, demanded changes, an afterword written to placate the censors, publication, and a halt to distribution.</p><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Hinze-Kunze-Roman <span class="kg-meta">(Literary work, 1981; Volker Braun)</span></td></tr>
+<tr><th>Censorship event</th><td>Four-year GDR print-approval process: manuscript submitted to Mitteldeutscher Verlag end 1981, passed to the Hauptverwaltung end 1983; negative expert report by Werner Neubert (July 1984); Höpcke changed &#x27;refusal&#x27; to &#x27;needs further work&#x27;; renewed unsuccessful attempts to obtain changes; approval early 1985.</td></tr>
+<tr><th>Imposed by</th><td>Hauptverwaltung Verlage und Buchhandel (GDR Ministry of Culture)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Prior approval</span> <span class="kg-chip">Modification requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Subject restriction</span><div class="kg-meta">Objections that the irony targets socialism, distorts the concept of freedom and represents the Liebknecht-Luxemburg commemoration unworthily (Neubert report, July 1984).</div></td></tr>
+<tr><th>Constrained element</th><td>Theme: Ironic portrayal of a Party functionary (Kunze) and his chauffeur (Hinze); apparatchik privilege at the heart of the plot.</td></tr><tr><th>Creative response</th><td>Braun frames the critique in an ironic, Diderot-like master-servant narrative with an intrusive narrator who comments on what &#x27;cannot be said directly&#x27;.<div class="kg-meta">performed by Volker Braun</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Irony</span> <span class="kg-chip">Allegory</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Creative adaptation</span></td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-medium">medium confidence</span> The preface to the French edition argues that Braun uses the ruse and irony of Enlightenment writers (Diderot&#x27;s Jacques le fataliste) to pass subversive ideas; the narrator explicitly thematises why so much &#x27;cannot be said directly&#x27;. This is an interpretation by the preface author, and the novel was written (1981) before the formal review began.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://editions-metailie.com/livre/le-roman-de-hinze-et-kunze/" target="_blank" rel="noopener noreferrer">Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation).</a></li><li><a href="https://www.nybooks.com/articles/1991/05/16/the-good-old-days/" target="_blank" rel="noopener noreferrer">Darnton, R. (1991). The Good Old Days. The New York Review of Books, 16 May 1991.</a></li></ul></td></tr>
+</table></div><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Hinze-Kunze-Roman <span class="kg-meta">(Literary work, 1981; Volker Braun)</span></td></tr>
+<tr><th>Censorship event</th><td>Four-year GDR print-approval process: manuscript submitted to Mitteldeutscher Verlag end 1981, passed to the Hauptverwaltung end 1983; negative expert report by Werner Neubert (July 1984); Höpcke changed &#x27;refusal&#x27; to &#x27;needs further work&#x27;; renewed unsuccessful attempts to obtain changes; approval early 1985.</td></tr>
+<tr><th>Imposed by</th><td>Hauptverwaltung Verlage und Buchhandel (GDR Ministry of Culture)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Prior approval</span> <span class="kg-chip">Modification requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Subject restriction</span><div class="kg-meta">Objections that the irony targets socialism, distorts the concept of freedom and represents the Liebknecht-Luxemburg commemoration unworthily (Neubert report, July 1984).</div></td></tr>
+<tr><th>Creative response</th><td>Dieter Schlenstedt, one of the manuscript&#x27;s first reviewers, writes an appended &#x27;schöngeistige Lesehilfe&#x27;: five fictional letters that ironise the review process and guide readers; the text was meant both to placate the censors and to guide reading.<div class="kg-meta">performed by Dieter Schlenstedt</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Paratextual framing</span> <span class="kg-chip">Irony</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Alternative version produced</span></td></tr><tr><th>Result</th><td>Hinze-Kunze-Roman, Mitteldeutscher Verlag (Halle) 1985 edition with Schlenstedt&#x27;s afterword; the simultaneous Suhrkamp edition appeared without it (1985)</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> The 1985 GDR edition appeared with Schlenstedt&#x27;s text, intended &#x27;d&#x27;une part à amadouer la censure, d&#x27;autre part à guider le lecteur&#x27;; the Suhrkamp edition in the West was published without it.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://books.openedition.org/enseditions/19283" target="_blank" rel="noopener noreferrer">Guibert-Yeche, H. Censure et autocensure en RDA. ENS Éditions (OpenEdition Books), pp. 127–144.</a></li><li><a href="https://editions-metailie.com/livre/le-roman-de-hinze-et-kunze/" target="_blank" rel="noopener noreferrer">Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation).</a></li><li><a href="https://www.bpb.de/shop/zeitschriften/apuz/archiv/535791/das-wechselspiel-von-selbstzensur-und-literaturlenkung-in-der-ddr/" target="_blank" rel="noopener noreferrer">Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR. Aus Politik und Zeitgeschichte, Bundeszentrale für politische Bildung.</a></li><li><a href="https://das-blaettchen.de/2025/04/ueber-volker-brauns-hinze-kunze-roman-71622.html" target="_blank" rel="noopener noreferrer">Höpcke, K. (1985). Über Volker Brauns Hinze-Kunze-Roman. Die Weltbühne 33–34/1985; reprinted in Das Blättchen, April 2025.</a></li></ul></td></tr>
+</table></div><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Hinze-Kunze-Roman <span class="kg-meta">(Literary work, 1981; Volker Braun)</span></td></tr>
+<tr><th>Censorship event</th><td>After publication and hostile reviews (Neues Deutschland; critic Anneliese Löffler), distribution of the novel in the GDR was stopped on 10 September 1985; Höpcke received a formal Party censure. A new GDR edition appeared only in 1988.</td></tr>
+<tr><th>Imposed by</th><td><span class="kg-muted">not named in the sources</span></td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Distribution restriction</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Content restriction</span><div class="kg-meta">Circulation of the already published novel halted.</div></td></tr>
+<tr><th>Creative response</th><td class="kg-muted">No documented creative response. The event is recorded without a response.</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> Distribution was stopped on 10 September 1985 (agent not named in the source); Höpcke was &#x27;called on the carpet and given a formal censure&#x27;. No documented creative response to this second event.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://editions-metailie.com/livre/le-roman-de-hinze-et-kunze/" target="_blank" rel="noopener noreferrer">Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation).</a></li><li><a href="https://www.nybooks.com/articles/1991/05/16/the-good-old-days/" target="_blank" rel="noopener noreferrer">Darnton, R. (1991). The Good Old Days. The New York Review of Books, 16 May 1991.</a></li></ul></td></tr>
+</table></div></div></details><details class="scenario-item kg-case" open>
+<summary class="scenario-summary">Dmitri Shostakovich, <em>Lady Macbeth</em> → Symphonies 4 and 5 (USSR, 1936–1937) <span class="kg-chip kg-chip-medium">Music</span></summary>
+<div class="scenario-content"><p>After the <em>Pravda</em> editorial “Muddle Instead of Music” (28 January 1936), the opera vanished from the repertoire. One constraint produced two contrasting responses: suppression (the Fourth Symphony, withdrawn until 1961) and adaptation (the Fifth Symphony, 1937). This illustrates Rosso’s enabling and disabling effects.</p><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Lady Macbeth of the Mtsensk District <span class="kg-meta">(Musical work, 1932; Dmitri Shostakovich)</span></td></tr>
+<tr><th>Censorship event</th><td>Unsigned Pravda editorial &#x27;Muddle Instead of Music&#x27; (28 January 1936), two days after Stalin attended the opera; further Pravda attacks followed; the opera disappeared from the repertoire (last performance 11 March 1936).</td></tr>
+<tr><th>Imposed by</th><td>Pravda (Communist Party newspaper; editorial expressing the official Party line)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Ban</span> <span class="kg-chip">Removal</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Stylistic restriction</span><div class="kg-meta">Condemnation of &#x27;formalism&#x27;: dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works.</div></td></tr>
+<tr><th>Constrained element</th><td>Audio element: Dissonant, modernist musical idiom of Lady Macbeth (and of the Fourth Symphony in progress).</td></tr><tr><th>Creative response</th><td>Fifth Symphony (composed 18 April–20 July 1937; premiered 21 November 1937, Leningrad Philharmonic, Mravinsky): a turn &#x27;towards greater accessibility, towards greater simplicity&#x27;, classical form and tonal harmony, with a finale whose triumph has been heard as sincere or ironic.<div class="kg-meta">performed by Dmitri Shostakovich</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Ambiguity</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Creative adaptation</span></td></tr><tr><th>Result</th><td>Symphony No. 5 in D minor, Op. 47 (1937)</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-medium">medium confidence</span> The Fifth Symphony is documented as Shostakovich&#x27;s response to the 1936 criticism (&#x27;a Soviet artist&#x27;s creative reply to just criticism&#x27;) and led to his rehabilitation; whether the finale is sincere or ironic remains debated, so the Ambiguity strategy is an interpretation.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://academic.oup.com/book/55321/chapter/428777077" target="_blank" rel="noopener noreferrer">Frolova-Walker, M. &amp; Walker, J. (2023). Shostakovich&#x27;s Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001</a></li><li><a href="https://www.bso.org/works/symphony-no-5-shostakovich" target="_blank" rel="noopener noreferrer">Robinson, H. Symphony No. 5 (Shostakovich). Boston Symphony Orchestra programme note.</a></li><li><a href="https://en.wikipedia.org/wiki/Muddle_Instead_of_Music" target="_blank" rel="noopener noreferrer">Muddle Instead of Music. Wikipedia (tertiary source, used for orientation only).</a></li></ul></td></tr>
+</table></div><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Symphony No. 4 in C minor, Op. 43 <span class="kg-meta">(Musical work, 1936; Dmitri Shostakovich)</span></td></tr>
+<tr><th>Censorship event</th><td>Premiere planned for 11 December 1936 (Leningrad Philharmonic, Stiedry) cancelled after rehearsals; officially presented as the composer&#x27;s withdrawal, while other accounts (Glikman) report pressure from Party and Composers&#x27; Union officials.</td></tr>
+<tr><th>Imposed by</th><td>Union of Soviet Composers and Party officials</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Self-censorship</span> <span class="kg-chip">Ban</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Stylistic restriction</span><div class="kg-meta">Condemnation of &#x27;formalism&#x27;: dissonant, modernist musical language declared unacceptable; Kerzhentsev demanded a concrete demonstration of reform in future works.</div></td></tr>
+<tr><th>Creative response</th><td>Shostakovich withdraws the Fourth Symphony; it remains unperformed until 1961.<div class="kg-meta">performed by Dmitri Shostakovich</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-muted">—</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Unpublished work</span></td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> The Fourth Symphony was withdrawn from rehearsal in 1936 and not performed until 1961; sources disagree on whether the withdrawal was voluntary or imposed, hence both SelfCensorship and Ban are recorded.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://en.wikipedia.org/wiki/Symphony_No._4_(Shostakovich)" target="_blank" rel="noopener noreferrer">Symphony No. 4 (Shostakovich). Wikipedia (tertiary source, used for orientation only).</a></li><li><a href="https://academic.oup.com/book/55321/chapter/428777077" target="_blank" rel="noopener noreferrer">Frolova-Walker, M. &amp; Walker, J. (2023). Shostakovich&#x27;s Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001</a></li></ul></td></tr>
+</table></div></div></details><details class="scenario-item kg-case" open>
+<summary class="scenario-summary">Alfred Hitchcock, <em>Notorious</em> (USA, 1945–1946) <span class="kg-chip kg-chip-medium">Film</span></summary>
+<div class="scenario-content"><p>The Production Code Administration reviewed the script and restricted how sexuality could be shown. Hitchcock’s fragmented kiss is a clear example of a constraint that redirected a creative solution instead of blocking it, in Stokes’s sense.</p><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Notorious <span class="kg-meta">(Film, 1946; Alfred Hitchcock)</span></td></tr>
+<tr><th>Censorship event</th><td>Production Code Administration review of the script: Joseph Breen called it &#x27;definitely unacceptable&#x27; (25 May 1945); a further review (25 July 1945) listed 17 required changes, incl. removing five uses of &#x27;tramp&#x27; for Alicia.</td></tr>
+<tr><th>Imposed by</th><td>Production Code Administration (headed by Joseph Breen)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Prior approval</span> <span class="kg-chip">Modification requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Content restriction</span> <span class="kg-chip">Direct representation restriction</span><div class="kg-meta">Production Code: &#x27;Excessive and lustful kissing ... are not to be shown&#x27;; enforced through an unofficial rule of thumb that a screen kiss should not exceed about three seconds.</div></td></tr>
+<tr><th>Constrained element</th><td>Scene: Love scene between Devlin (Cary Grant) and Alicia (Ingrid Bergman) in her Rio apartment.</td></tr><tr><th>Creative response</th><td>Hitchcock stages a scene of about two and a half to three minutes as a chain of short kisses (none longer than ~3 seconds), interrupted by talk and a telephone call, so the scene stays within the rule but reads as one continuous embrace.<div class="kg-meta">performed by Alfred Hitchcock</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Fragmentation</span> <span class="kg-chip">Indirect representation</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Creative adaptation</span></td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> Hitchcock &#x27;concocted&#x27; the kiss scene specifically to get around the supposed three-second rule; Bergman recalled that the censors &#x27;couldn&#x27;t and didn&#x27;t cut the scene because we never at any one point kissed for more than three seconds&#x27;.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://academic.oup.com/kentucky-scholarship-online/book/34148/chapter/289477434" target="_blank" rel="noopener noreferrer">Billheimer, J. (2019). Hitchcock and the Censors. University Press of Kentucky, pp. 118–128. DOI 10.5810/kentucky/9780813177427.003.0015</a></li><li><a href="https://the.hitchcock.zone/wiki/Production_Code_Administration" target="_blank" rel="noopener noreferrer">Production Code Administration. The Alfred Hitchcock Wiki (quotes the Production Code and Bergman&#x27;s recollection).</a></li></ul></td></tr>
+</table></div><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Notorious <span class="kg-meta">(Film, 1946; Alfred Hitchcock)</span></td></tr>
+<tr><th>Censorship event</th><td>Production Code Administration review of the script: Joseph Breen called it &#x27;definitely unacceptable&#x27; (25 May 1945); a further review (25 July 1945) listed 17 required changes, incl. removing five uses of &#x27;tramp&#x27; for Alicia.</td></tr>
+<tr><th>Imposed by</th><td>Production Code Administration (headed by Joseph Breen)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Prior approval</span> <span class="kg-chip">Modification requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Subject restriction</span><div class="kg-meta">Alicia must not appear as a &#x27;grossly immoral woman&#x27;; any suggestion of sexual promiscuity to be avoided; the word &#x27;tramp&#x27; to be removed.</div></td></tr>
+<tr><th>Constrained element</th><td>Theme: Characterisation of Alicia Huberman&#x27;s sexual morality.</td></tr><tr><th>Creative response</th><td class="kg-muted">No documented creative response. The event is recorded without a response.</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> The PCA found Alicia&#x27;s characterisation unacceptable and listed 17 changes (25 July 1945). How each change was implemented is not yet documented here — to be checked in Billheimer, ch. 14.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://academic.oup.com/kentucky-scholarship-online/book/34148/chapter/289477434" target="_blank" rel="noopener noreferrer">Billheimer, J. (2019). Hitchcock and the Censors. University Press of Kentucky, pp. 118–128. DOI 10.5810/kentucky/9780813177427.003.0015</a></li></ul></td></tr>
+</table></div></div></details><details class="scenario-item kg-case">
+<summary class="scenario-summary">Jafar Panahi, <em>This Is Not a Film</em> (Iran, 2010–2011) <span class="kg-chip kg-chip-medium">Film</span></summary>
+<div class="scenario-content"><p>In December 2010 an Iranian court sentenced Panahi to six years in prison and a 20-year ban on making films, writing screenplays, giving interviews and travelling abroad. The ban targets his filmmaking practice as a whole. His response, made with Mojtaba Mirtahmasb on a video camera and an iPhone inside his apartment, turns the conditions of the ban into the subject and form of the work itself.</p><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Jafar Panahi's filmmaking practice <span class="kg-meta">(Creative practice; Jafar Panahi)</span></td></tr>
+<tr><th>Censorship event</th><td>On 20 December 2010, Panahi was sentenced to six years in prison and a 20-year ban on making films, writing screenplays, giving interviews, and travelling abroad. In 2011, Cannes described This Is Not a Film as made under semi-clandestine conditions while the ban was in force.</td></tr>
+<tr><th>Imposed by</th><td>Branch 26 of the Tehran Revolutionary Court / Iranian judiciary</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Ban</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Professional Practice Restriction</span> <span class="kg-chip">Expression Restriction</span><div class="kg-meta">Panahi was prohibited from making or directing films and from writing screenplays for twenty years.</div></td></tr>
+<tr><th>Constrained element</th><td>Creative Activity: Film directing and screenplay writing.</td></tr>
+<tr><th>Creative response</th><td>Panahi and Mojtaba Mirtahmasb made a self-reflexive video diary largely inside Panahi's apartment. Panahi stages and describes an unproduced screenplay and turns the conditions of being forbidden to make films into part of the film's subject and form.<div class="kg-meta">performed by Jafar Panahi; Mojtaba Mirtahmasb</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Self Reflexivity</span> <span class="kg-chip">Minimal Production</span> <span class="kg-chip">Circumvention</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Creative Adaptation</span></td></tr>
+<tr><th>Result</th><td>This Is Not a Film (In Film Nist) (2011)</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> Cannes stated that Panahi and Rasoulof's films were made under semi-clandestine conditions and quoted Panahi that the desire to keep Iranian filmmaking alive motivated them to overcome the restrictions. This Is Not a Film directly documents Panahi's situation as a filmmaker forbidden to work.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://www.festival-cannes.com/en/2011/jafar-panahi-and-mohammad-rasoulof-in-the-cannes-official-selection/" target="_blank" rel="noopener noreferrer">Festival de Cannes. (2011). Jafar Panahi and Mohammad Rasoulof in the Cannes Official Selection! 7 May 2011.</a></li><li><a href="https://www.festival-cannes.com/en/2011/in-film-nist-this-is-not-a-film-by-jafar-panahi/" target="_blank" rel="noopener noreferrer">Festival de Cannes. (2011). In Film Nist (This Is Not A Film) by Jafar Panahi. 20 May 2011.</a></li><li><a href="https://iranhumanrights.org/2010/12/jafar-panahi-sentenced-to-six-years-in-prison-banned-from-making-films-for-20-years/" target="_blank" rel="noopener noreferrer">Center for Human Rights in Iran. (2010). Jafar Panahi Sentenced To Six Years In Prison, Banned From Making Films For 20 Years. 20 December 2010.</a></li><li><a href="https://cinema.iranicaonline.org/film/this-is-not-a-film/" target="_blank" rel="noopener noreferrer">Cinema Iranica. This Is Not a Film (film entry).</a></li></ul></td></tr>
+</table></div></div></details><details class="scenario-item kg-case">
+<summary class="scenario-summary">Emil Nolde, <em>Unpainted Pictures</em> (Nazi Germany, 1941–1945) <span class="kg-chip kg-chip-medium">Visual arts</span></summary>
+<div class="scenario-content"><p>In 1941 Nolde was expelled from the Reich Chamber of Fine Arts and banned from practising, exhibiting and selling art. The ban also limited his access to materials and channels. Museum sources record that he nevertheless continued to produce small-format watercolours in secret — the so-called Unpainted Pictures. Because Nolde had already worked in watercolour before 1941, this is a documented case of continuation and adaptation under constraint, not of a medium invented by censorship.</p><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Emil Nolde's artistic practice <span class="kg-meta">(Creative practice; Emil Nolde)</span></td></tr>
+<tr><th>Censorship event</th><td>In 1941 Nolde was expelled from the Reich Chamber of Fine Arts and subjected to a professional ban. Official museum sources record that he nevertheless continued producing small-format watercolours, the so-called Unpainted Pictures.</td></tr>
+<tr><th>Imposed by</th><td>Reich Chamber of Fine Arts (Reichskammer der bildenden Künste)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Ban</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Professional Practice Restriction</span> <span class="kg-chip">Material Restriction</span><div class="kg-meta">The professional ban prevented Nolde from officially practising, exhibiting, and selling art and limited his access to normal artistic materials and channels.</div></td></tr>
+<tr><th>Constrained element</th><td>Creative Activity: Professional production and public circulation of visual art.</td></tr>
+<tr><th>Creative response</th><td>Nolde continued working privately and produced further small-format watercolours in Seebüll. Museum accounts describe these works as being made secretly during the period of prohibition.<div class="kg-meta">performed by Emil Nolde</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Secret Production</span> <span class="kg-chip">Medium Adaptation</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Creative Adaptation</span></td></tr>
+<tr><th>Result</th><td>Unpainted Pictures (Ungemalte Bilder) (1941-1945)</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> The Nolde Museum records the 1941 expulsion and professional ban followed by further small-format watercolours; the National Gallery of Ireland states that despite the ban he continued to create, turning to small watercolour compositions painted in secret. Because Nolde had already used this medium before 1941, the claim is about continuation/adaptation under constraint rather than the invention of a new medium.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://www.nolde-museum.de/en/museum/der-kuenstler" target="_blank" rel="noopener noreferrer">Nolde Museum Seebüll. The Artist (biographical chronology of Emil Nolde).</a></li><li><a href="https://www.nationalgallery.ie/emil-nolde-colour-life/entartete-kunst-degenerate-art" target="_blank" rel="noopener noreferrer">National Gallery of Ireland. Entartete Kunst / Degenerate Art (Emil Nolde: Colour is Life exhibition material).</a></li></ul></td></tr>
+</table></div></div></details><details class="scenario-item kg-case">
+<summary class="scenario-summary">Elia Kazan & Tennessee Williams, <em>A Streetcar Named Desire</em> (USA, 1950–1951) <span class="kg-chip kg-chip-medium">Film</span></summary>
+<div class="scenario-content"><p>The film adaptation passed through two censorship processes. During PCA review in 1950, Kazan and Williams negotiated and rewrote the script — the rewritten ending makes Stella appear to leave Stanley. After completion, the Catholic Legion of Decency condemned the film and Warner Bros., without consulting Kazan, made twelve cuts. The case pairs a creative adaptation with a documented suppression.</p><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>A Streetcar Named Desire <span class="kg-meta">(Film, 1951; Elia Kazan; Tennessee Williams)</span></td></tr>
+<tr><th>Censorship event</th><td>During Production Code Administration review in 1950, the screenplay was challenged over three principal issues: the homosexuality of Blanche's late husband, Blanche's sexual behaviour, and the rape. The PCA proposed plot and dialogue changes before approval.</td></tr>
+<tr><th>Imposed by</th><td>Production Code Administration (MPAA)</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Prior Approval</span> <span class="kg-chip">Modification Requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Content Restriction</span> <span class="kg-chip">Subject Restriction</span> <span class="kg-chip">Direct Representation Restriction</span><div class="kg-meta">The adaptation could not directly represent or clearly state several sexual themes in the same form as the play, and the filmmakers were pressed to alter their treatment.</div></td></tr>
+<tr><th>Constrained element</th><td>Theme: Allan Grey's homosexuality, Blanche's sexuality, Stanley's rape of Blanche, and the moral consequences of Stanley's actions.</td></tr>
+<tr><th>Creative response</th><td>Kazan and Williams negotiated and altered the screenplay. Williams rewrote the ending so that Stella appears, somewhat ambiguously, to leave Stanley rather than return to him; other restricted material was handled more indirectly.<div class="kg-meta">performed by Elia Kazan; Tennessee Williams</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Narrative Modification</span> <span class="kg-chip">Ambiguity</span> <span class="kg-chip">Indirect Representation</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Creative Adaptation</span></td></tr>
+<tr><th>Result</th><td>A Streetcar Named Desire (PCA-approved film version) (1951)</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> AFI's production-history record documents the PCA objections and Williams's rewritten ending, while scholarship on the adaptation describes the film as preserving much of the play's meaning through alterations required by censorship.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://catalog.afi.com/Film/53428-A-STREETCAR-NAMED-DESIRE" target="_blank" rel="noopener noreferrer">American Film Institute. AFI Catalog: A Streetcar Named Desire (1951), production history and PCA/Legion of Decency documentation.</a></li><li><a href="https://americanaejournal.hu/index.php/americanaejournal/article/view/45438" target="_blank" rel="noopener noreferrer">Szabó, H. (2019). Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire. AMERICANA E-Journal of American Studies in Hungary, 15(1).</a></li></ul></td></tr>
+</table></div><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>A Streetcar Named Desire <span class="kg-meta">(Film, 1951; Elia Kazan; Tennessee Williams)</span></td></tr>
+<tr><th>Censorship event</th><td>After the film was completed, the Catholic Legion of Decency condemned it. Warner Bros., working with the MPAA and without consulting Kazan, made twelve cuts totalling roughly three to four minutes to obtain an acceptable rating.</td></tr>
+<tr><th>Imposed by</th><td>Catholic Legion of Decency, with MPAA involvement</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Removal</span> <span class="kg-chip">Modification Requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Content Restriction</span><div class="kg-meta">Sexual and 'carnal' material had to be reduced or removed for release without condemnation.</div></td></tr>
+<tr><th>Constrained element</th><td>Scene: Several scenes and lines, including the Stella stairway sequence and dialogue surrounding Stanley's attack on Blanche.</td></tr>
+<tr><th>Creative response</th><td class="kg-muted">No documented creative response. The event is recorded with its outcome only.</td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Suppression</span></td></tr>
+<tr><th>Result</th><td>A Streetcar Named Desire (1951 theatrical release with Legion/PCA cuts) (1951)</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> AFI records that the studio made twelve cuts without consulting Kazan and that Kazan believed some cuts changed the interpretation of the characters. This row represents a disabling/suppressive outcome rather than a creative response by the creators.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://catalog.afi.com/Film/53428-A-STREETCAR-NAMED-DESIRE" target="_blank" rel="noopener noreferrer">American Film Institute. AFI Catalog: A Streetcar Named Desire (1951), production history and PCA/Legion of Decency documentation.</a></li><li><a href="https://americanaejournal.hu/index.php/americanaejournal/article/view/45438" target="_blank" rel="noopener noreferrer">Szabó, H. (2019). Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire. AMERICANA E-Journal of American Studies in Hungary, 15(1).</a></li></ul></td></tr>
+</table></div></div></details><details class="scenario-item kg-case">
+<summary class="scenario-summary">Giuseppe Verdi & Antonio Somma, <em>Gustavo III</em> → <em>Un ballo in maschera</em> (Naples and Rome, 1858–1859) <span class="kg-chip kg-chip-medium">Opera</span></summary>
+<div class="scenario-content"><p>The opera project about the assassination of King Gustav III of Sweden was blocked by censors in Naples — the demanded changes were so extensive that Verdi broke the contract — and reworked in papal Rome. The final compromise transposed the action to colonial Boston and transformed the Swedish king into Governor Riccardo, preserving the dramatic structure while replacing the politically dangerous setting.</p><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Gustavo III / Una vendetta in dominò (opera project) <span class="kg-meta">(Musical work, 1857-1858; Giuseppe Verdi; Antonio Somma)</span></td></tr>
+<tr><th>Censorship event</th><td>The opera intended for Teatro San Carlo in Naples encountered censorial objections to a plot based on the assassination of a monarch. The demanded changes became so extensive that Verdi broke the contract with the Naples theatre and took the project elsewhere.</td></tr>
+<tr><th>Imposed by</th><td>Censors of the Kingdom of Naples</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Prior Approval</span> <span class="kg-chip">Modification Requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Subject Restriction</span> <span class="kg-chip">Direct Representation Restriction</span><div class="kg-meta">A royal assassination and the sovereign status of the protagonist could not be represented in the proposed form.</div></td></tr>
+<tr><th>Constrained element</th><td>Theme: The historical regicide plot based on the assassination of King Gustav III of Sweden.</td></tr>
+<tr><th>Creative response</th><td>Verdi rejected the most drastic demanded alterations, broke the contract with Teatro San Carlo, and moved the project to Rome.<div class="kg-meta">performed by Giuseppe Verdi</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Institutional Circumvention</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Abandonment</span></td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> Ricordi's critical-edition documentation states that censorship demands were severe enough for Verdi to break the Naples contract; scholarship on Verdi's censorship confirms that Un ballo in maschera had been rejected elsewhere before its Roman premiere.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://www.ricordi.com/en-US/Critical-Editions/Verdi-Giuseppe-Critical-Editions/Verdi-Giuseppe-WGV/Verdi-Un-ballo-in-maschera.aspx" target="_blank" rel="noopener noreferrer">Narici, I. (ed.). (2000). Giuseppe Verdi: Un ballo in maschera – Critical Edition. Ricordi.</a></li><li><a href="https://doi.org/10.1017/S0954586700005061" target="_blank" rel="noopener noreferrer">Giger, A. (1999). Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859). Cambridge Opera Journal, 11(3), 233–265. DOI: 10.1017/S0954586700005061.</a></li></ul></td></tr>
+</table></div><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>Gustavo III / Una vendetta in dominò (opera project) <span class="kg-meta">(Musical work, 1857-1858; Giuseppe Verdi; Antonio Somma)</span></td></tr>
+<tr><th>Censorship event</th><td>The project also underwent censorship in papal Rome. The final compromise relocated the action outside Europe to colonial Boston and transformed the historical Swedish king into the fictional Governor Riccardo, with corresponding changes to character names and political context.</td></tr>
+<tr><th>Imposed by</th><td>Censors of the Papal States in Rome</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Prior Approval</span> <span class="kg-chip">Modification Requirement</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Subject Restriction</span> <span class="kg-chip">Direct Representation Restriction</span><div class="kg-meta">The central assassination plot could remain only after the sovereign and European political context were transformed.</div></td></tr>
+<tr><th>Constrained element</th><td>Theme: Historical setting, political status of the protagonist, character identities, and context of the assassination.</td></tr>
+<tr><th>Creative response</th><td>Verdi and Somma transformed the setting and identities while preserving the dramatic structure: Sweden became colonial Boston, Gustav III became Governor Riccardo, and other characters were renamed.<div class="kg-meta">performed by Giuseppe Verdi; Antonio Somma</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Narrative Transposition</span> <span class="kg-chip">Character Transformation</span> <span class="kg-chip">Historical Displacement</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Creative Adaptation</span></td></tr>
+<tr><th>Result</th><td>Un ballo in maschera (1859)</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> The Metropolitan Opera and Verdi critical-edition sources explicitly link the Boston setting and transformed characters to negotiations with the censors. This is a strong example of narrative transposition used to preserve a censored dramatic structure.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://www.metopera.org/user-information/old-seasons/2023-24-season/un-ballo-in-maschera/" target="_blank" rel="noopener noreferrer">The Metropolitan Opera. Un Ballo in Maschera (work/season guide).</a></li><li><a href="https://www.ricordi.com/en-US/Critical-Editions/Verdi-Giuseppe-Critical-Editions/Verdi-Giuseppe-WGV/Verdi-Un-ballo-in-maschera.aspx" target="_blank" rel="noopener noreferrer">Narici, I. (ed.). (2000). Giuseppe Verdi: Un ballo in maschera – Critical Edition. Ricordi.</a></li><li><a href="https://doi.org/10.1017/S0954586700005061" target="_blank" rel="noopener noreferrer">Giger, A. (1999). Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859). Cambridge Opera Journal, 11(3), 233–265. DOI: 10.1017/S0954586700005061.</a></li></ul></td></tr>
+</table></div></div></details><details class="scenario-item kg-case">
+<summary class="scenario-summary">Mikhail Bulgakov, <em>The Master and Margarita</em> (USSR, 1930s–1969) <span class="kg-chip kg-chip-medium">Literature</span></summary>
+<div class="scenario-content"><p>Bulgakov wrote the novel in an environment in which he could no longer publish original fiction; the published form of the satire depends on indirect, Aesopian strategies. After his death, the first Soviet publication in <em>Moskva</em> (1966–1967) appeared only in heavily cut form. Elena Bulgakova preserved and prepared the text, and complete versions were published abroad — a posthumous creative response performed by an editor of the estate rather than the author.</p><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>The Master and Margarita <span class="kg-meta">(Literary work, 1928-1940; Mikhail Bulgakov)</span></td></tr>
+<tr><th>Censorship event</th><td>By the late 1920s and 1930s Bulgakov's prospects for publishing original fiction had sharply deteriorated; scholarly accounts describe him as no longer able to publish original fiction while he continued work on The Master and Margarita.</td></tr>
+<tr><th>Imposed by</th><td>Soviet literary and censorship establishment</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Publication Restriction</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Expression Restriction</span> <span class="kg-chip">Publication Restriction</span><div class="kg-meta">Political and satirical expression had to be developed in an environment in which Bulgakov could not expect normal publication of original fiction.</div></td></tr>
+<tr><th>Constrained element</th><td>Theme: Satirical and political treatment of Soviet institutions and social life.</td></tr>
+<tr><th>Creative response</th><td>The novel uses satire, ambiguity, fantastic displacement, and passages that scholars have discussed in terms of Aesopian language: indirect expression capable of carrying concealed political or social meanings.<div class="kg-meta">performed by Mikhail Bulgakov</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Aesopian Language</span> <span class="kg-chip">Satire</span> <span class="kg-chip">Ambiguity</span> <span class="kg-chip">Indirect Representation</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Creative Adaptation</span></td></tr>
+<tr><th>Result</th><td>The Master and Margarita (1940)</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-medium">medium confidence</span> The link between Soviet censorship and Aesopian strategies is interpretative rather than a directly documented causal statement by Bulgakov. Rosenshield documents the suppression of Bulgakov's publication opportunities, while Pope discusses Aesopian readings of politically suggestive passages in the novel. This relation should therefore be represented as a Claim, not as unquestioned causality.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://www.cambridge.org/core/journals/slavic-review/article/abs/master-and-margarita-and-the-poetics-of-aporia-a-polemical-article/1B06C78A2C4736CD2182ED5D4B6F2572" target="_blank" rel="noopener noreferrer">Rosenshield, G. (1997). The Master and Margarita and the Poetics of Aporia: A Polemical Article. Slavic Review, 56(2), 187–211. DOI: 10.2307/2500782.</a></li><li><a href="https://www.cambridge.org/core/journals/slavic-review/article/abs/ambiguity-and-meaning-in-the-master-and-margarita-the-role-of-afranius/C1CC1B17693788E4D6FB2F6E0B1AB372" target="_blank" rel="noopener noreferrer">Pope, R. W. F. (1977). Ambiguity and Meaning in The Master and Margarita: The Role of Afranius. Slavic Review, 36(1), 1–24. DOI: 10.2307/2494668.</a></li></ul></td></tr>
+</table></div><div class="kg-chain"><table class="kg-table">
+<tr><th>Work</th><td>The Master and Margarita <span class="kg-meta">(Literary work, 1928-1940; Mikhail Bulgakov)</span></td></tr>
+<tr><th>Censorship event</th><td>The novel's first Soviet publication in Moskva (1966-1967) was authorised only in a heavily cut form. Political and ideological passages, references to the secret police and arrests, attacks on the Soviet literary establishment, and other material were removed.</td></tr>
+<tr><th>Imposed by</th><td>Soviet censorship and the editors of Moskva</td></tr>
+<tr><th>Mechanism</th><td><span class="kg-chip">Redaction</span> <span class="kg-chip">Publication Restriction</span></td></tr>
+<tr><th>Constraint</th><td><span class="kg-chip">Content Restriction</span><div class="kg-meta">Only a substantially abridged version of the novel could appear in the Soviet journal.</div></td></tr>
+<tr><th>Constrained element</th><td>Textual Element: Politically sensitive passages, references to arrests and the secret police, attacks on the Soviet literary establishment, sexual/nudity material, and other excised text.</td></tr>
+<tr><th>Creative response</th><td>Elena Bulgakova preserved and prepared the text for publication; omitted passages circulated outside the censored journal version, and complete versions were subsequently published abroad, including a complete Russian text.<div class="kg-meta">performed by Elena Bulgakova</div></td></tr>
+<tr><th>Strategy</th><td><span class="kg-chip">Textual Restoration</span> <span class="kg-chip">Alternative Publication</span></td></tr>
+<tr><th>Outcome</th><td><span class="kg-chip kg-chip-outcome">Alternative Version Produced</span></td></tr>
+<tr><th>Result</th><td>The Master and Margarita (complete Russian edition, Possev) (1969)</td></tr>
+<tr><th>Claim</th><td><span class="kg-badge kg-badge-high">high confidence</span> Curtis documents that the Moskva text was authorised with substantial politically and ideologically motivated cuts and describes the later route to full publication abroad; Pope explicitly distinguishes the censored Moskva edition from complete Russian versions. The posthumous response is performed by an editor/estate representative rather than by the original creator.</td></tr>
+<tr><th>Evidence</th><td><ul class="kg-sources"><li><a href="https://www.masterandmargarita.eu/estore/pdf/emen062_curtis.pdf" target="_blank" rel="noopener noreferrer">Curtis, J. A. E. (2019). A Reader's Companion to Mikhail Bulgakov's The Master and Margarita. Boston: Academic Studies Press.</a></li><li><a href="https://www.cambridge.org/core/journals/slavic-review/article/abs/ambiguity-and-meaning-in-the-master-and-margarita-the-role-of-afranius/C1CC1B17693788E4D6FB2F6E0B1AB372" target="_blank" rel="noopener noreferrer">Pope, R. W. F. (1977). Ambiguity and Meaning in The Master and Margarita: The Role of Afranius. Slavic Review, 36(1), 1–24. DOI: 10.2307/2494668.</a></li></ul></td></tr>
+</table></div></div></details></div>
+      </section>
+
+      <section id="evaluation" class="section">
+        <h1>10. Evaluation</h1>
+        <h2>10.1 Reasoner</h2>
+        <p>
+          The merged file <code>censorcreate-v2.2-with-cases.owl</code> was classified with HermiT. The ontology is
+          <strong>consistent</strong>. The reasoner infers that all ten targeted works and practices belong to
+          <code>CensoredWork</code> (the two practices are targeted through <code>targetsPractice</code>). It also
+          infers that eight responses belong to <code>AdaptiveCreativeResponse</code>: Braun’s ironic narration,
+          Shostakovich’s Fifth Symphony, Hitchcock’s fragmented kiss, Panahi’s self-reflexive video diary, Nolde’s
+          secret watercolours, the rewritten <em>Streetcar</em> screenplay, Verdi’s transposition of <em>Un ballo in
+          maschera</em>, and Bulgakov’s Aesopian expression.
+        </p>
+        <h2>10.2 CQ coverage</h2>
+        <div class="kg-table-wrap"><table class="results-table"><thead><tr><th>CQ</th><th>Question</th><th>Rows</th><th>Status</th></tr></thead><tbody><tr><td>CQ1</td><td>Which creative works were subjected to censorship?</td><td>10</td><td>✓ answered</td></tr><tr><td>CQ2</td><td>Who or which institution imposed censorship on a work?</td><td>14</td><td>✓ answered</td></tr><tr><td>CQ3</td><td>Which censorship mechanism was used?</td><td>22</td><td>✓ answered</td></tr><tr><td>CQ4</td><td>What element or aspect of the work was constrained?</td><td>13</td><td>✓ answered</td></tr><tr><td>CQ5</td><td>What constraint resulted from the censorship event?</td><td>22</td><td>✓ answered</td></tr><tr><td>CQ6</td><td>How did the creator respond to the constraint?</td><td>15</td><td>✓ answered</td></tr><tr><td>CQ7</td><td>Which creative strategy was used in the response?</td><td>25</td><td>✓ answered</td></tr><tr><td>CQ8</td><td>What was the outcome: adaptation, modification, suppression, abandonment, etc.?</td><td>13</td><td>✓ answered</td></tr><tr><td>CQ9</td><td>Which creative strategies recur across different media or censorship mechanisms?</td><td>20</td><td>✓ answered</td></tr><tr><td>CQ10</td><td>Which sources support the claimed relationship between a censorship event and a creative response?</td><td>30</td><td>✓ answered</td></tr></tbody></table></div>
+        <p>All ten competency questions can be expressed in SPARQL and return answers over the current graph.</p>
+        <h2>10.3 Limitations</h2>
+        <ul>
+          <li><strong>Sample size.</strong> Eight cases are enough to test the model, but not to generalise. With the enlarged sample, CQ9 now shows some strategies recurring across media (for example indirect representation and ambiguity across film, music and literature), but several strategies still appear in a single case.</li>
+          <li><strong>Interpretive claims.</strong> The role of irony in Braun’s novel, the sincerity of Shostakovich’s finale, and the Aesopian reading of Bulgakov are contested in the literature. They have medium confidence and are not treated as facts.</li>
+          <li><strong>Causality.</strong> The model records documented responses to a constraint. It does not claim that the constraint alone caused the creative result.</li>
+          <li><strong>Agents.</strong> Some agents are not named in the sources (for example, who stopped the distribution of Braun’s novel). These relations are left empty instead of being guessed.</li>
+          <li><strong>Event-level outcomes.</strong> For documented suppressions without an identified creative response (the cut release of <em>A Streetcar Named Desire</em>), the outcome is recorded directly on the censorship event, which formally widens the domain of <code>hasOutcome</code> beyond <code>CreativeResponse</code>. A future revision may introduce an explicit "no documented response" pattern instead.</li>
+          <li><strong>Version identity.</strong> In the Bulgakov case the completed 1940 manuscript and the censored journal version are currently recorded under one identifier; a future revision should separate them.</li>
+          <li><strong>Source depth.</strong> Some claims still rely on tertiary or web sources and should be checked against primary archival material (for example, Mix 1993 on the publication history of <em>Hinze-Kunze-Roman</em>).</li>
+        </ul>
+      </section>
+
+      <section id="conclusions" class="section">
+        <h1>11. Conclusions</h1>
+        <p>
+          ConCreCen shows that censorship and the creative responses to it can be represented as a chain of events,
+          constraints, responses, strategies and outcomes. Each link in that chain can be traced to its sources.
+        </p>
+        <ul>
+          <li><strong>Outcomes are conditional, not deterministic.</strong> The same 1936 constraint led Shostakovich both to suppress one work (the Fourth Symphony) and to adapt in another (the Fifth Symphony). This supports Rosso’s view of constraints as enabling and disabling.</li>
+          <li><strong>Censorship is negotiated.</strong> In the GDR and in Hollywood, prior approval combined with modification requirements produced responses inside the approval process itself, such as Schlenstedt’s afterword or the PCA-compliant kiss. This fits Darnton’s account of censorship as negotiation.</li>
+          <li><strong>Constraints redirect solutions.</strong> Fragmentation (<em>Notorious</em>), irony and allegory (Braun) and ambiguity (Shostakovich) are alternative solutions that became attractive once the direct one was blocked, as in Stokes’s model of paired constraints.</li>
+          <li><strong>Evidence is part of the model.</strong> Modelling every relation as a sourced <code>Claim</code> with a confidence level keeps documented facts separate from interpretations.</li>
+        </ul>
+        <h2>Future work</h2>
+        <ul>
+          <li>Add more cases (for example, Iranian cinema or Soviet Aesopian language) to test whether strategies recur across media (CQ9).</li>
+          <li>Extend the model with a module on AI-driven content moderation.</li>
+          <li>Align the ontology with existing vocabularies such as Dublin Core and FOAF.</li>
+        </ul>
+      </section>
+
+      <section id="bibliography" class="section">
+        <h1>12. Bibliography</h1>
+        <h2>Theoretical framework</h2>
+        <ul><li>Darnton, R. (2014). <em>Censors at Work: How States Shaped Literature</em>. New York: W. W. Norton.</li><li>Stokes, P. D. (2008). Creativity from Constraints: What Can We Learn from Motherwell? From Mondrian? From Klee? <em>The Journal of Creative Behavior</em>, 42(4), 223–236. DOI: <a href="https://doi.org/10.1002/j.2162-6057.2008.tb01297.x" target="_blank" rel="noopener noreferrer">10.1002/j.2162-6057.2008.tb01297.x</a></li><li>Rosso, B. D. (2014). Creativity and Constraints: Exploring the Role of Constraints in the Creative Processes of Research and Development Teams. <em>Organization Studies</em>, 35(4), 551–585. DOI: <a href="https://doi.org/10.1177/0170840613517600" target="_blank" rel="noopener noreferrer">10.1177/0170840613517600</a></li></ul>
+        <h2>Case study sources</h2>
+        <ul><li>Billheimer, J. (2019). Hitchcock and the Censors. University Press of Kentucky, pp. 118–128. DOI 10.5810/kentucky/9780813177427.003.0015 <a href="https://academic.oup.com/kentucky-scholarship-online/book/34148/chapter/289477434" target="_blank" rel="noopener noreferrer">Link</a></li><li>Darnton, R. (1991). The Good Old Days. The New York Review of Books, 16 May 1991. <a href="https://www.nybooks.com/articles/1991/05/16/the-good-old-days/" target="_blank" rel="noopener noreferrer">Link</a></li><li>Das Wechselspiel von Selbstzensur und Literaturlenkung in der DDR. Aus Politik und Zeitgeschichte, Bundeszentrale für politische Bildung. <a href="https://www.bpb.de/shop/zeitschriften/apuz/archiv/535791/das-wechselspiel-von-selbstzensur-und-literaturlenkung-in-der-ddr/" target="_blank" rel="noopener noreferrer">Link</a></li><li>Frolova-Walker, M. &amp; Walker, J. (2023). Shostakovich&#x27;s Symphony No. 5. Oxford University Press. DOI 10.1093/oso/9780197566329.003.0001 <a href="https://academic.oup.com/book/55321/chapter/428777077" target="_blank" rel="noopener noreferrer">Link</a></li><li>Guibert-Yeche, H. Censure et autocensure en RDA. ENS Éditions (OpenEdition Books), pp. 127–144. <a href="https://books.openedition.org/enseditions/19283" target="_blank" rel="noopener noreferrer">Link</a></li><li>Höpcke, K. (1985). Über Volker Brauns Hinze-Kunze-Roman. Die Weltbühne 33–34/1985; reprinted in Das Blättchen, April 2025. <a href="https://das-blaettchen.de/2025/04/ueber-volker-brauns-hinze-kunze-roman-71622.html" target="_blank" rel="noopener noreferrer">Link</a></li><li>Lance, A. Preface to V. Braun, Le Roman de Hinze et Kunze. Éditions Métailié (reissue of the 1988 French translation). <a href="https://editions-metailie.com/livre/le-roman-de-hinze-et-kunze/" target="_blank" rel="noopener noreferrer">Link</a></li><li>Muddle Instead of Music. Wikipedia (tertiary source, used for orientation only). <a href="https://en.wikipedia.org/wiki/Muddle_Instead_of_Music" target="_blank" rel="noopener noreferrer">Link</a></li><li>Production Code Administration. The Alfred Hitchcock Wiki (quotes the Production Code and Bergman&#x27;s recollection). <a href="https://the.hitchcock.zone/wiki/Production_Code_Administration" target="_blank" rel="noopener noreferrer">Link</a></li><li>Robinson, H. Symphony No. 5 (Shostakovich). Boston Symphony Orchestra programme note. <a href="https://www.bso.org/works/symphony-no-5-shostakovich" target="_blank" rel="noopener noreferrer">Link</a></li><li>Symphony No. 4 (Shostakovich). Wikipedia (tertiary source, used for orientation only). <a href="https://en.wikipedia.org/wiki/Symphony_No._4_(Shostakovich)" target="_blank" rel="noopener noreferrer">Link</a></li><li>American Film Institute. AFI Catalog: A Streetcar Named Desire (1951), production history and PCA/Legion of Decency documentation. <a href="https://catalog.afi.com/Film/53428-A-STREETCAR-NAMED-DESIRE" target="_blank" rel="noopener noreferrer">Link</a></li><li>Festival de Cannes. (2011). Jafar Panahi and Mohammad Rasoulof in the Cannes Official Selection! 7 May 2011. <a href="https://www.festival-cannes.com/en/2011/jafar-panahi-and-mohammad-rasoulof-in-the-cannes-official-selection/" target="_blank" rel="noopener noreferrer">Link</a></li><li>Festival de Cannes. (2011). In Film Nist (This Is Not A Film) by Jafar Panahi. 20 May 2011. <a href="https://www.festival-cannes.com/en/2011/in-film-nist-this-is-not-a-film-by-jafar-panahi/" target="_blank" rel="noopener noreferrer">Link</a></li><li>Cinema Iranica. This Is Not a Film (film entry). <a href="https://cinema.iranicaonline.org/film/this-is-not-a-film/" target="_blank" rel="noopener noreferrer">Link</a></li><li>Curtis, J. A. E. (2019). A Reader's Companion to Mikhail Bulgakov's The Master and Margarita. Boston: Academic Studies Press. <a href="https://www.masterandmargarita.eu/estore/pdf/emen062_curtis.pdf" target="_blank" rel="noopener noreferrer">Link</a></li><li>Giger, A. (1999). Social control and the censorship of Giuseppe Verdi's operas in Rome (1844–1859). Cambridge Opera Journal, 11(3), 233–265. DOI: 10.1017/S0954586700005061. <a href="https://doi.org/10.1017/S0954586700005061" target="_blank" rel="noopener noreferrer">Link</a></li><li>Center for Human Rights in Iran. (2010). Jafar Panahi Sentenced To Six Years In Prison, Banned From Making Films For 20 Years. 20 December 2010. <a href="https://iranhumanrights.org/2010/12/jafar-panahi-sentenced-to-six-years-in-prison-banned-from-making-films-for-20-years/" target="_blank" rel="noopener noreferrer">Link</a></li><li>The Metropolitan Opera. Un Ballo in Maschera (work/season guide). <a href="https://www.metopera.org/user-information/old-seasons/2023-24-season/un-ballo-in-maschera/" target="_blank" rel="noopener noreferrer">Link</a></li><li>National Gallery of Ireland. Entartete Kunst / Degenerate Art (Emil Nolde: Colour is Life exhibition material). <a href="https://www.nationalgallery.ie/emil-nolde-colour-life/entartete-kunst-degenerate-art" target="_blank" rel="noopener noreferrer">Link</a></li><li>Nolde Museum Seebüll. The Artist (biographical chronology of Emil Nolde). <a href="https://www.nolde-museum.de/en/museum/der-kuenstler" target="_blank" rel="noopener noreferrer">Link</a></li><li>Pope, R. W. F. (1977). Ambiguity and Meaning in The Master and Margarita: The Role of Afranius. Slavic Review, 36(1), 1–24. DOI: 10.2307/2494668. <a href="https://www.cambridge.org/core/journals/slavic-review/article/abs/ambiguity-and-meaning-in-the-master-and-margarita-the-role-of-afranius/C1CC1B17693788E4D6FB2F6E0B1AB372" target="_blank" rel="noopener noreferrer">Link</a></li><li>Narici, I. (ed.). (2000). Giuseppe Verdi: Un ballo in maschera – Critical Edition. Ricordi. <a href="https://www.ricordi.com/en-US/Critical-Editions/Verdi-Giuseppe-Critical-Editions/Verdi-Giuseppe-WGV/Verdi-Un-ballo-in-maschera.aspx" target="_blank" rel="noopener noreferrer">Link</a></li><li>Rosenshield, G. (1997). The Master and Margarita and the Poetics of Aporia: A Polemical Article. Slavic Review, 56(2), 187–211. DOI: 10.2307/2500782. <a href="https://www.cambridge.org/core/journals/slavic-review/article/abs/master-and-margarita-and-the-poetics-of-aporia-a-polemical-article/1B06C78A2C4736CD2182ED5D4B6F2572" target="_blank" rel="noopener noreferrer">Link</a></li><li>Szabó, H. (2019). Censorship and Stardom in Various Adaptations of Tennessee Williams's A Streetcar Named Desire. AMERICANA E-Journal of American Studies in Hungary, 15(1). <a href="https://americanaejournal.hu/index.php/americanaejournal/article/view/45438" target="_blank" rel="noopener noreferrer">Link</a></li></ul>
+      </section>
+
+      <section id="downloads" class="section">
+        <h1>13. Downloads</h1>
+        <p>All project files are available for reuse and reproducibility.</p>
+        <table class="data-table"><thead><tr><th>File</th><th>Content</th></tr></thead><tbody><tr><td><a href="downloads/censorcreate-core-v2.2.ttl">Core ontology v2.2 (Turtle)</a></td><td>TBox: classes, properties, controlled vocabularies</td></tr><tr><td><a href="downloads/censorcreate-core-v2.2.owl">Core ontology v2.2 (OWL/RDF-XML)</a></td><td>Same schema, for Protégé / WebProtégé</td></tr><tr><td><a href="downloads/censorcreate-v2.2-with-cases.owl">Ontology + knowledge graph (OWL)</a></td><td>TBox + ABox, used for the evaluation</td></tr><tr><td><a href="downloads/censorcreate-v2.2-with-cases.ttl">Ontology + knowledge graph (Turtle)</a></td><td>TBox + ABox</td></tr><tr><td><a href="downloads/cases-triples.ttl">Knowledge graph triples</a></td><td>ABox only (documented cases)</td></tr><tr><td><a href="downloads/data/cases.csv">Dataset: cases</a></td><td>One row per event–response pair</td></tr><tr><td><a href="downloads/data/sources.csv">Dataset: sources</a></td><td>Bibliographic sources with URLs</td></tr><tr><td><a href="downloads/sparql-results.md">SPARQL results</a></td><td>Results of CQ1–CQ10</td></tr><tr><td><a href="downloads/build_kg.py">Build script</a></td><td>CSV → RDF conversion (Python, rdflib)</td></tr>
+        <tr><td>SPARQL queries</td><td><a href="downloads/queries/cq01_censored_works.rq">CQ01</a> · <a href="downloads/queries/cq02_censoring_agents.rq">CQ02</a> · <a href="downloads/queries/cq03_mechanisms.rq">CQ03</a> · <a href="downloads/queries/cq04_constrained_elements.rq">CQ04</a> · <a href="downloads/queries/cq05_constraints.rq">CQ05</a> · <a href="downloads/queries/cq06_responses.rq">CQ06</a> · <a href="downloads/queries/cq07_strategies.rq">CQ07</a> · <a href="downloads/queries/cq08_outcomes.rq">CQ08</a> · <a href="downloads/queries/cq09_recurring_strategies.rq">CQ09</a> · <a href="downloads/queries/cq10_evidence.rq">CQ10</a></td></tr>
+        <tr><td>GitHub</td><td><span class="kg-muted">[Add repository link]</span></td></tr></tbody></table>
+        <p class="kg-meta">Namespace: <code>http://example.org/censorcreate#</code> (prefix <code>cc:</code>).</p>
+      </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+    <script src="ontology-graph-data.js"></script>
+    <script src="ontology-graph.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
