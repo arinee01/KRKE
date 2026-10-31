@@ -1,11 +1,12 @@
-# CQ1. Which creative works were subjected to censorship?
+# CQ1. Which creative works (including creative practices) were subjected to censorship?
 PREFIX cc:   <http://example.org/censorcreate#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT DISTINCT ?work ?title ?year WHERE {
-  ?event a cc:CensorshipEvent ;
-         cc:targetsWork ?work .
+  { ?event a cc:CensorshipEvent ; cc:targetsWork ?work }
+  UNION
+  { ?event a cc:CensorshipEvent ; cc:targetsPractice ?work }
   ?work cc:title ?title .
   OPTIONAL { ?work cc:creationYear ?year }
   FILTER NOT EXISTS { ?work cc:dataProvenance "synthetic test individual" }
 }
-ORDER BY ?year
+ORDER BY ?year ?title
