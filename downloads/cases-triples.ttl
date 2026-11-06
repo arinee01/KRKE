@@ -80,7 +80,7 @@ cc:CL_Nolde_Watercolours a cc:Claim,
     cc:aboutCensorshipEvent cc:EV_Nolde_ProfessionalBan1941 ;
     cc:aboutCreativeResponse cc:RE_Nolde_UnpaintedPictures ;
     cc:claimText "The Nolde Museum records the 1941 expulsion and professional ban followed by further small-format watercolours; the National Gallery of Ireland states that despite the ban he continued to create, turning to small watercolour compositions painted in secret. Because Nolde had already used this medium before 1941, the claim is about continuation/adaptation under constraint rather than the invention of a new medium." ;
-    cc:confidenceLevel "high" ;
+    cc:confidenceLevel "medium" ;
     cc:dataProvenance "documented case" ;
     cc:supportedBy cc:SRC_NGI_NoldeDegenerate,
         cc:SRC_NoldeMuseum_Artist .
@@ -337,7 +337,7 @@ cc:EV_Nolde_ProfessionalBan1941 a cc:CensorshipEvent,
 cc:EV_Panahi_2010FilmmakingBan a cc:CensorshipEvent,
         owl:NamedIndividual ;
     cc:dataProvenance "documented case" ;
-    cc:description "On 20 December 2010, Panahi was sentenced to six years in prison and a 20-year ban on making films, writing screenplays, giving interviews, and travelling abroad. In 2011, Cannes described This Is Not a Film as made under semi-clandestine conditions while the ban was in force." ;
+    cc:description "On 18 December 2010, Panahi was sentenced to six years in prison and a 20-year ban on making films, writing screenplays, giving interviews, and travelling abroad. In 2011, Cannes described This Is Not a Film as made under semi-clandestine conditions while the ban was in force." ;
     cc:documentedBy cc:SRC_Cannes_Panahi2011,
         cc:SRC_Cannes_ThisIsNotAFilm2011,
         cc:SRC_CinemaIranica_TINAF,
@@ -454,7 +454,7 @@ cc:Nolde_UnpaintedPictures a cc:VisualArtwork,
         owl:NamedIndividual ;
     rdfs:label "Unpainted Pictures (Ungemalte Bilder)"@en ;
     cc:createdBy cc:EmilNolde ;
-    cc:creationYear 1945 ;
+    cc:creationYear 1941 ;
     cc:dataProvenance "documented case" ;
     cc:title "Unpainted Pictures (Ungemalte Bilder)" .
 
@@ -629,7 +629,7 @@ cc:DieterSchlenstedt a cc:Creator,
 cc:EV_HKR_PrintApproval a cc:CensorshipEvent,
         owl:NamedIndividual ;
     cc:dataProvenance "documented case" ;
-    cc:description "Four-year GDR print-approval process: manuscript submitted to Mitteldeutscher Verlag end 1981, passed to the Hauptverwaltung end 1983; negative expert report by Werner Neubert (July 1984); Höpcke changed 'refusal' to 'needs further work'; renewed unsuccessful attempts to obtain changes; approval early 1985." ;
+    cc:description "Four-year GDR print-approval process: manuscript submitted to Mitteldeutscher Verlag in 1981, passed to the Hauptverwaltung end 1983; negative expert report by Werner Neubert (July 1984); Höpcke changed 'refusal' to 'needs further work'; renewed unsuccessful attempts to obtain changes; approval early 1985." ;
     cc:documentedBy cc:SRC_Darnton1991,
         cc:SRC_GuibertYeche,
         cc:SRC_Hoepcke1985,
@@ -780,7 +780,7 @@ cc:RE_Nolde_UnpaintedPictures a cc:CreativeResponse,
     cc:description "Nolde continued working privately and produced further small-format watercolours in Seebüll. Museum accounts describe these works as being made secretly during the period of prohibition." ;
     cc:documentedBy cc:SRC_NGI_NoldeDegenerate,
         cc:SRC_NoldeMuseum_Artist ;
-    cc:eventDate 1945 ;
+    cc:eventDate 1941 ;
     cc:hasOutcome cc:CreativeAdaptation ;
     cc:performedBy cc:EmilNolde ;
     cc:respondsTo cc:CON_Nolde_ProfessionalPractice ;
