@@ -225,6 +225,12 @@ cc:Streetcar1951_ReleaseCut a cc:WorkVersion,
     cc:title "A Streetcar Named Desire (1951 theatrical release with Legion/PCA cuts)" ;
     cc:versionOf cc:Streetcar1951 .
 
+cc:Suppression a cc:OutcomeType,
+        owl:NamedIndividual ;
+    rdfs:label "Suppression"@en,
+        "Подавление"@ru ;
+    rdfs:comment "The expression was effectively suppressed and did not reach its audience in the intended form."@en .
+
 cc:TestEvent a cc:CensorshipEvent,
         owl:NamedIndividual ;
     rdfs:label "Test censorship event"@en ;
@@ -695,7 +701,6 @@ cc:EV_Streetcar_LegionCuts1951 a cc:CensorshipEvent,
     cc:documentedBy cc:SRC_AFI_Streetcar1951,
         cc:SRC_Szabo2019_Streetcar ;
     cc:eventDate 1951 ;
-    cc:hasOutcome cc:Suppression ;
     cc:imposedBy cc:CatholicLegionOfDecency ;
     cc:imposesConstraint cc:CON_Streetcar_ReleaseCuts ;
     cc:targetsWork cc:Streetcar1951 ;
@@ -932,12 +937,6 @@ cc:StylisticRestriction a cc:ConstraintType,
     rdfs:label "Stylistic restriction"@en,
         "Стилистическое ограничение"@ru ;
     rdfs:comment "A constraint on the artistic style, form, or idiom of a work (for example, condemnation of 'formalism'), rather than on its subject. Added in v2.1."@en .
-
-cc:Suppression a cc:OutcomeType,
-        owl:NamedIndividual ;
-    rdfs:label "Suppression"@en,
-        "Подавление"@ru ;
-    rdfs:comment "The expression was effectively suppressed and did not reach its audience in the intended form."@en .
 
 cc:Symbolism a cc:CreativeStrategy,
         owl:NamedIndividual ;

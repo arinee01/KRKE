@@ -371,7 +371,6 @@ cc:EV_Streetcar_LegionCuts1951 a cc:CensorshipEvent,
     cc:documentedBy cc:SRC_AFI_Streetcar1951,
         cc:SRC_Szabo2019_Streetcar ;
     cc:eventDate 1951 ;
-    cc:hasOutcome cc:Suppression ;
     cc:imposedBy cc:CatholicLegionOfDecency ;
     cc:imposesConstraint cc:CON_Streetcar_ReleaseCuts ;
     cc:targetsWork cc:Streetcar1951 ;
