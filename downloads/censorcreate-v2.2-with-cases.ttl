@@ -613,7 +613,7 @@ cc:EV_Bulgakov_LiterarySuppression1930s a cc:CensorshipEvent,
     cc:description "By the late 1920s and 1930s Bulgakov's prospects for publishing original fiction had sharply deteriorated; scholarly accounts describe him as no longer able to publish original fiction while he continued work on The Master and Margarita." ;
     cc:documentedBy cc:SRC_Pope1977_Bulgakov,
         cc:SRC_Rosenshield1997_Bulgakov ;
-    cc:eventDate "1930s" ;
+    cc:eventDate 1930 ;
     cc:hasResponse cc:RE_Bulgakov_AesopianExpression ;
     cc:imposedBy cc:SovietLiteraryEstablishment ;
     cc:imposesConstraint cc:CON_Bulgakov_PoliticalExpression ;
@@ -637,7 +637,7 @@ cc:EV_MasterMargarita_MoskvaCensorship1966 a cc:CensorshipEvent,
     cc:description "The novel's first Soviet publication in Moskva (1966-1967) was authorised only in a heavily cut form. Political and ideological passages, references to the secret police and arrests, attacks on the Soviet literary establishment, and other material were removed." ;
     cc:documentedBy cc:SRC_Curtis2019_Bulgakov,
         cc:SRC_Pope1977_Bulgakov ;
-    cc:eventDate "1966-1967" ;
+    cc:eventDate 1967 ;
     cc:hasResponse cc:RE_MasterMargarita_TextRestoration ;
     cc:imposedBy cc:SovietCensorship_Moskva ;
     cc:imposesConstraint cc:CON_MasterMargarita_PublicationCuts ;
@@ -820,7 +820,7 @@ cc:Nolde_UnpaintedPictures a cc:VisualArtwork,
         owl:NamedIndividual ;
     rdfs:label "Unpainted Pictures (Ungemalte Bilder)"@en ;
     cc:createdBy cc:EmilNolde ;
-    cc:creationYear "1941-1945" ;
+    cc:creationYear 1945 ;
     cc:dataProvenance "documented case" ;
     cc:title "Unpainted Pictures (Ungemalte Bilder)" .
 
@@ -1221,7 +1221,7 @@ cc:RE_Ballo_Transposition a cc:CreativeResponse,
     cc:documentedBy cc:SRC_Giger1999_Ballo,
         cc:SRC_Met_Ballo,
         cc:SRC_Ricordi_BalloCritical ;
-    cc:eventDate "1858-1859" ;
+    cc:eventDate 1859 ;
     cc:hasOutcome cc:CreativeAdaptation ;
     cc:performedBy cc:AntonioSomma,
         cc:GiuseppeVerdi ;
@@ -1237,7 +1237,7 @@ cc:RE_Bulgakov_AesopianExpression a cc:CreativeResponse,
     cc:description "The novel uses satire, ambiguity, fantastic displacement, and passages that scholars have discussed in terms of Aesopian language: indirect expression capable of carrying concealed political or social meanings." ;
     cc:documentedBy cc:SRC_Pope1977_Bulgakov,
         cc:SRC_Rosenshield1997_Bulgakov ;
-    cc:eventDate "1930s" ;
+    cc:eventDate 1930 ;
     cc:hasOutcome cc:CreativeAdaptation ;
     cc:performedBy cc:MikhailBulgakov ;
     cc:respondsTo cc:CON_Bulgakov_PoliticalExpression ;
@@ -1282,7 +1282,7 @@ cc:RE_MasterMargarita_TextRestoration a cc:CreativeResponse,
     cc:description "Elena Bulgakova preserved and prepared the text for publication; omitted passages circulated outside the censored journal version, and complete versions were subsequently published abroad, including a complete Russian text." ;
     cc:documentedBy cc:SRC_Curtis2019_Bulgakov,
         cc:SRC_Pope1977_Bulgakov ;
-    cc:eventDate "1966-1969" ;
+    cc:eventDate 1969 ;
     cc:hasOutcome cc:AlternativeVersionProduced ;
     cc:performedBy cc:ElenaBulgakova ;
     cc:producesVersion cc:MasterMargarita_FullRussian1969 ;
@@ -1296,7 +1296,7 @@ cc:RE_Nolde_UnpaintedPictures a cc:CreativeResponse,
     cc:description "Nolde continued working privately and produced further small-format watercolours in Seebüll. Museum accounts describe these works as being made secretly during the period of prohibition." ;
     cc:documentedBy cc:SRC_NGI_NoldeDegenerate,
         cc:SRC_NoldeMuseum_Artist ;
-    cc:eventDate "1941-1945" ;
+    cc:eventDate 1945 ;
     cc:hasOutcome cc:CreativeAdaptation ;
     cc:performedBy cc:EmilNolde ;
     cc:respondsTo cc:CON_Nolde_ProfessionalPractice ;
@@ -1425,7 +1425,7 @@ cc:GustavoIII_OperaProject a cc:MusicalWork,
     rdfs:label "Gustavo III / Una vendetta in dominò (opera project)"@en ;
     cc:createdBy cc:AntonioSomma,
         cc:GiuseppeVerdi ;
-    cc:creationYear "1857-1858" ;
+    cc:creationYear 1858 ;
     cc:dataProvenance "documented case" ;
     cc:title "Gustavo III / Una vendetta in dominò (opera project)" .
 
@@ -1636,8 +1636,7 @@ cc:MasterAndMargarita a cc:LiteraryWork,
         owl:NamedIndividual ;
     rdfs:label "The Master and Margarita"@en ;
     cc:createdBy cc:MikhailBulgakov ;
-    cc:creationYear 1940,
-        "1928-1940" ;
+    cc:creationYear 1940 ;
     cc:dataProvenance "documented case" ;
     cc:title "The Master and Margarita" .
 
