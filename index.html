@@ -223,94 +223,285 @@
         </p>
       </section>
 
-      <section id="theoretical-framework" class="section">
+       <section id="theoretical-framework" class="section">
         <h1>3. Theoretical Framework</h1>
+        
         <p>
-          This project investigates the relationship between censorship, constraint, and creative response. Its
-          starting point is an apparent paradox: censorship is primarily intended to restrict expression, yet in
-          some documented cases creators react to such restrictions by modifying their methods of expression,
-          adopting indirect forms of communication, or producing alternative versions of their works.
-        </p>
-        <p>
-          The ontology is based on three complementary theoretical perspectives: Robert Darnton on censorship,
-          Patricia D. Stokes on creativity under constraints, and Brent D. Rosso on the enabling and disabling
-          effects of constraints.
-        </p>
+         This project investigates the relationship between censorship, constraint,
+         and creative response. Its starting point is an apparent paradox:
+         censorship is primarily intended to restrict expression, yet in some
+         documented cases creators react to such restrictions by modifying their
+         methods of expression, adopting indirect forms of communication, or
+         producing alternative versions of their works.
+       </p>
 
-        <h2>Darnton: censorship as an institutional process</h2>
-        <p>
-          In <em>Censors at Work: How States Shaped Literature</em> (2014), Robert Darnton approaches censorship
-          historically and comparatively through cases from eighteenth-century France, nineteenth-century British
-          India, and twentieth-century East Germany. He presents censorship as more than a simple distinction
-          between “allowed” and “forbidden” works, describing it as an institutional process involving
-          authorities, censors, authors, editors, regulations, negotiations, revisions, and bans. This perspective
-          supports modelling censorship as an event or process, rather than as a simple property of a work:
-        </p>
-        <pre><code>CensorshipEvent → targetsWork → CreativeWork
-CensorshipEvent → imposedBy → CensoringAgent
-CensorshipEvent → usesMechanism → CensorshipMechanism</code></pre>
-        <p>
-          Darnton also distinguishes censorship from constraints in general: not every limitation is censorship.
-          This allows the ontology to represent <code>CensorshipConstraint</code> as a specific type of
-          <code>Constraint</code>.
-        </p>
-        <p>
-          His work also shows that censorship may operate through interaction and negotiation rather than only
-          through complete prohibition. In the cases he studies, the relationships between authors, editors,
-          censoring institutions, and cultural production could involve revisions, negotiations, approvals,
-          surveillance, and self-censorship. For this reason, the ontology does not reduce all censorship
-          mechanisms to <code>Ban</code>, but distinguishes <code>Ban</code>, <code>Removal</code>,
-          <code>Redaction</code>, <code>ModificationRequirement</code>, <code>DistributionRestriction</code>,
-          <code>PublicationRestriction</code>, <code>PriorApproval</code> and <code>SelfCensorship</code>.
-        </p>
+       <p>
+        <a
+         href="https://github.com/aldogangemi/CreOn/tree/main"
+         target="_blank"
+         rel="noopener noreferrer"
+        >CreOn</a>,
+         an ontology of creativity developed by Aldo Gangemi, provided conceptual
+         inspiration for this project. Its representation of the creative
+         environment through concepts such as <code>CreativityPress</code> and
+         <code>EnvironmentalCondition</code> prompted us to explore censorship as
+         a specific condition shaping creative activity. ConCreCen develops this
+         focus through its own model of censorship constraints and documented
+         creative responses, without formally reusing CreOn’s classes or properties.
+       </p>
 
-        <h2>Stokes: creativity from constraints</h2>
-        <p>
-          The second and central theoretical component is Patricia D. Stokes’s model of creativity from
-          constraints. In “Creativity from Constraints: What Can We Learn from Motherwell? From Mondrian? From
-          Klee?” (2008), Stokes presents creativity as a form of problem solving structured by constraints. Her
-          model directly questions the intuitive assumption that creativity requires maximum freedom. Stokes
-          describes a system of paired constraints: one constraint can preclude or limit the search among
-          familiar and reliable solutions, while another can promote or direct the search toward novel
-          alternatives. In simplified form:
-        </p>
-        <pre><code>Constraint → blocks a conventional solution → encourages search for alternatives</code></pre>
-        <p>
-          Applied to censorship, a restriction on direct expression may lead a creator to use another strategy,
-          such as metaphor, allegory, symbolism, or indirect representation. In the ontology this is represented
-          by <code>Constraint</code>, <code>CreativeResponse</code>, <code>CreativeStrategy</code> and
-          <code>OutcomeType</code>, and by the relations <code>imposesConstraint</code>, <code>respondsTo</code>,
-          <code>usesStrategy</code> and <code>hasOutcome</code>.
-        </p>
-        <p>
-          The important point is that the constraint does not automatically create creativity: it changes the
-          space of available solutions. A previously available solution becomes unavailable or less accessible,
-          potentially forcing or encouraging the search for another solution. Censorship is therefore modelled
-          not merely as an act of suppression but as a change in the conditions under which creative problem
-          solving takes place.
-        </p>
+       <p>
+         The ontology is based on three complementary theoretical perspectives:
+         <strong>Robert Darnton</strong> on censorship,
+         <strong>Patricia D. Stokes</strong> on creativity under constraints,
+         and <strong>Brent D. Rosso</strong> on the enabling and disabling effects
+         of constraints.
+       </p>
 
-        <h2>Rosso: enabling and disabling constraints</h2>
-        <p>
-          Brent D. Rosso’s “Creativity and Constraints” (2014) adds an important qualification: constraints do
-          not always improve creativity. Depending on their type and context, they may have either enabling or
-          disabling effects. For this reason, the ontology does not assume <code>Censorship → causes →
-          Creativity</code>. Instead, it represents multiple possible outcomes:
-        </p>
-        <pre><code>CensorshipConstraint → CreativeResponse → hasOutcome → CreativeAdaptation
-CensorshipConstraint → CreativeResponse → hasOutcome → Suppression</code></pre>
-        <p>This makes the model conditional rather than deterministic.</p>
+       <h2>Darnton: censorship as an institutional process</h2>
 
-        <h2>Conceptual model</h2>
-        <pre><code>Censorship Event → Constraint → Creative Response → Creative Strategy → Outcome</code></pre>
+       <p>
+         In <strong><em>Censors at Work: How States Shaped Literature</em>
+         (2014)</strong>, Robert Darnton approaches censorship historically and
+         comparatively through cases from eighteenth-century France,
+         nineteenth-century British India, and twentieth-century East Germany.
+         The author presents censorship as more than a simple distinction between
+         “allowed” and “forbidden” works. He describes it as an institutional
+         process involving authorities, censors, authors, editors, regulations,
+         negotiations, revisions, and bans.
+       </p>
+
+       <p>
+         This perspective supports modelling censorship as an
+         <strong>event or process</strong>, rather than as a simple property
+         of a work:
+       </p>
+
+       <table class="data-table">
+        <thead>
+          <tr>
+            <th scope="col">Subject</th>
+            <th scope="col">Relation</th>
+            <th scope="col">Object</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>CensorshipEvent</code></td>
+            <td><code>targetsWork</code></td>
+            <td><code>CreativeWork</code></td>
+          </tr>
+          <tr>
+            <td><code>CensorshipEvent</code></td>
+            <td><code>imposedBy</code></td>
+            <td><code>CensoringAgent</code></td>
+          </tr>
+          <tr>
+            <td><code>CensorshipEvent</code></td>
+            <td><code>usesMechanism</code></td>
+            <td><code>CensorshipMechanism</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+       <p>
+         Darnton also distinguishes censorship from constraints in general:
+         <strong>not every limitation is censorship</strong>. This allows the
+         ontology to represent <code>CensorshipConstraint</code> as a specific
+         type of <code>Constraint</code>.
+       </p>
+
+       <p>
+         The work also demonstrates that censorship may operate through
+         interaction and negotiation rather than only through complete
+         prohibition. In the cases he studies, the relationships between authors,
+         editors, censoring institutions, and cultural production could involve
+         revisions, negotiations, approvals, surveillance, and self-censorship.
+       </p>
+
+       <p>
+         For this reason, the ontology does not reduce all censorship mechanisms
+         to <code>Ban</code>. Instead, it distinguishes concepts such as
+         <code>Ban</code>, <code>Removal</code>, <code>Redaction</code>,
+         <code>ModificationRequirement</code>,
+         <code>DistributionRestriction</code>,
+         <code>PublicationRestriction</code>, <code>PriorApproval</code>,
+         and <code>SelfCensorship</code>.
+       </p>
+
+     <h2>Stokes: creativity from constraints</h2>
+
+       <p>
+         The second and central theoretical component is Patricia D. Stokes’s model of creativity from constraints. In her article
+         <strong><em>Creativity from Constraints: What Can We Learn from Motherwell? From Mondrian? From Klee?</em> (2008)</strong>,
+         Stokes presents creativity as a form of problem solving structured by constraints. Her model is particularly relevant to this project because
+         it directly questions the intuitive assumption that creativity requires maximum freedom.
+       </p>
+
+       <p>
+          Stokes describes a system of <strong>paired constraints</strong>.
+          One constraint can preclude or limit the search among familiar and
+         reliable solutions, while another can promote or direct the search
+         toward novel alternatives. In simplified form:
+       </p>
+       
+       <blockquote>
         <p>
-          Darnton explains who censors, what is censored, and how censorship operates. Stokes explains how
-          constraints can redirect creative problem solving. Rosso explains why constraints may either stimulate
-          adaptation or suppress creativity. The ontology therefore does not attempt to prove that censorship
-          increases creativity. Instead, it models the conditions under which creators respond to censorship, the
-          strategies they use, and the outcomes that follow.
+          <strong>Constraint → blocks a conventional solution → encourages search for alternatives</strong>
         </p>
-      </section>
+       </blockquote>
+       
+       <p>
+         Applied to censorship, a restriction on direct expression may lead a
+         creator to use another strategy, such as metaphor, allegory, symbolism, or indirect representation.
+       </p>
+
+       <p>
+         This idea is represented in the ontology through the following concepts and relations:
+       </p>
+       
+       <table class="data-table">
+        <thead>
+          <tr>
+            <th scope="col">Component</th>
+           <th scope="col">Ontology terms</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Classes</th>
+            <td>
+              <code>Constraint</code>,
+              <code>CreativeResponse</code>,
+              <code>CreativeStrategy</code>,
+              <code>OutcomeType</code>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Relations</th>
+            <td>
+              <code>imposesConstraint</code>,
+             <code>respondsTo</code>,
+             <code>usesStrategy</code>,
+             <code>hasOutcome</code>
+           </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>
+       The important point is that the constraint does not automatically create creativity: <strong>it changes the space of available solutions</strong>.
+       A previously available solution becomes unavailable or less accessible, potentially forcing or encouraging the search for another solution.
+      </p>
+
+      <p>
+        This work allows us to model censorship not merely as an act of suppression but as a change in the conditions under which creative problem solving takes place.
+     </p>
+
+      <h2>Rosso: enabling and disabling effects of constraints</h2>
+
+     <p>
+       Brent D. Rosso’s article <strong><em>Creativity and Constraints</em> (2014)</strong>
+       adds an important qualification. His research shows that constraints do not always improve creativity: depending on their type and context,
+       they may have either <strong>enabling or disabling effects</strong>.
+     </p>
+     
+     <p>
+       For this reason, the ontology does not assume a direct causal relation of the form <code>Censorship → causes → Creativity</code>.
+       Instead, it represents multiple possible outcomes of creative responses to censorship constraints, including adaptation and suppression:
+     </p>
+     
+     <table class="data-table">
+      <thead>
+        <tr>
+         <th scope="col">Subject</th>
+         <th scope="col">Relation</th>
+         <th scope="col">Possible outcome</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+         <td><code>CreativeResponse</code></td>
+         <td><code>hasOutcome</code></td>
+         <td><code>CreativeAdaptation</code></td>
+       </tr>
+       <tr>
+         <td><code>CreativeResponse</code></td>
+         <td><code>hasOutcome</code></td>
+         <td><code>Suppression</code></td>
+       </tr>
+      </tbody>
+    </table>
+    
+    <p>
+      This makes the model <strong>conditional rather than deterministic</strong>.
+    </p>
+
+    <h2>Combined conceptual model</h2>
+
+    <p>
+      The three perspectives are combined into the following conceptual sequence:
+    </p>
+    
+    <blockquote>
+      <p>
+        <strong>
+          Censorship Event → Constraint → Creative Response → Creative Strategy → Outcome
+        </strong>
+      </p>
+    </blockquote>
+    
+    <p>
+     This sequence summarises the theoretical argument. In the formal ontology, both strategies and outcomes are linked to the creative
+     response through <code>usesStrategy</code> and <code>hasOutcome</code>, respectively.
+    </p>
+    
+    <ul>
+      <li>
+        <strong>Darnton</strong> explains who censors, what is censored, and how censorship operates.
+      </li>
+     <li>
+       <strong>Stokes</strong> explains how constraints can redirect creative problem solving.
+     </li>
+     <li>
+       <strong>Rosso</strong> explains why constraints may either stimulate adaptation or suppress creativity.
+     </li>
+    </ul>
+    
+    <p>
+     The ontology therefore does not attempt to prove that censorship increases creativity. Instead, it models the conditions under which
+     creators respond to censorship, the strategies they use, and the outcomes that follow.
+    </p>
+    
+    <h2>Sources</h2>
+    
+    <ul>
+      <li>
+        Darnton, R. (2014). <em>Censors at Work: How States Shaped Literature.</em> New York: W. W. Norton.
+     </li>
+     <li>
+        Stokes, P. D. (2008). Creativity from Constraints: What Can We Learn from Motherwell? From Mondrian? From Klee?
+       <em>The Journal of Creative Behavior</em>, 42(4), 223–236.
+       DOI:
+       <a
+       href="https://doi.org/10.1002/j.2162-6057.2008.tb01297.x"
+       target="_blank"
+       rel="noopener noreferrer"
+       >10.1002/j.2162-6057.2008.tb01297.x</a>.
+      </li>
+      <li>
+       Rosso, B. D. (2014).
+       Creativity and Constraints: Exploring the Role of Constraints in the Creative Processes of Research and Development Teams.
+       <em>Organization Studies</em>, 35(4), 551–585.
+       DOI:
+       <a
+        href="https://doi.org/10.1177/0170840613517600"
+        target="_blank"
+        rel="noopener noreferrer"
+       >10.1177/0170840613517600</a>.
+      </li>
+    </ul>
+  </section>
 
       <section id="methodology" class="section">
         <h1>4. Methodology</h1>
