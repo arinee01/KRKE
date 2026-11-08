@@ -1395,15 +1395,46 @@ ORDER BY ?event ?response
       <section id="conclusions" class="section">
         <h1>11. Conclusions</h1>
         <p>
-          ConCreCen shows that censorship and the creative responses to it can be represented as a chain of events,
-          constraints, responses, strategies and outcomes. Each link in that chain can be traced to its sources.
+          ConCreCen addresses our research question by showing how censorship
+          constraints and creative responses can be formally represented and
+          compared. We developed an OWL ontology and populated an RDF knowledge
+          graph with eight case studies from literature, music, film, and visual
+          art. The model distinguishes what a censoring institution did, what
+          restriction it imposed, how creators responded, and what outcomes
+          were documented.
         </p>
-        <ul>
-          <li><strong>Outcomes are conditional, not deterministic.</strong> The same 1936 constraint led Shostakovich both to suppress one work (the Fourth Symphony) and to adapt in another (the Fifth Symphony). This supports Rosso’s view of constraints as enabling and disabling.</li>
-          <li><strong>Censorship is negotiated.</strong> In the GDR and in Hollywood, prior approval combined with modification requirements produced responses inside the approval process itself, such as Schlenstedt’s afterword or the PCA-compliant kiss. This fits Darnton’s account of censorship as negotiation.</li>
-          <li><strong>Constraints redirect solutions.</strong> Fragmentation (<em>Notorious</em>), irony and allegory (Braun) and ambiguity (Shostakovich) are alternative solutions that became attractive once the direct one was blocked, as in Stokes’s model of paired constraints.</li>
-          <li><strong>Evidence is part of the model.</strong> Modelling every relation as a sourced <code>Claim</code> with a confidence level keeps documented facts separate from interpretations.</li>
-        </ul>
+
+        <p>
+          Darnton's account of censorship as an institutional process informed
+          our representation of events, agents, and mechanisms. Stokes's work
+          on creativity under constraints helped us describe how creators
+          explored alternative ways of expressing an idea. Rosso's distinction
+          between enabling and disabling effects helped us account for the
+          different consequences documented in the cases. In <em>Notorious</em>,
+          Hitchcock staged an extended embrace as a sequence of brief kisses.
+          In the case of Shostakovich's Fourth Symphony, the planned premiere
+          was withdrawn. The same model can describe both a change in creative
+          technique and an interruption in a work's public circulation.
+        </p>
+
+        <p>
+          We checked the ontology's logical consistency with HermiT and used
+          SPARQL to explore ten competency questions. The queries allow us to
+          compare strategies such as ambiguity and indirect representation
+          across different kinds of works. They also allow readers to trace
+          specific interpretations of creative responses back to their sources
+          and see the confidence levels recorded for those claims.
+        </p>
+
+        <p>
+          Taken together, the cases show how censorship can restrict what
+          reaches the public and how, in some circumstances, creators respond
+          by changing how they express an idea. The project's contribution is
+          a shared model for comparing these situations while preserving the
+          evidence behind individual interpretations. How often these patterns
+          occur, and how much of a creative decision can be attributed to
+          censorship, remain open questions beyond the selected cases.
+        </p>
         <h2>Future work</h2>
         <ul>
           <li>Add more cases (for example, Iranian cinema or Soviet Aesopian language) to test whether strategies recur across media (CQ9).</li>
