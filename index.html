@@ -505,48 +505,107 @@
 
       <section id="methodology" class="section">
         <h1>4. Methodology</h1>
+
         <h2>Scope</h2>
         <p>
-          The knowledge graph covers documented cases of censorship of creative works in three media (literature,
-          music and film) and three censorship regimes: the German Democratic Republic, the Soviet Union and the
-          Hollywood Production Code. Together they span the period from 1936 to 1985. A case is included only if at least the censorship event is documented in
-          a scholarly or documentary source. A creative response is recorded only if a source documents it. If
-          a source reports a ban without a response, the case is recorded as an event without a response, not
-          as an inferred adaptation.
+          The knowledge graph covers documented cases of censorship of creative works and artistic
+          practice in four media (literature, music, film and visual art). The cases come from
+          several censorship contexts, including the pre-unification Italian states, Nazi Germany,
+          the German Democratic Republic, the Soviet Union, Iran, and the US film industry.
+          Together they span the period from 1857 to 2011.
         </p>
+        <p>
+          A case is included only if at least the censorship event is documented in a scholarly
+          or documentary source. A creative response is recorded only if a source documents it.
+          If a source reports a ban without a response, only the censorship event is recorded.
+        </p>
+
         <h2>Sources</h2>
         <p>
-          The 25 sources include scholarly monographs and chapters (Frolova-Walker & Walker; Billheimer;
-          Guibert-Yeche; Curtis), peer-reviewed articles (Szabó; Giger; Rosenshield; Pope), historical and critical
-          articles (Darnton in <em>The New York Review of Books</em>, Höpcke in <em>Die Weltbühne</em>), and
-          institutional web sources: festival documentation (Cannes), museum documentation (Nolde Museum Seebüll,
-          National Gallery of Ireland), the American Film Institute catalog, opera-house and critical-edition
-          materials (Metropolitan Opera, Ricordi), and human-rights reporting (Center for Human Rights in Iran).
-          Wikipedia entries were used only for orientation and are marked as tertiary sources. The full list is available in <a href="#bibliography">Bibliography</a>.
+          The case-study sources include scholarly monographs and chapters by Frolova-Walker and
+          Walker, Billheimer, and Guibert-Yeche. They also include historical and critical articles
+          by Darnton in <em>The New York Review of Books</em> and Höpcke in <em>Die Weltbühne</em>,
+          as well as publisher and programme texts. Wikipedia entries were used only for
+          orientation and are marked as tertiary sources. The full list is available in the
+          <a href="#bibliography">Bibliography</a>.
         </p>
+
         <h2>Extraction</h2>
         <p>
-          Facts were extracted manually into a fixed template (<code>cases.csv</code>), with one row per
-          event–response pair. Every relation between a censorship event and a creative response is stored as a
-          <code>Claim</code> with its supporting sources and a confidence level (high or medium). Interpretations
-          that remain contested in the literature have medium confidence. An LLM assistant was used to search for
-          and summarise sources and to draft Turtle code. Every fact entered into the dataset was checked against
-          the cited source.
+          Facts were extracted manually into a fixed template (<code>cases.csv</code>).
+          Each row records a censorship event and a specific constraint, with a creative response
+          where documented. Every relation between a censorship event and a creative response is
+          stored as a <code>Claim</code> with its supporting sources and a confidence level
+          (high or medium). Interpretations that remain contested in the literature have medium
+          confidence.
         </p>
+        <p>
+          An LLM assistant was used to search for and summarise sources and to draft Turtle code.
+          Every fact entered into the dataset was checked against the cited source.
+        </p>
+
         <h2>Ontology design methodology</h2>
         <p>
-          The ontology was developed iteratively and driven by competency questions, following the eXtreme
-          Design approach:
+          The ontology was developed using a combination of <strong>top-down</strong> and
+          <strong>bottom-up</strong> approaches (Noy &amp; McGuinness, 2001). In the top-down
+          approach, the theoretical framework guided the definition of the initial classes and
+          properties. In the bottom-up approach, analysis of documented cases helped identify
+          additional concepts and relations.
         </p>
+        <p>
+          Development drew on selected principles of <strong>eXtreme Design</strong>.
+          The model was refined iteratively, guided by competency questions and tested against
+          those questions. Development proceeded in five stages.
+        </p>
+
         <ol>
-          <li><strong>Theory → competency questions.</strong> The ten CQs were derived from the theoretical framework.</li>
-          <li><strong>Core TBox (v1).</strong> The classes and properties needed by the CQs were modelled in OWL and edited and inspected in WebProtégé, together with a synthetic test case.</li>
-          <li><strong>Revision (v2).</strong> The domain of <code>hasOutcome</code> was narrowed from <code>Event</code> to <code>CreativeResponse</code>, because an outcome belongs to a creator’s response, not to the act of censorship. English and Russian labels and definitions were added to all entities.</li>
-          <li><strong>Population and refinement (v2.1).</strong> Populating the graph with real cases required new controlled values (<code>Irony</code>, <code>ParatextualFraming</code>, <code>Fragmentation</code>, <code>StylisticRestriction</code>), a <code>resultsInWork</code> relation and subclasses of <code>Source</code>.</li>
-          <li><strong>Extension (v2.2).</strong> Five further cases added two modelling distinctions: an ongoing <code>CreativePractice</code> (Panahi, Nolde) can be the target of censorship (<code>targetsPractice</code>), and the range of <code>performedBy</code> was widened from <code>Creator</code> to <code>Agent</code> so that editors and estates (Schlenstedt, Elena Bulgakova) can perform responses. New classes <code>Editor</code> and <code>CreativePractice</code>, new data properties <code>claimText</code> and <code>bibliographicCitation</code>, and the duplicate relation <code>producesWork</code> was unified into <code>resultsInWork</code>.</li>
-          <li><strong>Validation.</strong> The HermiT reasoner checked consistency, and the CQs were run as SPARQL queries (see <a href="#evaluation">Evaluation</a>).</li>
+          <li>
+            <strong>From theory to competency questions.</strong>
+            The ten CQs were derived from the theoretical framework.
+          </li>
+          <li>
+            <strong>Core TBox (v1).</strong>
+            The classes and properties needed by the CQs were modelled in OWL and edited and
+            inspected in WebProtégé, together with a synthetic test case.
+          </li>
+          <li>
+            <strong>Revision (v2).</strong>
+            The domain of <code>hasOutcome</code> was narrowed from <code>Event</code> to
+            <code>CreativeResponse</code> to link outcomes to creators’ responses.
+            English and Russian labels and definitions were added to all entities.
+          </li>
+          <li>
+            <strong>Population and refinement (v2.1).</strong>
+            Populating the graph with real cases required new controlled values
+            (<code>Irony</code>, <code>ParatextualFraming</code>, <code>Fragmentation</code>
+            and <code>StylisticRestriction</code>), a <code>resultsInWork</code> relation
+            and subclasses of <code>Source</code>.
+          </li>
+          <li>
+            <strong>Validation.</strong>
+            The HermiT reasoner checked consistency, and the CQs were run as SPARQL queries
+            (see <a href="#evaluation">Evaluation</a>).
+          </li>
         </ol>
-        <p class="kg-meta">Years are typed as <code>xsd:integer</code> rather than <code>xsd:gYear</code>, because <code>gYear</code> is not part of the OWL 2 datatype map supported by HermiT.</p>
+
+        <p>
+          Year values use <code>xsd:integer</code> for compatibility with the OWL 2 datatype
+          map supported by HermiT.
+        </p>
+
+        <h3>Methodological references</h3>
+        <ul>
+          <li>
+            Noy, N. F., &amp; McGuinness, D. L. (2001).
+            <em>Ontology Development 101: A Guide to Creating Your First Ontology.</em>
+          </li>
+          <li>
+            Presutti, V., Daga, E., Gangemi, A., &amp; Blomqvist, E. (2009, October).
+            eXtreme Design with Content Ontology Design Patterns.
+            In <em>Proceedings of the Workshop on Ontology Patterns</em> (pp. 83–97).
+            Aachen, Germany. CEUR-WS.org.
+          </li>
+        </ul>
       </section>
 
       <section id="knowledge-representation" class="section">
